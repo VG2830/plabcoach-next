@@ -18,7 +18,6 @@ const socials = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-[var(--page-bg)] text-[var(--text)]">
-     
 
       <header className="sticky top-0 z-50 h-[83px] border border-[var(--line)] bg-white/90 px-4 py-3 shadow-[0_8px_24px_var(--shadow-header)] backdrop-blur-md sm:px-8 lg:px-16 xl:px-[220px]">
         <div className="mx-auto flex h-full max-w-[1920px] items-center justify-between">
@@ -128,19 +127,19 @@ export default function Home() {
         </main>
       </div>
 
-      <footer className="relative overflow-hidden bg-[var(--footer-bg)] px-4 pt-8 text-[var(--footer-text)] sm:px-8 md:pt-10 lg:px-16 xl:px-[220px]">
-        <div className="relative z-10 mx-auto max-w-[960px]">
+      <footer className="relative overflow-hidden bg-[var(--footer-bg)] px-4 pt-8 text-[var(--footer-text)] sm:px-6 sm:pt-10 md:px-8 lg:px-16 xl:px-[220px]">
+        <div className="relative z-10 mx-auto w-full max-w-[1920px]">
           {/* header row of the footer: logo left, socials right */}
-          <div className="flex flex-wrap items-center justify-between gap-5 sm:gap-8">
+          <div className="flex flex-wrap items-center justify-between gap-4 sm:gap-8">
             <Image
               src="/new_plabcoach.png"
               alt="PLABCOACH"
               width={210}
               height={57}
-              className="h-auto w-[130px] object-contain"
+              className="h-auto w-[110px] object-contain sm:w-[130px]"
             />
 
-            <div className="flex items-center gap-2 text-[0.62rem] font-bold text-[var(--text)]">
+            <div className="flex flex-wrap items-center gap-2 text-[0.62rem] font-bold text-[var(--text)]">
               <span>Social Media</span>
               {socials.map((s) => (
                 <a
@@ -158,10 +157,10 @@ export default function Home() {
           <div className="my-5 h-px bg-[var(--footer-border)]" />
 
           {/* main section of the footer: 4-column body */}
-          <div className="grid gap-7 pb-8 text-[0.68rem] leading-[1.55] sm:grid-cols-2 md:grid-cols-[1.25fr_0.9fr_1fr_1.35fr] md:gap-10 md:pb-10">
+          <div className="grid grid-cols-1 gap-7 pb-8 text-[0.68rem] leading-[1.55] sm:grid-cols-2 md:gap-8 md:pb-10 lg:grid-cols-[1.25fr_0.9fr_1fr_1.35fr] lg:gap-10">
             <section>
               <h2 className="mb-2 font-medium text-[var(--footer-heading)]">We have been</h2>
-              <p className="max-w-[225px] break-words">
+              <p className="max-w-md break-words">
                 We have been delivering high-quality online courses for nearly a decade.
                 All our instructors are experts with extensive experience in their
                 respective fields. We offer comprehensive course materials, ensuring our
