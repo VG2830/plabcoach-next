@@ -60,7 +60,7 @@ const trustPoints = [
 
 const journey = [
   { number: "01", title: "Join", text: "Create your account in minutes" },
-  { number: "02", title: "Learn", text: "Access structured courses & resources", active: true },
+  { number: "02", title: "Learn", text: "Access structured courses & resources" },
   { number: "03", title: "Practice", text: "Solve questions & improve continuously" },
   { number: "04", title: "Mock Tests", text: "Take mock exams & track performance" },
   { number: "05", title: "Pass Exam", text: "Build confidence & achieve your dream" },
@@ -172,8 +172,8 @@ function OfferCard({
   icon: string;
 }) {
   return (
-    <article className="flex h-full flex-col justify-start rounded-[28px] bg-[var(--soft-blue)] px-6 py-7 lg:px-7 lg:py-8">
-      <Image src={icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px]" />
+    <article className="group flex h-full flex-col justify-start rounded-[28px] border border-white/55 bg-[var(--soft-blue)] px-6 py-7 shadow-[0_10px_30px_rgba(36,70,128,0.035)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:bg-[#e6efff]/90 hover:shadow-[0_20px_42px_rgba(36,70,128,0.10)] lg:px-7 lg:py-8">
+      <Image src={icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
       <h3 className="text-[22px] font-bold leading-tight text-[var(--ink)]">{title}</h3>
       <p className="mt-3 max-w-[310px] text-[15px] leading-7 text-[var(--body-muted)]">{description}</p>
     </article>
@@ -182,7 +182,7 @@ function OfferCard({
 
 function CourseCard({ title }: { title: string }) {
   return (
-    <article className="group relative min-h-[492px] overflow-hidden rounded-[30px] bg-black shadow-[0_14px_34px_rgba(15,34,68,0.10)]">
+    <article className="group relative min-h-[492px] overflow-hidden rounded-[30px] bg-black shadow-[0_14px_34px_rgba(15,34,68,0.10)] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_26px_54px_rgba(15,34,68,0.18)]">
       <Image
         src="/fifth_sec_card_img.png"
         alt="Doctor preparing for a medical exam"
@@ -256,6 +256,7 @@ function SocialIcon({ label }: { label: string }) {
 
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [activeJourney, setActiveJourney] = useState(1);
   const [openFaq, setOpenFaq] = useState(0);
 
   const goToTestimonial = (direction: number) => {
@@ -297,7 +298,7 @@ export default function Home() {
               aria-hidden="true"
               width={1382}
               height={1382}
-              className="pointer-events-none absolute hidden h-[1382px] w-[1382px] max-w-none lg:block lg:-right-[385px] lg:-top-[392px]"
+              className="pointer-events-none absolute hidden h-[1382px] w-[1382px] max-w-none lg:block lg:-right-[385px] lg:-top-[455px]"
               priority
             />
 
@@ -323,7 +324,7 @@ export default function Home() {
               width={725}
               height={664}
               priority
-              className="absolute bottom-[72px] right-[-18px] z-10 hidden h-auto w-[610px] max-w-none lg:block xl:bottom-[78px] xl:right-[10px] xl:w-[660px] 2xl:bottom-[82px] 2xl:right-[18px] 2xl:w-[690px]"
+              className="absolute right-[-18px] top-[28px] z-10 hidden h-auto w-[610px] max-w-none lg:block xl:right-[10px] xl:w-[660px] 2xl:right-[18px] 2xl:w-[690px]"
             />
           </div>
         </section>
@@ -336,22 +337,27 @@ export default function Home() {
             <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
             <div className="relative grid min-h-[170px] grid-cols-2 md:grid-cols-4 lg:min-h-[205px] xl:min-h-[230px]">
               {stats.map((stat, index) => (
-                <div key={stat.label} className="relative flex items-center justify-center gap-4 px-4 py-6 lg:gap-[20px] xl:gap-[22px]">
-                  <div className="pointer-events-none absolute inset-[10px] rounded-[22px] border border-white/10 bg-white/[0.025] shadow-[inset_0_1px_0_rgba(255,255,255,0.28)]" />
+                <div key={stat.label} className={`relative flex items-center justify-center gap-4 px-4 py-6 lg:gap-[20px] xl:gap-[22px] ${index < stats.length - 1 ? "border-r border-white/65" : ""}`}>
                   <Image src={stat.icon} alt="" width={82} height={82} className="relative h-[64px] w-[64px] drop-shadow-[0_8px_18px_rgba(78,94,225,0.10)] lg:h-[72px] lg:w-[72px] xl:h-[82px] xl:w-[82px]" />
                   <div className="relative">
                     <div className="text-[32px] font-bold leading-none tracking-[-0.035em] text-[var(--ink)] lg:text-[40px] xl:text-[46px]">{stat.value}</div>
                     <div className="mt-2 text-[13px] font-normal text-[var(--accent)] lg:text-[15px] xl:text-[18px]">{stat.label}</div>
                   </div>
-                  {index < stats.length - 1 && <span aria-hidden="true" className="absolute bottom-[30px] right-0 top-[30px] hidden w-px bg-white/70 shadow-[1px_0_0_rgba(130,154,216,0.10)] md:block" />}
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-white pb-[120px] pt-[70px] lg:pt-[72px] xl:pt-[75px]">
-          <Image src="/ellipse_offer_section.png" alt="" width={1116} height={815} aria-hidden="true" className="pointer-events-none absolute -right-[80px] top-[80px] hidden w-[780px] opacity-70 xl:block" />
+        <section className="relative overflow-hidden bg-white pb-[118px] pt-[72px] lg:pb-[126px] lg:pt-[78px] xl:pt-[82px]">
+          <Image
+            src="/ellipse_offer_section.png"
+            alt=""
+            width={1116}
+            height={815}
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-[210px] -top-[20px] hidden w-[920px] max-w-none  lg:block xl:-right-[175px] xl:-top-[15px] xl:w-[980px] 2xl:-right-[145px] 2xl:w-[1040px]"
+          />
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="mb-10 lg:mb-12">
               <p className="text-[13px] font-semibold uppercase tracking-[0.01em] text-[var(--accent)]">What We Offer</p>
@@ -360,8 +366,8 @@ export default function Home() {
             </div>
 
             <div className="grid gap-6 lg:grid-cols-[0.96fr_2fr]">
-              <div className="relative min-h-[420px] overflow-hidden rounded-[28px] lg:min-h-[560px]">
-                <Image src="/offer_section_image.png" alt="Medical learner" fill sizes="(max-width: 1024px) 100vw, 35vw" className="object-cover object-center" />
+              <div className="group relative min-h-[420px] overflow-hidden rounded-[28px] shadow-[0_12px_30px_rgba(25,53,96,0.04)] lg:min-h-[560px]">
+                <Image src="/offer_section_image.png" alt="Medical learner" fill sizes="(max-width: 1024px) 100vw, 35vw" className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]" />
               </div>
 
               <div className="grid gap-5 md:grid-cols-1 xl:grid-cols-[1.75fr_1fr]">
@@ -373,10 +379,10 @@ export default function Home() {
                     {offerBottom.map((feature) => <OfferCard key={feature.title} {...feature} />)}
                   </div>
                 </div>
-                <article className="grid overflow-hidden rounded-[28px] bg-[var(--soft-blue)] sm:grid-cols-2 xl:grid-cols-1 xl:grid-rows-2">
+                <article className="grid overflow-hidden rounded-[28px] border border-white/55 bg-[var(--soft-blue)] shadow-[0_10px_30px_rgba(36,70,128,0.035)] sm:grid-cols-2 xl:grid-cols-1 xl:grid-rows-2">
                   {offerTall.map((feature, index) => (
-                    <div key={feature.title} className={`px-6 py-7 lg:px-7 lg:py-8 ${index === 0 ? "border-b border-[var(--divider)] sm:border-b-0 sm:border-r xl:border-b xl:border-r-0" : ""}`}>
-                      <Image src={feature.icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px]" />
+                    <div key={feature.title} className={`group px-6 py-7 transition-all duration-300 hover:bg-white/28 lg:px-7 lg:py-8 ${index === 0 ? "border-b border-[var(--divider)] sm:border-b-0 sm:border-r xl:border-b xl:border-r-0" : ""}`}>
+                      <Image src={feature.icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
                       <h3 className="text-[22px] font-bold leading-tight">{feature.title}</h3>
                       <p className="mt-3 text-[15px] leading-7 text-[var(--body-muted)]">{feature.description}</p>
                     </div>
@@ -415,30 +421,41 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white py-[110px] lg:py-[125px]">
+        <section className="bg-white py-[104px] lg:min-h-[650px] lg:py-[118px] xl:min-h-[665px] xl:py-[122px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-            <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">How It Works</p>
-            <h2 className="mt-2 text-[42px] font-bold tracking-[-0.025em] lg:text-[50px]">Your Journey to Success</h2>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.01em] text-[var(--accent)]">How It Works</p>
+            <h2 className="mt-[8px] text-[42px] font-bold tracking-[-0.028em] lg:text-[50px] xl:text-[52px]">Your Journey to Success</h2>
 
-            <div className="mt-[70px] grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-0">
-              {journey.map((step, index) => (
-                <div key={step.number} className="relative flex min-h-[245px] flex-col items-center text-center">
-                  <div className={`text-[104px] font-black leading-[0.8] tracking-[-0.05em] ${step.active ? "text-[var(--primary)]" : "text-transparent [-webkit-text-stroke:3px_var(--journey-outline)]"}`}>
+            <div className="mt-[76px] grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-0 lg:mt-[88px] xl:mt-[92px]">
+              {journey.map((step, index) => {
+                const isActive = activeJourney === index;
+
+                return (
+                <button type="button" key={step.number} onClick={() => setActiveJourney(index)} className="group relative flex min-h-[250px] flex-col items-center text-center">
+                  <div className={`text-[108px] font-black leading-[0.8] tracking-[-0.055em] transition-all duration-300 lg:text-[116px] xl:text-[122px] ${isActive ? "text-[var(--primary)]" : "text-transparent [-webkit-text-stroke:3px_var(--journey-outline)] group-hover:text-[var(--primary)] group-hover:[-webkit-text-stroke:0px_transparent]"}`}>
                     {step.number}
                   </div>
-                  <h3 className={`mt-8 text-[22px] font-bold ${step.active ? "text-black" : "text-[#777]"}`}>{step.title}</h3>
-                  <p className="mt-4 max-w-[220px] text-[15px] leading-7 text-[#777]">{step.text}</p>
+                  <h3 className={`mt-8 text-[22px] font-bold transition-colors duration-300 ${isActive ? "text-black" : "text-[#777] group-hover:text-black"}`}>{step.title}</h3>
+                  <p className="mt-4 max-w-[220px] text-[15px] leading-7 text-[#777] transition-colors duration-300 group-hover:text-[#5e5e5e]">{step.text}</p>
                   {index < journey.length - 1 && (
-                    <Image src="/fourth_sec_side_support.svg" alt="" width={97} height={289} aria-hidden="true" className="absolute -right-[48px] top-[-24px] hidden h-[220px] w-[74px] md:block lg:h-[245px] lg:w-[82px]" />
+                    <Image src="/fourth_sec_side_support.svg" alt="" width={97} height={289} aria-hidden="true" className="absolute -right-[48px] top-[-30px] hidden h-[230px] w-[77px] md:block lg:-right-[50px] lg:h-[252px] lg:w-[84px] xl:-right-[51px] xl:h-[262px] xl:w-[88px]" />
                   )}
-                </div>
-              ))}
+                </button>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-[90px] lg:py-[105px]">
-          <Image src="/featured_courses_bg.png" alt="" width={1035} height={712} aria-hidden="true" className="pointer-events-none absolute -left-[40px] -top-[110px] hidden w-[930px] opacity-20 lg:block" />
+        <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-[92px] lg:py-[104px] xl:py-[112px]">
+          <Image
+            src="/featured_courses_ellipse.png"
+            alt=""
+            width={1332}
+            height={689}
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-[115px] -top-[105px] hidden w-[1040px] max-w-none  lg:block xl:-left-[95px] xl:-top-[92px] xl:w-[1120px] 2xl:-left-[65px] 2xl:w-[1180px]"
+          />
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Featured Courses</p>
             <h2 className="mt-2 text-[42px] font-bold leading-tight tracking-[-0.025em] lg:text-[50px]">Popular Exam Preparations</h2>
@@ -448,12 +465,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative overflow-x-clip overflow-y-visible bg-white py-[80px] lg:py-[100px]">
-          <Image src="/video_learning_bg.png" alt="" width={1332} height={689} aria-hidden="true" className="pointer-events-none absolute left-[27%] top-[-10px] hidden w-[880px] opacity-[0.08] lg:block" />
+        <section className="relative overflow-x-clip overflow-y-visible bg-white py-[82px] lg:py-[98px] xl:py-[105px]">
+          <Image
+            src="/featured_courses_ellipse.png"
+            alt=""
+            width={1332}
+            height={689}
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[7%] -top-[115px] hidden w-[1060px] max-w-none  lg:block xl:left-[8%] xl:-top-[105px] xl:w-[1120px] 2xl:left-[9%] 2xl:w-[1190px]"
+          />
           <div className="relative z-10 mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 xl:gap-20">
-            <div className="relative min-h-[430px] sm:min-h-[520px] lg:min-h-[570px] xl:-ml-[5vw] xl:w-[calc(100%+5vw)] 2xl:ml-[calc((1480px-100vw)/2)] 2xl:min-h-[620px] 2xl:w-[calc(100%+(100vw-1480px)/2+110px)]">
+            <div className="relative min-h-[430px] sm:min-h-[520px] lg:min-h-[575px] xl:min-h-[600px] 2xl:ml-[calc((1480px-100vw)/2)] 2xl:min-h-[625px] 2xl:w-[calc(100%+(100vw-1480px)/2+92px)]">
               <div className="pointer-events-none absolute bottom-[11%] left-[12%] h-[56px] w-[76%] rounded-full bg-[#243f79]/10 blur-3xl" />
-              <Image src="/video_learning_laptop.png" alt="PLABCoach video lesson on a laptop" fill sizes="(max-width: 1024px) 100vw, (max-width: 1535px) 56vw, 64vw" className="origin-left object-contain object-left transition duration-500 hover:scale-[1.01] 2xl:scale-[1.12] 2xl:hover:scale-[1.13]" />
+              <Image src="/video_learning_laptop.png" alt="PLABCoach video lesson on a laptop" fill sizes="(max-width: 1024px) 100vw, (max-width: 1535px) 50vw, 62vw" className="origin-left object-contain object-left transition-transform duration-500 hover:scale-[1.008] 2xl:scale-[1.10] 2xl:hover:scale-[1.115]" />
             </div>
             <div className="relative z-10 lg:py-4">
               <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Video Learning</p>
@@ -508,11 +532,11 @@ export default function Home() {
                   const offset = (index - activeTestimonial + testimonials.length) % testimonials.length;
                   const positionClass = offset === 0
                     ? "left-[120px] right-[120px] top-0 z-20 min-h-[242px] rounded-[30px] bg-white shadow-[0_24px_60px_rgba(32,32,32,0.18)]"
-                    : offset === 1
-                      ? "left-[144px] right-[144px] top-[212px] z-[17] h-[118px] rounded-[28px] bg-white/[0.96] shadow-[0_18px_45px_rgba(38,38,38,0.14)]"
+                      : offset === 1
+                        ? "left-[144px] right-[144px] top-[212px] z-[17] h-[118px] rounded-[28px] bg-[#e9e9e9] shadow-[0_18px_45px_rgba(38,38,38,0.14)]"
                       : offset === 2
-                        ? "left-[160px] right-[160px] top-[278px] z-[16] h-[115px] rounded-[27px] bg-white/[0.88] shadow-[0_16px_42px_rgba(38,38,38,0.13)]"
-                        : "left-[176px] right-[176px] top-[344px] z-[15] h-[114px] rounded-[26px] bg-white/[0.72] shadow-[0_14px_38px_rgba(38,38,38,0.12)]";
+                        ? "left-[160px] right-[160px] top-[278px] z-[16] h-[115px] rounded-[27px] bg-[#d7d7d7] shadow-[0_16px_42px_rgba(38,38,38,0.13)]"
+                        : "left-[176px] right-[176px] top-[344px] z-[15] h-[114px] rounded-[26px] bg-[#c7c7c7] shadow-[0_14px_38px_rgba(38,38,38,0.12)]";
 
                   return (
                     <button
@@ -539,7 +563,8 @@ export default function Home() {
                           <div className="mt-[14px] grid grid-cols-[40px_1fr_40px] items-start gap-[12px]">
                             <span className="text-[52px] font-black leading-[0.9] text-[#9dcfff]">“</span>
                             <p className="pt-1 text-[14px] leading-[1.62] text-[#777777]">{item.quote}</p>
-                            <span className="self-end text-right text-[52px] font-black leading-[0.75] text-[#9dcfff]">”</span>
+                            {/* <span className="self-end text-right text-[52px] font-black leading-[0.75] text-[#9dcfff]">”</span> */}
+                            <span className="self-end text-right text-[52px] font-black leading-[0.75] text-[#9dcfff] -scale-y-100">”</span>
                           </div>
                         </div>
                       ) : (
@@ -596,7 +621,7 @@ export default function Home() {
         </section>
 
         <section id="faq" className="relative overflow-hidden bg-white py-[90px] lg:py-[112px]">
-          <Image src="/ellipse_offer_section.png" alt="" width={1116} height={815} aria-hidden="true" className="pointer-events-none absolute -right-[240px] -top-[250px] hidden w-[780px] opacity-[0.18] lg:block" />
+          <Image src="/ellipse_offer_section.png" alt="" width={1116} height={815} aria-hidden="true" className="pointer-events-none absolute -right-[210px] -top-[270px] hidden w-[850px] max-w-none opacity-[0.055] lg:block xl:-right-[165px] xl:-top-[285px] xl:w-[930px]" />
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end lg:gap-16">
               <div>
@@ -630,20 +655,29 @@ export default function Home() {
               </aside>
             </div>
 
-            <div className="relative mt-16 overflow-hidden rounded-[30px] bg-[linear-gradient(112deg,#075ba6_0%,#0868b7_50%,#075ca7_100%)] px-7 py-10 shadow-[0_24px_60px_rgba(8,77,145,0.18)] sm:px-10 lg:mt-[72px] lg:min-h-[455px] lg:px-[88px] lg:py-0 xl:min-h-[468px]">
-              <div className="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(125deg,rgba(255,255,255,0.04),transparent_40%),repeating-radial-gradient(ellipse_at_9%_112%,transparent_0_30px,rgba(255,255,255,0.18)_31px_33px,transparent_35px_54px)]" />
+            <div className="relative mt-16 overflow-visible rounded-[30px] bg-[#09539F] px-7 py-10 shadow-[0_24px_60px_rgba(8,77,145,0.18)] sm:px-10 lg:mt-[82px] lg:min-h-[455px] lg:px-[88px] lg:py-0 xl:min-h-[468px]">
+              <div className="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(125deg,rgba(255,255,255,0.04),transparent_40%)]" />
 
-              <svg aria-hidden="true" viewBox="0 0 720 230" className="pointer-events-none absolute bottom-[34px] left-[32px] hidden h-[220px] w-[620px] opacity-75 lg:block xl:left-[44px] xl:w-[670px]">
-                <path d="M16 207 C 96 162, 184 185, 248 150 C 305 119, 343 104, 415 109 C 486 114, 525 93, 566 57" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" opacity="0.82" />
-                <path d="M18 210 C 88 175, 149 188, 211 167" fill="none" stroke="white" strokeWidth="8" strokeLinecap="round" opacity="0.12" />
-              </svg>
+              <Image
+                src="/plane_smoke_icon.svg"
+                alt=""
+                aria-hidden="true"
+                width={600}
+                height={267}
+                className="pointer-events-none absolute bottom-[18px] left-[18px] hidden h-auto w-[560px] max-w-none opacity-[0.92] lg:block xl:bottom-[20px] xl:left-[28px] xl:w-[600px]"
+              />
 
               <div className="relative z-20 max-w-[520px] lg:flex lg:min-h-[455px] lg:flex-col lg:justify-center xl:min-h-[468px]">
                 <div className="relative">
                   <h3 className="max-w-[500px] text-[34px] font-bold leading-[1.08] tracking-[-0.028em] text-white lg:text-[48px] xl:text-[50px]">Ready to Begin Your UK Medical Journey?</h3>
-                  <svg aria-hidden="true" viewBox="0 0 74 74" className="absolute -right-[4px] top-[30px] hidden h-[72px] w-[72px] rotate-[13deg] text-white lg:block xl:-right-[18px] xl:top-[34px]">
-                    <path fill="currentColor" d="M69.8 10.6 42.2 67.8l-8.8-24.5-22.6-6.9c-2.4-.7-2.7-4-.4-5.1L65.9 5.9c3.1-1.4 5.4 1.7 3.9 4.7ZM37.4 38.1l5 14 14-29.1-19 15.1Z" />
-                  </svg>
+                  <Image
+                    src="/aeroplane_icon.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width={102}
+                    height={72}
+                    className="pointer-events-none absolute -right-[26px] top-[42px] hidden h-auto w-[90px] lg:block xl:-right-[40px] xl:top-[44px] xl:w-[102px]"
+                  />
                 </div>
                 <p className="mt-5 max-w-[360px] text-[15px] leading-[1.65] text-white/80 lg:text-[16px]">Join thousands of doctors preparing with PLABCoach.</p>
                 <div className="mt-7 flex flex-wrap gap-4 lg:mt-8">
@@ -658,7 +692,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative z-10 mt-10 flex w-full items-end justify-center lg:absolute lg:right-[-44px] lg:top-[-29px] lg:mt-0 lg:w-[58%] xl:right-[-52px] xl:top-[-31px]">
+              <div className="relative z-10 mt-10 flex w-full items-end justify-center lg:absolute lg:right-[-52px] lg:top-[-30px] lg:mt-0 lg:w-[58%] xl:right-[-62px] xl:top-[-31px] 2xl:right-[-68px]">
                 <Image
                   src="/medical_journey_devices.png"
                   alt="PLABCoach learning platform shown across desktop, laptop, tablet and mobile"
@@ -676,11 +710,11 @@ export default function Home() {
       <footer id="blogs" className="relative overflow-hidden bg-[var(--footer-bg)] pt-8 text-[var(--footer-text)] lg:pt-10">
         <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
           <div className="flex flex-wrap items-center justify-between gap-6">
-            <Image src="/new_plabcoach.png" alt="PLABCOACH" width={212} height={57} className="h-auto w-[180px] lg:w-[212px]" />
+            <Image src="/new_plabcoach.png" alt="PLABCOACH" width={212} height={57} className="h-auto w-[180px] lg:w-[198px] xl:w-[205px]" />
             <div className="flex items-center gap-3 text-[14px] font-bold text-black">
               <span className="mr-3">Social Media</span>
               {socialLabels.map((label) => (
-                <a key={label} href={`#${label}`} aria-label={label} className="grid h-8 w-8 place-items-center rounded-[4px] bg-black">
+                <a key={label} href={`#${label}`} aria-label={label} className="grid h-8 w-8 place-items-center rounded-[4px] bg-black transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--primary)] hover:shadow-[0_8px_18px_rgba(11,93,168,0.22)]">
                   <SocialIcon label={label} />
                 </a>
               ))}
@@ -698,10 +732,10 @@ export default function Home() {
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Courses</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="py-2 first:pt-0">UK PLAB / UKMLA Courses</li>
-                <li className="py-2">Ireland Courses</li>
-                <li className="py-2">UK Foundation Programme Courses</li>
-                <li className="py-2">Upcoming Courses</li>
+                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]">UK PLAB / UKMLA Courses</li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]">Ireland Courses</li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]">UK Foundation Programme Courses</li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]">Upcoming Courses</li>
               </ul>
               <h3 className="mb-3 mt-6 font-semibold text-[var(--footer-heading)]">Important Links</h3>
               <p>No Refund Policy</p>
@@ -720,7 +754,7 @@ export default function Home() {
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Contact Us</h3>
               <ul className="divide-y divide-[#dedede]">
                 <li className="flex gap-4 pb-4">
-                  <span className="mt-0.5 text-[24px] text-[var(--footer-heading)]">●</span>
+                  <Image src="/location_icon.svg" alt="" aria-hidden="true" width={17} height={23} className="mt-1 h-[23px] w-[17px] shrink-0" />
                   <span>9 The Pavilions, Cranmore Drive, Shirley,<br />UK B90 4SB</span>
                 </li>
                 <li className="flex gap-4 py-4">
@@ -728,7 +762,7 @@ export default function Home() {
                   <span>support@plabcoach.com</span>
                 </li>
                 <li className="flex gap-4 py-4">
-                  <span className="text-[22px] text-[var(--footer-heading)]">●</span>
+                  <Image src="/phone_icon.svg" alt="" aria-hidden="true" width={20} height={20} className="mt-1 h-[20px] w-[20px] shrink-0" />
                   <span>UK: +44 7712 222818, UK: +44 7956 835626<br />UK: +44 7737 713749, IN: +91 81300 14412</span>
                 </li>
               </ul>
@@ -736,7 +770,7 @@ export default function Home() {
           </div>
 
           <div className="relative h-[235px] overflow-hidden sm:h-[260px] lg:h-[280px]">
-            <Image src="/footer_logo.png" alt="" aria-hidden="true" width={1480} height={280} className="absolute inset-x-0 top-0 h-auto w-full opacity-50" />
+            <Image src="/footer_logo_with_blur.png" alt="" aria-hidden="true" width={1480} height={281} className="absolute inset-x-0 top-0 h-auto w-full opacity-[0.92]" />
           </div>
         </div>
       </footer>
