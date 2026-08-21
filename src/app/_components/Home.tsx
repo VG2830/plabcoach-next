@@ -210,25 +210,26 @@ function CourseCard({ title }: { title: string }) {
 
 function SubscriptionCard({ title }: { title: string }) {
   return (
-    <article className="relative min-h-[530px] overflow-hidden rounded-[30px] bg-black shadow-[0_12px_32px_rgba(15,34,68,0.08)]">
+    <article className="group relative min-h-[530px] cursor-pointer overflow-hidden rounded-[30px] bg-black shadow-[0_12px_32px_rgba(15,34,68,0.08)] ring-1 ring-black/[0.02] transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_28px_64px_rgba(15,54,104,0.22)] hover:ring-[#3c8ee8]/25">
       <Image
         src="/woman-teaching-her-student-english.png"
         alt="Medical course"
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
-        className="object-cover object-center"
+        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.055]"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/95" />
-      <div className="absolute left-5 top-5 z-10 flex items-center gap-2 text-[12px] font-semibold text-[var(--primary)]">
-        <span className="grid h-7 w-7 place-items-center rounded-full bg-white/90">●</span>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/95 transition-colors duration-500 group-hover:via-black/5 group-hover:to-black" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.18),transparent_34%,transparent_68%,rgba(71,151,255,0.15))] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute left-5 top-5 z-10 flex items-center gap-2 text-[12px] font-semibold text-[var(--primary)] transition-transform duration-500 group-hover:translate-x-1">
+        <span className="grid h-7 w-7 place-items-center rounded-full bg-white/90 shadow-[0_5px_16px_rgba(0,0,0,0.08)]">●</span>
         <span>2 Courses</span>
       </div>
-      <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-6">
+      <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-6 transition-transform duration-500 ease-out group-hover:-translate-y-1.5">
         <h3 className="max-w-[270px] text-[22px] font-semibold leading-[1.05] text-white">{title}</h3>
-        <p className="mt-3 text-[14px] leading-6 text-white/75">
+        <p className="mt-3 text-[14px] leading-6 text-white/75 transition-colors duration-500 group-hover:text-white/90">
           Comprehensive preparation for PLAB and UKMLA exams with expert-designed study modules, practice questions, and video lessons.
         </p>
-        <button className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white transition hover:brightness-105">
+        <button className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)]">
           View Courses
         </button>
       </div>
@@ -261,16 +262,13 @@ export default function Home() {
     setActiveTestimonial((current) => (current + direction + testimonials.length) % testimonials.length);
   };
 
-  const activeStory = testimonials[activeTestimonial];
-  const stackedStories = [1, 2, 3].map((offset) => testimonials[(activeTestimonial + offset) % testimonials.length]);
-
   return (
     <div className="min-h-screen bg-white text-[var(--ink)]">
       <header className="sticky top-0 z-50 border-b border-black/[0.05] bg-white/95 backdrop-blur-md">
         <div className="mx-auto grid h-[var(--header-height)] w-[var(--site-width)] max-w-[var(--container-max)] grid-cols-[1fr_auto_1fr] items-center gap-5">
           <nav className="hidden items-center gap-8 text-[14px] font-medium text-[var(--nav-muted)] lg:flex">
             <a href="#courses" className="flex items-center gap-1.5 transition hover:text-[var(--primary)]">
-              Courses <span className="text-[11px]">⌄</span>
+              Courses <span className="text-[11px]"><Image src="/course_header_arrow.svg" alt="Expand question" width={8} height={4}  className="w-2 h-auto" /></span>
             </a>
             <a href="#exam-dates" className="font-semibold text-[var(--accent)]">Important Exam Dates</a>
             <a href="#blogs" className="transition hover:text-[var(--primary)]">Blogs</a>
@@ -292,7 +290,7 @@ export default function Home() {
 
       <main id="top">
         <section className="relative overflow-hidden bg-[var(--hero-bg)]">
-          <div className="relative mx-auto min-h-[640px] w-[var(--site-width)] max-w-[var(--container-max)] sm:min-h-[690px] lg:h-[720px] lg:min-h-0 xl:h-[804px]">
+          <div className="relative mx-auto min-h-[640px] w-[var(--site-width)] max-w-[var(--container-max)] sm:min-h-[680px] lg:h-[650px] lg:min-h-0 xl:h-[690px] 2xl:h-[700px]">
             <Image
               src="/hero_banner_bg_ellipse.png"
               alt=""
@@ -303,45 +301,49 @@ export default function Home() {
               priority
             />
 
-            <div className="relative z-20 max-w-[700px] pt-16 sm:pt-[88px] lg:pt-[125px] xl:pt-[145px]">
+            <div className="relative z-20 max-w-[700px] pt-16 sm:pt-[88px] lg:pt-[92px] xl:pt-[108px] 2xl:pt-[112px]">
               <p className="text-[12px] font-semibold leading-none text-[var(--accent)] sm:text-[13px]">
                 Trusted Medical Learning Platform
               </p>
               <h1 className="mt-[14px] max-w-[700px] text-[43px] font-bold leading-[1.07] tracking-[-0.032em] text-[var(--ink)] sm:text-[52px] lg:text-[58px] xl:text-[62px]">
                 Prepare for PLAB &amp; UK Medical Exams with Confidence
               </h1>
-              <p className="mt-7 max-w-[620px] text-[14px] leading-[1.8] text-[var(--body-muted)] sm:text-[15px] lg:mt-[34px] xl:mt-[40px]">
+              <p className="mt-7 max-w-[620px] text-[14px] leading-[1.8] text-[var(--body-muted)] sm:text-[15px] lg:mt-[30px] xl:mt-[34px]">
                 Expert-led coaching, question banks, mock exams and structured learning designed to help international doctors succeed.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4 lg:mt-[42px] lg:gap-[24px] xl:mt-[58px]">
+              <div className="mt-8 flex flex-wrap gap-4 lg:mt-[34px] lg:gap-[24px] xl:mt-[42px]">
                 <button type="button" className="h-[58px] min-w-[196px] rounded-[9px] bg-[var(--primary)] px-9 text-[14px] font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:brightness-105 xl:h-[61px] xl:min-w-[228px]">Start Learning</button>
                 <button type="button" className="h-[58px] min-w-[196px] rounded-[9px] border-[1.5px] border-[var(--button-border)] bg-transparent px-9 text-[14px] font-semibold text-[var(--button-muted)] transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 xl:h-[61px] xl:min-w-[228px]">Explore Courses</button>
               </div>
             </div>
 
             <Image
-              src="/hero_banner_image.png"
+              src="/man-woman-wearing-capes.png"
               alt="Doctors preparing international medical learners"
-              width={853}
-              height={626}
+              width={725}
+              height={664}
               priority
-              className="absolute bottom-[72px] right-[-105px] z-10 hidden h-auto w-[700px] max-w-none lg:block xl:bottom-[81px] xl:right-0 xl:w-[853px]"
+              className="absolute bottom-[72px] right-[-18px] z-10 hidden h-auto w-[610px] max-w-none lg:block xl:bottom-[78px] xl:right-[10px] xl:w-[660px] 2xl:bottom-[82px] 2xl:right-[18px] 2xl:w-[690px]"
             />
           </div>
         </section>
 
-        <section className="relative z-30 -mt-[78px] lg:-mt-[92px] xl:-mt-[100px]">
-          <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)] overflow-hidden rounded-[30px] border border-white/70 bg-[linear-gradient(180deg,#DFE8FE_0%,#E8F0FF_58%,#E8F0FF_100%)] shadow-[0_8px_28px_rgba(49,76,137,0.04)] backdrop-blur-xl">
-            <div className="grid min-h-[170px] grid-cols-2 md:grid-cols-4 lg:min-h-[205px] xl:min-h-[230px]">
+        <section className="relative z-30 -mt-[78px] lg:-mt-[88px] xl:-mt-[94px]">
+          <div className="relative mx-auto w-[var(--site-width)] max-w-[var(--container-max)] overflow-hidden rounded-[30px] border border-white/55 bg-white/[0.16] shadow-[0_18px_48px_rgba(48,72,128,0.10),inset_0_1px_0_rgba(255,255,255,0.78)] backdrop-blur-[20px] backdrop-saturate-[135%]">
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.34)_0%,rgba(225,236,255,0.18)_36%,rgba(207,226,255,0.11)_68%,rgba(255,255,255,0.24)_100%)]" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_8%,rgba(255,255,255,0.42),transparent_34%),radial-gradient(circle_at_76%_100%,rgba(205,225,255,0.18),transparent_38%)]" />
+            <div className="pointer-events-none absolute -left-[8%] -top-[75%] h-[210%] w-[48%] rotate-[14deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent)] blur-2xl" />
+            <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
+            <div className="relative grid min-h-[170px] grid-cols-2 md:grid-cols-4 lg:min-h-[205px] xl:min-h-[230px]">
               {stats.map((stat, index) => (
-                <div key={stat.label} className="group relative flex items-center justify-center gap-4 px-4 py-6 transition-all duration-300 hover:bg-white/[0.38] lg:gap-[20px] xl:gap-[22px]">
-                  <div className="pointer-events-none absolute inset-2 rounded-[24px] bg-[linear-gradient(135deg,rgba(255,255,255,0.52),rgba(255,255,255,0.16))] opacity-0 shadow-[inset_0_1px_0_rgba(255,255,255,0.92),0_12px_34px_rgba(67,91,160,0.08)] backdrop-blur-xl transition-opacity duration-300 group-hover:opacity-100" />
-                  <Image src={stat.icon} alt="" width={82} height={82} className="relative h-[64px] w-[64px] transition duration-300 group-hover:-translate-y-0.5 group-hover:scale-[1.035] lg:h-[72px] lg:w-[72px] xl:h-[82px] xl:w-[82px]" />
-                  <div className="relative transition duration-300 group-hover:-translate-y-0.5">
+                <div key={stat.label} className="relative flex items-center justify-center gap-4 px-4 py-6 lg:gap-[20px] xl:gap-[22px]">
+                  <div className="pointer-events-none absolute inset-[10px] rounded-[22px] border border-white/10 bg-white/[0.025] shadow-[inset_0_1px_0_rgba(255,255,255,0.28)]" />
+                  <Image src={stat.icon} alt="" width={82} height={82} className="relative h-[64px] w-[64px] drop-shadow-[0_8px_18px_rgba(78,94,225,0.10)] lg:h-[72px] lg:w-[72px] xl:h-[82px] xl:w-[82px]" />
+                  <div className="relative">
                     <div className="text-[32px] font-bold leading-none tracking-[-0.035em] text-[var(--ink)] lg:text-[40px] xl:text-[46px]">{stat.value}</div>
                     <div className="mt-2 text-[13px] font-normal text-[var(--accent)] lg:text-[15px] xl:text-[18px]">{stat.label}</div>
                   </div>
-                  {index < stats.length - 1 && <span aria-hidden="true" className="absolute bottom-[30px] right-0 top-[30px] hidden w-px bg-white/80 md:block" />}
+                  {index < stats.length - 1 && <span aria-hidden="true" className="absolute bottom-[30px] right-0 top-[30px] hidden w-px bg-white/70 shadow-[1px_0_0_rgba(130,154,216,0.10)] md:block" />}
                 </div>
               ))}
             </div>
@@ -449,9 +451,9 @@ export default function Home() {
         <section className="relative overflow-x-clip overflow-y-visible bg-white py-[80px] lg:py-[100px]">
           <Image src="/video_learning_bg.png" alt="" width={1332} height={689} aria-hidden="true" className="pointer-events-none absolute left-[27%] top-[-10px] hidden w-[880px] opacity-[0.08] lg:block" />
           <div className="relative z-10 mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 xl:gap-20">
-            <div className="relative min-h-[430px] sm:min-h-[520px] lg:-ml-[8vw] lg:min-h-[570px] lg:w-[calc(100%+8vw)] xl:-ml-[10vw] xl:w-[calc(100%+10vw)] 2xl:ml-[calc((1480px-100vw)/2)] 2xl:w-[calc(100%+(100vw-1480px)/2)]">
+            <div className="relative min-h-[430px] sm:min-h-[520px] lg:min-h-[570px] xl:-ml-[5vw] xl:w-[calc(100%+5vw)] 2xl:ml-[calc((1480px-100vw)/2)] 2xl:min-h-[620px] 2xl:w-[calc(100%+(100vw-1480px)/2+110px)]">
               <div className="pointer-events-none absolute bottom-[11%] left-[12%] h-[56px] w-[76%] rounded-full bg-[#243f79]/10 blur-3xl" />
-              <Image src="/video_learning_laptop.png" alt="PLABCoach video lesson on a laptop" fill sizes="(max-width: 1024px) 100vw, 58vw" className="object-contain object-left transition duration-500 hover:scale-[1.01]" />
+              <Image src="/video_learning_laptop.png" alt="PLABCoach video lesson on a laptop" fill sizes="(max-width: 1024px) 100vw, (max-width: 1535px) 56vw, 64vw" className="origin-left object-contain object-left transition duration-500 hover:scale-[1.01] 2xl:scale-[1.12] 2xl:hover:scale-[1.13]" />
             </div>
             <div className="relative z-10 lg:py-4">
               <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Video Learning</p>
@@ -502,45 +504,92 @@ export default function Home() {
               <div aria-hidden="true" className="pointer-events-none absolute left-[146px] right-[146px] top-[-22px] hidden h-[78px] rounded-[30px] bg-white/[0.85] shadow-[0_16px_46px_rgba(35,35,35,0.14)] lg:block" />
 
               <div className="hidden lg:block">
-                {stackedStories.slice().reverse().map((item, reverseIndex) => {
-                  const depth = 3 - reverseIndex;
+                {testimonials.map((item, index) => {
+                  const offset = (index - activeTestimonial + testimonials.length) % testimonials.length;
+                  const positionClass = offset === 0
+                    ? "left-[120px] right-[120px] top-0 z-20 min-h-[242px] rounded-[30px] bg-white shadow-[0_24px_60px_rgba(32,32,32,0.18)]"
+                    : offset === 1
+                      ? "left-[144px] right-[144px] top-[212px] z-[17] h-[118px] rounded-[28px] bg-white/[0.96] shadow-[0_18px_45px_rgba(38,38,38,0.14)]"
+                      : offset === 2
+                        ? "left-[160px] right-[160px] top-[278px] z-[16] h-[115px] rounded-[27px] bg-white/[0.88] shadow-[0_16px_42px_rgba(38,38,38,0.13)]"
+                        : "left-[176px] right-[176px] top-[344px] z-[15] h-[114px] rounded-[26px] bg-white/[0.72] shadow-[0_14px_38px_rgba(38,38,38,0.12)]";
+
                   return (
                     <button
                       type="button"
-                      key={`${item.name}-${depth}`}
-                      onClick={() => setActiveTestimonial((activeTestimonial + depth) % testimonials.length)}
-                      className={`absolute text-left transition duration-300 hover:-translate-y-0.5 hover:bg-white ${depth === 1 ? "left-[144px] right-[144px] top-[212px] z-[17] h-[118px] rounded-[28px] bg-white/[0.96] shadow-[0_18px_45px_rgba(38,38,38,0.14)]" : depth === 2 ? "left-[160px] right-[160px] top-[278px] z-[16] h-[115px] rounded-[27px] bg-white/[0.88] shadow-[0_16px_42px_rgba(38,38,38,0.13)]" : "left-[176px] right-[176px] top-[344px] z-[15] h-[114px] rounded-[26px] bg-white/[0.72] shadow-[0_14px_38px_rgba(38,38,38,0.12)]"}`}
+                      key={item.name}
+                      onClick={() => offset !== 0 && setActiveTestimonial(index)}
+                      disabled={offset === 0}
+                      aria-label={offset === 0 ? `${item.name} testimonial` : `Show testimonial from ${item.name}`}
+                      className={`group absolute overflow-hidden text-left transform-gpu transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${positionClass} ${offset === 0 ? "cursor-default" : "cursor-pointer hover:-translate-y-1 hover:bg-white"}`}
                     >
-                      <div className="flex h-full items-center justify-between px-8">
-                        <div className="flex items-center gap-4">
-                          <span className="relative h-[54px] w-[54px] shrink-0 overflow-hidden rounded-full ring-2 ring-white"><Image src={item.image} alt="" fill className="object-cover" /></span>
-                          <span className="block text-[18px] font-semibold text-black">{item.name}</span>
+                      <div className={`pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent transition-opacity duration-500 ${offset === 0 ? "opacity-100" : "opacity-0"}`} />
+
+                      {offset === 0 ? (
+                        <div className="px-[26px] py-[24px]">
+                          <div className="flex items-start justify-between gap-6">
+                            <div className="flex items-center gap-4">
+                              <span className="relative h-[68px] w-[68px] shrink-0 overflow-hidden rounded-full shadow-[0_5px_14px_rgba(0,0,0,0.08)] ring-2 ring-white">
+                                <Image src={item.image} alt="" fill sizes="68px" className="object-cover" />
+                              </span>
+                              <span className="text-[20px] font-semibold text-black">{item.name}</span>
+                            </div>
+                            <span className="mt-2 shrink-0 text-[24px] tracking-[2px] text-[#f2d500]">★★★★★</span>
+                          </div>
+                          <div className="mt-[14px] grid grid-cols-[40px_1fr_40px] items-start gap-[12px]">
+                            <span className="text-[52px] font-black leading-[0.9] text-[#9dcfff]">“</span>
+                            <p className="pt-1 text-[14px] leading-[1.62] text-[#777777]">{item.quote}</p>
+                            <span className="self-end text-right text-[52px] font-black leading-[0.75] text-[#9dcfff]">”</span>
+                          </div>
                         </div>
-                        <span className="pr-1 text-[21px] tracking-[2px] text-[#f2d500]">★★★★★</span>
-                      </div>
+                      ) : (
+                        <div className="flex h-full items-center justify-between px-8">
+                          <div className="flex items-center gap-4 transition-transform duration-500 group-hover:translate-x-1">
+                            <span className="relative h-[54px] w-[54px] shrink-0 overflow-hidden rounded-full ring-2 ring-white">
+                              <Image src={item.image} alt="" fill sizes="54px" className="object-cover" />
+                            </span>
+                            <span className="block text-[18px] font-semibold text-black">{item.name}</span>
+                          </div>
+                          <span className="pr-1 text-[21px] tracking-[2px] text-[#f2d500]">★★★★★</span>
+                        </div>
+                      )}
                     </button>
                   );
                 })}
               </div>
 
-              <article className="relative z-20 mx-auto min-h-[238px] rounded-[26px] bg-white px-6 py-6 shadow-[0_24px_60px_rgba(32,32,32,0.18)] sm:px-8 lg:absolute lg:left-[120px] lg:right-[120px] lg:top-0 lg:min-h-[242px] lg:rounded-[30px] lg:px-[26px] lg:py-[24px] xl:left-[120px] xl:right-[120px]">
-                <div className="flex items-start justify-between gap-6">
+              <article className="relative z-20 mx-auto min-h-[238px] rounded-[26px] bg-white px-6 py-6 shadow-[0_24px_60px_rgba(32,32,32,0.18)] sm:px-8 lg:hidden">
+                <div className="flex items-start justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <span className="relative h-[60px] w-[60px] shrink-0 overflow-hidden rounded-full lg:h-[68px] lg:w-[68px]"><Image src={activeStory.image} alt="" fill className="object-cover" /></span>
-                    <span className="text-[18px] font-semibold text-black lg:text-[20px]">{activeStory.name}</span>
+                    <span className="relative h-[60px] w-[60px] shrink-0 overflow-hidden rounded-full ring-2 ring-white">
+                      <Image src={testimonials[activeTestimonial].image} alt="" fill sizes="60px" className="object-cover" />
+                    </span>
+                    <span className="text-[18px] font-semibold text-black">{testimonials[activeTestimonial].name}</span>
                   </div>
-                  <span className="mt-2 shrink-0 text-[20px] tracking-[2px] text-[#f2d500] lg:text-[22px] xl:text-[24px]">★★★★★</span>
+                  <span className="mt-2 shrink-0 text-[18px] tracking-[1px] text-[#f2d500] sm:text-[20px]">★★★★★</span>
                 </div>
-                <div className="mt-4 grid grid-cols-[36px_1fr_36px] items-start gap-3 lg:mt-[14px] lg:grid-cols-[40px_1fr_40px] lg:gap-[12px]">
-                  <span className="text-[46px] font-black leading-[0.9] text-[#9dcfff] lg:text-[52px]">“</span>
-                  <p className="pt-1 text-[13px] leading-[1.65] text-[#777777] lg:text-[14px] lg:leading-[1.62]">{activeStory.quote}</p>
-                  <span className="self-end text-right text-[46px] font-black leading-[0.75] text-[#9dcfff] lg:text-[52px]">”</span>
+                <div className="mt-4 grid grid-cols-[30px_1fr_30px] items-start gap-2 sm:grid-cols-[36px_1fr_36px] sm:gap-3">
+                  <span className="text-[42px] font-black leading-[0.9] text-[#9dcfff] sm:text-[46px]">“</span>
+                  <p className="pt-1 text-[13px] leading-[1.65] text-[#777777]">{testimonials[activeTestimonial].quote}</p>
+                  <span className="self-end text-right text-[42px] font-black leading-[0.75] text-[#9dcfff] sm:text-[46px]">”</span>
                 </div>
               </article>
 
               <div className="relative z-30 mt-6 flex justify-center gap-3 lg:absolute lg:right-[40px] lg:top-[58px] lg:mt-0 lg:flex-col lg:gap-[32px]">
-                <button type="button" onClick={() => goToTestimonial(-1)} aria-label="Previous testimonial" className="grid h-[40px] w-[40px] place-items-center rounded-full bg-white text-[18px] text-black shadow-[0_6px_18px_rgba(28,28,28,0.10)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(28,28,28,0.14)]">⌃</button>
-                <button type="button" onClick={() => goToTestimonial(1)} aria-label="Next testimonial" className="grid h-[40px] w-[40px] place-items-center rounded-full bg-white text-[18px] text-black shadow-[0_6px_18px_rgba(28,28,28,0.10)] transition hover:translate-y-0.5 hover:shadow-[0_8px_20px_rgba(28,28,28,0.14)]">⌄</button>
+                <button type="button" onClick={() => goToTestimonial(-1)} aria-label="Previous testimonial" className="group grid h-[40px] w-[40px] place-items-center rounded-full bg-white text-[18px] text-black shadow-[0_6px_18px_rgba(28,28,28,0.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_24px_rgba(28,28,28,0.16)]"><span className="transition-transform duration-300 group-hover:-translate-y-0.5"><Image src="/up_arrow.svg" alt="Previous testimonial" width={20} height={20}  className="w-5 h-auto"/></span></button>
+                <button type="button" onClick={() => goToTestimonial(1)} aria-label="Next testimonial" className="group grid h-[40px] w-[40px] place-items-center rounded-full bg-white text-[18px] text-black shadow-[0_6px_18px_rgba(28,28,28,0.10)] transition-all duration-300 hover:translate-y-1 hover:shadow-[0_10px_24px_rgba(28,28,28,0.16)]"><span className="transition-transform duration-300 group-hover:translate-y-0.5"><Image src="/down_arrow.svg" alt="Next testimonial" width={20} height={20}  className="w-5 h-auto"/></span></button>
+              </div>
+
+              <div className="mt-5 flex justify-center gap-2 lg:hidden">
+                {testimonials.map((item, index) => (
+                  <button
+                    type="button"
+                    key={`${item.name}-dot`}
+                    onClick={() => setActiveTestimonial(index)}
+                    aria-label={`Show testimonial ${index + 1}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${index === activeTestimonial ? "w-7 bg-[var(--primary)]" : "w-2 bg-[#cbd2df]"}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -560,7 +609,7 @@ export default function Home() {
                       <div key={faq.question} className={`overflow-hidden rounded-[12px] border transition duration-300 ${isOpen ? "border-[var(--ink)]/10 bg-white shadow-[0_12px_30px_rgba(32,47,95,0.08)]" : "border-transparent bg-[#f0f2ff] hover:bg-[#e9edff]"}`}>
                         <button type="button" onClick={() => setOpenFaq(isOpen ? -1 : index)} className={`flex w-full items-center justify-between gap-5 px-5 py-4 text-left text-[13px] font-semibold transition ${isOpen ? "bg-[var(--ink)] text-white" : "text-[#535b72]"}`} aria-expanded={isOpen}>
                           <span>{faq.question}</span>
-                          <span className={`text-[17px] transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>⌄</span>
+                          <span className={`text-[17px] transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}><Image src="/fb_down_arrow.svg" alt="Expand question" width={12} height={12}  className="w-4 h-auto" /></span>
                         </button>
                         <div className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                           <div className="overflow-hidden">
@@ -574,44 +623,50 @@ export default function Home() {
               </div>
 
               <aside className="rounded-[28px] border border-[#e4e8ff] bg-[linear-gradient(135deg,#f4f5ff,#e9edff)] p-7 shadow-[0_18px_44px_rgba(39,54,116,0.07)] lg:mb-1 lg:p-8">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white text-[22px] text-[var(--primary)] shadow-sm">?</div>
+                {/* <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white text-[22px] text-[var(--primary)] shadow-sm">?</div> */}
                 <h3 className="mt-5 text-[22px] font-bold text-black">Still have a question?</h3>
                 <p className="mt-3 text-[13px] leading-6 text-[#74798a]">Can’t find the answer you need? Send us an email and our team will get back to you as soon as possible.</p>
                 <button type="button" className="mt-6 h-[48px] rounded-[10px] bg-[var(--primary)] px-6 text-[13px] font-semibold text-white shadow-[0_12px_24px_rgba(11,93,168,0.18)] transition hover:-translate-y-0.5 hover:brightness-105">Start Learning</button>
               </aside>
             </div>
 
-            <div className="relative mt-16 overflow-hidden rounded-[30px] bg-[linear-gradient(120deg,#075aa4,#0a6fc2)] px-7 py-9 shadow-[0_24px_60px_rgba(8,77,145,0.18)] sm:px-10 lg:mt-[72px] lg:min-h-[340px] lg:px-14 lg:py-12">
-              <div className="pointer-events-none absolute inset-0 opacity-25 [background-image:radial-gradient(circle_at_20%_25%,rgba(255,255,255,0.24)_0,transparent_22%),repeating-radial-gradient(ellipse_at_12%_110%,transparent_0_28px,rgba(255,255,255,0.18)_30px_32px,transparent_34px_48px)]" />
-              <div className="relative z-10 max-w-[520px] lg:pt-5">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-white/70">Learn anywhere</p>
-                <h3 className="mt-3 max-w-[470px] text-[34px] font-bold leading-[1.08] tracking-[-0.025em] text-white lg:text-[42px]">Ready to Begin Your UK Medical Journey?</h3>
-                <p className="mt-4 max-w-[360px] text-[14px] leading-6 text-white/75">Join doctors preparing with PLABCoach and keep your learning accessible across laptop, tablet and mobile.</p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <button type="button" className="rounded-[10px] bg-black px-5 py-3 text-left text-white transition hover:-translate-y-0.5 hover:bg-black/90">
-                    <span className="block text-[9px] uppercase text-white/65">Download on the</span>
-                    <span className="text-[14px] font-semibold">App Store</span>
+            <div className="relative mt-16 overflow-hidden rounded-[30px] bg-[linear-gradient(112deg,#075ba6_0%,#0868b7_50%,#075ca7_100%)] px-7 py-10 shadow-[0_24px_60px_rgba(8,77,145,0.18)] sm:px-10 lg:mt-[72px] lg:min-h-[455px] lg:px-[88px] lg:py-0 xl:min-h-[468px]">
+              <div className="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(125deg,rgba(255,255,255,0.04),transparent_40%),repeating-radial-gradient(ellipse_at_9%_112%,transparent_0_30px,rgba(255,255,255,0.18)_31px_33px,transparent_35px_54px)]" />
+
+              <svg aria-hidden="true" viewBox="0 0 720 230" className="pointer-events-none absolute bottom-[34px] left-[32px] hidden h-[220px] w-[620px] opacity-75 lg:block xl:left-[44px] xl:w-[670px]">
+                <path d="M16 207 C 96 162, 184 185, 248 150 C 305 119, 343 104, 415 109 C 486 114, 525 93, 566 57" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" opacity="0.82" />
+                <path d="M18 210 C 88 175, 149 188, 211 167" fill="none" stroke="white" strokeWidth="8" strokeLinecap="round" opacity="0.12" />
+              </svg>
+
+              <div className="relative z-20 max-w-[520px] lg:flex lg:min-h-[455px] lg:flex-col lg:justify-center xl:min-h-[468px]">
+                <div className="relative">
+                  <h3 className="max-w-[500px] text-[34px] font-bold leading-[1.08] tracking-[-0.028em] text-white lg:text-[48px] xl:text-[50px]">Ready to Begin Your UK Medical Journey?</h3>
+                  <svg aria-hidden="true" viewBox="0 0 74 74" className="absolute -right-[4px] top-[30px] hidden h-[72px] w-[72px] rotate-[13deg] text-white lg:block xl:-right-[18px] xl:top-[34px]">
+                    <path fill="currentColor" d="M69.8 10.6 42.2 67.8l-8.8-24.5-22.6-6.9c-2.4-.7-2.7-4-.4-5.1L65.9 5.9c3.1-1.4 5.4 1.7 3.9 4.7ZM37.4 38.1l5 14 14-29.1-19 15.1Z" />
+                  </svg>
+                </div>
+                <p className="mt-5 max-w-[360px] text-[15px] leading-[1.65] text-white/80 lg:text-[16px]">Join thousands of doctors preparing with PLABCoach.</p>
+                <div className="mt-7 flex flex-wrap gap-4 lg:mt-8">
+                  <button type="button" className="flex h-[52px] min-w-[132px] items-center gap-2 rounded-[7px] bg-black px-4 text-left text-white shadow-[0_8px_18px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 hover:bg-black/90">
+                    <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0 fill-white" aria-hidden="true"><path d="M17.6 13.1c0-2.8 2.3-4.2 2.4-4.3-1.3-1.9-3.4-2.2-4.1-2.2-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.7-1-1.9 0-3.7 1.1-4.7 2.8-2 3.5-.5 8.7 1.4 11.5.9 1.4 2 2.9 3.5 2.8 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.7.9c1.5 0 2.5-1.4 3.4-2.7 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-2.8-1.1-2.8-4.6ZM14.8 4.8c.8-1 1.3-2.3 1.2-3.6-1.2.1-2.6.8-3.4 1.7-.7.8-1.4 2.2-1.2 3.4 1.3.1 2.6-.6 3.4-1.5Z" /></svg>
+                    <span><span className="block text-[8px] leading-none text-white/70">Download on the</span><span className="mt-0.5 block text-[14px] font-semibold leading-none">App Store</span></span>
                   </button>
-                  <button type="button" className="rounded-[10px] bg-black px-5 py-3 text-left text-white transition hover:-translate-y-0.5 hover:bg-black/90">
-                    <span className="block text-[9px] uppercase text-white/65">Get it on</span>
-                    <span className="text-[14px] font-semibold">Google Play</span>
+                  <button type="button" className="flex h-[52px] min-w-[142px] items-center gap-2 rounded-[7px] bg-black px-4 text-left text-white shadow-[0_8px_18px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 hover:bg-black/90">
+                    <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0" aria-hidden="true"><path fill="#00d084" d="M3 2.8v18.4l10.5-9.2L3 2.8Z"/><path fill="#ffd43b" d="m13.5 12 3.2-2.8 3.8 2.2c.9.5.9 1.6 0 2.1l-3.8 2.2-3.2-3.7Z"/><path fill="#3b82f6" d="m3 2.8 12 7-1.5 2.2L3 2.8Z"/><path fill="#ef4444" d="m3 21.2 12-7-1.5-2.2L3 21.2Z"/></svg>
+                    <span><span className="block text-[8px] leading-none text-white/70">GET IT ON</span><span className="mt-0.5 block text-[14px] font-semibold leading-none">Google Play</span></span>
                   </button>
                 </div>
               </div>
 
-              <div className="relative mt-10 h-[260px] lg:absolute lg:bottom-[-34px] lg:right-[2%] lg:mt-0 lg:h-[360px] lg:w-[55%]">
-                <div className="absolute bottom-[34px] right-[4%] h-[215px] w-[68%] rounded-[18px] border-[8px] border-[#13161b] bg-[#eff3f9] p-1 shadow-[0_26px_50px_rgba(0,0,0,0.24)] sm:h-[235px] lg:h-[245px]">
-                  <div className="relative h-full w-full overflow-hidden rounded-[7px] bg-white">
-                    <Image src="/video_learning_laptop.png" alt="PLABCoach course platform on desktop" fill className="object-cover object-left-top" sizes="40vw" />
-                  </div>
-                  <div className="absolute -bottom-[18px] left-1/2 h-[20px] w-[22%] -translate-x-1/2 rounded-b-lg bg-[#cbd1d9]" />
-                </div>
-                <div className="absolute bottom-[14px] left-[2%] h-[125px] w-[43%] rounded-[12px] border-[6px] border-[#111318] bg-white shadow-[0_18px_36px_rgba(0,0,0,0.22)] lg:h-[145px]">
-                  <div className="relative h-full w-full overflow-hidden rounded-[5px]"><Image src="/video_learning_laptop.png" alt="PLABCoach on laptop" fill className="object-cover object-left-top" sizes="25vw" /></div>
-                </div>
-                <div className="absolute bottom-[6px] right-[1%] h-[142px] w-[78px] rounded-[16px] border-[6px] border-[#111318] bg-white shadow-[0_16px_34px_rgba(0,0,0,0.22)] lg:h-[170px] lg:w-[92px]">
-                  <div className="relative h-full w-full overflow-hidden rounded-[9px]"><Image src="/video_learning_laptop.png" alt="PLABCoach on mobile" fill className="object-cover object-[8%_top]" sizes="90px" /></div>
-                </div>
+              <div className="relative z-10 mt-10 flex w-full items-end justify-center lg:absolute lg:right-[-44px] lg:top-[-29px] lg:mt-0 lg:w-[58%] xl:right-[-52px] xl:top-[-31px]">
+                <Image
+                  src="/medical_journey_devices.png"
+                  alt="PLABCoach learning platform shown across desktop, laptop, tablet and mobile"
+                  width={855}
+                  height={483}
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 82vw, 58vw"
+                  className="h-auto w-full max-w-[855px] object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.14)] lg:max-w-none"
+                />
               </div>
             </div>
           </div>
