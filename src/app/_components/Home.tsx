@@ -12,39 +12,39 @@ const stats = [
 
 const offerTop = [
   {
-    title: "Video Courses",
-    description: "High-quality video lessons covering all topics in detail",
+    title: "Self-Paced Mastery Videos",
+    description: "Expert-led video tutorials for PRES 3, NCA, and PSA, available on your own schedule.",
     icon: "/second_sec_video_icon_2.png",
   },
   {
     title: "Live Coaching",
-    description: "Interactive live classes with expert doctors and real-time doubt solving.",
+    description: "Interactive sessions with Dr. Karam Singh and Dr. Anjum Kohli, delivered online and in-person.",
     icon: "/second_sec_live_icon_2.svg",
   },
 ];
 
 const offerBottom = [
   {
-    title: "Mock Exams",
-    description: "Realistic mock tests that simulate the actual exam environment.",
+    title: "SmartMocks",
+    description: "Full-length mock exams simulating real exam conditions, with personalised feedback",
     icon: "/second_sec_exam_icon_2.svg",
   },
   {
-    title: "Smart Tools",
-    description: "Performance tracking, notes, flashcards and personalized study plans.",
+    title: "SmartCards",
+    description: "Image-based flashcards for fast recall and clinical reasoning practice on the go.",
     icon: "/second_sec_setting_icon_2.svg",
   },
 ];
 
 const offerTall = [
   {
-    title: "Question Bank",
-    description: "High-yield questions with detailed explanations and exam-style practice",
+    title: "SmartQBank",
+    description: "Question banks for PLAB I/UKMLA-AKT and PRES 2, with performance analytics to track progress.",
     icon: "/second_sec_question_icon_2.svg",
   },
   {
-    title: "Mentor Support",
-    description: "One-to-one guidance from UK-based medical professionals.",
+    title: "SmartNotes",
+    description: "Structured revision notes for PLAB 2, PRES 3, and UKFP National Clinical Assessment (NCA) & Prescribing Safety Assessment (PSA).",
     icon: "/second_sec_mentor_icon_2.svg",
   },
 ];
@@ -135,27 +135,27 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "What exams does PLABCoach provide preparation for?",
+    question: "What is PLABcoach?",
     answer: "PLABCoach supports preparation for UK PLAB / UKMLA pathways, PLAB 1, PLAB 2, PRES and selected MRCP-focused learning programmes. Course availability may vary by exam cycle.",
   },
   {
-    question: "Does PLABCoach offer live coaching?",
+    question: "Which exams does PLABcoach provide preparation for?",
     answer: "Yes. Selected programmes include live expert-led sessions, guided revision and opportunities to ask questions alongside self-paced learning resources.",
   },
   {
-    question: "Is there a mobile app available?",
+    question: "Does PLABcoach Offer both online and in-person courses?",
     answer: "The learning experience is designed to work smoothly across modern browsers and mobile screens, so you can continue studying when you are away from your laptop.",
   },
   {
-    question: "Are the mock exams similar to the real exam?",
+    question: "Who teaches the PLABcoach courses?",
     answer: "Mocks are built to reflect exam-style timing, question patterns and decision-making pressure so you can practise in a focused, realistic environment.",
   },
   {
-    question: "Can I get mentor support?",
+    question: "How do I access the question banks and course materials?",
     answer: "Mentor support is available with selected courses and coaching plans, including guidance from experienced medical educators and UK-based professionals.",
   },
   {
-    question: "How can I get started?",
+    question: "Does PLABcoach offer a free trial or sample questions?",
     answer: "Choose the course that matches your target exam, create your account and begin with the recommended learning path. You can explore the course catalogue before enrolling.",
   },
 ];
@@ -305,16 +305,18 @@ export default function Home() {
               <p className="text-[12px] font-semibold leading-none text-[var(--accent)] sm:text-[13px]">
                 Trusted Medical Learning Platform
               </p>
-              <h1 className="mt-[14px] max-w-[700px] text-[43px] font-bold leading-[1.07] tracking-[-0.032em] text-[var(--ink)] sm:text-[52px] lg:text-[58px] xl:text-[62px]">
-                Prepare for PLAB &amp; UK Medical Exams with Confidence
+              <h1 className="mt-[14px] max-w-[700px] text-[33px] font-bold leading-[1.07] tracking-[-0.032em] text-[var(--ink)] sm:text-[52px] lg:text-[58px] xl:text-[48px]">
+                {/* Prepare for PLAB &amp; UK Medical Exams with Confidence */}
+                PLAB, UKMLA, PRES & UK Foundation Programme Exam Preparation for International Medical Graduates
               </h1>
               <p className="mt-7 max-w-[620px] text-[14px] leading-[1.8] text-[var(--body-muted)] sm:text-[15px] lg:mt-[30px] xl:mt-[34px]">
-                Expert-led coaching, question banks, mock exams and structured learning designed to help international doctors succeed.
+                {/* Expert-led coaching, question banks, mock exams and structured learning designed to help international doctors succeed. */}
+                PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr. Karam Singh, an NHS doctor and educator. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland PRES, the UK Foundation Programme NCA and PSA, MRCP-AKT — combining live coaching with self-paced online learning.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4 lg:mt-[34px] lg:gap-[24px] xl:mt-[42px]">
+              {/* <div className="mt-8 flex flex-wrap gap-4 lg:mt-[34px] lg:gap-[24px] xl:mt-[42px]">
                 <button type="button" className="h-[58px] min-w-[196px] rounded-[9px] bg-[var(--primary)] px-9 text-[14px] font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:brightness-105 xl:h-[61px] xl:min-w-[228px]">Start Learning</button>
                 <button type="button" className="h-[58px] min-w-[196px] rounded-[9px] border-[1.5px] border-[var(--button-border)] bg-transparent px-9 text-[14px] font-semibold text-[var(--button-muted)] transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 xl:h-[61px] xl:min-w-[228px]">Explore Courses</button>
-              </div>
+              </div> */}
             </div>
 
             <Image
