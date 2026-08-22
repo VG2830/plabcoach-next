@@ -256,7 +256,6 @@ function SocialIcon({ label }: { label: string }) {
 
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [activeJourney, setActiveJourney] = useState(1);
   const [openFaq, setOpenFaq] = useState(0);
 
   const goToTestimonial = (direction: number) => {
@@ -356,7 +355,7 @@ export default function Home() {
             width={1116}
             height={815}
             aria-hidden="true"
-            className="pointer-events-none absolute -right-[210px] -top-[20px] hidden w-[920px] max-w-none  lg:block xl:-right-[175px] xl:-top-[15px] xl:w-[980px] 2xl:-right-[145px] 2xl:w-[1040px]"
+            className="pointer-events-none absolute z-0 hidden max-w-none lg:right-[-225px] lg:top-[38px] lg:block lg:w-[930px] xl:right-[-175px] xl:top-[16px] xl:w-[1010px] 2xl:right-[-130px] 2xl:top-[-8px] 2xl:w-[1080px]"
           />
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="mb-10 lg:mb-12">
@@ -428,14 +427,13 @@ export default function Home() {
 
             <div className="mt-[76px] grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-0 lg:mt-[88px] xl:mt-[92px]">
               {journey.map((step, index) => {
-                const isActive = activeJourney === index;
-
                 return (
-                <button type="button" key={step.number} onClick={() => setActiveJourney(index)} className="group relative flex min-h-[250px] flex-col items-center text-center">
-                  <div className={`text-[108px] font-black leading-[0.8] tracking-[-0.055em] transition-all duration-300 lg:text-[116px] xl:text-[122px] ${isActive ? "text-[var(--primary)]" : "text-transparent [-webkit-text-stroke:3px_var(--journey-outline)] group-hover:text-[var(--primary)] group-hover:[-webkit-text-stroke:0px_transparent]"}`}>
-                    {step.number}
+                <button type="button" key={step.number} className="group relative flex min-h-[250px] flex-col items-center text-center">
+                  <div className="relative flex h-[130px] w-[213px] items-start justify-center transition-transform duration-300 group-hover:-translate-y-1">
+                    <Image src={`/${step.number}.svg`} alt="" width={213} height={130} aria-hidden="true" className="h-auto max-h-[130px] w-auto max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0" />
+                    <Image src={`/${step.number}_with_color.svg`} alt="" width={213} height={130} aria-hidden="true" className="absolute inset-0 h-auto max-h-[130px] w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
-                  <h3 className={`mt-8 text-[22px] font-bold transition-colors duration-300 ${isActive ? "text-black" : "text-[#777] group-hover:text-black"}`}>{step.title}</h3>
+                  <h3 className="mt-8 text-[22px] font-bold text-[#777] transition-colors duration-300 group-hover:text-black">{step.title}</h3>
                   <p className="mt-4 max-w-[220px] text-[15px] leading-7 text-[#777] transition-colors duration-300 group-hover:text-[#5e5e5e]">{step.text}</p>
                   {index < journey.length - 1 && (
                     <Image src="/fourth_sec_side_support.svg" alt="" width={97} height={289} aria-hidden="true" className="absolute -right-[48px] top-[-30px] hidden h-[230px] w-[77px] md:block lg:-right-[50px] lg:h-[252px] lg:w-[84px] xl:-right-[51px] xl:h-[262px] xl:w-[88px]" />
@@ -465,31 +463,46 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative overflow-x-clip overflow-y-visible bg-white py-[82px] lg:py-[98px] xl:py-[105px]">
-          <Image
-            src="/featured_courses_ellipse.png"
-            alt=""
-            width={1332}
-            height={689}
-            aria-hidden="true"
-            className="pointer-events-none absolute left-[7%] -top-[115px] hidden w-[1060px] max-w-none  lg:block xl:left-[8%] xl:-top-[105px] xl:w-[1120px] 2xl:left-[9%] 2xl:w-[1190px]"
-          />
-          <div className="relative z-10 mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 xl:gap-20">
-            <div className="relative min-h-[430px] sm:min-h-[520px] lg:min-h-[575px] xl:min-h-[600px] 2xl:ml-[calc((1480px-100vw)/2)] 2xl:min-h-[625px] 2xl:w-[calc(100%+(100vw-1480px)/2+92px)]">
-              <div className="pointer-events-none absolute bottom-[11%] left-[12%] h-[56px] w-[76%] rounded-full bg-[#243f79]/10 blur-3xl" />
-              <Image src="/video_learning_laptop.png" alt="PLABCoach video lesson on a laptop" fill sizes="(max-width: 1024px) 100vw, (max-width: 1535px) 50vw, 62vw" className="origin-left object-contain object-left transition-transform duration-500 hover:scale-[1.008] 2xl:scale-[1.10] 2xl:hover:scale-[1.115]" />
+        <section className="relative overflow-x-clip overflow-y-visible bg-white py-[82px] sm:py-[90px] lg:py-[98px] xl:py-[105px] 2xl:py-[112px]">
+          <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+            <div className="relative mx-auto h-full w-[var(--site-width)] max-w-[var(--container-max)]">
+              <Image
+                src="/featured_courses_ellipse.png"
+                alt=""
+                width={1332}
+                height={689}
+                aria-hidden="true"
+                className="absolute -left-[150px] -top-[0px] w-[1000px] max-w-none opacity-[0.88] xl:-left-[175px] xl:-top-[0px] xl:w-[1080px] 2xl:-left-[220px] 2xl:-top-[0px] 2xl:w-[1140px]"
+              />
             </div>
-            <div className="relative z-10 lg:py-4">
+          </div>
+
+          <div className="relative z-10 mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 xl:gap-16 2xl:gap-20">
+            <div className="relative min-h-[410px] w-full sm:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px] 2xl:min-h-[640px]">
+              <div className="pointer-events-none absolute bottom-[10%] left-[10%] h-[56px] w-[78%] rounded-full bg-[#243f79]/10 blur-3xl 2xl:left-[5%] 2xl:w-[88%]" />
+
+              <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
+                <Image
+                  src="/video_learning_laptop.png"
+                  alt="PLABCoach video lesson on a laptop"
+                  fill
+                  sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 50vw, 900px"
+                  className="object-contain object-left transition-transform duration-500 hover:scale-[1.008]"
+                />
+              </div>
+            </div>
+
+            <div className="relative z-10 max-w-[690px] lg:py-4 2xl:justify-self-end">
               <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Video Learning</p>
-              <h2 className="mt-2 max-w-[620px] text-[42px] font-bold leading-[1.12] tracking-[-0.025em] lg:text-[50px]">Learn From Experts. Prepare With Confidence</h2>
-              <p className="mt-4 max-w-[670px] text-[16px] leading-7 text-[var(--body-muted)]">Watch expert-led lessons, exam strategies, clinical concepts and practical guidance designed to make your preparation more focused and effective.</p>
-              <div className="mt-9 space-y-5">
+              <h2 className="mt-2 max-w-[620px] text-[40px] font-bold leading-[1.12] tracking-[-0.025em] sm:text-[42px] lg:text-[48px] xl:text-[50px]">Learn From Experts. Prepare With Confidence</h2>
+              <p className="mt-4 max-w-[670px] text-[15px] leading-7 text-[var(--body-muted)] sm:text-[16px]">Watch expert-led lessons, exam strategies, clinical concepts and practical guidance designed to make your preparation more focused and effective.</p>
+              <div className="mt-8 space-y-4 sm:mt-9 sm:space-y-5">
                 {videoBenefits.map((benefit) => (
-                  <div key={benefit.title} className="group flex items-center gap-5 rounded-2xl p-1 transition duration-300 hover:translate-x-1">
-                    <Image src={benefit.icon} alt="" width={51} height={51} className="h-[48px] w-[48px] shrink-0 transition duration-300 group-hover:scale-105" />
+                  <div key={benefit.title} className="group flex items-center gap-4 rounded-2xl p-1 transition duration-300 hover:translate-x-1 sm:gap-5">
+                    <Image src={benefit.icon} alt="" width={51} height={51} className="h-[44px] w-[44px] shrink-0 transition duration-300 group-hover:scale-105 sm:h-[48px] sm:w-[48px]" />
                     <div>
                       <h3 className="text-[15px] font-bold text-[var(--ink)]">{benefit.title}</h3>
-                      <p className="mt-1 text-[15px] leading-6 text-[var(--body-muted)]">{benefit.text}</p>
+                      <p className="mt-1 text-[14px] leading-6 text-[var(--body-muted)] sm:text-[15px]">{benefit.text}</p>
                     </div>
                   </div>
                 ))}
@@ -525,8 +538,6 @@ export default function Home() {
             </div>
 
             <div className="relative mt-9 min-h-[430px] lg:mt-[44px] lg:min-h-[500px] xl:mt-[50px] xl:min-h-[520px]">
-              <div aria-hidden="true" className="pointer-events-none absolute left-[146px] right-[146px] top-[-22px] hidden h-[78px] rounded-[30px] bg-white/[0.85] shadow-[0_16px_46px_rgba(35,35,35,0.14)] lg:block" />
-
               <div className="hidden lg:block">
                 {testimonials.map((item, index) => {
                   const offset = (index - activeTestimonial + testimonials.length) % testimonials.length;
@@ -621,7 +632,14 @@ export default function Home() {
         </section>
 
         <section id="faq" className="relative overflow-hidden bg-white py-[90px] lg:py-[112px]">
-          <Image src="/ellipse_offer_section.png" alt="" width={1116} height={815} aria-hidden="true" className="pointer-events-none absolute -right-[210px] -top-[270px] hidden w-[850px] max-w-none opacity-[0.055] lg:block xl:-right-[165px] xl:-top-[285px] xl:w-[930px]" />
+          <Image
+            src="/ellipse_offer_section.png"
+            alt=""
+            width={1116}
+            height={815}
+            aria-hidden="true"
+            className="pointer-events-none absolute z-0 hidden max-w-none lg:right-[-205px] lg:top-[-165px] lg:block lg:w-[860px] xl:right-[-165px] xl:top-[-180px] xl:w-[930px] 2xl:right-[-125px] 2xl:top-[-232px] 2xl:w-[990px]"
+          />
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end lg:gap-16">
               <div>
@@ -777,3 +795,4 @@ export default function Home() {
     </div>
   );
 }
+            
