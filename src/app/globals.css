@@ -20,6 +20,7 @@
   --hero-glow: rgba(101, 112, 239, 0.10);
   --soft-blue: rgba(224, 234, 255, 0.72);
   --section-gray: #f1f1f1;
+  --about-us-bg:#F5F6FD;
   --courses-bg: #f3f3f3;
   --testimonial-bg: #f1f1f1;
   --divider: rgba(88, 102, 219, 0.15);
@@ -69,3 +70,66 @@ button {
     overflow-x: hidden;
   }
 }
+/* @import "tailwindcss";
+
+:root {
+  --container-max: 1480px;
+  --font-body: Arial, Helvetica, sans-serif;
+  --primary: #075cae;
+  --ink: #17265c;
+}
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+} */

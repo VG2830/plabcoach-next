@@ -66,7 +66,50 @@ const journey = [
   { number: "05", title: "Pass Exam", text: "Build confidence & achieve your dream" },
 ];
 
-const featuredCourses = ["PLAB 1", "PLAB 1", "PLAB 1", "PLAB 1"];
+// const featuredCourses = ["PLAB 1", "PLAB 1", "PLAB 1", "PLAB 1"];
+const exams = [
+  {
+    title: "PLAB 1 / UKMLA-AKT",
+    subtitle: "Written knowledge exam for UK GMC registration",
+    icon: "/plab1_exam_icon.svg",
+  },
+  {
+    title: "PLAB 2 / UKMLA-CPSA",
+    subtitle: "Clinical OSCE for UK GMC registration",
+    icon: "/plab2_exam_icon.svg",
+  },
+  {
+    title: "PRES 2",
+    subtitle: "Written exam for Irish Medical Council (IMC) registration",
+    icon: "/pres2_exam_icon.svg",
+  },
+  {
+    title: "PRES 3",
+    subtitle: "OSCE + data interpretation for Irish Medical Council (IMC) registration",
+    icon: "/pres3_exam_icon.svg",
+  },
+  {
+    title: "UKFPO-NCA",
+    subtitle: "Clinical assessment for UK Foundation Programme eligibility",
+    icon: "/nca_exam_icon.svg",
+  },
+  {
+    title: "UKFPO-PSA",
+    subtitle: "Prescribing Safety Assessment for Foundation Programme candidates",
+    icon: "/psa_exam_icon.svg",
+  },
+  {
+    title: "MSRA",
+    subtitle: "Computer-based assessment for GP and specialty training entry",
+    icon: "/msra_exam_icon.svg",
+  },
+  {
+    title: "MRCP-AKT",
+    subtitle: "Applied Knowledge Test for GP trainees (ST3)",
+    icon: "/mrcp_exam_icon.svg",
+  },
+];
+
 
 const videoBenefits = [
   {
@@ -161,6 +204,11 @@ const faqs = [
 ];
 
 const socialLabels = ["facebook", "linkedin", "instagram", "x", "whatsapp"];
+const blogs = [
+  "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
+  "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
+  "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
+];
 
 function OfferCard({
   title,
@@ -176,33 +224,62 @@ function OfferCard({
       <Image src={icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
       <h3 className="text-[22px] font-bold leading-tight text-[var(--ink)]">{title}</h3>
       <p className="mt-3 max-w-[310px] text-[15px] leading-7 text-[var(--body-muted)]">{description}</p>
+      <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
+        Know More
+      </span>
     </article>
   );
 }
 
-function CourseCard({ title }: { title: string }) {
+// function CourseCard({ title }: { title: string }) {
+//   return (
+//     <article className="group relative min-h-[492px] overflow-hidden rounded-[30px] bg-black shadow-[0_14px_34px_rgba(15,34,68,0.10)] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_26px_54px_rgba(15,34,68,0.18)]">
+//       <Image
+//         src="/fifth_sec_card_img.png"
+//         alt="Doctor preparing for a medical exam"
+//         fill
+//         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+//         className="object-cover object-center transition duration-500 group-hover:scale-[1.025]"
+//       />
+//       <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/95" />
+//       <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-5">
+//         <h3 className="text-[24px] font-bold leading-tight text-white">{title}</h3>
+//         <p className="mt-2 max-w-[285px] text-[15px] leading-6 text-white/80">
+//           Complete preparation for PLAB 1 with practice questions &amp; mocks.
+//         </p>
+//         <div className="mt-4 flex flex-wrap gap-2 text-[12px] text-white">
+//           <span className="rounded-full bg-white/20 px-3 py-1.5 backdrop-blur-sm">120+ Videos</span>
+//           <span className="rounded-full bg-white/20 px-3 py-1.5 backdrop-blur-sm">5 Mock Tests</span>
+//         </div>
+//         <button className="mt-5 h-[58px] w-full rounded-[12px] bg-[var(--accent)] text-[16px] font-semibold text-white transition hover:brightness-105">
+//           Explore →
+//         </button>
+//       </div>
+//     </article>
+//   );
+// }
+function ExamCard({ exam }: { exam: (typeof exams)[number] }) {
   return (
-    <article className="group relative min-h-[492px] overflow-hidden rounded-[30px] bg-black shadow-[0_14px_34px_rgba(15,34,68,0.10)] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_26px_54px_rgba(15,34,68,0.18)]">
-      <Image
-        src="/fifth_sec_card_img.png"
-        alt="Doctor preparing for a medical exam"
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-        className="object-cover object-center transition duration-500 group-hover:scale-[1.025]"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/95" />
-      <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-5">
-        <h3 className="text-[24px] font-bold leading-tight text-white">{title}</h3>
-        <p className="mt-2 max-w-[285px] text-[15px] leading-6 text-white/80">
-          Complete preparation for PLAB 1 with practice questions &amp; mocks.
+    <article className="group flex min-h-[138px] items-center gap-5 rounded-[28px] bg-[#e3edff] px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8e7ff] hover:shadow-[0_18px_40px_rgba(42,82,145,0.14)] sm:gap-6 sm:px-6 xl:min-h-[164px] xl:gap-7 xl:px-7">
+      <div className="grid h-[92px] w-[92px] shrink-0 place-items-center rounded-[15px] bg-[#c9e2ff] transition-all duration-300 group-hover:bg-[#b9d9ff] sm:h-[100px] sm:w-[100px] xl:h-[114px] xl:w-[114px]">
+        <Image
+          src={exam.icon}
+          alt=""
+          width={82}
+          height={82}
+          className="h-[58px] w-[58px] object-contain transition-transform duration-300 group-hover:scale-105 sm:h-[64px] sm:w-[64px] xl:h-[82px] xl:w-[82px]"
+        />
+      </div>
+      <div className="min-w-0 py-1">
+        <h3 className="text-[25px] font-bold leading-tight text-[#18275f] sm:text-[28px] xl:text-[36px]">
+          {exam.title}
+        </h3>
+        <p className="mt-2 text-[13px] font-medium leading-[1.5] text-[#555d6d] sm:text-[14px] xl:text-[16px]">
+          {exam.subtitle}
         </p>
-        <div className="mt-4 flex flex-wrap gap-2 text-[12px] text-white">
-          <span className="rounded-full bg-white/20 px-3 py-1.5 backdrop-blur-sm">120+ Videos</span>
-          <span className="rounded-full bg-white/20 px-3 py-1.5 backdrop-blur-sm">5 Mock Tests</span>
-        </div>
-        <button className="mt-5 h-[58px] w-full rounded-[12px] bg-[var(--accent)] text-[16px] font-semibold text-white transition hover:brightness-105">
+        <span className="mt-3 inline-block text-[13px] font-semibold text-[#5368f2] transition-transform duration-300 group-hover:translate-x-1 xl:text-[15px]">
           Explore →
-        </button>
+        </span>
       </div>
     </article>
   );
@@ -302,21 +379,18 @@ export default function Home() {
             />
 
             <div className="relative z-20 max-w-[700px] pt-16 sm:pt-[88px] lg:pt-[92px] xl:pt-[108px] 2xl:pt-[112px]">
-              <p className="text-[12px] font-semibold leading-none text-[var(--accent)] sm:text-[13px]">
+              <p className="text-[12px] font-semibold uppercase leading-none text-[var(--accent)] sm:text-[13px]">
                 Trusted Medical Learning Platform
               </p>
               <h1 className="mt-[14px] max-w-[700px] text-[33px] font-bold leading-[1.07] tracking-[-0.032em] text-[var(--ink)] sm:text-[52px] lg:text-[58px] xl:text-[48px]">
                 {/* Prepare for PLAB &amp; UK Medical Exams with Confidence */}
                 PLAB, UKMLA, PRES & UK Foundation Programme Exam Preparation for International Medical Graduates
               </h1>
-              <p className="mt-7 max-w-[620px] text-[14px] leading-[1.8] text-[var(--body-muted)] sm:text-[15px] lg:mt-[30px] xl:mt-[34px]">
-                {/* Expert-led coaching, question banks, mock exams and structured learning designed to help international doctors succeed. */}
-                PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr. Karam Singh, an NHS doctor and educator. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland PRES, the UK Foundation Programme NCA and PSA, MRCP-AKT — combining live coaching with self-paced online learning.
-              </p>
-              {/* <div className="mt-8 flex flex-wrap gap-4 lg:mt-[34px] lg:gap-[24px] xl:mt-[42px]">
-                <button type="button" className="h-[58px] min-w-[196px] rounded-[9px] bg-[var(--primary)] px-9 text-[14px] font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:brightness-105 xl:h-[61px] xl:min-w-[228px]">Start Learning</button>
-                <button type="button" className="h-[58px] min-w-[196px] rounded-[9px] border-[1.5px] border-[var(--button-border)] bg-transparent px-9 text-[14px] font-semibold text-[var(--button-muted)] transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 xl:h-[61px] xl:min-w-[228px]">Explore Courses</button>
-              </div> */}
+             <div className="mt-6 max-w-[720px] rounded-[22px] bg-white/68 px-5 py-4 shadow-[0_10px_30px_rgba(53,79,128,0.04)] backdrop-blur-sm sm:px-6 sm:py-5 xl:mt-7 xl:px-7 xl:py-6">
+                <p className="text-[12px] font-medium leading-[1.65] text-[#185b99] sm:text-[13px] xl:text-[14px]">
+                  PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr. Karam Singh, an NHS doctor and educator. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, MRCP-AKT — combining live coaching with self-paced online learning.
+                </p>
+              </div>
             </div>
 
             <Image
@@ -378,6 +452,7 @@ export default function Home() {
                   </div>
                   <div className="grid gap-5 sm:grid-cols-[1.15fr_0.75fr]">
                     {offerBottom.map((feature) => <OfferCard key={feature.title} {...feature} />)}
+                    
                   </div>
                 </div>
                 <article className="grid overflow-hidden rounded-[28px] border border-white/55 bg-[var(--soft-blue)] shadow-[0_10px_30px_rgba(36,70,128,0.035)] sm:grid-cols-2 xl:grid-cols-1 xl:grid-rows-2">
@@ -386,6 +461,9 @@ export default function Home() {
                       <Image src={feature.icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
                       <h3 className="text-[22px] font-bold leading-tight">{feature.title}</h3>
                       <p className="mt-3 text-[15px] leading-7 text-[var(--body-muted)]">{feature.description}</p>
+                      <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
+        Know More
+      </span>
                     </div>
                   ))}
                 </article>
@@ -393,10 +471,35 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-16 sm:py-20 lg:py-[94px] xl:py-[96px]">
+          <Image
+            src="/featured_courses_ellipse.png"
+            alt=""
+            width={1332}
+            height={689}
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-[460px] right-[50px] top-[12px] hidden w-[960px] max-w-none  lg:block xl:-left-[310px] xl:w-[1100px]"
+          />
+          <div className={`mx-auto w-[var(--site-width)] max-w-[var(--container-max)] relative z-10`}>
+            <h2 className="text-[39px] font-bold tracking-[-0.025em] text-[#17265c] sm:text-[43px] lg:text-[47px] xl:text-[48px]">
+              Exams We Prepare You For
+            </h2>
+            <p className="mt-3 max-w-[730px] text-[13px] leading-[1.65] text-[#81848a] sm:text-[14px] xl:text-[16px]">
+              PLABcoach prepares candidates for [N] licensing and specialty exams across the UK and Ireland, from initial GMC/IMC registration through to GP-level entry.
+            </p>
 
-        <section id="about-us" className="bg-[var(--section-gray)] py-[110px] lg:py-[125px]">
+            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:mt-11 xl:gap-x-6 xl:gap-y-6">
+              {exams.map((exam) => (
+                <ExamCard key={exam.title} exam={exam} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+        <section id="about-us" className="bg-[var(--about-us-bg)] py-[110px] lg:py-[125px]">
           <div className="mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-            <div>
+            {/* <div>
               <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Why PLABCoach</p>
               <h2 className="mt-2 max-w-[660px] text-[42px] font-bold leading-[1.12] tracking-[-0.025em] lg:text-[52px]">Prepared by Doctors. Trusted by Thousands.</h2>
               <div className="mt-10 space-y-7">
@@ -411,6 +514,23 @@ export default function Home() {
                 <button className="h-[60px] min-w-[220px] rounded-[12px] bg-[var(--primary)] px-9 text-[15px] font-semibold text-white">Start Learning</button>
                 <button className="h-[60px] min-w-[220px] rounded-[12px] border-2 border-[#777] bg-transparent px-9 text-[15px] font-semibold text-[#777]">Explore Courses</button>
               </div>
+            </div> */}
+            <div>
+              <h2 className="text-[39px] font-bold uppercase tracking-[0.015em] text-[#17265c] sm:text-[44px] lg:text-[48px] xl:text-[50px]">
+                Why PLABCoach
+              </h2>
+              <p className="mt-5 max-w-[540px] text-[15px] leading-[2] text-[#353943] sm:text-[16px] xl:mt-6 xl:text-[18px]">
+                Led by Dr. Karam Singh, an NHS doctor and educator, PLABcoach has provided structured exam preparation for international medical graduates for over 10 years. Courses combine live coaching, self-paced video content, and exam-realistic question banks, with teaching tailored to each candidate&apos;s weak areas
+              </p>
+              <p className="mt-10 text-[13px] font-semibold text-[#222] xl:text-[15px]">
+                Read Our Full Story
+              </p>
+              <button
+                type="button"
+                className="mt-3 h-[52px] min-w-[190px] rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
+              >
+                About Us 
+              </button>
             </div>
 
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
@@ -421,118 +541,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="bg-white py-[104px] lg:min-h-[650px] lg:py-[118px] xl:min-h-[665px] xl:py-[122px]">
-          <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.01em] text-[var(--accent)]">How It Works</p>
-            <h2 className="mt-[8px] text-[42px] font-bold tracking-[-0.028em] lg:text-[50px] xl:text-[52px]">Your Journey to Success</h2>
-
-            <div className="mt-[76px] grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-0 lg:mt-[88px] xl:mt-[92px]">
-              {journey.map((step, index) => {
-                return (
-                <button type="button" key={step.number} className="group relative flex min-h-[250px] flex-col items-center text-center">
-                  <div className="relative flex h-[130px] w-[213px] items-start justify-center transition-transform duration-300 group-hover:-translate-y-1">
-                    <Image src={`/${step.number}.svg`} alt="" width={213} height={130} aria-hidden="true" className="h-auto max-h-[130px] w-auto max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0" />
-                    <Image src={`/${step.number}_with_color.svg`} alt="" width={213} height={130} aria-hidden="true" className="absolute inset-0 h-auto max-h-[130px] w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  </div>
-                  <h3 className="mt-8 text-[22px] font-bold text-[#777] transition-colors duration-300 group-hover:text-black">{step.title}</h3>
-                  <p className="mt-4 max-w-[220px] text-[15px] leading-7 text-[#777] transition-colors duration-300 group-hover:text-[#5e5e5e]">{step.text}</p>
-                  {index < journey.length - 1 && (
-                    <Image src="/fourth_sec_side_support.svg" alt="" width={97} height={289} aria-hidden="true" className="absolute -right-[48px] top-[-30px] hidden h-[230px] w-[77px] md:block lg:-right-[50px] lg:h-[252px] lg:w-[84px] xl:-right-[51px] xl:h-[262px] xl:w-[88px]" />
-                  )}
-                </button>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-[92px] lg:py-[104px] xl:py-[112px]">
-          <Image
-            src="/featured_courses_ellipse.png"
-            alt=""
-            width={1332}
-            height={689}
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-[115px] -top-[105px] hidden w-[1040px] max-w-none  lg:block xl:-left-[95px] xl:-top-[92px] xl:w-[1120px] 2xl:-left-[65px] 2xl:w-[1180px]"
-          />
-          <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-            <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Featured Courses</p>
-            <h2 className="mt-2 text-[42px] font-bold leading-tight tracking-[-0.025em] lg:text-[50px]">Popular Exam Preparations</h2>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-              {featuredCourses.map((course, i) => <CourseCard key={`${course}-${i}`} title={course} />)}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-x-clip overflow-y-visible bg-white py-[82px] sm:py-[90px] lg:py-[98px] xl:py-[105px] 2xl:py-[112px]">
-          <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
-            <div className="relative mx-auto h-full w-[var(--site-width)] max-w-[var(--container-max)]">
-              <Image
-                src="/featured_courses_ellipse.png"
-                alt=""
-                width={1332}
-                height={689}
-                aria-hidden="true"
-                className="absolute -left-[150px] -top-[0px] w-[1000px] max-w-none opacity-[0.88] xl:-left-[175px] xl:-top-[0px] xl:w-[1080px] 2xl:-left-[220px] 2xl:-top-[0px] 2xl:w-[1140px]"
-              />
-            </div>
-          </div>
-
-          <div className="relative z-10 mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 xl:gap-16 2xl:gap-20">
-            <div className="relative min-h-[410px] w-full sm:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px] 2xl:min-h-[640px]">
-              <div className="pointer-events-none absolute bottom-[10%] left-[10%] h-[56px] w-[78%] rounded-full bg-[#243f79]/10 blur-3xl 2xl:left-[5%] 2xl:w-[88%]" />
-
-              <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
-                <Image
-                  src="/video_learning_laptop.png"
-                  alt="PLABCoach video lesson on a laptop"
-                  fill
-                  sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 50vw, 900px"
-                  className="object-contain object-left transition-transform duration-500 hover:scale-[1.008]"
-                />
-              </div>
-            </div>
-
-            <div className="relative z-10 max-w-[690px] lg:py-4 2xl:justify-self-end">
-              <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Video Learning</p>
-              <h2 className="mt-2 max-w-[620px] text-[40px] font-bold leading-[1.12] tracking-[-0.025em] sm:text-[42px] lg:text-[48px] xl:text-[50px]">Learn From Experts. Prepare With Confidence</h2>
-              <p className="mt-4 max-w-[670px] text-[15px] leading-7 text-[var(--body-muted)] sm:text-[16px]">Watch expert-led lessons, exam strategies, clinical concepts and practical guidance designed to make your preparation more focused and effective.</p>
-              <div className="mt-8 space-y-4 sm:mt-9 sm:space-y-5">
-                {videoBenefits.map((benefit) => (
-                  <div key={benefit.title} className="group flex items-center gap-4 rounded-2xl p-1 transition duration-300 hover:translate-x-1 sm:gap-5">
-                    <Image src={benefit.icon} alt="" width={51} height={51} className="h-[44px] w-[44px] shrink-0 transition duration-300 group-hover:scale-105 sm:h-[48px] sm:w-[48px]" />
-                    <div>
-                      <h3 className="text-[15px] font-bold text-[var(--ink)]">{benefit.title}</h3>
-                      <p className="mt-1 text-[14px] leading-6 text-[var(--body-muted)] sm:text-[15px]">{benefit.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white py-[95px] lg:py-[110px]">
-          <div className="mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] gap-8 lg:grid-cols-[280px_1fr] lg:gap-10">
-            <aside className="flex flex-col">
-              <p className="text-[12px] font-semibold uppercase text-[#7d56ff]">Our Courses</p>
-              <h2 className="mt-2 text-[34px] font-bold leading-[1.08] text-black lg:text-[42px]">Subscription-Based Coaching</h2>
-              <p className="mt-4 text-[14px] leading-6 text-[#676767]">At PLABcoach, we understand the importance of flexibility in your learning journey. Our self-paced learning modules let you study at your own convenience with expert-curated content, question banks, and video lessons - tailored to fit your schedule and goals.</p>
-              <div className="mt-8 bg-[#f4f9ff] p-6">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-white shadow-sm">◈</span>
-                <p className="mt-4 text-[13px] font-semibold leading-5 text-black">Learn at your pace. Prepare with confidence. Succeed in your exams.</p>
-                <p className="mt-4 text-[13px] leading-5 text-[#777]">Trusted by thousands of medical professionals worldwide</p>
-              </div>
-              <button className="mt-auto h-[52px] rounded-[10px] border-2 border-[#2184ff] text-[14px] font-semibold text-[#2184ff] lg:mt-9">Browse All Courses&nbsp;&nbsp; →</button>
-            </aside>
-            <div className="grid gap-6 md:grid-cols-3">
-              {subscriptionCourses.map((course, i) => <SubscriptionCard key={`${course}-${i}`} title={course} />)}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden bg-[var(--testimonial-bg)] py-[82px] sm:py-[95px] lg:min-h-[820px] lg:pb-[120px] lg:pt-[108px] xl:min-h-[875px] xl:pt-[116px]">
+         <section className="relative overflow-hidden bg-[var(--testimonial-bg)] py-[82px] sm:py-[95px] lg:min-h-[820px] lg:pb-[120px] lg:pt-[108px] xl:min-h-[875px] xl:pt-[116px]">
           <div className="relative mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div>
               <p className="text-[12px] font-semibold uppercase leading-none tracking-[0.01em] text-[var(--accent)] xl:text-[13px]">What Our Students Say</p>
@@ -632,6 +641,163 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* <section className="bg-white py-[104px] lg:min-h-[650px] lg:py-[118px] xl:min-h-[665px] xl:py-[122px]">
+          <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.01em] text-[var(--accent)]">How It Works</p>
+            <h2 className="mt-[8px] text-[42px] font-bold tracking-[-0.028em] lg:text-[50px] xl:text-[52px]">Your Journey to Success</h2>
+
+            <div className="mt-[76px] grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-0 lg:mt-[88px] xl:mt-[92px]">
+              {journey.map((step, index) => {
+                return (
+                <button type="button" key={step.number} className="group relative flex min-h-[250px] flex-col items-center text-center">
+                  <div className="relative flex h-[130px] w-[213px] items-start justify-center transition-transform duration-300 group-hover:-translate-y-1">
+                    <Image src={`/${step.number}.svg`} alt="" width={213} height={130} aria-hidden="true" className="h-auto max-h-[130px] w-auto max-w-full object-contain transition-opacity duration-300 group-hover:opacity-0" />
+                    <Image src={`/${step.number}_with_color.svg`} alt="" width={213} height={130} aria-hidden="true" className="absolute inset-0 h-auto max-h-[130px] w-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  </div>
+                  <h3 className="mt-8 text-[22px] font-bold text-[#777] transition-colors duration-300 group-hover:text-black">{step.title}</h3>
+                  <p className="mt-4 max-w-[220px] text-[15px] leading-7 text-[#777] transition-colors duration-300 group-hover:text-[#5e5e5e]">{step.text}</p>
+                  {index < journey.length - 1 && (
+                    <Image src="/fourth_sec_side_support.svg" alt="" width={97} height={289} aria-hidden="true" className="absolute -right-[48px] top-[-30px] hidden h-[230px] w-[77px] md:block lg:-right-[50px] lg:h-[252px] lg:w-[84px] xl:-right-[51px] xl:h-[262px] xl:w-[88px]" />
+                  )}
+                </button>
+                );
+              })}
+            </div>
+          </div>
+        </section> */}
+
+        {/* <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-[92px] lg:py-[104px] xl:py-[112px]">
+          <Image
+            src="/featured_courses_ellipse.png"
+            alt=""
+            width={1332}
+            height={689}
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-[115px] -top-[105px] hidden w-[1040px] max-w-none  lg:block xl:-left-[95px] xl:-top-[92px] xl:w-[1120px] 2xl:-left-[65px] 2xl:w-[1180px]"
+          />
+          <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
+            <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Featured Courses</p>
+            <h2 className="mt-2 text-[42px] font-bold leading-tight tracking-[-0.025em] lg:text-[50px]">Popular Exam Preparations</h2>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+              {featuredCourses.map((course, i) => <CourseCard key={`${course}-${i}`} title={course} />)}
+            </div>
+          </div>
+        </section> */}
+         {/* BLOGS */}
+        <section id="blogs" className="bg-white py-16 sm:py-20 lg:py-[118px] xl:py-[122px]">
+          <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
+            <h2 className="text-[39px] font-bold tracking-[-0.025em] text-[#17265c] sm:text-[45px] lg:text-[49px] xl:text-[50px]">
+              Our Latest News &amp; Blogs
+            </h2>
+            <div className="mt-10 grid gap-6 md:grid-cols-3 xl:mt-11">
+              {blogs.map((title, index) => (
+                <article
+                  key={`${title}-${index}`}
+                  className="group rounded-[28px] bg-[#d4e3ff] p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#cadafa] hover:shadow-[0_18px_42px_rgba(46,83,143,0.13)] xl:p-6"
+                >
+                  <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
+                    <Image
+                      src="/fifth_sec_card_img.png"
+                      alt="Medical learner reading"
+                      fill
+                      sizes="(max-width: 767px) 100vw, 33vw"
+                      className="object-fit object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <h3 className="mt-5 min-h-[72px] text-[20px] font-semibold leading-[1.12] text-[#17265c] lg:text-[22px] xl:min-h-[86px] xl:text-[25px]">
+                    {title}
+                  </h3>
+                  <button
+                    type="button"
+                    className="mt-5 h-[52px] min-w-[190px] rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
+                  >
+                    Read more
+                  </button>
+                </article>
+              ))}
+            </div>
+            <div className="mt-14 flex justify-center xl:mt-16">
+              <button
+                type="button"
+                className="h-[52px] rounded-[9px] bg-[#075cae] px-10 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:px-12 xl:text-[15px]"
+              >
+                Browse All Blogs
+              </button>
+            </div>
+          </div>
+        </section>
+        {/* subscription courses */}
+        <section className="bg-white py-[95px] lg:py-[110px]">
+          <div className="mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] gap-8 lg:grid-cols-[280px_1fr] lg:gap-10">
+            <aside className="flex flex-col">
+              <p className="text-[12px] font-semibold uppercase text-[#7d56ff]">Our Courses</p>
+              <h2 className="mt-2 text-[34px] font-bold leading-[1.08] text-black lg:text-[42px]">Subscription-Based Coaching</h2>
+              <p className="mt-4 text-[14px] leading-6 text-[#676767]">At PLABcoach, we understand the importance of flexibility in your learning journey. Our self-paced learning modules let you study at your own convenience with expert-curated content, question banks, and video lessons - tailored to fit your schedule and goals.</p>
+              <div className="mt-8 bg-[#f4f9ff] p-6">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-white shadow-sm">◈</span>
+                <p className="mt-4 text-[13px] font-semibold leading-5 text-black">Learn at your pace. Prepare with confidence. Succeed in your exams.</p>
+                <p className="mt-4 text-[13px] leading-5 text-[#777]">Trusted by thousands of medical professionals worldwide</p>
+              </div>
+              <button className="mt-auto h-[52px] rounded-[10px] border-2 border-[#2184ff] text-[14px] font-semibold text-[#2184ff] lg:mt-9">Browse All Courses&nbsp;&nbsp; →</button>
+            </aside>
+            <div className="grid gap-6 md:grid-cols-3">
+              {subscriptionCourses.map((course, i) => <SubscriptionCard key={`${course}-${i}`} title={course} />)}
+            </div>
+          </div>
+        </section>
+         
+        <section className="relative overflow-x-clip overflow-y-visible bg-white py-[82px] sm:py-[90px] lg:py-[98px] xl:py-[105px] 2xl:py-[112px]">
+          <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+            <div className="relative mx-auto h-full w-[var(--site-width)] max-w-[var(--container-max)]">
+              <Image
+                src="/featured_courses_ellipse.png"
+                alt=""
+                width={1332}
+                height={689}
+                aria-hidden="true"
+                className="absolute -left-[150px] -top-[0px] w-[1000px] max-w-none opacity-[0.88] xl:-left-[175px] xl:-top-[0px] xl:w-[1080px] 2xl:-left-[220px] 2xl:-top-[0px] 2xl:w-[1140px]"
+              />
+            </div>
+          </div>
+
+          <div className="relative z-10 mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 xl:gap-16 2xl:gap-20">
+            <div className="relative min-h-[410px] w-full sm:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px] 2xl:min-h-[640px]">
+              <div className="pointer-events-none absolute bottom-[10%] left-[10%] h-[56px] w-[78%] rounded-full bg-[#243f79]/10 blur-3xl 2xl:left-[5%] 2xl:w-[88%]" />
+
+              <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
+                <Image
+                  src="/video_learning_laptop.png"
+                  alt="PLABCoach video lesson on a laptop"
+                  fill
+                  sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 50vw, 900px"
+                  className="object-contain object-left transition-transform duration-500 hover:scale-[1.008]"
+                />
+              </div>
+            </div>
+
+            <div className="relative z-10 max-w-[690px] lg:py-4 2xl:justify-self-end">
+              <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Video Learning</p>
+              <h2 className="mt-2 max-w-[620px] text-[40px] font-bold leading-[1.12] tracking-[-0.025em] sm:text-[42px] lg:text-[48px] xl:text-[50px]">Learn From Experts. Prepare With Confidence</h2>
+              <p className="mt-4 max-w-[670px] text-[15px] leading-7 text-[var(--body-muted)] sm:text-[16px]">Watch expert-led lessons, exam strategies, clinical concepts and practical guidance designed to make your preparation more focused and effective.</p>
+              <div className="mt-8 space-y-4 sm:mt-9 sm:space-y-5">
+                {videoBenefits.map((benefit) => (
+                  <div key={benefit.title} className="group flex items-center gap-4 rounded-2xl p-1 transition duration-300 hover:translate-x-1 sm:gap-5">
+                    <Image src={benefit.icon} alt="" width={51} height={51} className="h-[44px] w-[44px] shrink-0 transition duration-300 group-hover:scale-105 sm:h-[48px] sm:w-[48px]" />
+                    <div>
+                      <h3 className="text-[15px] font-bold text-[var(--ink)]">{benefit.title}</h3>
+                      <p className="mt-1 text-[14px] leading-6 text-[var(--body-muted)] sm:text-[15px]">{benefit.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+
+       
 
         <section id="faq" className="relative overflow-hidden bg-white py-[90px] lg:py-[112px]">
           <Image
