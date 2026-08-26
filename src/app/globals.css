@@ -30,6 +30,26 @@
   --footer-bg: #f2f2f2;
   --footer-text: #666666;
   --footer-heading: #5862db;
+
+  /* Courses page — Figma source colors */
+  --courses-hero-bg: #eeeffd;
+  --courses-panel-bg: #e8f0ff;
+  --courses-primary: #09539f;
+  --courses-heading: #17245a;
+  --courses-card-heading: #04376a;
+  --courses-label: #5262ea;
+  --courses-copy: #777777;
+  --courses-button-border: #8a8a8a;
+  --courses-button-muted: #7b7b7b;
+  --courses-tab-bg: #a5d2ff;
+  --courses-card-border: #e3e3e3;
+  --courses-divider: #e7f1fb;
+  --courses-feature-bg: #f6fbff;
+  --courses-cta: #5b65dc;
+  --courses-learning-bg: #ededed;
+  --courses-learning-card-bg: #1d1d1d;
+  --courses-final-bg: #084c90;
+  --courses-final-copy: #c4d0dc;
 }
 
 @theme inline {
