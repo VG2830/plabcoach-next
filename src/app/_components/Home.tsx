@@ -14,7 +14,7 @@ const offerTop = [
   {
     title: "Self-Paced Mastery Videos",
     description: "Expert-led video tutorials for PRES 3, NCA, and PSA, available on your own schedule.",
-    icon: "/second_sec_video_icon_2.png",
+    icon: "/second_sec_video_icon_2.webp",
   },
   {
     title: "Live Coaching",
@@ -49,22 +49,22 @@ const offerTall = [
   },
 ];
 
-const trustPoints = [
-  "Created by UK doctors with real NHS experience",
-  "Structured curriculum aligned with GMC standards",
-  "Supports PLAB 1, PLAB 2 & MRCP (PACES & Part 1)",
-  "High-quality resources and exam-focused content",
-  "Flexible learning to fit your schedule",
-  "Trusted by thousands of international doctors",
-];
+// const trustPoints = [
+//   "Created by UK doctors with real NHS experience",
+//   "Structured curriculum aligned with GMC standards",
+//   "Supports PLAB 1, PLAB 2 & MRCP (PACES & Part 1)",
+//   "High-quality resources and exam-focused content",
+//   "Flexible learning to fit your schedule",
+//   "Trusted by thousands of international doctors",
+// ];
 
-const journey = [
-  { number: "01", title: "Join", text: "Create your account in minutes" },
-  { number: "02", title: "Learn", text: "Access structured courses & resources" },
-  { number: "03", title: "Practice", text: "Solve questions & improve continuously" },
-  { number: "04", title: "Mock Tests", text: "Take mock exams & track performance" },
-  { number: "05", title: "Pass Exam", text: "Build confidence & achieve your dream" },
-];
+// const journey = [
+//   { number: "01", title: "Join", text: "Create your account in minutes" },
+//   { number: "02", title: "Learn", text: "Access structured courses & resources" },
+//   { number: "03", title: "Practice", text: "Solve questions & improve continuously" },
+//   { number: "04", title: "Mock Tests", text: "Take mock exams & track performance" },
+//   { number: "05", title: "Pass Exam", text: "Build confidence & achieve your dream" },
+// ];
 
 // const featuredCourses = ["PLAB 1", "PLAB 1", "PLAB 1", "PLAB 1"];
 const exams = [
@@ -140,36 +140,45 @@ const videoBenefits = [
 ];
 
 const subscriptionCourses = [
-  "01 UK PLAB/UKMLA Courses",
-  "01 UK PLAB/UKMLA Courses",
-  "01 UK PLAB/UKMLA Courses",
+  {
+    title: "UK PLAB / UKMLA COURSES",
+    subtitle: "Prepare for the knowledge and clinical assessments required to begin your medical career in the UK.The UKMLA assesses the core knowledge, skills and behaviours required for safe and effective medical practice.",
+  },
+  {
+    title: "IRELAND COURSES",
+    subtitle: "Focused preparation for doctors preparing for the Pre-Registration Examination System in Ireland.",
+  },
+  {
+    title: "UK FOUNDATION PROGRAMME COURSES",
+    subtitle: "Build the knowledge and practical confidence required for key UK Foundation Programme assessments.",
+  },
 ];
 
 const testimonials = [
   {
     name: "Dr. Adeel Khan",
-    image: "/third_section_dr_img.png",
+    image: "/third_section_dr_img.webp",
     exam: "PLAB 2",
     location: "United Kingdom",
     quote: "PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt! PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt! PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt!",
   },
   {
     name: "Dr. Priya Sharma",
-    image: "/fifth_sec_card_img.png",
+    image: "/fifth_sec_card_img.webp",
     exam: "PLAB 1",
     location: "India",
     quote: "The course gave me a clear plan instead of leaving me to figure everything out alone. I could revise at my own pace and use the mocks to understand exactly where I needed to improve.",
   },
   {
     name: "Dr. Mohammed Ali",
-    image: "/offer_section_image.png",
+    image: "/offer_section_image.webp",
     exam: "UKMLA",
     location: "UAE",
     quote: "I found the combination of concise teaching, practical questions and mentor guidance very useful. It kept my preparation focused and helped me build consistency week after week.",
   },
   {
     name: "Dr. Sara Wilson",
-    image: "/hero_banner_image.png",
+    image: "/hero_banner_image.webp",
     exam: "PRES",
     location: "Ireland",
     quote: "The platform made a difficult syllabus feel manageable. The learning path was easy to follow and the practice resources helped me turn weak areas into strengths before the exam.",
@@ -205,9 +214,9 @@ const faqs = [
 
 const socialLabels = ["facebook", "linkedin", "instagram", "x", "whatsapp"];
 const blogs = [
+  "OSCE Self-Assessment: 10 Signs You Need More Practice as an International Medical Graduate",
   "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
-  "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
-  "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
+  "PRES 3 vs PLAB 2: Everything International Medical Graduates Need to Know",
 ];
 
 function OfferCard({
@@ -235,7 +244,7 @@ function OfferCard({
 //   return (
 //     <article className="group relative min-h-[492px] overflow-hidden rounded-[30px] bg-black shadow-[0_14px_34px_rgba(15,34,68,0.10)] transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_26px_54px_rgba(15,34,68,0.18)]">
 //       <Image
-//         src="/fifth_sec_card_img.png"
+//         src="/fifth_sec_card_img.webp"
 //         alt="Doctor preparing for a medical exam"
 //         fill
 //         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -285,11 +294,11 @@ function ExamCard({ exam }: { exam: (typeof exams)[number] }) {
   );
 }
 
-function SubscriptionCard({ title }: { title: string }) {
+function SubscriptionCard({ course }: { course: (typeof subscriptionCourses)[number] }) {
   return (
     <article className="group relative min-h-[530px] cursor-pointer overflow-hidden rounded-[30px] bg-black shadow-[0_12px_32px_rgba(15,34,68,0.08)] ring-1 ring-black/[0.02] transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_28px_64px_rgba(15,54,104,0.22)] hover:ring-[#3c8ee8]/25">
       <Image
-        src="/woman-teaching-her-student-english.png"
+        src="/woman-teaching-her-student-english.webp"
         alt="Medical course"
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
@@ -302,9 +311,9 @@ function SubscriptionCard({ title }: { title: string }) {
         <span>2 Courses</span>
       </div>
       <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-6 transition-transform duration-500 ease-out group-hover:-translate-y-1.5">
-        <h3 className="max-w-[270px] text-[22px] font-semibold leading-[1.05] text-white">{title}</h3>
+        <h3 className="max-w-[270px] text-[22px] font-semibold leading-[1.05] text-white">{course.title}</h3>
         <p className="mt-3 text-[14px] leading-6 text-white/75 transition-colors duration-500 group-hover:text-white/90">
-          Comprehensive preparation for PLAB and UKMLA exams with expert-designed study modules, practice questions, and video lessons.
+          {course.subtitle}
         </p>
         <button className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)]">
           View Courses
@@ -353,7 +362,7 @@ export default function Home() {
           </nav>
 
           <a href="#top" aria-label="PLABCOACH home" className="justify-self-center">
-            <Image src="/new_plabcoach.png" width={212} height={57} alt="PLABCOACH" className="h-auto w-[145px] sm:w-[190px] lg:w-[212px]" priority />
+            <Image src="/new_plabcoach.webp" width={212} height={57} alt="PLABCOACH" className="h-auto w-[145px] sm:w-[190px] lg:w-[212px]" priority />
           </a>
 
           <div className="flex items-center justify-end gap-7">
@@ -369,7 +378,7 @@ export default function Home() {
         <section className="relative overflow-hidden bg-[var(--hero-bg)]">
           <div className="relative mx-auto min-h-[640px] w-[var(--site-width)] max-w-[var(--container-max)] sm:min-h-[680px] lg:h-[650px] lg:min-h-0 xl:h-[690px] 2xl:h-[700px]">
             <Image
-              src="/hero_banner_bg_ellipse.png"
+              src="/hero_banner_bg_ellipse.webp"
               alt=""
               aria-hidden="true"
               width={1382}
@@ -394,7 +403,7 @@ export default function Home() {
             </div>
 
             <Image
-              src="/man-woman-wearing-capes.png"
+              src="/man-woman-wearing-capes.webp"
               alt="Doctors preparing international medical learners"
               width={725}
               height={664}
@@ -426,7 +435,7 @@ export default function Home() {
 
         <section className="relative overflow-hidden bg-white pb-[118px] pt-[72px] lg:pb-[126px] lg:pt-[78px] xl:pt-[82px]">
           <Image
-            src="/ellipse_offer_section.png"
+            src="/ellipse_offer_section.webp"
             alt=""
             width={1116}
             height={815}
@@ -442,7 +451,7 @@ export default function Home() {
 
             <div className="grid gap-6 lg:grid-cols-[0.96fr_2fr]">
               <div className="group relative min-h-[420px] overflow-hidden rounded-[28px] shadow-[0_12px_30px_rgba(25,53,96,0.04)] lg:min-h-[560px]">
-                <Image src="/offer_section_image.png" alt="Medical learner" fill sizes="(max-width: 1024px) 100vw, 35vw" className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]" />
+                <Image src="/offer_section_image.webp" alt="Medical learner" fill sizes="(max-width: 1024px) 100vw, 35vw" className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]" />
               </div>
 
               <div className="grid gap-5 md:grid-cols-1 xl:grid-cols-[1.75fr_1fr]">
@@ -473,7 +482,7 @@ export default function Home() {
         </section>
         <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-16 sm:py-20 lg:py-[94px] xl:py-[96px]">
           <Image
-            src="/featured_courses_ellipse.png"
+            src="/featured_courses_ellipse.webp"
             alt=""
             width={1332}
             height={689}
@@ -534,9 +543,9 @@ export default function Home() {
             </div>
 
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
-              <Image src="/third_sec_upfront_img.png" alt="" width={728} height={554} aria-hidden="true" className="absolute inset-0 h-full w-full object-contain" />
+              <Image src="/third_sec_upfront_img.webp" alt="" width={728} height={554} aria-hidden="true" className="absolute inset-0 h-full w-full object-contain" />
               <div className="absolute left-[24%] top-[3%] h-[78%] w-[65%] overflow-hidden rounded-[34px]">
-                <Image src="/third_section_dr_img.png" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
+                <Image src="/third_section_dr_img.webp" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -669,7 +678,7 @@ export default function Home() {
 
         {/* <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-[92px] lg:py-[104px] xl:py-[112px]">
           <Image
-            src="/featured_courses_ellipse.png"
+            src="/featured_courses_ellipse.webp"
             alt=""
             width={1332}
             height={689}
@@ -698,11 +707,11 @@ export default function Home() {
                 >
                   <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
                     <Image
-                      src="/fifth_sec_card_img.png"
-                      alt="Medical learner reading"
+                      src="/blogs_image.svg"
+                      alt="blogs image"
                       fill
                       sizes="(max-width: 767px) 100vw, 33vw"
-                      className="object-fit object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
                   <h3 className="mt-5 min-h-[72px] text-[20px] font-semibold leading-[1.12] text-[#17265c] lg:text-[22px] xl:min-h-[86px] xl:text-[25px]">
@@ -742,7 +751,7 @@ export default function Home() {
               <button className="mt-auto h-[52px] rounded-[10px] border-2 border-[#2184ff] text-[14px] font-semibold text-[#2184ff] lg:mt-9">Browse All Courses&nbsp;&nbsp; →</button>
             </aside>
             <div className="grid gap-6 md:grid-cols-3">
-              {subscriptionCourses.map((course, i) => <SubscriptionCard key={`${course}-${i}`} title={course} />)}
+              {subscriptionCourses.map((course) => <SubscriptionCard key={course.title} course={course} />)}
             </div>
           </div>
         </section>
@@ -751,7 +760,7 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
             <div className="relative mx-auto h-full w-[var(--site-width)] max-w-[var(--container-max)]">
               <Image
-                src="/featured_courses_ellipse.png"
+                src="/featured_courses_ellipse.webp"
                 alt=""
                 width={1332}
                 height={689}
@@ -767,7 +776,7 @@ export default function Home() {
 
               <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
                 <Image
-                  src="/video_learning_laptop.png"
+                  src="/video_learning_laptop.webp"
                   alt="PLABCoach video lesson on a laptop"
                   fill
                   sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 50vw, 900px"
@@ -801,7 +810,7 @@ export default function Home() {
 
         <section id="faq" className="relative overflow-hidden bg-white py-[90px] lg:py-[112px]">
           <Image
-            src="/ellipse_offer_section.png"
+            src="/ellipse_offer_section.webp"
             alt=""
             width={1116}
             height={815}
@@ -880,7 +889,7 @@ export default function Home() {
 
               <div className="relative z-10 mt-10 flex w-full items-end justify-center lg:absolute lg:right-[-52px] lg:top-[-30px] lg:mt-0 lg:w-[58%] xl:right-[-62px] xl:top-[-31px] 2xl:right-[-68px]">
                 <Image
-                  src="/medical_journey_devices.png"
+                  src="/medical_journey_devices.webp"
                   alt="PLABCoach learning platform shown across desktop, laptop, tablet and mobile"
                   width={855}
                   height={483}
@@ -896,7 +905,7 @@ export default function Home() {
       <footer id="blogs" className="relative overflow-hidden bg-[var(--footer-bg)] pt-8 text-[var(--footer-text)] lg:pt-10">
         <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
           <div className="flex flex-wrap items-center justify-between gap-6">
-            <Image src="/new_plabcoach.png" alt="PLABCOACH" width={212} height={57} className="h-auto w-[180px] lg:w-[198px] xl:w-[205px]" />
+            <Image src="/new_plabcoach.webp" alt="PLABCOACH" width={212} height={57} className="h-auto w-[180px] lg:w-[198px] xl:w-[205px]" />
             <div className="flex items-center gap-3 text-[14px] font-bold text-black">
               <span className="mr-3">Social Media</span>
               {socialLabels.map((label) => (
@@ -956,7 +965,7 @@ export default function Home() {
           </div>
 
           <div className="relative h-[235px] overflow-hidden sm:h-[260px] lg:h-[280px]">
-            <Image src="/footer_logo_with_blur.png" alt="" aria-hidden="true" width={1480} height={281} className="absolute inset-x-0 top-0 h-auto w-full opacity-[0.92]" />
+            <Image src="/footer_logo_with_blur.webp" alt="" aria-hidden="true" width={1480} height={281} className="absolute inset-x-0 top-0 h-auto w-full opacity-[0.92]" />
           </div>
         </div>
       </footer>
