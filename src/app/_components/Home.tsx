@@ -500,12 +500,18 @@ export default function Home() {
               <p className="mt-10 text-[13px] font-semibold text-[#222] xl:text-[15px]">
                 Read Our Full Story
               </p>
-              <button
+              {/* <button
                 type="button"
                 className="mt-3 h-[52px] min-w-[190px] rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
               >
                 About Us 
-              </button>
+              </button> */}
+              <Link
+                  href="/aboutus"
+                 className="mt-3 inline-flex h-[52px] min-w-[190px] items-center justify-center rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
+                  >
+                 About Us
+                </Link>
             </div>
 
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
@@ -693,12 +699,12 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-14 flex justify-center xl:mt-16">
-              <button
-                type="button"
-                className="h-[52px] rounded-[9px] bg-[#075cae] px-10 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:px-12 xl:text-[15px]"
+              <Link
+                href="/blogs"
+                className="h-[52px] rounded-[9px] bg-[#075cae] py-4 px-10 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:px-12 xl:text-[15px]"
               >
                 Browse All Blogs
-              </button>
+              </Link>
             </div>
           </div>
         </section>
