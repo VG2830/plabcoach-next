@@ -31,6 +31,29 @@
   --footer-text: #666666;
   --footer-heading: #5862db;
 
+
+    /* About Us page — Figma source colors */
+  --about-hero-bg: #eef0ff;
+  --about-heading: #17245a;
+  --about-accent: #0877f9;
+  --about-label: #5363e8;
+  --about-copy: #777777;
+  --about-portrait-bg: #78a4fb;
+  --about-badge-icon-bg: #d7e6ff;
+
+    /* Blogs page — Figma source colors */
+  --blogs-hero-bg: #eef0ff;
+  --blogs-featured-bg: #f2f3ff;
+  --blogs-heading: #17245a;
+  --blogs-label: #5363e8;
+  --blogs-primary: #0b5da8;
+  --blogs-muted: #777777;
+  --blogs-meta-bg: #f6f7ff;
+  --blogs-border: #e2e2e2;
+  --blogs-search-border: #8c8c8c;
+  --blogs-image-bg: #f1f1f1;
+  --blogs-arrow-bg: #7cbcff;
+
   /* Courses page — Figma source colors */
   --courses-hero-bg: #eeeffd;
   --courses-panel-bg: #e8f0ff;

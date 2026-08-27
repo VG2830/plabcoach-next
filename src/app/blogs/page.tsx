@@ -1,4 +1,5 @@
+import Blogs from "../_components/blogs/Blogs";
 
-export default function BlogsPage(){
-    return(<div>Blogs Page</div>)
+export default function BlogsPage() {
+  return <Blogs />;
 }
