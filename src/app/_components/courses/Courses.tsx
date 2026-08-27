@@ -247,21 +247,21 @@ export default function Courses() {
             <div className="mx-auto mt-[28px] grid max-w-[594px] grid-cols-1 gap-[12px] sm:grid-cols-3 sm:gap-[14px]">
               <a
                 href="#uk-plab-ukmla"
-                className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-105 sm:text-[12px]"
+                className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)]  hover:bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-105 sm:text-[12px]"
               >
                 <Image src="/plab_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="h-[20px] w-[20px]" />
                 UK PLAB / UKMLA
               </a>
               <a
                 href="#ireland-courses"
-                className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-[0.98] sm:text-[12px]"
+                className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)] hover:bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-[0.98] sm:text-[12px]"
               >
                 <Image src="/ireland_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="h-[20px] w-[20px]" />
                 Ireland PRES
               </a>
               <a
                 href="#uk-foundation"
-                className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-[0.98] sm:text-[12px]"
+                className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)] hover:bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-[0.98] sm:text-[12px]"
               >
                 <Image src="/uk_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="h-[20px] w-[20px]" />
                 UK Foundation
