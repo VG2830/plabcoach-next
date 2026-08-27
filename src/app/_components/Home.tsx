@@ -318,7 +318,7 @@ function SubscriptionCard({ course }: { course: (typeof subscriptionCourses)[num
         <p className="mt-3 text-[14px] leading-6 text-white/75 transition-colors duration-500 group-hover:text-white/90">
           {course.subtitle}
         </p>
-        <Link href="/courses" className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)] flex items-center justify-center">
+        <Link href="" className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)] flex items-center justify-center">
           View Courses
         </Link>
       </div>
@@ -714,7 +714,9 @@ export default function Home() {
                 <p className="mt-4 text-[13px] font-semibold leading-5 text-black">Learn at your pace. Prepare with confidence. Succeed in your exams.</p>
                 <p className="mt-4 text-[13px] leading-5 text-[#777]">Trusted by thousands of medical professionals worldwide</p>
               </div>
-              <button className="mt-auto h-[52px] rounded-[10px] border-2 border-[#2184ff] text-[14px] font-semibold text-[#2184ff] lg:mt-9">Browse All Courses&nbsp;&nbsp; →</button>
+              <Link href="/courses" className="mt-auto px-auto text-center leading-none p-[18px] h-[52px] rounded-[10px] border-2 border-[#2184ff] text-[14px] font-semibold text-[#2184ff] lg:mt-9">
+                {/* <button ></button> */}Browse All Courses&nbsp;&nbsp; →
+              </Link>
             </aside>
             <div className="grid gap-6 md:grid-cols-3">
               {subscriptionCourses.map((course) => <SubscriptionCard key={course.title} course={course} />)}
