@@ -290,7 +290,7 @@ export default function Courses() {
           <CourseSection
             id="uk-foundation"
             title="UK Foundation Programme Courses"
-            description="Build the knowledge and practical confidence required for key UK Foundation Programme assessments."
+            description="The UK Foundation Programme (UKFP) is a two-year, structured training program for newly qualified doctors in the UK, designed to bridge the gap between medical school and specialty training."
             courses={foundationCourses}
             decoration="left-large"
           />
