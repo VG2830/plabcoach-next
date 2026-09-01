@@ -89,6 +89,32 @@
   --course-detail-icon-bg: #eef0ff;
   --course-detail-cta-bg: #0b5da8;
   --course-detail-cta-copy: #bed2e6;
+
+  /* Course plan page — Figma source colors */
+  --plan-hero-bg: #f0f1ff;
+  --plan-ink: #17245a;
+  --plan-blue: #0b5da8;
+  --plan-purple: #8b52ff;
+  --plan-button: #5966e3;
+  --plan-card-accent: #c8c9f3;
+  --plan-card: #fbfbff;
+  --plan-card-border: #efeff6;
+  --plan-testimonial-bg: #f7f7f7;
+  --plan-text: #555555;
+  --plan-muted: #777777;
+  --plan-review-text: #9b9b9b;
+  --plan-divider: #cfd7ff;
+  --plan-green: #19c410;
+  --plan-old-price: #db4b20;
+  --plan-star: #dda326;
+  --plan-dot-1: #8ccfff;
+  --plan-dot-2: #74c1ff;
+  --plan-dot-3: #66b6ff;
+  --plan-dot-4: #8ac7f3;
+  --plan-dot-5: #b5d9ef;
+  --plan-dot-6: #d6e8f3;
+  --plan-hover-shadow: 0 9px 20px rgba(26, 38, 86, 0.16);
+  --plan-row-shadow: 0 5px 16px rgba(36, 45, 82, 0.10);
 }
 
 @theme inline {

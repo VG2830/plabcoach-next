@@ -40,7 +40,7 @@ function SubscribeButton({ href, className = "" }: { href: string; className?: s
 }
 
 export default function CourseDetail({ course }: { course: CourseDetailData }) {
-  const plansHref = `/courses/${course.slug}/plans`;
+  const plansHref = `/course-plan?course=${encodeURIComponent(course.slug)}`;
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[var(--course-detail-heading)]">
