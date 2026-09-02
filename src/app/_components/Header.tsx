@@ -91,7 +91,7 @@ export default function Header() {
             />
           </a>
           <span className="hidden h-[18px] w-px bg-[#dce5f0] lg:block" aria-hidden="true" />
-          <a href="#support" aria-label="Support" className="hidden lg:block">
+          <Link href="/contact-us" aria-label="Contact Us" className="hidden lg:block">
             <Image
               src="/header_phone_icon.svg"
               alt=""
@@ -100,7 +100,7 @@ export default function Header() {
               height={18}
               className="h-[17px] w-[17px]"
             />
-          </a>
+          </Link>
           <span className="hidden h-[18px] w-px bg-[#dce5f0] lg:block" aria-hidden="true" />
           <a
             href="#sign-in"
@@ -142,6 +142,13 @@ export default function Header() {
                 ) : null}
               </Link>
             ))}
+            <Link
+              href="/contact-us"
+              onClick={() => setMenuOpen(false)}
+              className="flex min-h-[46px] items-center justify-between border-b border-black/[0.05] px-2 transition hover:text-[var(--primary)]"
+            >
+              <span>Contact Us</span>
+            </Link>
             <a
               href="#sign-in"
               onClick={() => setMenuOpen(false)}

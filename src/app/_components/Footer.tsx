@@ -70,7 +70,7 @@ export default function Footer() {
                   <span>9 The Pavilions, Cranmore Drive, Shirley,<br />UK B90 4SB</span>
                 </li>
                 <li className="flex gap-4 py-4">
-                  <span className="text-[22px] text-[var(--footer-heading)]">✉</span>
+                  <Image src="/mail_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="mt-1 h-[24px] w-[24px] shrink-0" />
                   <span>support@plabcoach.com</span>
                 </li>
                 <li className="flex gap-4 py-4">

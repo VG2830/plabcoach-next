@@ -46,7 +46,7 @@ function DecorativeRings({
 }) {
   return (
     <Image
-      src="/featured_courses_ellipse.png"
+      src="/courses_plan_section_ellipse.webp"
       alt=""
       aria-hidden="true"
       width={1332}
@@ -83,7 +83,7 @@ function PlanHero({ data }: { data: CoursePlanConfig }) {
 
         <DecorativeHeroRings className="right-[-270px] top-[-330px] hidden w-[980px] lg:block xl:right-[-178px] xl:top-[-382px] xl:w-[1110px]" />
         <Image
-          src="/three-medical-professionals-posing-together.png"
+          src="/three-medical-professionals-posing-together.webp"
           alt="Doctors preparing for UK medical exams"
           width={853}
           height={626}
@@ -238,8 +238,8 @@ function PrimaryPlanCard({ plan, courseSlug }: { plan: PlanCardData; courseSlug:
 function ProgrammeSection({ data }: { data: CoursePlanConfig }) {
   return (
     <section className="relative overflow-hidden bg-white py-[72px] lg:py-[82px]">
-      <DecorativeRings className="right-[-365px] top-[-70px] w-[900px]" />
-      <DecorativeRings className="-bottom-[238px] -left-[190px] w-[735px] rotate-[72deg]" />
+      <DecorativeRings className="right-[-300px] top-[-78px] w-[820px] sm:right-[-330px] sm:w-[860px] lg:right-[-365px] lg:top-[-70px] lg:w-[900px]" />
+      {/* <DecorativeRings className="-bottom-[245px] -left-[205px] w-[700px] rotate-[72deg] sm:-left-[195px] sm:w-[720px] lg:-bottom-[238px] lg:-left-[190px] lg:w-[735px]" /> */}
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
         <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
         <div className="mb-6">
@@ -262,35 +262,21 @@ function ProgrammeSection({ data }: { data: CoursePlanConfig }) {
   );
 }
 
-function SelfPacedCard({
-  plan,
-  courseSlug,
-  onHover,
-  onLeave,
-}: {
-  plan: SelfPacedPlan;
-  courseSlug: string;
-  onHover: () => void;
-  onLeave: () => void;
-}) {
+function SelfPacedCard({ plan, courseSlug }: { plan: SelfPacedPlan; courseSlug: string }) {
   return (
-    <div className="relative flex h-[368px] min-w-0 items-center" onMouseEnter={onHover} onMouseLeave={onLeave}>
-      <article className="group relative flex h-[296px] w-full flex-col overflow-hidden rounded-[20px] border border-[var(--plan-card-border)] bg-[var(--plan-card)] px-[15px] pb-[15px] pt-[13px] transition-[height,transform,box-shadow,border-color] duration-300 ease-out hover:h-[368px] hover:-translate-y-[1px] hover:border-[var(--plan-hover-border)] hover:shadow-[var(--plan-hover-shadow)] focus-within:h-[368px] focus-within:border-[var(--plan-hover-border)] focus-within:shadow-[var(--plan-hover-shadow)] sm:px-[17px]">
-        <div className="pointer-events-none absolute left-0 top-0 h-[154px] w-full overflow-hidden opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
-          <div className="absolute left-0 top-0 h-[154px] w-full rounded-br-[100%] bg-[var(--plan-card-accent)]" />
+    <div className="relative flex h-[368px] items-center">
+      <article className="group relative flex h-[296px] w-full flex-col overflow-hidden rounded-[20px] border border-[var(--plan-card-border)] bg-[var(--plan-card)] px-[15px] pb-[15px] pt-[13px] transition-[height,transform,box-shadow] duration-300 ease-out hover:h-[368px] hover:-translate-y-[1px] hover:shadow-[var(--plan-hover-shadow)] sm:px-[17px]">
+        <div className="pointer-events-none absolute left-0 top-0 h-[146px] w-full overflow-hidden opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="absolute -left-[18px] -top-[93px] h-[205px] w-[345px] rounded-[0_0_65%_0] bg-[var(--plan-card-accent)]" />
         </div>
         <div className="relative z-10">
           <div className="flex items-end gap-4">
-            <span className="text-[42px] font-bold leading-none tracking-[-0.03em] text-[var(--plan-ink)] transition-[font-size,transform] duration-300 group-hover:-translate-y-[1px] group-hover:text-[54px] group-focus-within:text-[54px]">
-              {plan.price}
-            </span>
+            <span className="text-[42px] font-bold leading-none tracking-[-0.03em] text-[var(--plan-ink)] transition-[font-size] duration-300 group-hover:text-[54px]">{plan.price}</span>
             <span className="mb-[6px] text-[12px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
           </div>
-          <h3 className="mt-3 text-[20px] font-bold leading-tight text-[var(--plan-ink)] transition-colors duration-300 group-hover:text-[var(--plan-blue)] group-focus-within:text-[var(--plan-blue)] sm:text-[21px]">
-            {plan.title}
-          </h3>
+          <h3 className="mt-3 text-[20px] font-bold leading-tight text-[var(--plan-ink)] transition-colors duration-300 group-hover:text-[var(--plan-blue)] sm:text-[21px]">{plan.title}</h3>
         </div>
-        <div className="relative z-10 mt-5 transition-[margin] duration-300 group-hover:mt-8 group-focus-within:mt-8">
+        <div className="relative z-10 mt-5 transition-[margin] duration-300 group-hover:mt-8">
           <h4 className="text-[15px] font-bold text-[var(--plan-text)]">{plan.subtitle}</h4>
           <ul className="mt-2 space-y-[7px]">
             {plan.features.map((feature) => (
@@ -310,34 +296,17 @@ function SelfPacedCard({
 }
 
 function SelfPacedSection({ data }: { data: CoursePlanConfig }) {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  const gridColumns =
-    hoveredCard === 0
-      ? "md:grid-cols-[1.135fr_1fr_1fr]"
-      : hoveredCard === 1
-        ? "md:grid-cols-[1fr_1.135fr_1fr]"
-        : hoveredCard === 2
-          ? "md:grid-cols-[1fr_1fr_1.135fr]"
-          : "md:grid-cols-[1fr_1fr_1fr]";
-
   return (
-    <section className="relative overflow-hidden bg-white pb-[55px] pt-[58px] lg:pb-[55px] lg:pt-[58px]">
-      <DecorativeRings className="-left-[305px] -top-[145px] w-[770px] rotate-[13deg]" />
+    <section className="relative overflow-hidden bg-white py-[56px] lg:py-[62px]">
+      <DecorativeRings className="-left-[290px] -top-[148px] w-[760px] rotate-[15deg]" />
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-        <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
-        <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">SmartNotes &amp; Self-Paced Mastery Videos</h2>
-        <div className={`mt-4 grid gap-[14px] transition-[grid-template-columns] duration-300 ease-out ${gridColumns}`}>
-          {data.selfPacedPlans.map((plan, index) => (
-            <SelfPacedCard
-              key={plan.id}
-              plan={plan}
-              courseSlug={data.slug}
-              onHover={() => setHoveredCard(index)}
-              onLeave={() => setHoveredCard(null)}
-            />
-          ))}
-        </div>
+        <div className="mx-auto max-w-[1480px]">
+          <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px]">SmartNotes &amp; Self-Paced Mastery Videos</h2>
+          <div className="mt-7 grid gap-4 md:grid-cols-3">
+            {data.selfPacedPlans.map((plan) => (
+              <SelfPacedCard key={plan.id} plan={plan} courseSlug={data.slug} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -391,7 +360,8 @@ function HorizontalPlanCard({ plan, courseSlug }: { plan: HorizontalPlan; course
 function DataInterpretationSection({ data }: { data: CoursePlanConfig }) {
   return (
     <section className="relative overflow-hidden bg-white py-[62px] lg:py-[70px]">
-      <DecorativeRings className="-bottom-[176px] right-[-330px] w-[790px] rotate-[19deg]" />
+      <DecorativeRings className="right-[-360px] top-[24px] w-[760px] rotate-[19deg] sm:right-[-345px] sm:top-[8px] sm:w-[785px] lg:right-[-330px] lg:top-[-4px] lg:w-[805px]" />
+      {/* <DecorativeRings className="-bottom-[292px] -left-[180px] w-[650px] rotate-[72deg] sm:-bottom-[286px] sm:-left-[172px] sm:w-[675px] lg:-bottom-[280px] lg:-left-[165px] lg:w-[690px]" /> */}
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
         <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
         <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">Data Interpretation Course</h2>
@@ -438,7 +408,8 @@ function MockPlanCard({ plan, courseSlug }: { plan: MockPlan; courseSlug: string
 function MockSection({ data }: { data: CoursePlanConfig }) {
   return (
     <section className="relative overflow-hidden bg-white pb-[78px] pt-[46px] lg:pb-[78px] lg:pt-[46px]">
-      <DecorativeRings className="-left-[340px] -top-[60px] w-[820px] rotate-[20deg]" />
+      <DecorativeRings className="-left-[370px] -top-[42px] w-[790px] rotate-[20deg] sm:-left-[355px] sm:-top-[52px] sm:w-[805px] lg:-left-[340px] lg:-top-[60px] lg:w-[820px]" />
+      {/* <DecorativeRings className="-right-[255px] -top-[365px] w-[720px] rotate-[19deg] sm:-right-[245px] sm:-top-[375px] sm:w-[745px] lg:-right-[235px] lg:-top-[385px] lg:w-[770px]" /> */}
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
         <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
         <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">Mock - Online Tests</h2>

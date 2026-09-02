@@ -118,6 +118,18 @@
   --plan-hover-border: #dfe2fb;
   --plan-dot-active: #74c1ff;
   --plan-dot-idle: #c7dff0;
+
+  /* Contact Us page */
+  --contact-page-bg: #f1f2ff;
+  --contact-panel-bg: #ffffff;
+  --contact-card-bg: #d5d9ff;
+  --contact-heading: #17245a;
+  --contact-copy: #666666;
+  --contact-placeholder: #b7b7b7;
+  --contact-field-bg: #f2f2f2;
+  --contact-field-border: #ececec;
+  --contact-button: #0b5da8;
+  --contact-ring-purple: #a9adef;
 }
 
 @theme inline {
