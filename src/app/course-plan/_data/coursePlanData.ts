@@ -46,12 +46,12 @@ export type CoursePlanConfig = {
   heroDescription: string;
   programmeTitle: string;
   programmeSubtitle: string;
-  testimonial: {
+  testimonials: {
     name: string;
     role: string;
     country: string;
     quote: string;
-  };
+  }[];
   primaryPlans: PlanCardData[];
   selfPacedPlans: SelfPacedPlan[];
   horizontalPlans: HorizontalPlan[];
@@ -87,13 +87,43 @@ const pres3Plan: CoursePlanConfig = {
     "Structured, result-driven courses designed to help you clear exams and secure your medical career in the UK.",
   programmeTitle: "PRES 3",
   programmeSubtitle: "Comprehensive Programme",
-  testimonial: {
-    name: "Safia Abdulla",
-    role: "Doctor",
-    country: "IRELAND",
-    quote:
-      "Great course. The videos were great help. Dr Karam was very kind and helpful. He helped us and gave us tips whenever he was around. He knew us by name even before he had met us in person. Dr Anjum’s advice and notes were also very useful. The timing of the course was good. It allowed for enough practice time before the exam. The environment at the center was well-suited for practicing and studying. Very grateful for the opportunity to perform procedures and the large number of needles available at the center. Was also grateful for being able to practice on the breast mannequin which was one of my exam stations. However, a few of the mannequins require replacement like the one for rectal exam. The otoscopes and fundoscopes were not working.",
-  },
+  testimonials: [
+    {
+      name: "Safia Abdulla",
+      role: "Doctor",
+      country: "IRELAND",
+      quote:
+        "Great course. The videos were great help. Dr Karam was very kind and helpful. He helped us and gave us tips whenever he was around. He knew us by name even before he had met us in person. Dr Anjum’s advice and notes were also very useful. The timing of the course was good. It allowed for enough practice time before the exam. The environment at the center was well-suited for practicing and studying. Very grateful for the opportunity to perform procedures and the large number of needles available at the center. Was also grateful for being able to practice on the breast mannequin which was one of my exam stations. However, a few of the mannequins require replacement like the one for rectal exam. The otoscopes and fundoscopes were not working.",
+    },
+    {
+      name: "Dr. Adeel Khan",
+      role: "Doctor",
+      country: "UNITED KINGDOM",
+      quote:
+        "PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt. The structured practice helped me focus on the areas that mattered most before the exam.",
+    },
+    {
+      name: "Dr. Priya Sharma",
+      role: "Doctor",
+      country: "INDIA",
+      quote:
+        "The course gave me a clear plan instead of leaving me to figure everything out alone. I could revise at my own pace and use the mocks to understand exactly where I needed to improve.",
+    },
+    {
+      name: "Dr. Mohammed Ali",
+      role: "Doctor",
+      country: "UAE",
+      quote:
+        "I found the combination of concise teaching, practical questions and mentor guidance very useful. It kept my preparation focused and helped me build consistency week after week.",
+    },
+    {
+      name: "Dr. Sara Wilson",
+      role: "Doctor",
+      country: "IRELAND",
+      quote:
+        "The platform made a difficult syllabus feel manageable. The learning path was easy to follow and the practice resources helped me turn weak areas into strengths before the exam.",
+    },
+  ],
   primaryPlans: [
     {
       id: "live-course",
