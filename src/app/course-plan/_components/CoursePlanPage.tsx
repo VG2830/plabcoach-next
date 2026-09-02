@@ -107,63 +107,63 @@ function TestimonialSlider({ testimonials }: { testimonials: CoursePlanConfig["t
     return () => window.clearInterval(timer);
   }, [paused, testimonials.length]);
 
+  if (!testimonials.length) return null;
+
+  const activeIndex = active < testimonials.length ? active : 0;
+  const review = testimonials[activeIndex];
+
   return (
     <article
-      className={`relative min-h-[486px] overflow-hidden rounded-[22px] border border-[var(--plan-card-border)] bg-[var(--plan-testimonial-bg)] ${interactiveCard}`}
+      className={`relative flex w-full min-h-[360px] flex-col overflow-hidden rounded-[22px] border border-[var(--plan-card-border)] bg-[var(--plan-testimonial-bg)] px-[15px] pb-[16px] pt-[16px] sm:min-h-[390px] sm:px-[17px] lg:min-h-[486px] lg:px-[15px] lg:pb-[16px] lg:pt-[16px] xl:px-[17px] ${interactiveCard}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={() => setPaused(false)}
       aria-roledescription="carousel"
       aria-label="Student reviews"
+      aria-live="polite"
     >
-      <div className="absolute inset-x-0 bottom-[45px] top-0 overflow-hidden">
-        {testimonials.map((review, index) => {
-          const position =
-            index === active
-              ? "translate-x-0 opacity-100"
-              : index < active
-                ? "-translate-x-[22px] opacity-0"
-                : "translate-x-[22px] opacity-0";
+      <div
+        key={`${review.name}-${active}`}
+        className="flex min-h-0 flex-1 flex-col transition-opacity duration-300"
+      >
+        <div className="flex gap-[5px] text-[var(--plan-star)]">
+          {Array.from({ length: 5 }).map((_, starIndex) => (
+            <StarIcon key={starIndex} className="h-[16px] w-[16px]" />
+          ))}
+        </div>
 
-          return (
-            <div
-              key={`${review.name}-${index}`}
-              className={`absolute inset-0 flex flex-col px-[15px] pb-4 pt-4 transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:px-[17px] ${position}`}
-              aria-hidden={index !== active}
-            >
-              <div className="flex gap-[5px] text-[var(--plan-star)]">
-                {Array.from({ length: 5 }).map((_, starIndex) => (
-                  <StarIcon key={starIndex} className="h-[16px] w-[16px]" />
-                ))}
-              </div>
-              <p className="mt-7 text-[10px] leading-[1.78] text-[var(--plan-review-text)] sm:text-[10.5px]">
-                {review.quote}
-              </p>
-              <div className="mt-6">
-                <p className="text-[15px] font-bold text-[var(--plan-text)]">{review.name}</p>
-                <div className="mt-[7px] flex items-center justify-between gap-4 text-[10px] font-semibold text-[var(--plan-green)]">
-                  <span>{review.role}</span>
-                  <span>Country: {review.country}</span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        <p className="mt-7 break-words text-[10px] leading-[1.78] text-[var(--plan-review-text)] sm:text-[10.5px] lg:text-[10px] xl:text-[10.5px]">
+          {review.quote}
+        </p>
+
+        <div className="mt-6">
+          <p className="break-words text-[15px] font-bold leading-tight text-[var(--plan-text)]">
+            {review.name}
+          </p>
+          <div className="mt-[7px] flex flex-wrap items-start justify-between gap-x-4 gap-y-1 text-[10px] font-semibold leading-[1.35] text-[var(--plan-green)]">
+            <span className="min-w-0 break-words">{review.role}</span>
+            <span className="min-w-0 break-words text-right">Country: {review.country}</span>
+          </div>
+        </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-[19px] z-20 flex justify-center gap-[3px]">
-        {testimonials.map((review, index) => (
-          <button
-            key={`${review.name}-dot`}
-            type="button"
-            onClick={() => setActive(index)}
-            className={`h-[6px] rounded-full transition-[width,background-color,transform] duration-300 hover:scale-125 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--plan-button)] focus-visible:ring-offset-2 ${
-              index === active ? "w-[12px] bg-[var(--plan-dot-active)]" : "w-[6px] bg-[var(--plan-dot-idle)]"
-            }`}
-            aria-label={`Show review ${index + 1}`}
-            aria-current={index === active ? "true" : undefined}
-          />
-        ))}
-      </div>
+      {testimonials.length > 1 ? (
+        <div className="relative z-20 mt-5 flex min-h-[12px] flex-wrap items-center justify-center gap-[3px] lg:mt-auto lg:pt-5">
+          {testimonials.map((item, index) => (
+            <button
+              key={`${item.name}-dot-${index}`}
+              type="button"
+              onClick={() => setActive(index)}
+              className={`h-[6px] rounded-full transition-[width,background-color,transform] duration-300 hover:scale-125 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--plan-button)] focus-visible:ring-offset-2 ${
+                index === activeIndex ? "w-[12px] bg-[var(--plan-dot-active)]" : "w-[6px] bg-[var(--plan-dot-idle)]"
+              }`}
+              aria-label={`Show review ${index + 1}`}
+              aria-current={index === activeIndex ? "true" : undefined}
+            />
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }
