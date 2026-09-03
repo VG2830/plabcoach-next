@@ -130,6 +130,40 @@
   --contact-field-border: #ececec;
   --contact-button: #0b5da8;
   --contact-ring-purple: #a9adef;
+
+  /* Appraisal page */
+  --appraisal-hero-bg: #dee2ff;
+  --appraisal-section-soft: #f8f9ff;
+  --appraisal-ink: #162355;
+  --appraisal-primary: #09539f;
+  --appraisal-accent: #5b65dc;
+  --appraisal-copy: #777777;
+  --appraisal-hero-button: #2b38d8;
+  --appraisal-partnership-bg: #94a0ff;
+  --appraisal-services-panel: #e2f0ff;
+  --appraisal-icon-bg: #bfdfff;
+  --appraisal-offers-bg: #f0f0f0;
+  --appraisal-card-copy: #737373;
+  --appraisal-offer-red: #ff4d4f;
+  --appraisal-code-border: #67bf3b;
+  --appraisal-code-hover: #f1ffe9;
+  --appraisal-divider: #eeeeee;
+  --appraisal-button: #5b65dc;
+  --appraisal-benefit-text: #363259;
+  --appraisal-benefit-icon-bg: #e3e0fa;
+  --appraisal-benefit-icon-hover: #dad5fb;
+  --appraisal-benefit-shape-light: #ededed;
+  --appraisal-benefit-shape-lavender: #b6b6db;
+  --appraisal-benefit-shape-blue: #556ece;
+  --appraisal-benefit-shape-pale: #e5e7ff;
+  --appraisal-journey-muted: #838383;
+  --appraisal-journey-line: #a3a9ff;
+  --appraisal-reviews-bg: #ededed;
+  --appraisal-review-card: #d0e1ff;
+  --appraisal-review-copy: #232323;
+  --appraisal-review-stars-bg: #d0e1ff;
+  --appraisal-star: #dda326;
+  --appraisal-slider-arrow: #85bffa;
 }
 
 @theme inline {
@@ -170,6 +204,7 @@ button {
     overflow-x: hidden;
   }
 }
+
 /* @import "tailwindcss";
 
 :root {

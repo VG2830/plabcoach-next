@@ -9,6 +9,7 @@ const navigation = [
   { label: "Important Exam Dates", href: "#" },
   { label: "Blogs", href: "/blogs" },
   { label: "About Us", href: "/aboutus" },
+  {label:"GMC Appraisal", href:"/appraisal"}
 ];
 
 export default function Header() {
@@ -80,6 +81,9 @@ export default function Header() {
         </Link>
 
         <div className="flex items-center justify-end gap-4 lg:gap-5">
+          {/* <Link href="/appraisal" aria-label="Appraisal" className="hidden text-[14px] font-medium text-[var(--nav-muted)] transition hover:text-[var(--primary)] lg:block">
+            GMC Appraisal
+          </Link> */}
           <a href="#calendar" aria-label="Important dates" className="hidden lg:block">
             <Image
               src="/calender_icon.svg"
