@@ -323,16 +323,16 @@ export default function AppraisalPage() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-white pt-[6px] sm:pt-[14px] lg:pt-[2px]">
+        <section className="relative overflow-hidden bg-white pt-[14px] sm:pt-[20px] lg:pt-[28px] xl:pt-[34px]">
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-            <div className="mx-auto grid max-w-[840px] items-start gap-[34px] lg:grid-cols-[395px_1fr] lg:gap-[30px]">
-              <div className="relative mx-auto h-[250px] w-full max-w-[395px] sm:h-[262px] lg:mx-0 lg:h-[250px]">
-                <div className="relative h-full w-full overflow-visible">
+            <div className="mx-auto grid w-full max-w-[1480px] items-center gap-[40px] sm:gap-[52px] lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:gap-[66px] xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-[82px]">
+              <div className="relative mx-auto w-full max-w-[540px] lg:mx-0">
+                <div className="relative aspect-[604/383] w-full overflow-visible">
                   <Image
                     src="/about_doctor_appraisal-iamge.webp"
                     alt="Doctor appraisal specialist"
                     fill
-                    sizes="(max-width: 1023px) 92vw, 395px"
+                    sizes="(max-width: 639px) 92vw, (max-width: 1023px) 540px, (max-width: 1279px) 520px, 540px"
                     className="object-contain object-left-top"
                   />
                   <Image
@@ -340,19 +340,19 @@ export default function AppraisalPage() {
                     alt="GMC compliant appraisal support"
                     width={187}
                     height={188}
-                    className="absolute bottom-[0px] right-[-2px] z-20 h-auto w-[104px] object-contain sm:w-[110px] lg:bottom-[1px] lg:right-[-3px] lg:w-[104px]"
+                    className="absolute bottom-[-18px] right-[-12px] z-20 h-auto w-[124px] object-contain sm:w-[138px] lg:bottom-[-20px] lg:right-[-18px] lg:w-[142px] xl:bottom-[-24px] xl:right-[-22px] xl:w-[150px]"
                   />
                 </div>
               </div>
 
-              <div className="pt-[8px] sm:pt-[12px] lg:pt-[37px]">
-                <p className="text-[9px] font-bold uppercase tracking-[0.01em] text-[var(--appraisal-accent)] sm:text-[10px] lg:text-[9px]">
+              <div className="w-full max-w-[590px] lg:pb-[6px]">
+                <p className="text-[10px] font-bold uppercase tracking-[0.015em] text-[var(--appraisal-accent)] sm:text-[11px] lg:text-[11px] xl:text-[12px]">
                   About Dr Appraisals
                 </p>
-                <h2 className="mt-[7px] text-[30px] font-bold leading-[1.03] tracking-[-0.025em] text-[var(--appraisal-ink)] sm:text-[34px] lg:text-[29px]">
+                <h2 className="mt-[8px] text-[31px] font-bold leading-[1.04] tracking-[-0.025em] text-[var(--appraisal-ink)] sm:text-[35px] lg:text-[37px] xl:text-[40px]">
                   Trusted UK Compliance Partner
                 </h2>
-                <div className="mt-[24px] max-w-[440px] space-y-[17px] text-[11px] leading-[1.62] text-[var(--appraisal-copy)] sm:text-[12px] lg:mt-[22px] lg:space-y-[16px] lg:text-[10px] lg:leading-[1.62]">
+                <div className="mt-[24px] max-w-[590px] space-y-[18px] text-[11px] leading-[1.68] text-[var(--appraisal-copy)] sm:text-[12px] lg:mt-[26px] lg:space-y-[20px] lg:text-[12px] xl:text-[13px] xl:leading-[1.72]">
                   <p>Dr Christopher Boyson is a UK-based General Practitioner, medical appraiser, and educator with significant expertise in clinical practice and professional development.</p>
                   <p>He serves as a Training Programme Director for postgraduate GP training, an examiner, and an NHS appraiser.</p>
                   <p>He has supported doctors across all career stages, from international medical graduates joining the NHS to experienced clinicians preparing for revalidation.</p>
@@ -361,22 +361,22 @@ export default function AppraisalPage() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto mt-[92px] w-[var(--site-width)] max-w-[var(--container-max)] sm:mt-[112px] lg:mt-[120px]">
-            <div className="mx-auto max-w-[1230px]">
-              <h2 className="text-[24px] font-bold uppercase leading-none tracking-[-0.02em] text-[var(--appraisal-ink)] sm:text-[26px] lg:text-[24px]">
+          <div className="relative z-10 mx-auto mt-[96px] w-[var(--site-width)] max-w-[var(--container-max)] sm:mt-[112px] lg:mt-[132px] xl:mt-[148px]">
+            <div className="mx-auto w-full max-w-[1010px]">
+              <h2 className="text-[24px] font-bold uppercase leading-none tracking-[-0.02em] text-[var(--appraisal-ink)] sm:text-[27px] lg:text-[28px] xl:text-[30px]">
                 Services Overview
               </h2>
 
-              <div className="mt-[12px] grid gap-x-[12px] gap-y-[14px] rounded-[19px] bg-[var(--appraisal-services-panel)] p-[13px] shadow-[0_8px_22px_rgba(33,56,111,0.05)] sm:grid-cols-2 sm:p-[14px] lg:grid-cols-3 lg:p-[13px]">
+              <div className="mt-[14px] grid gap-[14px] rounded-[24px] bg-[var(--appraisal-services-panel)] p-[16px] shadow-[0_8px_22px_rgba(33,56,111,0.05)] sm:grid-cols-2 sm:p-[18px] lg:grid-cols-3 lg:gap-[16px] lg:p-[18px] xl:gap-[18px] xl:p-[20px]">
                 {services.map((service) => (
                   <article
                     key={`${service.title}-${service.detail}`}
-                    className="group flex min-h-[74px] items-center gap-[10px] rounded-[18px] bg-white px-[12px] py-[10px] transition-[transform,box-shadow] duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_24px_rgba(24,38,91,0.09)] lg:min-h-[74px] lg:px-[12px]"
+                    className="group flex min-h-[86px] items-center gap-[12px] rounded-[20px] bg-white px-[14px] py-[12px] transition-[transform,box-shadow] duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_24px_rgba(24,38,91,0.09)] lg:min-h-[88px] lg:px-[15px] xl:min-h-[92px] xl:gap-[14px] xl:px-[16px]"
                   >
-                    <span className="grid h-[48px] w-[48px] shrink-0 place-items-center rounded-[10px] bg-[var(--appraisal-icon-bg)] transition duration-300 group-hover:scale-[1.04]">
-                      <Image src={service.icon} alt="" aria-hidden="true" width={38} height={38} className="h-[36px] w-[36px] object-contain" />
+                    <span className="grid h-[54px] w-[54px] shrink-0 place-items-center rounded-[11px] bg-[var(--appraisal-icon-bg)] transition duration-300 group-hover:scale-[1.04] xl:h-[58px] xl:w-[58px]">
+                      <Image src={service.icon} alt="" aria-hidden="true" width={42} height={42} className="h-[40px] w-[40px] object-contain xl:h-[43px] xl:w-[43px]" />
                     </span>
-                    <h3 className="text-[14px] font-bold leading-[1.06] tracking-[-0.015em] text-black sm:text-[15px] lg:text-[14px]">
+                    <h3 className="text-[14px] font-bold leading-[1.08] tracking-[-0.015em] text-black sm:text-[15px] lg:text-[15px] xl:text-[16px]">
                       {service.title}<br />{service.detail}
                     </h3>
                   </article>
@@ -385,7 +385,7 @@ export default function AppraisalPage() {
             </div>
           </div>
 
-          <div className="relative z-0 mt-[-96px] h-[174px] w-full sm:mt-[-98px] sm:h-[190px] lg:mt-[-97px] lg:h-[174px]">
+          <div className="relative z-0 mt-[-116px] h-[214px] w-full sm:mt-[-118px] sm:h-[230px] lg:mt-[-122px] lg:h-[242px] xl:mt-[-128px] xl:h-[258px]">
             <Image
               src="/hospital-building-building-medical-red-cross-symbolizing.webp"
               alt=""
