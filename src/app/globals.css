@@ -119,6 +119,23 @@
   --plan-dot-active: #74c1ff;
   --plan-dot-idle: #c7dff0;
 
+  /* Important Exam Dates page */
+  --exam-hero-bg: #f0f1ff;
+  --exam-heading: #17245a;
+  --exam-section-heading: #17245a;
+  --exam-label: #5363e8;
+  --exam-copy: #777777;
+  --exam-card-bg: #f7f7ff;
+  --exam-card-border: #e4e6f8;
+  --exam-card-heading: #07386b;
+  --exam-card-text: #101010;
+  --exam-date-accent: #5363e8;
+  --exam-label-red: #ff343b;
+  --exam-row-divider: #dfe1ee;
+  --exam-card-hover-bg: #f1f3ff;
+  --exam-card-hover-border: #cbd2fb;
+  --exam-card-hover-shadow: 0 18px 42px rgba(27, 42, 101, 0.14);
+
   /* Contact Us page */
   --contact-page-bg: #f1f2ff;
   --contact-panel-bg: #ffffff;
