@@ -54,31 +54,31 @@ export default function AboutUsPage() {
       <Header />
 
       <main>
-        <section id="about-us" className="relative h-[575px] overflow-visible bg-[var(--about-hero-bg)] sm:h-[590px] lg:h-[575px]">
+        <section id="about-us" className="relative h-[500px] overflow-visible bg-[var(--about-hero-bg)] sm:h-[590px] lg:h-[575px]">
           <Image
             src="/featured_courses_ellipse.webp"
             alt=""
             aria-hidden="true"
             width={1332}
             height={689}
-            className="pointer-events-none absolute left-1/2 top-[-20px] z-0 w-[820px] max-w-none -translate-x-1/2 sm:top-[-35px] sm:w-[1040px] lg:top-[-44px] lg:w-[1310px]"
+            className="pointer-events-none absolute left-1/2 top-[-38px] z-0 w-[720px] max-w-none -translate-x-1/2 sm:top-[-35px] sm:w-[1040px] lg:top-[-44px] lg:w-[1310px]"
           />
 
           <div className="relative z-10 mx-auto h-full w-[var(--site-width)] max-w-[var(--container-max)]">
-            <div className="mx-auto flex max-w-[930px] flex-col items-center px-2 pt-[86px] text-center sm:pt-[105px] lg:pt-[145px]">
+            <div className="mx-auto flex max-w-[930px] flex-col items-center px-2 pt-[62px] text-center sm:pt-[105px] lg:pt-[145px]">
               <p className="text-[11px] font-bold uppercase tracking-[0.015em] text-[var(--about-label)] sm:text-[12px] lg:text-[13px]">
                 About Us
               </p>
 
-              <h1 className="mt-[10px] text-[38px] font-bold leading-[1.04] tracking-[-0.025em] text-[var(--about-heading)] sm:text-[46px] lg:text-[52px]">
+              <h1 className="mt-[10px] max-w-[350px] text-[34px] font-bold leading-[1.06] tracking-[-0.025em] text-[var(--about-heading)] min-[420px]:max-w-[390px] min-[420px]:text-[37px] sm:max-w-none sm:text-[46px] sm:leading-[1.04] lg:text-[52px]">
                 Every Doctor&apos;s Journey Needs
                 <br className="hidden sm:block" /> the <span className="text-[var(--about-accent)]">Right Guidance</span>
               </h1>
 
-              <div className="mt-[48px] flex w-full max-w-[478px] flex-col gap-[14px] sm:flex-row sm:justify-center sm:gap-[22px] lg:mt-[60px]">
+              <div className="mt-[34px] flex w-full max-w-[478px] flex-col gap-[14px] sm:mt-[48px] sm:flex-row sm:justify-center sm:gap-[22px] lg:mt-[60px]">
                 <Link
                 href="/courses"
-                className="flex h-[58px] flex-1 items-center justify-center gap-[13px] rounded-[7px] bg-[var(--primary)] px-[22px] text-[13px] font-bold text-white transition-[filter] duration-200 hover:brightness-105 sm:text-[15px]"
+                className="mx-auto flex h-[54px] w-full max-w-[290px] flex-1 items-center justify-center gap-[13px] rounded-[7px] bg-[var(--primary)] px-[22px] text-[13px] font-bold text-white transition-[filter] duration-200 hover:brightness-105 sm:h-[58px] sm:max-w-none sm:text-[15px]"
                 >
                 Explore Courses
                 </Link>
@@ -91,7 +91,7 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            <div className="absolute bottom-[-430px] left-1/2 z-20 w-full max-w-[1246px] -translate-x-1/2 px-2 sm:px-5 lg:px-0">
+            <div className="absolute bottom-[-92px] left-1/2 z-20 w-full max-w-[1246px] -translate-x-1/2 px-2 min-[420px]:bottom-[-105px] sm:bottom-[-180px] sm:px-5 lg:bottom-[-430px] lg:px-0">
               <div className="relative aspect-[1246/556] w-full overflow-hidden rounded-[22px] bg-[#102a32] shadow-[0_18px_34px_rgba(32,43,70,0.20)] sm:rounded-[28px]">
                 <iframe
                   className="absolute inset-0 h-full w-full border-0"
@@ -106,14 +106,14 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-white pb-[92px] pt-[500px] sm:pb-[110px] sm:pt-[520px] lg:pb-[145px] lg:pt-[535px]">
+        <section className="relative overflow-hidden bg-white pb-[92px] pt-[138px] min-[420px]:pt-[152px] sm:pb-[110px] sm:pt-[235px] lg:pb-[145px] lg:pt-[535px]">
           <Image
             src="/featured_courses_ellipse.webp"
             alt=""
             aria-hidden="true"
             width={1332}
             height={689}
-            className="pointer-events-none absolute left-[-260px] top-[405px] z-0 w-[820px] max-w-none sm:left-[-320px] sm:w-[1040px] lg:left-[-330px] lg:top-[420px] lg:w-[1120px]"
+            className="pointer-events-none absolute left-[-260px] top-[70px] z-0 w-[760px] max-w-none sm:left-[-320px] sm:top-[150px] sm:w-[1040px] lg:left-[-330px] lg:top-[420px] lg:w-[1120px]"
           />
           <Image
             src="/featured_courses_ellipse.webp"

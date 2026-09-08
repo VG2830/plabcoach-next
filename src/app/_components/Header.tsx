@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { label: "Courses", href: "/courses", hasArrow: true },
@@ -14,6 +15,10 @@ const navigation = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === "/courses" ? pathname.startsWith("/courses") : pathname === href;
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/[0.05] bg-white/95 backdrop-blur-md">
@@ -23,7 +28,10 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="flex items-center gap-1.5 transition hover:text-[var(--primary)]"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`flex items-center gap-1.5 transition hover:text-[var(--primary)] ${
+                isActive(item.href) ? "font-semibold text-[var(--accent)]" : ""
+              }`}
             >
               {item.label}
               {item.hasArrow ? (
@@ -131,7 +139,10 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="flex min-h-[46px] items-center justify-between border-b border-black/[0.05] px-2 transition hover:text-[var(--primary)]"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`flex min-h-[46px] items-center justify-between border-b border-black/[0.05] px-2 transition hover:text-[var(--primary)] ${
+                  isActive(item.href) ? "font-semibold text-[var(--accent)]" : ""
+                }`}
               >
                 <span>{item.label}</span>
                 {item.hasArrow ? (

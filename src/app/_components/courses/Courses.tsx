@@ -15,6 +15,7 @@ import Image from "next/image";
 import Header from "../Header";
 import Footer from "../Footer";
 import CourseCard from "./CourseCard";
+import Link from "next/link";
 
 type CourseItem = {
   image: string;
@@ -205,12 +206,17 @@ export default function Courses() {
                     Explore Courses
                     <ArrowIcon />
                   </a> */}
-                  <a
-                    href="#course-finder"
+                  {/* <a
+                    href=""
                     className="flex h-[51px] min-w-[186px] items-center justify-center rounded-[7px] border-[1.5px] border-[var(--courses-button-border)] bg-transparent px-[22px] text-[12px] font-bold text-[var(--courses-button-muted)] transition-colors duration-200 hover:border-[var(--courses-primary)] hover:text-[var(--courses-primary)] sm:text-[13px]"
                   >
                     Find Your Exam
-                  </a>
+                  </a> */}
+                  <Link href="/important-exam" className="flex h-[51px] min-w-[186px] items-center justify-center rounded-[7px] border-[1.5px] border-[var(--courses-button-border)] bg-transparent px-[22px] text-[12px] font-bold text-[var(--courses-button-muted)] transition-colors duration-200 hover:border-[var(--courses-primary)] hover:text-[var(--courses-primary)] sm:text-[13px]">
+                    
+                      Find Your Exam
+                    
+                  </Link>
                 </div>
 
                 <Image

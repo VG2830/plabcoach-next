@@ -62,7 +62,7 @@ function EnrolButton({ courseSlug, planId }: { courseSlug: string; planId: strin
       href={getPlanSelectionHref(courseSlug, planId)}
       className="grid h-[40px] w-full place-items-center rounded-[7px] bg-[var(--plan-button)] text-[10px] font-bold uppercase tracking-[-0.01em] text-white transition-[transform,filter,box-shadow] duration-200 hover:-translate-y-[1px] hover:brightness-105 hover:shadow-[0_7px_16px_rgba(91,101,220,0.20)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--plan-button)] focus-visible:ring-offset-2 sm:h-[42px]"
     >
-      ENROL NOW
+      ENROLL NOW
     </Link>
   );
 }

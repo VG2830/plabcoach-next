@@ -124,11 +124,11 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
             </div>
 
             <div className="mt-[42px] grid gap-[28px] lg:grid-cols-[205px_1fr] lg:items-start lg:gap-[40px] xl:grid-cols-[220px_1fr] xl:gap-[54px]">
-              <h3 className="max-w-[170px] text-[24px] font-bold leading-[1.08] tracking-[-0.01em] text-[var(--course-detail-option-title)] sm:text-[28px] lg:pt-[4px] lg:text-[31px]">
-                The
-                <br /> course is
-                <br /> available
-                <br /> in
+              <h3 className="max-w-[300px] text-[24px] font-bold leading-[1.08] tracking-[-0.01em] text-[var(--course-detail-option-title)] sm:text-[28px] lg:pt-[4px] lg:text-[31px]">
+                  The
+                  <br className="hidden lg:block" /> course is
+                  <br className="hidden lg:block" /> available
+                  <br className="hidden lg:block" /> in
               </h3>
 
               <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-[16px]">

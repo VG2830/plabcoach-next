@@ -249,7 +249,7 @@ export default function ImportantExamPage() {
                 width={1382}
                 height={1382}
                 priority
-                className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[500px] max-w-none -translate-x-1/2 -translate-y-[47%] object-contain rotate-[-58deg] opacity-80 sm:w-[610px] lg:left-[51%] lg:top-[33%] lg:w-[760px] xl:w-[1400px]"
+                className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-[500px] max-w-none -translate-x-1/2 -translate-y-[47%] object-contain rotate-[-58deg] opacity-80 sm:w-[610px] lg:left-[51%] lg:top-[33%] lg:w-[760px] xl:w-[1400px] "
               />
               <Image
                 src="/3d_floating_calender.webp"

@@ -21,10 +21,10 @@ export default function Footer() {
     <>
      <footer id="blogs" className="relative overflow-hidden bg-[var(--footer-bg)] pt-8 text-[var(--footer-text)] lg:pt-10">
         <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-          <div className="flex flex-wrap items-center justify-between gap-6">
+          <div className="flex flex-col items-start gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
             <Image src="/new_plabcoach.webp" alt="PLABCOACH" width={212} height={57} className="h-auto w-[180px] lg:w-[198px] xl:w-[205px]" />
-            <div className="flex items-center gap-3 text-[14px] font-bold text-black">
-              <span className="mr-3">Social Media</span>
+            <div className="flex w-full flex-wrap items-center gap-3 text-[14px] font-bold text-black sm:w-auto">
+              <span className="mr-1 sm:mr-3">Social Media</span>
               {socialLabels.map((label) => (
                 <a key={label} href={`#${label}`} aria-label={label} className="grid h-8 w-8 place-items-center rounded-[4px] bg-black transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--primary)] hover:shadow-[0_8px_18px_rgba(11,93,168,0.22)]">
                   <SocialIcon label={label} />
@@ -33,9 +33,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-10 h-px bg-[#acd6ef]" />
+          <div className="mt-7 h-px bg-[#acd6ef] sm:mt-10" />
 
-          <div className="grid gap-10 pb-9 pt-10 text-[15px] leading-7 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.85fr_1fr_1.15fr] lg:gap-14">
+          <div className="grid gap-8 pb-4 pt-8 text-[15px] leading-7 sm:grid-cols-2 sm:gap-10 sm:pb-9 sm:pt-10 lg:grid-cols-[1.25fr_0.85fr_1fr_1.15fr] lg:gap-14">
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">We have been</h3>
               <p className="max-w-[390px]">We have been delivering high-quality online courses for nearly a decade. All our instructors are experts with extensive experience in their respective fields. We offer comprehensive course materials, ensuring our students have everything they need to succeed.</p>
@@ -81,8 +81,15 @@ export default function Footer() {
             </section>
           </div>
 
-          <div className="relative h-[235px] overflow-hidden sm:h-[260px] lg:h-[280px]">
-            <Image src="/footer_logo_with_blur.webp" alt="" aria-hidden="true" width={1480} height={281} className="absolute inset-x-0 top-0 h-auto w-full opacity-[0.92]" />
+          <div className="relative overflow-hidden sm:h-[260px] lg:h-[280px]">
+            <Image
+              src="/footer_logo_with_blur.webp"
+              alt=""
+              aria-hidden="true"
+              width={1480}
+              height={281}
+              className="relative block h-auto w-full opacity-[0.92] sm:absolute sm:inset-x-0 sm:top-0"
+            />
           </div>
         </div>
       </footer>

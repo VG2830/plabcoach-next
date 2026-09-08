@@ -140,11 +140,11 @@ function ArrowIcon({ direction }: { direction: "left" | "right" }) {
 
 function HeroBadge({ icon, kicker, title, className = "" }: { icon: string; kicker: string; title: React.ReactNode; className?: string }) {
   return (
-    <div className={`absolute z-20 flex min-h-[96px] items-center gap-[16px] rounded-[17px] bg-white px-[19px] py-[15px] shadow-[0_18px_46px_rgba(24,38,91,0.19)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_52px_rgba(24,38,91,0.24)] xl:min-h-[113px] xl:gap-[18px] xl:px-[22px] xl:py-[17px] ${className}`}>
-      <Image src={icon} alt="" aria-hidden="true" width={72} height={72} className="h-[58px] w-[58px] shrink-0 object-contain xl:h-[66px] xl:w-[66px]" />
+    <div className={`absolute z-20 flex min-h-[68px] items-center gap-[10px] rounded-[12px] bg-white px-[11px] py-[10px] shadow-[0_12px_30px_rgba(24,38,91,0.17)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(24,38,91,0.22)] sm:min-h-[96px] sm:gap-[16px] sm:rounded-[17px] sm:px-[19px] sm:py-[15px] sm:shadow-[0_18px_46px_rgba(24,38,91,0.19)] xl:min-h-[113px] xl:gap-[18px] xl:px-[22px] xl:py-[17px] ${className}`}>
+      <Image src={icon} alt="" aria-hidden="true" width={72} height={72} className="h-[42px] w-[42px] shrink-0 object-contain sm:h-[58px] sm:w-[58px] xl:h-[66px] xl:w-[66px]" />
       <div className="leading-[1.02]">
-        <p className="text-[12px] font-semibold text-[var(--appraisal-accent)] xl:text-[14px]">{kicker}</p>
-        <p className="mt-[5px] text-[18px] font-bold text-[var(--appraisal-ink)] xl:text-[21px]">{title}</p>
+        <p className="text-[9px] font-semibold text-[var(--appraisal-accent)] sm:text-[12px] xl:text-[14px]">{kicker}</p>
+        <p className="mt-[4px] text-[13px] font-bold text-[var(--appraisal-ink)] sm:mt-[5px] sm:text-[18px] xl:text-[21px]">{title}</p>
       </div>
     </div>
   );
@@ -273,25 +273,25 @@ export default function AppraisalPage() {
 
       <main>
         <section className="relative overflow-hidden bg-[var(--appraisal-hero-bg)]">
-          <div className="relative mx-auto grid min-h-[600px] w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-8 py-[70px] sm:min-h-[650px] lg:min-h-[745px] lg:grid-cols-[0.89fr_1.11fr] lg:gap-0 lg:py-0">
-            <div className="relative z-20 max-w-[670px] lg:-translate-y-[18px] lg:self-center">
+          <div className="relative mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-[28px] py-[44px] sm:min-h-[650px] sm:gap-8 sm:py-[70px] lg:min-h-[745px] lg:grid-cols-[0.89fr_1.11fr] lg:gap-0 lg:py-0">
+            <div className="relative z-20 mx-auto w-full max-w-[670px] text-center sm:text-left lg:mx-0 lg:-translate-y-[18px] lg:self-center">
               <p className="text-[11px] font-bold uppercase tracking-[0.025em] text-[var(--appraisal-accent)] sm:text-[12px] lg:text-[13px]">We&apos;re here to help</p>
-              <h1 className="mt-[13px] text-[43px] font-bold leading-[1.01] tracking-[-0.038em] text-[var(--appraisal-ink)] sm:text-[54px] lg:text-[64px] xl:text-[66px]">
+              <h1 className="mx-auto mt-[11px] max-w-[360px] text-[36px] font-bold leading-[1.04] tracking-[-0.034em] text-[var(--appraisal-ink)] min-[420px]:max-w-[400px] min-[420px]:text-[40px] sm:mx-0 sm:mt-[13px] sm:max-w-none sm:text-[54px] sm:leading-[1.01] sm:tracking-[-0.038em] lg:text-[64px] xl:text-[66px]">
                 Get in Touch With Our Team
               </h1>
-              <p className="mt-[35px] max-w-[620px] text-[13px] leading-[1.68] text-[var(--appraisal-copy)] sm:text-[15px] lg:text-[16px]">
+              <p className="mx-auto mt-[22px] max-w-[520px] text-[13px] leading-[1.6] text-[var(--appraisal-copy)] sm:mx-0 sm:mt-[35px] sm:max-w-[620px] sm:text-[15px] sm:leading-[1.68] lg:text-[16px]">
                 Have questions about courses, subscriptions, or admissions? Connect with our team for quick assistance and expert guidance.
               </p>
-              <button type="button" className="mt-[50px] h-[60px] w-[226px] rounded-[9px] bg-[var(--appraisal-hero-button)] px-[20px] text-[13px] font-bold text-white shadow-[0_12px_28px_rgba(56,73,226,0.18)] transition duration-300 hover:-translate-y-1 hover:brightness-105">
+              <button type="button" className="mt-[30px] h-[54px] w-full max-w-[260px] rounded-[9px] bg-[var(--appraisal-hero-button)] px-[20px] text-[13px] font-bold text-white shadow-[0_12px_28px_rgba(56,73,226,0.18)] transition duration-300 hover:-translate-y-1 hover:brightness-105 sm:mt-[50px] sm:h-[60px] sm:w-[226px]">
                 Get Exclusive Access
               </button>
-              <p className="mt-[24px] text-[12px] font-bold text-[var(--appraisal-primary)]">We&apos;re Here to Help</p>
+              <p className="mt-[18px] text-[12px] font-bold text-[var(--appraisal-primary)] sm:mt-[24px]">We&apos;re Here to Help</p>
             </div>
 
-            <div className="relative z-10 mx-auto mt-8 h-[430px] w-full max-w-[760px] sm:h-[520px] lg:mt-0 lg:h-[720px] lg:max-w-[860px] lg:translate-x-[60px] lg:self-center">
+            <div className="relative z-10 mx-auto mt-0 h-[335px] w-full max-w-[430px] min-[420px]:h-[370px] min-[420px]:max-w-[500px] sm:mt-8 sm:h-[520px] sm:max-w-[760px] lg:mt-0 lg:h-[720px] lg:max-w-[860px] lg:translate-x-[60px] lg:self-center">
               <Image src="/gmc_hero_image.webp" alt="Medical professionals" fill priority sizes="(max-width: 1023px) 94vw, 860px" className="object-contain object-center lg:-translate-y-[52px] lg:object-right" />
-              <HeroBadge icon="/trusted_doctor_icon.svg" kicker="Trusted by" title="UK Doctors" className="bottom-[56px] left-[0px] min-w-[230px] sm:bottom-[72px] sm:left-[22px] lg:bottom-[197px] lg:left-[-110px] lg:min-w-[258px]" />
-              <HeroBadge icon="/gmc_complaint_icon.svg" kicker="GMC-Compliant" title="Services" className="right-[0px] top-[22px] min-w-[224px] sm:right-[16px] sm:top-[30px] lg:right-[4px] lg:top-[150px] lg:min-w-[245px]" />
+              <HeroBadge icon="/trusted_doctor_icon.svg" kicker="Trusted by" title="UK Doctors" className="bottom-[34px] left-[0px] min-w-[166px] sm:bottom-[72px] sm:left-[22px] sm:min-w-[230px] lg:bottom-[197px] lg:left-[-110px] lg:min-w-[258px]" />
+              <HeroBadge icon="/gmc_complaint_icon.svg" kicker="GMC-Compliant" title="Services" className="right-[0px] top-[14px] min-w-[164px] sm:right-[16px] sm:top-[30px] sm:min-w-[224px] lg:right-[4px] lg:top-[150px] lg:min-w-[245px]" />
               <div className="absolute bottom-[6px] right-[0px] z-20 hidden min-h-[96px] w-[330px] items-center gap-[16px] rounded-[17px] bg-white px-[20px] py-[15px] shadow-[0_18px_46px_rgba(24,38,91,0.19)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_52px_rgba(24,38,91,0.24)] sm:flex lg:bottom-[92px] lg:right-[-92px] xl:min-h-[113px] xl:w-[370px] xl:gap-[18px] xl:px-[22px] xl:py-[17px]">
                 <Image src="/intr_medical_icon.svg" alt="" aria-hidden="true" width={72} height={72} className="h-[60px] w-[60px] shrink-0 object-contain xl:h-[66px] xl:w-[66px]" />
                 <div className="leading-[1.04]">
@@ -392,8 +392,17 @@ export default function AppraisalPage() {
               aria-hidden="true"
               fill
               sizes="100vw"
-              className="pointer-events-none object-cover object-center"
+              className=" pointer-events-none hidden min-[426px]:block object-cover object-center"
             />
+            <Image
+              src="/hospital-building-mobile.png"
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="100vw"
+              className=" pointer-events-none block min-[426px]:hidden object-cover object-center"
+            />
+
           </div>
         </section>
 
