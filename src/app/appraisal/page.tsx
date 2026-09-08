@@ -395,7 +395,7 @@ export default function AppraisalPage() {
               className=" pointer-events-none hidden min-[426px]:block object-cover object-center"
             />
             <Image
-              src="/hospital-building-mobile.png"
+              src="/hospital-building-mobile.webp"
               alt=""
               aria-hidden="true"
               fill
