@@ -273,7 +273,7 @@ function OfferCard({
 function ExamCard({ exam }: { exam: (typeof exams)[number] }) {
   return (
     <article className="group flex min-h-[138px] items-center gap-5 rounded-[28px] bg-[#e3edff] px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8e7ff] hover:shadow-[0_18px_40px_rgba(42,82,145,0.14)] sm:gap-6 sm:px-6 xl:min-h-[164px] xl:gap-7 xl:px-7">
-      <div className="grid h-[92px] w-[92px] shrink-0 place-items-center rounded-[15px] bg-[#c9e2ff] transition-all duration-300 group-hover:bg-[#b9d9ff] sm:h-[100px] sm:w-[100px] xl:h-[114px] xl:w-[114px]">
+      <div className="grid h-[80px] w-[80px] shrink-0 place-items-center rounded-[15px] bg-[#c9e2ff] transition-all duration-300 group-hover:bg-[#b9d9ff] sm:h-[80px] sm:w-[80px] xl:h-[114px] xl:w-[114px]">
         <Image
           src={exam.icon}
           alt=""
