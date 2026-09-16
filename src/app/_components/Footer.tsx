@@ -1,19 +1,21 @@
 import Image from 'next/image';
-const socialLabels = ["facebook", "linkedin", "instagram", "x", "whatsapp"];
+// const socialLabels = ["facebook", "linkedin", "instagram", "x", "whatsapp"];
+const socialLabels = ["facebook", "instagram", "whatsapp"];
+
 function SocialIcon({ label }: { label: string }) {
   const common = "h-[18px] w-[18px] fill-white";
   if (label === "facebook") {
     return <svg className={common} viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.2l.8-4H13V9c0-.7.3-1 1-1Z" /></svg>;
   }
-  if (label === "linkedin") {
-    return <svg className={common} viewBox="0 0 24 24"><path d="M5 8.2H1.8V22H5V8.2ZM3.4 2A2 2 0 1 0 3.4 6 2 2 0 0 0 3.4 2ZM22 14c0-4.2-2.2-6.1-5.2-6.1-2.4 0-3.5 1.3-4.1 2.2V8.2H9.5V22h3.2v-6.8c0-1.8.3-3.6 2.7-3.6 2.3 0 2.4 2.2 2.4 3.7V22H22V14Z" /></svg>;
-  }
+  // if (label === "linkedin") {
+  //   return <svg className={common} viewBox="0 0 24 24"><path d="M5 8.2H1.8V22H5V8.2ZM3.4 2A2 2 0 1 0 3.4 6 2 2 0 0 0 3.4 2ZM22 14c0-4.2-2.2-6.1-5.2-6.1-2.4 0-3.5 1.3-4.1 2.2V8.2H9.5V22h3.2v-6.8c0-1.8.3-3.6 2.7-3.6 2.3 0 2.4 2.2 2.4 3.7V22H22V14Z" /></svg>;
+  // }
   if (label === "instagram") {
     return <svg className={common} viewBox="0 0 24 24"><path fillRule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7Zm5 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2.2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM17.7 6.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" clipRule="evenodd" /></svg>;
   }
-  if (label === "x") {
-    return <svg className={common} viewBox="0 0 24 24"><path d="M18.8 2H22l-7 8 8.2 12h-6.4l-5-6.6L6 22H2.8l7.5-8.6L2.4 2H9l4.5 6 5.3-6Zm-1.1 17.9h1.8L8 4H6.1l11.6 15.9Z" /></svg>;
-  }
+  // if (label === "x") {
+  //   return <svg className={common} viewBox="0 0 24 24"><path d="M18.8 2H22l-7 8 8.2 12h-6.4l-5-6.6L6 22H2.8l7.5-8.6L2.4 2H9l4.5 6 5.3-6Zm-1.1 17.9h1.8L8 4H6.1l11.6 15.9Z" /></svg>;
+  // }
   return <svg className={common} viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 17.8a7.8 7.8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A7.8 7.8 0 1 1 12 19.8Zm4.3-5.8c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1a6.2 6.2 0 0 1-3-2.6c-.2-.4.2-.4.7-1.2.1-.2.1-.4 0-.6l-.8-1.9c-.2-.5-.5-.4-.7-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 1.8.8 2.5.8 3.4.7 1-.1 1.4-.7 1.6-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.2-.6-.4Z" /></svg>;
 }
 export default function Footer() {
@@ -87,7 +89,7 @@ export default function Footer() {
               alt=""
               aria-hidden="true"
               width={1480}
-              height={281}
+              height={398}
               className="relative block h-auto w-full opacity-[0.92] sm:absolute sm:inset-x-0 sm:top-0"
             />
           </div>

@@ -130,7 +130,7 @@ export default function AboutUsPage() {
                 <div className="relative mx-auto h-[390px] w-[84%] max-w-[520px] sm:h-[500px] lg:ml-[36px] lg:h-[520px] lg:w-[535px]">
                   <div className="absolute bottom-[35px] left-[17px] right-[17px] h-[250px] rounded-[19px] bg-[var(--about-portrait-bg)] sm:bottom-[44px] sm:h-[315px] lg:bottom-[40px] lg:h-[312px]" />
                   <Image
-                    src="/karam_image.webp"
+                    src="/karam_sir_new_img.webp"
                     alt="Dr Karam Singh"
                     fill
                     sizes="(max-width: 1023px) 80vw, 535px"

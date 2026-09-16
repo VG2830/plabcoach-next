@@ -75,12 +75,12 @@
   --courses-final-copy: #c4d0dc;
 
   /* Individual course pages — Figma source colors */
-  --course-detail-hero-bg: #eef0ff;
+  --course-detail-hero-bg: #FEFEFE;
   --course-detail-heading: #17245a;
   --course-detail-label: #5363e8;
   --course-detail-primary: #0b5da8;
   --course-detail-copy: #666a75;
-  --course-detail-body-strong: #252a35;
+  --course-detail-body-strong: #09539F;
   --course-detail-button-border: #8b8b8b;
   --course-detail-button-muted: #818181;
   --course-detail-option-title: #5c00d7;
@@ -89,6 +89,37 @@
   --course-detail-icon-bg: #eef0ff;
   --course-detail-cta-bg: #0b5da8;
   --course-detail-cta-copy: #bed2e6;
+  --course-detail-hero-desc-bg: #F8F9FF;
+  --course-detail-hero-desc-border: #e6eaff;
+  --course-detail-toc-bg: #ffffff;
+  --course-detail-toc-item-bg: #eef0ff;
+  --course-detail-toc-item-active: #eef0ff;
+  --course-detail-toc-dot: #c9d0ff;
+  --course-detail-content-bg: #eef0ff;
+  --course-detail-section-heading: #5363e8;
+  --course-detail-section-dot: #d7dcff;
+  --course-detail-faq-bg: #eef0ff;
+  --course-detail-faq-item-bg: #eef0ff;
+  --course-detail-faq-item-active: #0c2350;
+  --course-detail-faq-text: #252a35;
+  --course-detail-faq-cta-bg: #eef0ff;
+  --course-detail-comparison-section-bg: #eeeeee;
+  --course-detail-comparison-note-bg: #f5f9ff;
+  --course-detail-comparison-note-text: #0b5da8;
+  --course-detail-comparison-table-border: #e2e8f0;
+  --course-detail-comparison-plab1-header: #3b82f6;
+  --course-detail-comparison-pres2-header: #7c68d9;
+  --course-detail-comparison-feature-header: #e2e2e2;
+  --course-detail-comparison-row-even: #f0f6ff;
+  --course-detail-related-1-bg: #f0f6ff;
+  --course-detail-related-2-bg: #f5f3ff;
+  --course-detail-related-3-bg: #eefbf3;
+  --course-detail-related-1-icon: #a5cfff;
+  --course-detail-related-2-icon: #c4b9ff;
+  --course-detail-related-3-icon: #9fdcb7;
+  --course-detail-related-1-tag-bg: #c7e2ff;
+  --course-detail-related-2-tag-bg: #d9d1ff;
+  --course-detail-related-3-tag-bg: #bde4cc;
 
   /* Course plan page — Figma source colors */
   --plan-hero-bg: #f0f1ff;

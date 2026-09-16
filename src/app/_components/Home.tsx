@@ -75,41 +75,49 @@ const exams = [
     title: "PLAB 1 / UKMLA-AKT",
     subtitle: "Written knowledge exam for UK GMC registration",
     icon: "/plab1_exam_icon.svg",
+    href: "/courses/plab-1-ukmla",
   },
   {
     title: "PLAB 2 / UKMLA-CPSA",
     subtitle: "Clinical OSCE for UK GMC registration",
     icon: "/plab2_exam_icon.svg",
+    href: "/courses/plab-2-ukmla",
   },
   {
     title: "PRES 2",
     subtitle: "Written exam for Irish Medical Council (IMC) registration",
     icon: "/pres2_exam_icon.svg",
+    href: "/courses/pres-level-2",
   },
   {
     title: "PRES 3",
     subtitle: "OSCE + data interpretation for Irish Medical Council (IMC) registration",
     icon: "/pres3_exam_icon.svg",
+    href: "/courses/pres-3-osce",
   },
   {
     title: "UKFPO-NCA",
     subtitle: "Clinical assessment for UK Foundation Programme eligibility",
     icon: "/nca_exam_icon.svg",
+    href: "/courses/national-clinical-assessment",
   },
   {
     title: "UKFPO-PSA",
     subtitle: "Prescribing Safety Assessment for Foundation Programme candidates",
     icon: "/psa_exam_icon.svg",
+    href: "/courses/prescribing-safety-assessment",
   },
   {
     title: "MSRA",
     subtitle: "Computer-based assessment for GP and specialty training entry",
     icon: "/msra_exam_icon.svg",
+    href:"#",
   },
   {
     title: "MRCP-AKT",
     subtitle: "Applied Knowledge Test for GP trainees (ST3)",
     icon: "/mrcp_exam_icon.svg",
+    href:"#",
   },
 ];
 
@@ -290,7 +298,9 @@ function ExamCard({ exam }: { exam: (typeof exams)[number] }) {
           {exam.subtitle}
         </p>
         <span className="mt-3 inline-block text-[13px] font-semibold text-[#5368f2] transition-transform duration-300 group-hover:translate-x-1 xl:text-[15px]">
-          Explore →
+         <a href={exam.href} className="block">
+            Explore →
+          </a>    
         </span>
       </div>
     </article>
@@ -369,12 +379,12 @@ export default function Home() {
             </div>
 
             <Image
-              src="/man-woman-wearing-capes.webp"
+              src="/hero_banner_image.webp"
               alt="Doctors preparing international medical learners"
               width={725}
               height={664}
               priority
-              className="absolute right-[-18px] top-[28px] z-10 hidden h-auto w-[610px] max-w-none lg:block xl:right-[10px] xl:w-[660px] 2xl:right-[18px] 2xl:w-[690px]"
+              className="absolute right-[-18px] top-[130px] z-10 hidden h-auto w-[610px] max-w-none lg:block xl:right-[10px] xl:w-[660px] 2xl:right-[18px] 2xl:w-[690px]"
             />
           </div>
         </section>
@@ -716,7 +726,7 @@ export default function Home() {
               <h2 className="mt-2 text-[34px] font-bold leading-[1.08] text-black lg:text-[42px]">Subscription-Based Coaching</h2>
               <p className="mt-4 text-[14px] leading-6 text-[#676767]">At PLABcoach, we understand the importance of flexibility in your learning journey. Our self-paced learning modules let you study at your own convenience with expert-curated content, question banks, and video lessons - tailored to fit your schedule and goals.</p>
               <div className="mt-8 bg-[#f4f9ff] p-6">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-white shadow-sm">◈</span>
+                <span className="grid h-10 w-10 place-items-center rounded-full  shadow-sm"><Image src="/icon.svg" alt="Icon" width={20} height={20} /></span>
                 <p className="mt-4 text-[13px] font-semibold leading-5 text-black">Learn at your pace. Prepare with confidence. Succeed in your exams.</p>
                 <p className="mt-4 text-[13px] leading-5 text-[#777]">Trusted by thousands of medical professionals worldwide</p>
               </div>
