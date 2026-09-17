@@ -84,6 +84,7 @@ export type CourseDetailData = {
   videoTitle: string;
   ctaTitle: string;
   ctaCopy: string;
+  subscribeButtonLabel: string;
   subscribeHref?: string;
 };
 
@@ -183,22 +184,22 @@ const faqsPlab1: FAQItem[] = [
   {
     question: "Can I take PLAB 1 without completing my internship?",
     answer:
-      "No. The GMC requires evidence that your internship / post-qualification training meets their criteria before you can book PLAB 1. In practice this typically means a minimum of 12 months acceptable clinical experience post-qualification, with specific rotations covered. Always check the latest GMC guidance for your country of qualification.",
+      " Yes. PLAB 1 can be sat immediately after graduating from medical school; a completed internship is required later, for full GMC registration, not for sitting the exam.",
   },
   {
     question: "How many attempts am I allowed at PLAB 1?",
     answer:
-      "Under current GMC rules you may attempt PLAB 1 up to four attempts. If you do not pass within four attempts you are not normally permitted further attempts and should consider alternative routes to GMC registration. Always confirm the latest attempt policy on the GMC website.",
+      " GMC allows a standard number of attempts (commonly cited as four); candidates who don't pass within that limit may apply for an additional attempt with evidence of further learning.",
   },
   {
     question: "Where can I sit PLAB 1?",
     answer:
-      "PLAB 1 is held at UK and overseas test centres via the GMC's appointed test providers. Overseas centres are usually available in major cities in India, Pakistan, Bangladesh, Egypt, Nigeria, the UAE and several other countries — the exact list for each sitting is published by the GMC when booking opens.",
+      " At British Council or GMC-approved test centres worldwide, including UK and international venues — unlike PLAB 2, which is only held in Manchester.",
   },
   {
     question: "What score do I need to pass PLAB 1?",
     answer:
-      "The pass mark for PLAB 1 is set by the GMC for each sitting using standard-setting methodology, so it varies slightly by exam. Historically, candidates should aim for a performance comfortably above 60% of available marks in realistic full mocks under timed conditions to be confident of passing the real exam.",
+      "The pass mark is set per sitting using a standardised process rather than a single fixed number.",
   },
   {
     question: "How is PLAB 1 different from PRES 2 in Ireland?",
@@ -356,30 +357,30 @@ const faqsPlab2: FAQItem[] = [
   {
     question: "Can I sit PLAB 2 outside the UK?",
     answer:
-      "No. PLAB 2 is currently delivered only at the GMC's appointed OSCE centres in the UK (Manchester). You should factor UK travel, accommodation and, if applicable, visa requirements into your timeline and budget.",
+      " No. Unlike PLAB 1, PLAB 2 is held only at the GMC's Clinical Assessment Centre in Manchester.",
   },
   {
-    question: "How long after passing PLAB 1 can I take PLAB 2?",
+    question: "How long do I have to pass PLAB 2 after passing PLAB 1?",
     answer:
-      "You can usually book PLAB 2 shortly after you receive your PLAB 1 pass result and your GMC online account reflects the pass. There is a time window for completing PLAB 2 after passing PLAB 1 — confirm the latest validity rule with the GMC before making travel or course plans.",
+      "GMC requires PLAB 2 to be passed within 2 years of the PLAB 1 pass date — plan your booking timeline around this window.",
   },
   {
-    question: "How many attempts do I have at PLAB 2?",
+    question: "How many stations does PLAB 2 have?",
     answer:
-      "Currently the GMC allows up to four attempts at PLAB 2. If you do not pass within four attempts you are unlikely to be granted further attempts and should explore other GMC-acceptable routes to registration.",
+      "16 scored clinical stations, plus 2 rest stations, each scored station lasting 8 minutes.",
   },
   {
-    question: "Will communication skills be assessed in English?",
+    question: "How many attempts am I allowed at PLAB 2?",
     answer:
-      "Yes. All patient and colleague interaction in PLAB 2 is conducted in English. Even if your English language certificate is already accepted by the GMC, strong spoken communication and clear explanation tailored to the patient is central to passing every clinical and communication station.",
+      "Check the  attempt limit on gmc-uk.org (commonly cited as 4, consistent with PLAB 1) ",
   },
   {
-    question: "Do I need NHS experience to pass PLAB 2?",
+    question: "What is the PLAB 2 fee?",
     answer:
-      "No. Many candidates pass PLAB 2 without prior NHS experience, provided they prepare using UK-guideline-based content and practice stations in a way that simulates a UK-style consultation. Our course is designed to bridge that gap for candidates preparing from overseas.",
+      "£1,036, effective from 1 April 2026 — ⚠ confirm current figure on gmc-uk.org, as GMC revises fees annually.",
   },
   {
-    question: "Is PLAB 2 the same as PRES 3 in Ireland?",
+    question: "How is PLAB 2 different from PRES 3 in Ireland?",
     answer:
       "PRES 3 is the Irish Medical Council's OSCE + data interpretation assessment. It is a different exam run by a different regulator, although both are practical clinical assessments. You should not assume automatic portability of a pass; always check current reciprocity guidance directly with the GMC or Irish Medical Council for your intended route.",
   },
@@ -924,6 +925,7 @@ export const courseDetails = {
     videoTitle: "Ace PLAB1 With PlabCoach",
     ctaTitle: "READY TO ACE PLAB 1?",
     ctaCopy: "Choose your learning path and start your PLAB 1 / UKMLA preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PLAB 1 Preparation",
     subscribeHref: "/course-plan?course=plab-1-ukmla",
   },
   "plab-2-ukmla": {
@@ -978,6 +980,7 @@ export const courseDetails = {
     videoTitle: "PLAB 2 / UKMLA clinical skills preparation with PLABCoach",
     ctaTitle: "READY TO ACE PLAB 2?",
     ctaCopy: "Choose your learning path and start your PLAB 2 / UKMLA clinical preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PLAB 2 Preparation",
     subscribeHref: "/course-plan?course=plab-2-ukmla",
   },
   "pres-level-2": {
@@ -1056,6 +1059,7 @@ export const courseDetails = {
     videoTitle: "Crack PRES2 with Confidence",
     ctaTitle: "READY TO ACE PRES 2?",
     ctaCopy: "Choose your learning path and start your PRES Level 2 preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PRES 2 Preparation",
     subscribeHref: "/course-plan?course=pres-level-2",
   },
   "pres-3-osce": {
@@ -1110,6 +1114,7 @@ export const courseDetails = {
     videoTitle: "Preparing Doctors for Safe, Ethical & Effective Medical Practice in Ireland",
     ctaTitle: "READY TO ACE PRES 3?",
     ctaCopy: "Choose your learning path and start your preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PRES 3 Preparation",
     subscribeHref: "/course-plan?course=pres-3-osce",
   },
   "national-clinical-assessment": {
@@ -1164,6 +1169,7 @@ export const courseDetails = {
     videoTitle: "Master the UKFPO National Clinical Assessment NCA with PLABCOACH",
     ctaTitle: "READY TO ACE THE NCA?",
     ctaCopy: "Choose your learning path and start your National Clinical Assessment preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start NCA Preparation",
     subscribeHref: "/course-plan?course=national-clinical-assessment",
   },
   "prescribing-safety-assessment": {
@@ -1218,6 +1224,7 @@ export const courseDetails = {
     videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
     ctaTitle: "READY TO ACE THE PSA?",
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PSA Preparation",
     subscribeHref: "/course-plan?course=prescribing-safety-assessment",
   },
 } satisfies Record<string, CourseDetailData>;

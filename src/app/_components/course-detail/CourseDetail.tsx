@@ -96,11 +96,19 @@ function RelatedExamCard({ exam, index }: { exam: RelatedExam; index: number }) 
 }
 
 function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
-  const common = "#0c2350";
+  const cls = "h-[55%] w-[55%] text-white";
   switch (icon) {
     case "eligibility":
       return (
-       <Image src="/pathway_1.svg" alt=""  width={34} height={34}></Image>
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <rect x="5" y="4" width="14" height="17" rx="2.2" stroke="currentColor" strokeWidth="1.6" />
+        //   <rect x="9" y="2.4" width="6" height="3.2" rx="1" fill="currentColor" />
+        //   <circle cx="10.4" cy="11" r="1.7" stroke="currentColor" strokeWidth="1.4" />
+        //   <path d="M8 16.3c.4-1.6 1.8-2.4 3.1-2.4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        //   <circle cx="16.2" cy="16.3" r="2.9" fill="currentColor" />
+        //   <path d="M14.9 16.3l.9.9 1.6-1.8" stroke="#151f52" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        // </svg>
+        <Image src="/pathway_1.svg" alt=""  width={56} height={56}></Image> 
       );
     case "pass-plab1":
     case "pass-pres2":
@@ -109,155 +117,204 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "pass-nca":
     case "pass-psa":
       return (
-        <Image src="/pathway_2.svg" alt="" width={34} height={34}></Image>
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <rect x="3.2" y="4.5" width="17.6" height="12.2" rx="1.8" stroke="currentColor" strokeWidth="1.6" />
+        //   <path d="M9 20h6M12 16.7V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        //   <circle cx="12" cy="10.6" r="3.3" stroke="currentColor" strokeWidth="1.4" />
+        //   <path d="M10.6 10.6l1 1 2-2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        // </svg>
+        <Image src="/pathway_2.svg" alt=""  width={56} height={56}></Image>
       );
     case "prepare-plab2":
     case "prepare-pres3":
     case "prepare-nca":
     case "prepare-psa":
       return (
-        <Image src="/pathway_3.svg" alt="" width={34} height={34}></Image>
+        <Image src="/pathway_3.svg" alt=""  width={56} height={56}></Image>
       );
     case "apply-registration":
     case "apply-imc":
     case "apply-fp":
       return (
-              <Image src="/pathway_4.svg" alt="" width={34} height={34}></Image>
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <path
+        //     d="M12 5.2c-1.7-1-4-1.3-5.8-.7v13.3c1.8-.6 4.1-.3 5.8.7 1.7-1 4-1.3 5.8-.7V4.5c-1.8-.6-4.1-.3-5.8.7Z"
+        //     stroke="currentColor"
+        //     strokeWidth="1.4"
+        //     strokeLinejoin="round"
+        //   />
+        //   <path d="M12 5.2v13.3" stroke="currentColor" strokeWidth="1.3" />
+        //   <path d="M10.9 10h2.2M12 8.9v2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        // </svg>
+        <Image src="/pathway_4.svg" alt=""  width={56} height={56}></Image>
+      );
+    case "apply-registration":
+    case "apply-imc":
+    case "apply-fp":
+      return (
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <rect x="3.2" y="5.2" width="14.4" height="13.6" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        //   <circle cx="7.5" cy="9.8" r="1.6" stroke="currentColor" strokeWidth="1.3" />
+        //   <path d="M5.6 15c.4-1.4 1.6-2.1 2.8-2.1M12.4 8.6h3.4M12.4 11.4h2.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+        //   <path d="M15.8 15.6l3.5-3.5 1.6 1.6-3.5 3.5-2 .4.4-2Z" fill="currentColor" />
+        // </svg>
+        <Image src="/pathway_5.svg" alt=""  width={56} height={56}></Image>
       );
     case "start-career":
       return (
-        
-        <Image src="/pathway_5.svg" alt="" width={34} height={34}></Image>
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        //   <rect x="3.4" y="7.4" width="17.2" height="11.4" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        //   <path d="M3.4 12.4h17.2" stroke="currentColor" strokeWidth="1.3" />
+        //   <path d="M12 10.4v4M10 12.4h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        // </svg>
+        <Image src="/pathway_6.svg" alt=""  width={56} height={56}></Image>
       );
     default:
       return (
-        // 
-        <Image src="/pathway_6.svg" alt="" width={34} height={34}></Image>
+        <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="8.2" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M9 12.3l2.1 2.1L15.4 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       );
   }
 }
 
+/**
+ * Wave geometry: for the standard 6-step pathway (the one in the reference
+ * design) we use hand-placed points/curve control values that reproduce that
+ * exact layout at any width, since the SVG scales via viewBox + width:100%.
+ * For any other step count we fall back to a generated smooth wave so the
+ * component keeps working for shorter/longer pathways elsewhere on the site.
+ */
 function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
   const curve = useMemo(() => {
-    if (steps.length === 0) return null;
-    const width = 1400;
-    const height = 520;
-    const defaultPts = [
-      { x: 150, y: 370 },
-      { x: 355, y: 240 },
-      { x: 580, y: 345 },
-      { x: 790, y: 275 },
-      { x: 1005, y: 200 },
-      { x: 1220, y: 170 },
-    ];
     const n = steps.length;
-    const pts = defaultPts.slice(0, n);
     if (n === 0) return null;
-    if (n > defaultPts.length) {
-      for (let i = defaultPts.length; i < n; i++) {
-        const t = i / (n - 1);
-        pts.push({ x: 150 + t * (width - 300), y: 260 });
-      }
+
+    const viewMinX = 100;
+    const viewMinY = 120;
+    const viewW = 1300;
+    const viewH = 560;
+
+    let pts: { x: number; y: number }[];
+    let entry: { x: number; y: number };
+    let exit: { x: number; y: number };
+
+    if (n === 6) {
+      pts = [
+        { x: 259, y: 533 },
+        { x: 461, y: 421 },
+        { x: 659, y: 366 },
+        { x: 856, y: 346 },
+        { x: 1054, y: 255 },
+        { x: 1253, y: 255 },
+      ];
+      entry = { x: 133, y: 548 };
+      exit = { x: 1345, y: 186 };
+    } else {
+      const startX = 190;
+      const endX = viewMinX + viewW - 190;
+      const topY = viewMinY + viewH * 0.28;
+      const bottomY = viewMinY + viewH * 0.82;
+      pts = Array.from({ length: n }, (_, i) => {
+        const t = n === 1 ? 0 : i / (n - 1);
+        return { x: startX + t * (endX - startX), y: bottomY - t * (bottomY - topY) };
+      });
+      entry = { x: pts[0].x - 95, y: pts[0].y + 16 };
+      exit = { x: pts[n - 1].x + 95, y: pts[n - 1].y - 66 };
     }
-    let d = `M ${pts[0].x - 90} ${pts[0].y + 18}`;
-    for (let i = 0; i < pts.length - 1; i++) {
-      const a = pts[i];
-      const b = pts[i + 1];
+
+    const all = [entry, ...pts, exit];
+    let d = `M ${all[0].x} ${all[0].y}`;
+    for (let i = 0; i < all.length - 1; i++) {
+      const a = all[i];
+      const b = all[i + 1];
       const dx = b.x - a.x;
       const cx1 = a.x + dx * 0.42;
-      const cy1 = a.y + (b.y - a.y) * 0.08;
+      const cy1 = a.y - (a.y - b.y) * 0.12;
       const cx2 = a.x + dx * 0.58;
-      const cy2 = a.y + (b.y - a.y) * 0.92;
-      d += ` C ${cx1.toFixed(1)} ${cy1.toFixed(1)}, ${cx2.toFixed(1)} ${cy2.toFixed(1)}, ${b.x} ${b.y}`;
+      const cy2 = b.y + (a.y - b.y) * 0.12;
+      d += ` C ${cx1.toFixed(1)} ${cy1.toFixed(1)}, ${cx2.toFixed(1)} ${cy2.toFixed(1)}, ${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
     }
-    const last = pts[pts.length - 1];
-    d += ` C ${last.x + 40} ${last.y - 18}, ${last.x + 75} ${last.y - 55}, ${last.x + 95} ${last.y - 105}`;
-    return { path: d, pts, viewBox: `0 0 ${width} ${height}`, width, height };
-  }, [steps]);
 
-  const labelAbove: Record<number, boolean> = { 2: true };
+    return {
+      path: d,
+      pts,
+      viewBox: `${viewMinX} ${viewMinY} ${viewW} ${viewH}`,
+      minX: viewMinX,
+      minY: viewMinY,
+      width: viewW,
+      height: viewH,
+    };
+  }, [steps]);
 
   if (!curve) return null;
 
   return (
-    <div className="relative w-full overflow-hidden">
-      <svg
-        viewBox={curve.viewBox}
-        preserveAspectRatio="xMidYMid meet"
-        className="h-auto w-full max-w-[1400px]"
-        aria-hidden="true"
-      >
-        <defs>
-          <linearGradient id="pathwayLine" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#b8c3ff" />
-            <stop offset="45%" stopColor="#9aaaff" />
-            <stop offset="100%" stopColor="#8396ff" />
-          </linearGradient>
-          <filter id="pathwayGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3.2" result="b" />
-            <feMerge>
-              <feMergeNode in="b" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-        <path
-          d={curve.path}
-          fill="none"
-          stroke="url(#pathwayLine)"
-          strokeWidth="9"
-          strokeLinecap="round"
-          filter="url(#pathwayGlow)"
-          opacity="0.92"
-        />
-      </svg>
+    <>
+      {/* Tablet / desktop — reproduces the reference wave layout, fully fluid via viewBox scaling */}
+      <div className="relative hidden w-full overflow-hidden sm:block">
+        <svg viewBox={curve.viewBox} preserveAspectRatio="xMidYMid meet" className="h-auto w-full" aria-hidden="true">
+          <defs>
+            <linearGradient id="pathwayLine" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#c3cbfd" />
+              <stop offset="50%" stopColor="#a3b0fb" />
+              <stop offset="100%" stopColor="#8a9af9" />
+            </linearGradient>
+          </defs>
+          <path d={curve.path} fill="none" stroke="url(#pathwayLine)" strokeWidth="11" strokeLinecap="round" />
+        </svg>
 
-      <ol className="pointer-events-none absolute inset-0">
-        {curve.pts.map((pt, i) => {
-          const step = steps[i];
-          if (!step) return null;
-          const leftPct = (pt.x / curve.width) * 100;
-          const topPct = (pt.y / curve.height) * 100;
-          const above = labelAbove[i] ?? false;
-          return (
-            <li
-              key={step.id}
-              className="absolute -translate-x-1/2"
-              style={{
-                left: `${leftPct}%`,
-                top: `${topPct}%`,
-              }}
-            >
-              <div className="pointer-events-auto relative grid place-items-center -translate-y-1/2">
-                <span
-                  className="absolute h-[92px] w-[92px] rounded-full bg-[#eef0ff]"
-                  style={{ opacity: 0.85 }}
-                />
-                <span
-                  className="relative grid h-[82px] w-[82px] place-items-center rounded-full bg-white shadow-[0_14px_36px_rgba(83,99,232,0.22)] ring-[7px] ring-[#e8ecff]"
-                >
-                  <PathwayIcon icon={step.icon} />
-                </span>
-                <span
-                  className="absolute -top-[14px] -left-[20px] flex h-[46px] w-[46px] items-center justify-center rounded-full bg-[#f1f3ff] text-[20px] font-extrabold tracking-[-0.01em] text-[#17245a]"
-                >
-                  {step.number}
-                </span>
-                <div
-                  className={`absolute w-[280px] max-w-[42vw] text-center ${
-                    above ? "bottom-[108%] mb-[14px]" : "top-[108%] mt-[14px]"
-                  }`}
-                >
-                  <p className="whitespace-pre-wrap text-[14.5px] font-bold leading-[1.3] tracking-[-0.008em] text-[var(--course-detail-heading)] sm:text-[15.5px] md:text-[16px]">
-                    {step.label}
-                  </p>
+        <ol className="pointer-events-none absolute inset-0">
+          {curve.pts.map((pt, i) => {
+            const step = steps[i];
+            if (!step) return null;
+            const leftPct = ((pt.x - curve.minX) / curve.width) * 100;
+            const topPct = ((pt.y - curve.minY) / curve.height) * 100;
+            return (
+              <li key={step.id} className="absolute -translate-x-1/2" style={{ left: `${leftPct}%`, top: `${topPct}%` }}>
+                <div className="pointer-events-auto relative grid -translate-y-1/2 place-items-center">
+                  <span className="relative grid h-[74px] w-[74px] place-items-center rounded-full bg-[#dee3fb] md:h-[86px] md:w-[86px] lg:h-[96px] lg:w-[96px] xl:h-[104px] xl:w-[104px]">
+                    <span className="grid h-[54px] w-[54px] place-items-center rounded-[15px]  md:h-[50px] md:w-[50px] lg:h-[56px] lg:w-[56px] xl:h-[60px] xl:w-[60px]">
+                      <PathwayIcon icon={step.icon} />
+                    </span>
+                  </span>
+
+                  <span className="absolute -left-[24px] -top-[2px] text-[24px] font-extrabold tracking-[-0.01em] text-[#17225c] md:-left-[28px] md:text-[27px] lg:-left-[32px] lg:text-[30px] xl:-left-[36px] xl:text-[32px]">
+                    {step.number}
+                  </span>
+
+                  <div className="absolute top-[108%] mt-[12px] w-[150px] max-w-[38vw] text-center md:w-[160px] lg:w-[170px]">
+                    <p className="whitespace-pre-wrap text-[13.5px] font-bold leading-[1.3] tracking-[-0.006em] text-[#17225c] md:text-[15px] lg:text-[16px]">
+                      {step.label}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          );
-        })}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+
+      {/* Mobile — vertical timeline so every step stays fully readable on narrow screens */}
+      <ol className="flex flex-col sm:hidden">
+        {steps.map((step, i) => (
+          <li key={step.id} className="relative flex gap-4 pb-8 last:pb-0">
+            {i < steps.length - 1 && (
+              <span className="absolute left-[27px] top-[56px] h-[calc(100%-40px)] w-[3px] rounded-full bg-gradient-to-b from-[#c3cbfd] to-[#8a9af9]" />
+            )}
+            <div className="relative z-10 grid h-[56px] w-[56px] shrink-0 place-items-center rounded-full bg-[#dee3fb]">
+              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] bg-[#151f52]">
+                <PathwayIcon icon={step.icon} />
+              </span>
+              <span className="absolute -left-[6px] -top-[6px] text-[15px] font-extrabold text-[#17225c]">{step.number}</span>
+            </div>
+            <p className="pt-[14px] text-[14.5px] font-bold leading-[1.35] text-[#17225c]">{step.label}</p>
+          </li>
+        ))}
       </ol>
-    </div>
+    </>
   );
 }
 
@@ -273,12 +330,12 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const subscribeSection = (
     <div className="mt-[34px] flex flex-col gap-[14px] sm:flex-row sm:gap-[20px] lg:mt-[40px]">
       <SubscribeButton href={plansHref} />
-      <a
+      {/* <a
         href="#course-sections"
         className="inline-flex h-[50px] min-w-[186px] items-center justify-center rounded-[10px] border-[1.5px] border-[var(--course-detail-button-border)] px-[26px] text-[13px] font-bold text-[var(--course-detail-button-muted)] transition-colors duration-200 hover:border-[var(--course-detail-primary)] hover:text-[var(--course-detail-primary)]"
       >
         Learn More
-      </a>
+      </a> */}
     </div>
   );
 
@@ -311,7 +368,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                   </span>
                 </h1>
 
-                {subscribeSection}
+                {/* {subscribeSection} */}
 
                 <div className="mt-[44px] rounded-[28px] border border-[var(--course-detail-hero-desc-border)] bg-[var(--course-detail-hero-desc-bg)] px-[26px] py-[28px] shadow-[0_14px_34px_rgba(83,99,232,0.08)] sm:px-[34px] sm:py-[32px]">
                   <p className="text-[13px] font-medium leading-[1.75] text-[var(--course-detail-body-strong)] sm:text-[14.5px] lg:text-[15px]">
@@ -398,6 +455,11 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                         {p}
                       </p>
                     ))}
+                    {activeSection.id === "what-is" && (
+                      <SubscribeButton href={plansHref} className="mt-[8px] h-[48px] px-[24px]">
+                        {course.subscribeButtonLabel}
+                      </SubscribeButton>
+                    )}
                   </div>
                 </article>
               )}
@@ -551,7 +613,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
               </h2>
             </div>
 
-            <div className="mt-[44px] h-[520px] min-h-[460px] w-full sm:mt-[54px] sm:h-[560px] lg:mt-[66px] lg:h-[600px] xl:h-[620px]">
+            <div className="mt-[50px] w-full sm:mt-[60px] lg:mt-[74px]">
               <PathwayVisual steps={course.pathway} />
             </div>
           </div>
