@@ -100,14 +100,6 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
   switch (icon) {
     case "eligibility":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <rect x="5" y="4" width="14" height="17" rx="2.2" stroke="currentColor" strokeWidth="1.6" />
-        //   <rect x="9" y="2.4" width="6" height="3.2" rx="1" fill="currentColor" />
-        //   <circle cx="10.4" cy="11" r="1.7" stroke="currentColor" strokeWidth="1.4" />
-        //   <path d="M8 16.3c.4-1.6 1.8-2.4 3.1-2.4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        //   <circle cx="16.2" cy="16.3" r="2.9" fill="currentColor" />
-        //   <path d="M14.9 16.3l.9.9 1.6-1.8" stroke="#151f52" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        // </svg>
         <Image src="/pathway_1.svg" alt=""  width={56} height={56}></Image> 
       );
     case "pass-plab1":
@@ -117,12 +109,6 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "pass-nca":
     case "pass-psa":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <rect x="3.2" y="4.5" width="17.6" height="12.2" rx="1.8" stroke="currentColor" strokeWidth="1.6" />
-        //   <path d="M9 20h6M12 16.7V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        //   <circle cx="12" cy="10.6" r="3.3" stroke="currentColor" strokeWidth="1.4" />
-        //   <path d="M10.6 10.6l1 1 2-2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-        // </svg>
         <Image src="/pathway_2.svg" alt=""  width={56} height={56}></Image>
       );
     case "prepare-plab2":
@@ -136,38 +122,18 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "apply-imc":
     case "apply-fp":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <path
-        //     d="M12 5.2c-1.7-1-4-1.3-5.8-.7v13.3c1.8-.6 4.1-.3 5.8.7 1.7-1 4-1.3 5.8-.7V4.5c-1.8-.6-4.1-.3-5.8.7Z"
-        //     stroke="currentColor"
-        //     strokeWidth="1.4"
-        //     strokeLinejoin="round"
-        //   />
-        //   <path d="M12 5.2v13.3" stroke="currentColor" strokeWidth="1.3" />
-        //   <path d="M10.9 10h2.2M12 8.9v2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        // </svg>
         <Image src="/pathway_4.svg" alt=""  width={56} height={56}></Image>
       );
     case "apply-registration":
     case "apply-imc":
     case "apply-fp":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <rect x="3.2" y="5.2" width="14.4" height="13.6" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        //   <circle cx="7.5" cy="9.8" r="1.6" stroke="currentColor" strokeWidth="1.3" />
-        //   <path d="M5.6 15c.4-1.4 1.6-2.1 2.8-2.1M12.4 8.6h3.4M12.4 11.4h2.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-        //   <path d="M15.8 15.6l3.5-3.5 1.6 1.6-3.5 3.5-2 .4.4-2Z" fill="currentColor" />
-        // </svg>
+        
         <Image src="/pathway_5.svg" alt=""  width={56} height={56}></Image>
       );
     case "start-career":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        //   <rect x="3.4" y="7.4" width="17.2" height="11.4" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        //   <path d="M3.4 12.4h17.2" stroke="currentColor" strokeWidth="1.3" />
-        //   <path d="M12 10.4v4M10 12.4h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        // </svg>
+      
         <Image src="/pathway_6.svg" alt=""  width={56} height={56}></Image>
       );
     default:
@@ -305,7 +271,7 @@ function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
               <span className="absolute left-[27px] top-[56px] h-[calc(100%-40px)] w-[3px] rounded-full bg-gradient-to-b from-[#c3cbfd] to-[#8a9af9]" />
             )}
             <div className="relative z-10 grid h-[56px] w-[56px] shrink-0 place-items-center rounded-full bg-[#dee3fb]">
-              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] bg-[#151f52]">
+              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] ">
                 <PathwayIcon icon={step.icon} />
               </span>
               <span className="absolute -left-[6px] -top-[6px] text-[15px] font-extrabold text-[#17225c]">{step.number}</span>
@@ -399,9 +365,9 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="grid gap-[30px] lg:grid-cols-[454px_minmax(0,1fr)] lg:items-start lg:gap-[26px]">
               {/* TOC — shows only the currently active section */}
-              <aside className="max-h-none overflow-visible lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[-15px] lg:max-h-[calc(100vh-var(--header-height)-24px)] lg:overflow-x-hidden lg:overflow-y-auto">
-                <div className="relative overflow-hidden rounded-r-[36px] bg-[var(--course-detail-toc-bg)] px-[28px] py-[34px] shadow-[0_18px_40px_rgba(23,36,90,0.06)] sm:px-[32px] sm:py-[40px] lg:w-[454px] lg:rounded-l-none lg:px-0 lg:py-[44px]">
-                  <div className="lg:pl-[143px]">
+              <aside className="max-h-none overflow-visible lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[calc((100vw-var(--container-max))*-0.5)] lg:w-[calc(454px+(100vw-var(--container-max))*0.5)] lg:max-h-[calc(100vh-var(--header-height)-24px)] lg:overflow-x-hidden lg:overflow-y-auto">
+                <div className="relative overflow-hidden rounded-r-[36px] bg-[var(--course-detail-toc-bg)] px-[28px] py-[34px] shadow-[0_18px_40px_rgba(23,36,90,0.06)] sm:px-[32px] sm:py-[40px] lg:w-full lg:rounded-l-none lg:px-0 lg:py-[44px]">
+                  <div className="lg:pl-[calc((100vw-var(--container-max))*0.5)]">
                   <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">TOC</p>
                   <h2 className="mt-[6px] text-[26px] font-bold leading-[1.1] tracking-[-0.016em] text-[var(--course-detail-heading)] sm:text-[30px] lg:text-[34px]">
                     Table of Contents
@@ -415,7 +381,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                           key={item.id}
                           type="button"
                           onClick={() => setActiveTocId(item.id)}
-                          className={`flex min-h-[44px] items-center gap-2 rounded-[10px] px-[8px] py-[9px] text-left transition-colors duration-200 ${
+                          className={`flex min-h-[44px] items-center gap-2  px-[8px] py-[9px] text-left transition-colors duration-200 ${
                             isActive ? "bg-[var(--course-detail-toc-item-active)]" : "hover:bg-[var(--course-detail-toc-item-bg)]"
                           }`}
                         >
