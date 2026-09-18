@@ -268,11 +268,11 @@ const relatedExamsDefault: RelatedExam[] = [
 
 const tocPlab2: TocItem[] = [
   { id: "what-is", label: "What is PLAB 2 / CPSA?" },
-  { id: "who-needs", label: "Who Needs PLAB 2" },
+  { id: "who-needs", label: "Who Needs to Take PLAB 2" },
   { id: "format", label: "PLAB 2 Format & Stations" },
-  { id: "skills", label: "Skills & Blueprint" },
-  { id: "eligibility", label: "Eligibility, Booking & Fees" },
-  { id: "dates", label: "PLAB 2 Dates & Venues" },
+  { id: "skills", label: "Marking Domains" },
+  { id: "eligibility", label: "Eligibility & Registration Process" },
+  { id: "dates", label: "PLAB 2 Dates & Fees" },
   { id: "prepare", label: "How to Prepare for PLAB 2" },
   { id: "how-helps", label: "How PLABcoach Helps" },
   { id: "who-should", label: "Who Should Take This Course" },
@@ -289,10 +289,9 @@ const sectionsPlab2: CourseSection[] = [
   },
   {
     id: "who-needs",
-    heading: "Who Needs PLAB 2",
+    heading: "Who Needs to Take PLAB 2",
     paragraphs: [
-      "Almost all international medical graduates who require PLAB as their route to GMC full registration must pass PLAB 2 after passing PLAB 1. There are very few exemptions, so if your route to UK registration goes through PLAB 1, you should plan for PLAB 2 as the mandatory follow-on assessment.",
-      "You cannot sit PLAB 2 before passing PLAB 1. Once PLAB 1 is passed you typically have a defined window to attempt PLAB 2 (currently up to four attempts within a set period from your PLAB 1 pass), so most candidates begin structured PLAB 2 preparation shortly after their PLAB 1 result.",
+      "Any candidate who has passed PLAB 1 and wishes to proceed to full GMC registration must sit and pass PLAB 2. GMC requires PLAB 2 to be passed within 2 years of the PLAB 1 pass date (measured from the date PLAB 1 was sat, not the date results were issued) — candidates should factor this window into their booking timeline, since Manchester seats are in high demand.",
     ],
   },
   {
@@ -305,23 +304,21 @@ const sectionsPlab2: CourseSection[] = [
   },
   {
     id: "skills",
-    heading: "Skills & Blueprint",
+    heading: "Marking Domains",
     paragraphs: [
-      "The PLAB 2 blueprint covers the knowledge, skills and behaviours expected of a doctor entering UK Foundation Year 1. Domains assessed are clinical and procedural skills, communication with patients, relatives and colleagues, applied clinical knowledge and decision-making, patient safety, and professional behaviour and ethics.",
-      "Candidates are expected to manage common acute and chronic presentations, work under time pressure similar to a real clinical environment, and show the patient-centred communication expected in UK practice — including shared decision-making, clarity of explanation and appropriate signposting.",
+      "Each station is marked against three domains, applied consistently across the circuit ,Data gathering, technical and assessment skills — history-taking accuracy, examination technique, correct use of instruments , Clinical management skills — appropriate, UK-guideline-based decision-making and next steps,Interpersonal skills — communication, empathy, professionalism, and patient safety behaviours",
     ],
   },
   {
     id: "eligibility",
-    heading: "Eligibility, Booking & Fees",
+    heading: "Eligibility & Registration Process",
     paragraphs: [
-      "To be eligible to sit PLAB 2 you must have already passed PLAB 1 and maintain a valid, acceptable English language score as set out by the GMC. As of today, four attempts at PLAB 2 are permitted; any candidate who fails after the maximum number of attempts will need to review alternative routes with the GMC.",
-      "PLAB 2 bookings are made through your GMC online account once your PLAB 1 result is confirmed. Exam places are released on published dates and fill quickly. Fees are set by the GMC and reviewed annually, so candidates should confirm up-to-date pricing and refund policy directly on the GMC website before booking.",
+      "A valid PLAB 1 pass, within the current 2-year validity window , Primary medical qualification already verified (carried over from PLAB 1 booking) ,A verified GMC Online account with PLAB 2 booking access unlocked after PLAB 1 results are issued , Candidates are responsible for securing any visa required to travel to and sit the exam in Manchester",
     ],
   },
   {
     id: "dates",
-    heading: "PLAB 2 Dates & Venues",
+    heading: "PLAB 2 Dates & Fees",
     paragraphs: [
       "PLAB 2 is run at dedicated OSCE centres in the UK, primarily in Manchester. Sittings occur regularly across the year with dates published in advance on the GMC website. Candidates should allow enough notice to plan travel, accommodation, visa (if needed) and final preparation before the exam date.",
       "Because PLAB 2 can only be sat in the UK, international candidates should also factor in any visa requirements, travel costs and the time needed to practice their structured approach to stations after arrival in the UK.",
@@ -385,6 +382,30 @@ const faqsPlab2: FAQItem[] = [
       "PRES 3 is the Irish Medical Council's OSCE + data interpretation assessment. It is a different exam run by a different regulator, although both are practical clinical assessments. You should not assume automatic portability of a pass; always check current reciprocity guidance directly with the GMC or Irish Medical Council for your intended route.",
   },
 ];
+const comparisonPlab2: ComparisonTable = {
+  heading: "PLAB 2 vs PRES 3 Comparison",
+  noteHeading: "Regulatory relationship (verify against Irish Medical Council before publish — active/evolving area)",
+  noteBullets: [
+    "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practice — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
+    "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
+  ],
+  colAHeader: "PLAB 1",
+  colBHeader: "PRES 2",
+  colAColor: "var(--course-detail-comparison-plab1-header)",
+  colBColor: "var(--course-detail-comparison-pres2-header)",
+  rows: [
+    { feature: "Governing body", colA: "GMC (UK)", colB: "Irish Medical Council (IMC)" },
+    { feature: "Format", colA: "180 SBA questions, 180 minutes", colB: "Written MCQ, clinical scenarios, ~3 hours" },
+    { feature: "Registration granted", colA: "UK (GMC)", colB: "Ireland" },
+    {
+      feature: "Recognised equivalence",
+      colA: "PLAB 1 ≈ PRES 2 (exemption in practice)",
+      colB: "Irish Medical Council recognises PLAB 1 pass as PRES 2-equivalent",
+    },
+  ],
+  footerText:
+    "Follow with 2–3 sentences: candidates targeting UK GMC registration primarily should sit PLAB 1; candidates targeting Ireland who already hold a PLAB 1 pass do not need to separately sit PRES 2. Link to Irish Medical Council's PRES page as the citable primary source.",
+};
 
 const tocPres2: TocItem[] = [
   { id: "what-is", label: "What is PRES 2?" },
@@ -931,7 +952,7 @@ export const courseDetails = {
   "plab-2-ukmla": {
     slug: "plab-2-ukmla",
     eyebrow: "PLAB 2 / UKMLA-CPSA",
-    title: "PLAB 2 / UKMLA-CPSA:\nComplete Guide to Stations,\nSkills, Dates & Preparation",
+    title: "PLAB 2 / UKMLA-CPSA:\nComplete Guide to OSCE \nStations, Marking & Preparation",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "PLAB 2 is the GMC's clinical OSCE and, together with PLAB 1, completes the UKMLA-aligned registration pathway for international medical graduates. It tests practical skills, communication, clinical reasoning and professionalism through a series of time-limited stations run in the UK. A PLAB 2 pass, alongside PLAB 1, allows IMGs to apply for full GMC registration with a licence to practise.",
@@ -943,6 +964,7 @@ export const courseDetails = {
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
       buttonLabel: "Start Learning",
     },
+    comparison: comparisonPlab2,
     relatedExams: [
       {
         title: "PLAB 1 / UKMLA-AKT",

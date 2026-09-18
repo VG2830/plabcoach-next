@@ -327,17 +327,17 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const activeSection =
     course.sections.find((s) => s.id === activeTocId) ?? course.sections[0];
 
-  const subscribeSection = (
-    <div className="mt-[34px] flex flex-col gap-[14px] sm:flex-row sm:gap-[20px] lg:mt-[40px]">
-      <SubscribeButton href={plansHref} />
-      {/* <a
-        href="#course-sections"
-        className="inline-flex h-[50px] min-w-[186px] items-center justify-center rounded-[10px] border-[1.5px] border-[var(--course-detail-button-border)] px-[26px] text-[13px] font-bold text-[var(--course-detail-button-muted)] transition-colors duration-200 hover:border-[var(--course-detail-primary)] hover:text-[var(--course-detail-primary)]"
-      >
-        Learn More
-      </a> */}
-    </div>
-  );
+  // const subscribeSection = (
+  //   <div className="mt-[34px] flex flex-col gap-[14px] sm:flex-row sm:gap-[20px] lg:mt-[40px]">
+  //     <SubscribeButton href={plansHref} />
+  //     {/* <a
+  //       href="#course-sections"
+  //       className="inline-flex h-[50px] min-w-[186px] items-center justify-center rounded-[10px] border-[1.5px] border-[var(--course-detail-button-border)] px-[26px] text-[13px] font-bold text-[var(--course-detail-button-muted)] transition-colors duration-200 hover:border-[var(--course-detail-primary)] hover:text-[var(--course-detail-primary)]"
+  //     >
+  //       Learn More
+  //     </a> */}
+  //   </div>
+  // );
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[var(--course-detail-heading)]">
@@ -399,7 +399,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="grid gap-[30px] lg:grid-cols-[454px_minmax(0,1fr)] lg:items-start lg:gap-[26px]">
               {/* TOC — shows only the currently active section */}
-              <aside className="lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[-15px]">
+              <aside className="max-h-none overflow-visible lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[-15px] lg:max-h-[calc(100vh-var(--header-height)-24px)] lg:overflow-x-hidden lg:overflow-y-auto">
                 <div className="relative overflow-hidden rounded-r-[36px] bg-[var(--course-detail-toc-bg)] px-[28px] py-[34px] shadow-[0_18px_40px_rgba(23,36,90,0.06)] sm:px-[32px] sm:py-[40px] lg:w-[454px] lg:rounded-l-none lg:px-0 lg:py-[44px]">
                   <div className="lg:pl-[143px]">
                   <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">TOC</p>
@@ -536,19 +536,19 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 </div>
               )}
 
-              <div className="mt-[44px] overflow-hidden rounded-[18px] border border-[var(--course-detail-comparison-table-border)] bg-white shadow-[0_18px_42px_rgba(23,36,90,0.10)] sm:mt-[50px] sm:rounded-[22px]">
+              <div className="mt-[44px] overflow-hidden rounded-[18px] border border-[var(--course-detail-comparison-table-border)] bg-[#eeeeee] shadow-[0_18px_42px_rgba(23,36,90,0.10)] sm:mt-[50px] sm:rounded-[22px]">
                 <div className="grid grid-cols-3">
                   <div className="bg-[var(--course-detail-comparison-feature-header)] px-[20px] py-[20px] sm:px-[26px] sm:py-[22px]">
                     <p className="text-[14px] font-bold tracking-[0.02em] text-[#303030] sm:text-[16px]">FEATURE</p>
                   </div>
                   <div
-                    className="px-[20px] py-[20px] sm:px-[26px] sm:py-[22px]"
+                    className="px-[20px] py-[20px] sm:px-[26px] sm:py-[22px] rounded-[20px] lg: mr-[2px] "
                     style={{ backgroundColor: course.comparison.colAColor ?? "var(--course-detail-comparison-plab1-header)" }}
                   >
                     <p className="text-[15px] font-bold text-white sm:text-[17px]">{course.comparison.colAHeader}</p>
                   </div>
                   <div
-                    className="px-[20px] py-[20px] sm:px-[26px] sm:py-[22px]"
+                    className="px-[20px] py-[20px] sm:px-[26px] sm:py-[22px] rounded-[20px] lg: ml-[2px] "
                     style={{ backgroundColor: course.comparison.colBColor ?? "var(--course-detail-comparison-pres2-header)" }}
                   >
                     <p className="text-[15px] font-bold text-white sm:text-[17px]">{course.comparison.colBHeader}</p>
