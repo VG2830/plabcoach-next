@@ -100,6 +100,14 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
   switch (icon) {
     case "eligibility":
       return (
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <rect x="5" y="4" width="14" height="17" rx="2.2" stroke="currentColor" strokeWidth="1.6" />
+        //   <rect x="9" y="2.4" width="6" height="3.2" rx="1" fill="currentColor" />
+        //   <circle cx="10.4" cy="11" r="1.7" stroke="currentColor" strokeWidth="1.4" />
+        //   <path d="M8 16.3c.4-1.6 1.8-2.4 3.1-2.4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        //   <circle cx="16.2" cy="16.3" r="2.9" fill="currentColor" />
+        //   <path d="M14.9 16.3l.9.9 1.6-1.8" stroke="#151f52" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+        // </svg>
         <Image src="/pathway_1.svg" alt=""  width={56} height={56}></Image> 
       );
     case "pass-plab1":
@@ -109,6 +117,12 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "pass-nca":
     case "pass-psa":
       return (
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <rect x="3.2" y="4.5" width="17.6" height="12.2" rx="1.8" stroke="currentColor" strokeWidth="1.6" />
+        //   <path d="M9 20h6M12 16.7V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        //   <circle cx="12" cy="10.6" r="3.3" stroke="currentColor" strokeWidth="1.4" />
+        //   <path d="M10.6 10.6l1 1 2-2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        // </svg>
         <Image src="/pathway_2.svg" alt=""  width={56} height={56}></Image>
       );
     case "prepare-plab2":
@@ -122,18 +136,38 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "apply-imc":
     case "apply-fp":
       return (
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <path
+        //     d="M12 5.2c-1.7-1-4-1.3-5.8-.7v13.3c1.8-.6 4.1-.3 5.8.7 1.7-1 4-1.3 5.8-.7V4.5c-1.8-.6-4.1-.3-5.8.7Z"
+        //     stroke="currentColor"
+        //     strokeWidth="1.4"
+        //     strokeLinejoin="round"
+        //   />
+        //   <path d="M12 5.2v13.3" stroke="currentColor" strokeWidth="1.3" />
+        //   <path d="M10.9 10h2.2M12 8.9v2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        // </svg>
         <Image src="/pathway_4.svg" alt=""  width={56} height={56}></Image>
       );
     case "apply-registration":
     case "apply-imc":
     case "apply-fp":
       return (
-        
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <rect x="3.2" y="5.2" width="14.4" height="13.6" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        //   <circle cx="7.5" cy="9.8" r="1.6" stroke="currentColor" strokeWidth="1.3" />
+        //   <path d="M5.6 15c.4-1.4 1.6-2.1 2.8-2.1M12.4 8.6h3.4M12.4 11.4h2.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+        //   <path d="M15.8 15.6l3.5-3.5 1.6 1.6-3.5 3.5-2 .4.4-2Z" fill="currentColor" />
+        // </svg>
         <Image src="/pathway_5.svg" alt=""  width={56} height={56}></Image>
       );
     case "start-career":
       return (
-      
+        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
+        //   <path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        //   <rect x="3.4" y="7.4" width="17.2" height="11.4" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        //   <path d="M3.4 12.4h17.2" stroke="currentColor" strokeWidth="1.3" />
+        //   <path d="M12 10.4v4M10 12.4h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        // </svg>
         <Image src="/pathway_6.svg" alt=""  width={56} height={56}></Image>
       );
     default:
@@ -159,9 +193,9 @@ function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
     if (n === 0) return null;
 
     const viewMinX = 100;
-    const viewMinY = 120;
+    const viewMinY = 160;
     const viewW = 1300;
-    const viewH = 560;
+    const viewH = 520;
 
     let pts: { x: number; y: number }[];
     let entry: { x: number; y: number };
@@ -271,7 +305,7 @@ function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
               <span className="absolute left-[27px] top-[56px] h-[calc(100%-40px)] w-[3px] rounded-full bg-gradient-to-b from-[#c3cbfd] to-[#8a9af9]" />
             )}
             <div className="relative z-10 grid h-[56px] w-[56px] shrink-0 place-items-center rounded-full bg-[#dee3fb]">
-              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] ">
+              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] bg-[#151f52]">
                 <PathwayIcon icon={step.icon} />
               </span>
               <span className="absolute -left-[6px] -top-[6px] text-[15px] font-extrabold text-[#17225c]">{step.number}</span>
@@ -312,13 +346,14 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden bg-[var(--course-detail-hero-bg)] pb-[70px] pt-[64px] sm:pb-[90px] sm:pt-[74px] lg:pb-[10px] lg:pt-[82px]">
+          {/* Desktop: original section-anchored ellipse, unchanged */}
           <Image
             src="/hero_banner_bg_ellipse.webp"
             alt=""
             aria-hidden="true"
             width={1332}
             height={689}
-            className="pointer-events-none absolute right-[-380px] top-[-140px] w-[880px] max-w-none  sm:right-[-300px] sm:w-[1000px] lg:right-[-130px] lg:top-[-330px] lg:w-[1280px]"
+            className="pointer-events-none absolute hidden lg:top-[-330px] lg:right-[-130px] lg:block lg:w-[1280px] lg:max-w-none"
           />
 
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
@@ -343,7 +378,16 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 </div>
               </div>
 
-              <div className="relative mx-auto w-full max-w-[825px] justify-self-end bottom-[-80px]">
+              <div className="relative mx-auto w-full max-w-[825px] justify-self-end lg:bottom-[-80px]">
+                {/* Mobile / tablet: ellipse tracks the image wrapper instead of the section top, so it stays behind the image after the layout stacks */}
+                <Image
+                  src="/hero_banner_bg_ellipse.webp"
+                  alt=""
+                  aria-hidden="true"
+                  width={1332}
+                  height={689}
+                  className="pointer-events-none absolute left-1/2 top-1/2 w-[160%] max-w-none -translate-x-1/2 -translate-y-1/2 sm:w-[130%] lg:hidden"
+                />
                 <div className="relative aspect-[4/3.3] w-full">
                   <Image
                     src={course.heroImage}
@@ -435,7 +479,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
 
        
         {/* FAQs */}
-        <section className="relative overflow-hidden bg-white pb-[82px] pt-[10px] sm:pb-[92px] sm:pt-[20px] lg:pb-[104px]">
+        <section className="relative overflow-hidden bg-white pb-[82px] pt-[10px] sm:pb-[92px] sm:pt-[120px] lg:pb-[104px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="grid gap-[44px] lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-start lg:gap-[60px] xl:gap-[72px]">
               <div>
@@ -524,15 +568,15 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 {course.comparison.rows.map((row, i) => (
                   <div
                     key={row.feature}
-                    className={`grid grid-cols-3 border-t border-[var(--course-detail-comparison-table-border)] ${i % 2 === 1 ? "bg-[var(--course-detail-comparison-row-even)]" : "bg-white"}`}
+                    className="grid grid-cols-3 border-t border-[var(--course-detail-comparison-table-border)] bg-[#F6F6F6]"
                   >
                     <div className="px-[20px] py-[20px] sm:px-[26px] sm:py-[22px]">
                       <p className="text-[13px] font-semibold leading-[1.55] text-[#142452] sm:text-[14.5px]">{row.feature}</p>
                     </div>
-                    <div className="border-l border-[var(--course-detail-comparison-table-border)] px-[20px] py-[20px] sm:px-[26px] sm:py-[22px]">
+                    <div className="border-l border-[var(--course-detail-comparison-table-border)] px-[20px] py-[20px] sm:px-[26px] sm:py-[22px] bg-[var(--course-detail-comparison-row-even)]">
                       <p className="text-[13px] leading-[1.6] text-[#39415a] sm:text-[14.5px]">{row.colA}</p>
                     </div>
-                    <div className="border-l border-[var(--course-detail-comparison-table-border)] px-[20px] py-[20px] sm:px-[26px] sm:py-[22px]">
+                    <div className="border-l border-[var(--course-detail-comparison-table-border)] px-[20px] py-[20px] sm:px-[26px] sm:py-[22px] bg-[var(--course-detail-comparison-row-even)]">
                       <p className="text-[13px] leading-[1.6] text-[#39415a] sm:text-[14.5px]">{row.colB}</p>
                     </div>
                   </div>
@@ -549,7 +593,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
         )}
 
         {/* Related Exams */}
-        <section className="relative overflow-hidden bg-white pb-[92px] pt-[10px] sm:pb-[110px] sm:pt-[20px] lg:pb-[120px]">
+        <section className="relative overflow-hidden bg-white pb-[92px] pt-[10px] sm:pb-[110px] sm:pt-[120px] lg:pb-[120px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">EXAMS</p>
             <h2 className="mt-[6px] text-[28px] font-bold leading-[1.12] tracking-[-0.018em] text-[var(--course-detail-heading)] sm:text-[34px] lg:text-[38px] xl:text-[42px]">
