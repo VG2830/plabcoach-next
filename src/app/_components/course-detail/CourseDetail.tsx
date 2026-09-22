@@ -100,14 +100,6 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
   switch (icon) {
     case "eligibility":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <rect x="5" y="4" width="14" height="17" rx="2.2" stroke="currentColor" strokeWidth="1.6" />
-        //   <rect x="9" y="2.4" width="6" height="3.2" rx="1" fill="currentColor" />
-        //   <circle cx="10.4" cy="11" r="1.7" stroke="currentColor" strokeWidth="1.4" />
-        //   <path d="M8 16.3c.4-1.6 1.8-2.4 3.1-2.4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        //   <circle cx="16.2" cy="16.3" r="2.9" fill="currentColor" />
-        //   <path d="M14.9 16.3l.9.9 1.6-1.8" stroke="#151f52" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        // </svg>
         <Image src="/pathway_1.svg" alt=""  width={56} height={56}></Image> 
       );
     case "pass-plab1":
@@ -117,12 +109,6 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "pass-nca":
     case "pass-psa":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <rect x="3.2" y="4.5" width="17.6" height="12.2" rx="1.8" stroke="currentColor" strokeWidth="1.6" />
-        //   <path d="M9 20h6M12 16.7V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        //   <circle cx="12" cy="10.6" r="3.3" stroke="currentColor" strokeWidth="1.4" />
-        //   <path d="M10.6 10.6l1 1 2-2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-        // </svg>
         <Image src="/pathway_2.svg" alt=""  width={56} height={56}></Image>
       );
     case "prepare-plab2":
@@ -136,38 +122,16 @@ function PathwayIcon({ icon }: { icon: PathwayStep["icon"] }) {
     case "apply-imc":
     case "apply-fp":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <path
-        //     d="M12 5.2c-1.7-1-4-1.3-5.8-.7v13.3c1.8-.6 4.1-.3 5.8.7 1.7-1 4-1.3 5.8-.7V4.5c-1.8-.6-4.1-.3-5.8.7Z"
-        //     stroke="currentColor"
-        //     strokeWidth="1.4"
-        //     strokeLinejoin="round"
-        //   />
-        //   <path d="M12 5.2v13.3" stroke="currentColor" strokeWidth="1.3" />
-        //   <path d="M10.9 10h2.2M12 8.9v2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        // </svg>
         <Image src="/pathway_4.svg" alt=""  width={56} height={56}></Image>
       );
     case "apply-registration":
     case "apply-imc":
     case "apply-fp":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <rect x="3.2" y="5.2" width="14.4" height="13.6" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        //   <circle cx="7.5" cy="9.8" r="1.6" stroke="currentColor" strokeWidth="1.3" />
-        //   <path d="M5.6 15c.4-1.4 1.6-2.1 2.8-2.1M12.4 8.6h3.4M12.4 11.4h2.6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-        //   <path d="M15.8 15.6l3.5-3.5 1.6 1.6-3.5 3.5-2 .4.4-2Z" fill="currentColor" />
-        // </svg>
         <Image src="/pathway_5.svg" alt=""  width={56} height={56}></Image>
       );
     case "start-career":
       return (
-        // <svg viewBox="0 0 24 24" fill="none" className={cls} xmlns="http://www.w3.org/2000/svg">
-        //   <path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        //   <rect x="3.4" y="7.4" width="17.2" height="11.4" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        //   <path d="M3.4 12.4h17.2" stroke="currentColor" strokeWidth="1.3" />
-        //   <path d="M12 10.4v4M10 12.4h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        // </svg>
         <Image src="/pathway_6.svg" alt=""  width={56} height={56}></Image>
       );
     default:
@@ -327,17 +291,6 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const activeSection =
     course.sections.find((s) => s.id === activeTocId) ?? course.sections[0];
 
-  // const subscribeSection = (
-  //   <div className="mt-[34px] flex flex-col gap-[14px] sm:flex-row sm:gap-[20px] lg:mt-[40px]">
-  //     <SubscribeButton href={plansHref} />
-  //     {/* <a
-  //       href="#course-sections"
-  //       className="inline-flex h-[50px] min-w-[186px] items-center justify-center rounded-[10px] border-[1.5px] border-[var(--course-detail-button-border)] px-[26px] text-[13px] font-bold text-[var(--course-detail-button-muted)] transition-colors duration-200 hover:border-[var(--course-detail-primary)] hover:text-[var(--course-detail-primary)]"
-  //     >
-  //       Learn More
-  //     </a> */}
-  //   </div>
-  // );
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[var(--course-detail-heading)]">

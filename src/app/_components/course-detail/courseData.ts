@@ -409,10 +409,10 @@ const comparisonPlab2: ComparisonTable = {
 
 const tocPres2: TocItem[] = [
   { id: "what-is", label: "What is PRES 2?" },
-  { id: "who-needs", label: "Who Needs PRES 2" },
-  { id: "format", label: "PRES 2 Format & Questions" },
-  { id: "syllabus", label: "PRES 2 Syllabus / Blueprint" },
-  { id: "eligibility", label: "Eligibility & Registration" },
+  { id: "who-needs", label: "Who Needs to Take PRES 2?" },
+  { id: "format", label: "PRES 2 Format & Structure" },
+  { id: "syllabus", label: "PRES 2 Syllabus" },
+  { id: "eligibility", label: "Eligibility & Registration Process" },
   { id: "dates", label: "PRES 2 Dates & Fees" },
   { id: "prepare", label: "How to Prepare for PRES 2" },
   { id: "how-helps", label: "How PLABcoach Helps" },
@@ -424,40 +424,36 @@ const sectionsPres2: CourseSection[] = [
     id: "what-is",
     heading: "What is PRES 2?",
     paragraphs: [
-      "PRES 2 is the written component of Ireland's Pre-Registration Examination System, administered by the Irish Medical Council for international medical graduates who are applying to the Irish training system or seeking registration in Ireland. It is a multiple-choice written exam set in the context of Irish clinical practice.",
-      "PRES 2 is delivered alongside PRES 3 (the clinical / OSCE and data interpretation component) and is designed to confirm that an IMG has the applied medical knowledge required for safe practice as an intern / pre-registration doctor in the Irish health system.",
+      "PRES 2 is the written knowledge component of Ireland's Pre-Registration Examination System (PRES), set by the Irish Medical Council (IMC). It is required for international medical graduates who qualified outside the EU/EEA and who do not hold a qualification or internship the IMC recognises as an exemption, before they can register to practise medicine in Ireland.",
+      "PRES 2 must be passed before a candidate can attempt PRES 3, the OSCE and data interpretation component — the two levels are sat in a fixed, IMC-enforced sequence.",
     ],
   },
   {
     id: "who-needs",
-    heading: "Who Needs PRES 2",
+    heading: "Who Needs to Take PRES 2?",
     paragraphs: [
-      "Most international medical graduates applying for the Irish Medical Council Intern or Pre-Registration pathway are required to sit PRES unless exempt. Exemptions can apply where a candidate already holds a qualification or pass the IMC treats as equivalent — such as a valid PLAB 1 pass, under current guidance always verify with the Irish Medical Council for your own case.",
-      "If you are targeting an Irish internship or Irish NCHD training post, you should check the latest IMC booklet and Health Service Executive (HSE) / NCHD guidance to confirm whether PRES 2 (and PRES 3) will be part of your required pathway.",
+      "PRES 2 is required for IMGs who qualified outside the EU/EEA/Switzerland, do not hold a higher qualification or an internship the IMC deems equivalent to the Irish internship programme, and do not qualify for an exemption. Candidates who have passed the UK's PLAB 1 are generally recognised by the IMC as PRES 2-equivalent in practice and may be exempt.",
     ],
   },
   {
     id: "format",
-    heading: "PRES 2 Format & Questions",
+    heading: "PRES 2 Format & Structure",
     paragraphs: [
-      "PRES 2 is a written examination made up of multiple-choice / single-best-answer style questions rooted in realistic clinical scenarios. The exam is timed and typically runs for around 3 hours depending on the current format published by the Irish Medical Council.",
-      "Questions commonly present an Irish or general hospital / general-practice style case and ask the candidate to choose the single best investigation, diagnosis, management step, prescribing choice, referral decision or ethical / communication response from the options provided.",
+      "The exam consists of multiple-choice questions that are clinically based. It has an approximate duration of three hours and is delivered as a written exam. The content areas include obstetrics and gynaecology, paediatrics, psychiatry, surgery, medicine, and general practice."
     ],
   },
   {
     id: "syllabus",
-    heading: "PRES 2 Syllabus / Blueprint",
+    heading: "PRES 2 Syllabus",
     paragraphs: [
-      "The PRES 2 syllabus reflects the scope of knowledge expected of a competent intern / first-year pre-registration doctor in Ireland. It covers the common conditions and presentations in general medicine, general surgery, paediatrics, obstetrics and gynaecology, psychiatry, emergency medicine, musculoskeletal, primary care and therapeutics.",
-      "Irish and general European guidelines, common local patterns of disease, the Irish health system context, safety and prescribing are all relevant. Candidates should also expect questions that test interpretation of common investigations, drug side effects, vaccinations, screening and ethical issues relevant to day-to-day Irish practice.",
+      "PRES 2 tests theoretical knowledge and its application to clinical scenarios across five core areas:Medicine / General Practice,Surgery,Obstetrics & Gynaecology,Paediatrics,Psychiatry."
     ],
   },
   {
     id: "eligibility",
-    heading: "Eligibility & Registration",
+    heading: "Eligibility & Registration Process",
     paragraphs: [
-      "Eligibility for PRES is set by the Irish Medical Council and usually requires an acceptable primary medical qualification, verification of that qualification, and evidence of English language proficiency (IELTS, OET or equivalent, meeting the IMC's published scores).",
-      "Candidates apply to the Irish Medical Council to be accepted for the PRES pathway, and once approved can register for the next available PRES 2 / PRES 3 diet via the IMC's online system. Processing of verification can take several weeks, so early application is strongly recommended.",
+      "Eligibility generally requires a primary medical qualification from a medical school outside the EU/EEA/Switzerland, with no qualifying exemption, such as a relevant higher qualification, equivalent internship, or accepted alternative examination pass. Applicants must also provide evidence of English-language proficiency; however, the exact current IELTS requirement should be confirmed directly with the Medical Council of Ireland, as published sources may differ."
     ],
   },
   {
@@ -472,58 +468,57 @@ const sectionsPres2: CourseSection[] = [
     id: "prepare",
     heading: "How to Prepare for PRES 2",
     paragraphs: [
-      "Strong PRES 2 preparation uses a structured review of high-yield topics, a large volume of exam-style MCQ practice, and timed mock assessments to build question technique and coverage. Most candidates find that a plan of 2-4 focused months is realistic depending on their baseline knowledge and time available per week.",
-      "We recommend starting with a diagnostic mock to identify weak specialties, then interleaving concept revision with daily MCQ sessions and weekly cumulative mocks. Pay special attention to Irish-higher-weighted areas such as common chronic disease, acute hospital admissions, paediatrics, women's health, psychiatry and evidence-based medicine.",
+      "Preparation for PRES 2 should involve systematically covering all five core content areas rather than focusing mainly on familiar specialties. Candidates should practise a high volume of clinical-scenario MCQs specifically aligned with the PRES syllabus, rather than relying solely on generic question banks. It is also advisable to complete at least one full timed practice session under the three-hour exam format before the actual sitting. Particular attention should be given to obstetrics, paediatrics, and psychiatry, as these areas may receive less emphasis in some other medical examinations and can therefore be overlooked during preparation."
     ],
   },
   {
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach's PRES 2 course is built around the latest IMC blueprint and a large, exam-style question bank written and reviewed by doctors familiar with both Irish-prescribing context and the style of question the IMC favours. The package includes recorded concept lectures, concise high-yield notes, regular homework quizzes and full-length timed mock exams.",
-      "You also have access to live small-group Q&A sessions and optional 1-to-1 coaching for weaker topics, so that progress is measurable every week and you are never stuck on unclear explanations or difficult question styles.",
+      "PLABcoach's PRES 2 preparation programme includes SmartQBank for PRES 2, featuring a comprehensive question bank and online mock tests, along with structured coverage of all five PRES 2 content areas. The courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with more than a decade of experience preparing international medical graduates (IMGs) for medical licensing examinations in the UK and Ireland.",
+      "While no course can guarantee an exam result, structured preparation across all five PRES 2 content areas can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
     ],
   },
   {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "This course is ideal for IMGs who are planning to take the Irish Medical Council PRES 2 exam as part of an Intern or NCHD application pathway to Ireland, whether they are currently working in Ireland, the UK, India, the Middle East or elsewhere.",
-      "It is also a strong fit for candidates who already hold a PLAB 1 pass and are exploring the Irish route as a parallel or backup plan, or for doctors switching from UK to Irish training who need to understand the IMC blueprint differences and Irish-specific content.",
+      "This course is designed for international medical graduates preparing for their first PRES 2 attempt, as well as candidates who have previously attempted the examination and want a more structured, feedback-driven approach to revision. It is also suitable for doctors who are familiar with clinical practice in their home country but need Ireland-specific, IMC-aligned preparation. Candidates considering whether to sit PRES 2 or pursue a PLAB 1 exemption can also use the course to prepare for their chosen pathway, including those studying remotely in preparation for an upcoming PRES 2 sitting."
+   
     ],
   },
 ];
 
 const faqsPres2: FAQItem[] = [
   {
-    question: "Can I be exempted from PRES 2 if I already passed PLAB 1?",
+    question: "What is PRES 2?",
     answer:
-      "In many cases yes — the Irish Medical Council currently treats a valid PLAB 1 pass as equivalent to PRES 2 in practice, so you may be able to apply to PRES 3 directly. Always confirm the latest equivalence and any time-limit conditions directly with the Irish Medical Council for your own application before relying on this.",
+      "PRES 2 is the written multiple-choice exam component of Ireland's Pre-Registration Examination System, testing clinical knowledge across five core specialty areas.",
   },
   {
-    question: "Where is PRES 2 held?",
+    question: "Do I need to pass PRES 2 before PRES 3?",
     answer:
-      "PRES 2 is currently run in Dublin and occasionally at other approved venues depending on the diet. You should check the Irish Medical Council's current PRES booklet for venues and any travel or visa planning if you will be coming to Ireland from abroad.",
+      "Yes. The Irish Medical Council enforces a fixed sequence — PRES 2 must be passed before a candidate can sit PRES 3.",
   },
   {
-    question: "How many times can I take PRES 2?",
+    question: "Am I exempt from PRES 2 if I've passed PLAB 1?",
     answer:
-      "Attempt limits and rules are set by the Irish Medical Council and published in the PRES handbook. You should check the current booklet for the latest position, as policies can be updated between diets.",
+      " The Irish Medical Council generally recognises a PLAB 1 pass as equivalent to PRES 2 in practice. Confirm your specific exemption eligibility directly with the Irish Medical Council, as individual circumstances vary.",
   },
   {
-    question: "Is PRES 2 the same as PLAB 1 content-wise?",
+    question: "What subjects does PRES 2 cover?",
     answer:
-      "PRES 2 and PLAB 1 cover similar broad areas of applied clinical knowledge at a similar level, but they are written by different regulators for different healthcare systems. In particular, Irish guidelines, system context and local patterns of disease may differ from UK PLAB-style questions, so dedicated PRES 2 preparation is always worthwhile even if you already studied for PLAB 1.",
+      "Medicine/general practice, surgery, obstetrics & gynaecology, paediatrics, and psychiatry.",
   },
   {
-    question: "What is a safe mock score before the exam?",
+    question: "How long is the PRES 2 exam? ",
     answer:
-      "Because the exact pass mark can vary by diet, there is no single magic number. As a rule of thumb, candidates who are consistently scoring comfortably above the two-thirds mark in realistic timed mocks — and who are improving their weaker topics — tend to be in a strong position for exam day.",
+      "Approximately 3 hours.",
   },
   {
-    question: "Should I take PRES 2 or PRES 3 first?",
+    question: "How is PRES 2 different from PLAB 1?",
     answer:
-      "For most candidates PRES 2 (the written exam) comes before PRES 3 (the practical OSCE and data interpretation exam) or is sat in the same diet. Check the Irish Medical Council's current ordering for the diet you are entering, as rules and packaging can evolve.",
+      "See the comparison section below.",
   },
 ];
 
@@ -531,8 +526,8 @@ const tocPres3: TocItem[] = [
   { id: "what-is", label: "What is PRES 3?" },
   { id: "who-needs", label: "Who Needs PRES 3" },
   { id: "format", label: "PRES 3 Format & Stations" },
-  { id: "data-interpret", label: "Data Interpretation Component" },
-  { id: "eligibility", label: "Eligibility & Registration" },
+  { id: "data-interpret", label: "Domains Assessed" },
+  { id: "eligibility", label: " Eligibility & Registration Process" },
   { id: "dates", label: "PRES 3 Dates & Fees" },
   { id: "prepare", label: "How to Prepare for PRES 3" },
   { id: "how-helps", label: "How PLABcoach Helps" },
@@ -544,117 +539,135 @@ const sectionsPres3: CourseSection[] = [
     id: "what-is",
     heading: "What is PRES 3?",
     paragraphs: [
-      "PRES 3 is the practical component of the Irish Medical Council's Pre-Registration Examination System. It combines an Objective Structured Clinical Examination (OSCE) with a separate data interpretation assessment. Together, these two elements test whether an international medical graduate has the clinical skills and applied judgment needed to work safely as an intern / pre-registration doctor in Ireland.",
-      "PRES 3 is the final stage of the PRES pathway for most candidates, usually taken after PRES 2 (or after a PRES-2-equivalent exemption such as PLAB 1) has been completed.",
+      "PRES 3 is the practical, clinical component of Ireland's Pre-Registration Examination System (PRES), set by the Irish Medical Council (IMC). It combines an Objective Structured Clinical Examination (OSCE) with a data interpretation assessment, and is the final exam step before an eligible international medical graduate can proceed toward Irish registration.",
+      "Unlike PRES 2, which is a written exam, PRES 3 requires candidates to travel to Dublin in person — there is no remote or international sitting option.",
     ],
   },
   {
     id: "who-needs",
     heading: "Who Needs PRES 3",
     paragraphs: [
-      "Most candidates progressing through the Irish Medical Council's PRES route to Intern or NCHD-level registration will need to sit and pass PRES 3. This includes both candidates who took PRES 2 and those who were exempted from PRES 2 through the IMC's current equivalence rules.",
-      "Always confirm the exact sequence and requirements for your own application by cross-checking the latest Irish Medical Council PRES booklet and any additional HSE or training-programme requirements, especially if you are applying from a non-standard route or hold qualifications from multiple jurisdictions.",
+      "Any candidate who has passed PRES 2 and does not hold an accepted exemption must sit and pass PRES 3 to proceed toward Irish Medical Council registration. Candidates who hold a PLAB 2 pass should check the Irish Medical Council's current position on PLAB 2 recognition before assuming automatic exemption from PRES 3 — as of mid-2026 this recognition was a proposed rule change"
     ],
   },
   {
     id: "format",
     heading: "PRES 3 Format & Stations",
     paragraphs: [
-      "PRES 3 is typically run as an OSCE with a circuit of clinical stations. Each station tests a specific skill such as history taking, focused physical examination, practical procedural skills on models or manikins, communication skills, counselling, consent-giving, breaking bad news or a management-oriented scenario with an actor patient.",
-      "Stations are strictly timed, with a clear marking scheme for each task and a trained examiner present. Candidates are assessed not only on the factual correctness of what they do, but also on their communication, organisation, safety, professional behaviour and patient-centred approach.",
+      "The PRES 3 assessment uses an OSCE format combined with data interpretation, delivered across approximately 12–16 stations. Each station lasts approximately 8 minutes. The assessment is conducted in person in Dublin only. Station types include history taking, physical examination, communication (including breaking bad news), prescribing safety, practical procedures, and data interpretation."
     ],
   },
   {
     id: "data-interpret",
-    heading: "Data Interpretation Component",
+    heading: "Domains Assessed",
     paragraphs: [
-      "In addition to the OSCE stations, PRES 3 includes a dedicated data interpretation element. This tests the candidate's ability to read and act on real-world clinical data such as blood results, ECGs, chest X-rays, arterial blood gases, urinalysis, common microbiology results and other investigations commonly requested in Irish hospital and general-practice settings.",
-      "Questions can cover diagnosis, immediate management, next-investigation choice or recognition of a dangerously abnormal result requiring escalation. Many candidates find that a structured approach to each data type (ECG, ABG, CXR, etc.) is the key to both speed and accuracy in this section.",
+      "PRES 3 stations assess candidates across three combined domains: **communication**, including patient interaction, breaking bad news, and clearly explaining diagnoses and management plans; **interpretation**, involving the interpretation of ECGs, blood results, blood gases, and radiology; and **practical skills**, including clinical examination techniques and procedural competence."
     ],
   },
   {
     id: "eligibility",
-    heading: "Eligibility & Registration",
+    heading: " Eligibility & Registration Process",
     paragraphs: [
-      "Eligibility for PRES 3 is managed by the Irish Medical Council. You will typically need to have passed PRES 2 (or hold an accepted equivalent), maintain valid English language evidence, and hold a primary medical qualification that has been fully verified and accepted by the IMC.",
-      "Once the IMC confirms you are eligible for the PRES pathway you can apply for an available PRES 3 diet through their online portal. Application windows close well in advance of the exam date, so apply early to avoid missing the diet you are targeting.",
+      "To be eligible for PRES 3, candidates must have a **valid PRES 2 pass**, as the examination sequence is fixed and enforced through the IMC candidate portal, meaning PRES 3 cannot be booked until PRES 2 has been passed. Candidates must not already hold a **qualifying exemption**, and their credentials must have been **previously verified through EPIC**, with this verification carried forward from the PRES 2 application. Candidates are also responsible for arranging and covering their own **travel and accommodation in Dublin** for the examination sitting."
     ],
   },
   {
     id: "dates",
     heading: "PRES 3 Dates & Fees",
     paragraphs: [
-      "PRES 3 dates are published in the Irish Medical Council's PRES booklet for each calendar year, with multiple diets typically available. The exam is held in Ireland, usually in Dublin, at dedicated OSCE / assessment venues.",
-      "Candidates should budget for the PRES 3 fee together with travel, accommodation and any visa arrangements. If PRES 2 and PRES 3 are being taken close together, plan both fees and the full travel timeline into your preparation calendar.",
+      "PRES 3 fee: reported at approximately €1,500 in the most recently published 2026 figures referenced by third-party sources — the most significant single cost in the Irish registration process.",
+      "PRES 3 availability has historically been limited relative to demand — as of early 2026, reported figures showed several hundred candidates waiting to sit PRES 3, with only a small number of sittings run per year. This scarcity is the direct reason behind the Irish Medical Council's proposed PLAB 2 recognition (see comparison section below) — worth mentioning briefly in this section as useful context for candidates weighing their options, cited to a specific published source rather than stated as a general claim.",
     ],
   },
   {
     id: "prepare",
     heading: "How to Prepare for PRES 3",
     paragraphs: [
-      "PRES 3 is a performance exam, so preparation must be active — repeated timed practice of stations, not just reading notes. The most effective approach combines: (1) a checklist-driven framework for each station type, (2) deliberate practice of common procedures, (3) regular mock circuits with trained actors and examiners, (4) a dedicated data-interpretation drill plan for ECGs, ABGs, CXRs and labs, and (5) targeted remediation of any weaker station types.",
-      "Most candidates benefit from 6-12 weeks of structured, frequent practice. Solo candidates often lose momentum or miss important examiner-level feedback, so a supported programme with structured stations and regular mocks is the most reliable route to a confident first pass.",
+      "To prepare effectively for PRES 3, candidates should practise the **full station circuit under the actual 8-minute timing**, rather than focusing on individual skills in isolation. Particular emphasis should be placed on **data interpretation**, including ECGs, blood gases, blood results, and radiology, as this is a distinct assessed domain. Candidates should also rehearse **communication-focused stations**, such as breaking bad news and explaining diagnoses, ideally with a study partner or coach, as these skills can be difficult to self-assess. For practical procedure stations, using **manikins or simulators that closely match the equipment used in the examination** can help familiarise candidates with the required techniques. Finally, candidates should **plan travel and accommodation in Dublin well in advance**, as examination dates may be limited and accommodation near the venue can become scarce once dates are announced."
     ],
   },
   {
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "Our PRES 3 programme provides full end-to-end preparation for both the OSCE stations and the data interpretation component. You get structured station notes and checklists, demonstration videos of high-frequency procedures and communication stations, repeated small-group timed practice with trained role-players and examiners, and a series of realistic PRES 3 mock circuits that mirror the length and format of the real exam.",
-      "The data interpretation module includes dedicated teaching and a large bank of ECG, ABG, CXR and lab-result drill questions with worked answers. 1-to-1 remediation sessions are available for specific weak stations or for candidates retaking PRES 3 after a close attempt.",
+      "PLABcoach’s PRES 3 preparation includes SmartNotes covering all assessed domains, including communication, data interpretation, and practical skills, along with Self-Paced Mastery Videos that allow candidates to prepare according to their own schedule. The programme also offers Live Coaching, available both online and offline, with manikin-based practical skills training, as well as mock examinations, including live OSCE mocks in Dublin and online data interpretation mocks. The courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK and Ireland licensing examinations.",
+      "While no course can guarantee an examination result, structured, feedback-driven OSCE and data interpretation practice can improve exam readiness and help candidates identify and avoid common mistakes that may otherwise contribute to repeat attempts.",
     ],
   },
   {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "This course is designed for any doctor preparing for PRES 3 as part of an Irish Intern or NCHD registration pathway, including those who are currently practising in Ireland and those travelling to Ireland especially for the exam.",
-      "It is also suitable for repeat PRES 3 candidates who need help understanding exactly where marks were lost and building a targeted remediation plan for the next diet.",
+      "This course is designed for **doctors who have passed PRES 2 and are progressing to practical OSCE and data interpretation preparation**. It is particularly suitable for candidates who have a strong understanding of the clinical content but need **structured practice with station timing and performance**, as well as those who have attempted PRES 3 previously and are looking for more **targeted, feedback-driven preparation**. The course is also useful for doctors who require focused practice in **data interpretation**, including ECGs, blood gases, blood results, and radiology, alongside clinical stations, and for candidates planning to travel to **Dublin** who want to experience realistic mock examination practice beforehand."
     ],
   },
 ];
 
 const faqsPres3: FAQItem[] = [
   {
-    question: "Is PRES 3 harder than PLAB 2?",
+    question: "What is PRES 3? ",
     answer:
-      "PRES 3 and PLAB 2 are both demanding practical exams but are run by different regulators with different marking emphases and station mixes. PRES 3 additionally includes a structured data interpretation element, while PLAB 2 tends to be fully station-based. Candidates should prepare specifically for the exam they are sitting rather than assuming one maps cleanly to the other.",
+      " PRES 3 is the OSCE and data interpretation exam that forms the clinical component of Ireland's Pre-Registration Examination System, sat in person in Dublin.",
   },
   {
-    question: "Can PRES 3 be sat outside Ireland?",
+    question: "Do I need to pass PRES 2 before PRES 3?",
     answer:
-      "No. PRES 3 is currently held only in Ireland at the IMC's approved assessment venues. You should plan travel and any visa or accommodation arrangements well in advance of the diet you intend to sit.",
+      "Yes. The Irish Medical Council enforces a fixed sequence — PRES 3 cannot be booked until PRES 2 has been passed.",
   },
   {
-    question: "How is data interpretation assessed?",
+    question: "Can I sit PRES 3 outside Ireland?",
     answer:
-      "Data interpretation is assessed as a dedicated written / on-screen element using realistic clinical cases and standard formats for ECGs, ABGs, imaging reports, lab panels and other investigation results. The emphasis is on the decisions an intern would actually make — next investigation, safe discharge, immediate treatment or escalation — rather than pure recognition of a pattern.",
+      "No. Unlike PRES 2, PRES 3 is held only in person in Dublin.",
   },
   {
-    question: "What if I speak with a strong accent — will I fail communication stations?",
+    question: "Am I exempt from PRES 3 if I've passed PLAB 2?",
     answer:
-      "What examiners test is whether the patient clearly understands you, and whether you understand and respond appropriately to the patient. If you use clear, moderate-speed English and check the patient's understanding where needed, accent alone is not a reason to fail a communication station. Our tutors can help you with the specific communication scripts and turn-taking patterns that examiners look for.",
+      "As of mid-2026, the Irish Medical Council had proposed recognising PLAB 2 as an alternative to PRES 3, but this was not yet confirmed. Check the Irish Medical Council's current published position directly before assuming exemption.",
   },
   {
-    question: "How many attempts am I allowed at PRES 3?",
+    question: "How many stations does PRES 3 have?",
     answer:
-      "Attempt rules are set by the Irish Medical Council and updated in the PRES handbook. Always check the latest version for the diet you are applying to, as limits, cooling-off periods and any appeal processes can change.",
+      "Approximately 12–16 stations, each around 8 minutes — ⚠ confirm the current exact figure on medicalcouncil.ie.",
   },
   {
-    question: "Do I need Irish hospital experience to pass PRES 3?",
+    question: "What is the PRES 3 fee??",
     answer:
-      "Not necessarily. Many successful PRES 3 candidates prepare from overseas using an Irish-context course and structured station practice. Irish hospital or GP experience is helpful, but the exam is designed to be fair to well-prepared IMGs from any background, and our course explicitly bridges system-context differences for candidates not already working in Ireland.",
+      "Reported at approximately €1,500 in recent published figures — ⚠ confirm current fee on medicalcouncil.ie, separate from travel/accommodation costs.",
   },
 ];
+const comparisonPres3: ComparisonTable = {
+  heading: "PRES 3 vs PLAB 2 Comparison",
+  noteHeading: "",
+  // noteBullets: [
+  //   "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practice — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
+  //   "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
+  // ],
+  colAHeader: "PRES 3",
+  colBHeader: "PLAB 2",
+  colAColor: "var(--course-detail-comparison-plab1-header)",
+  colBColor: "var(--course-detail-comparison-pres2-header)",
+  rows: [
+    { feature: "Governing body", colA: "Irish Medical Council (IMC)", colB: "GMC (UK)" },
+    { feature: "Format", colA: "OSCE + data interpretation, ~12–16 stations", colB: "16-station OSCE, 8 minutes each" },
+    { feature: "Registration granted", colA: "Ireland", colB: "UK (GMC)" },
+    {
+      feature: "Recognised equivalence",
+      colA: "Formal recognition of PLAB 2 as alternative proposed — verify current status",
+      colB: "Irish Medical Council has proposed recognising PLAB 2 as a PRES 3 alternative — not yet confirmed",
+    },
+  ],
+  footerText:
+    "",
+};
 
 const tocNca: TocItem[] = [
-  { id: "what-is", label: "What is the NCA?" },
-  { id: "who-needs", label: "Who Needs to Sit the NCA" },
-  { id: "format", label: "NCA Format & Stations" },
-  { id: "syllabus", label: "Skills, Domains & Blueprint" },
-  { id: "eligibility", label: "Eligibility & Application" },
-  { id: "dates", label: "NCA Dates & Costs" },
-  { id: "prepare", label: "How to Prepare for the NCA" },
+  { id: "what-is", label: "What is the UKFPO-NCA?" },
+  { id: "who-needs", label: "Who Needs to Take the UKFPO-NCA?" },
+  { id: "format", label: "UKFPO-NCA Format & Stations" },
+  { id: "syllabus", label: "Standard Assessed" },
+  { id: "eligibility", label: "Eligibility & Registration Process" },
+  { id: "dates", label: " UKFPO-NCA Dates & Fees" },
+  { id: "prepare", label: "How to Prepare for the UKFPO-NCA" },
   { id: "how-helps", label: "How PLABcoach Helps" },
   { id: "who-should", label: "Who Should Take This Course" },
 ];
@@ -662,126 +675,119 @@ const tocNca: TocItem[] = [
 const sectionsNca: CourseSection[] = [
   {
     id: "what-is",
-    heading: "What is the NCA?",
+    heading: "What is the UKFPO-NCA?",
     paragraphs: [
-      "The National Clinical Assessment (NCA) is a UK-wide clinical-skills assessment used by the UK Foundation Programme Office (UKFPO) as part of the recruitment process into the UK Foundation Programme. It is used alongside educational performance measures and other recruitment elements to help rank applicants for Foundation Year 1 posts across the UK.",
-      "For international medical graduates and UK graduates applying to the Foundation Programme from certain pathways, a strong NCA performance is a major driver of a higher overall ranking and therefore a better chance of being allocated to a preferred region or a competitive training rotation.",
+      "The UKFPO National Clinical Assessment (UKFPO-NCA) is an eligibility requirement set by the UK Foundation Programme Office (UKFPO), delivered by Manchester University NHS Foundation Trust. The UKFPO's own materials label it the Clinical Assessment — worth citing accurately when linking to foundationprogramme.nhs.uk — but UKFPO-NCA is the name used throughout this page and PLABcoach's course, as it's the term candidates search for and recognise. It is not a GMC exam and is separate from PLAB: it exists specifically to confirm that a candidate applying to the UK Foundation Programme has the clinical skills to work safely as an F1 doctor, at the point of eligibility application rather than at the point of GMC registration.",
+      "It applies only to candidates who qualified from medical school on or before a specific cutoff date set for each UKFP application cycle (5 August 2024 for the UKFP2026 cycle) — candidates who qualify after that date are assessed differently. There are no exceptions or exemptions once a candidate falls within the required group.",
     ],
   },
   {
     id: "who-needs",
-    heading: "Who Needs to Sit the NCA",
+    heading: "Who Needs to Take the UKFPO-NCA?",
     paragraphs: [
-      "Whether you need to sit the NCA depends on your applicant group as defined by the UKFPO for the recruitment round you are entering. In recent years it has been a core part of the application for many IMG applicants to the UK Foundation Programme, as well as for some other defined applicant cohorts.",
-      "You should check the current UKFPO applicant guidance booklet for the exact year you are applying, because applicant groups, the weight of the NCA in the overall ranking, and any alternative pre-employment checks required can change between rounds.",
+      "Any candidate applying to the UK Foundation Programme who qualified from medical school on or before the cycle's cutoff date must take and pass the Clinical Assessment as a condition of eligibility — regardless of citizenship, nationality, country of medical school, or current GMC registration status.",
+      "Common misconception: passing PLAB does NOT exempt a candidate from the UKFPO-NCA. PLAB satisfies GMC registration requirements; the UKFPO-NCA separately assesses clinical readiness to begin Foundation training. The two serve different purposes and neither substitutes for the other.",
     ],
   },
   {
     id: "format",
-    heading: "NCA Format & Stations",
+    heading: "UKFPO-NCA Format & Stations",
     paragraphs: [
-      "The NCA is structured as a skills assessment — typically a series of timed clinical and communication stations — delivered at authorised assessment centres or via an approved remote/hybrid format depending on the current round. Stations are short and tightly timed, designed to test consistent, safe, patient-centred performance.",
-      "Common station styles include: focused history taking, simulated patient communication, explanation and consent, management of an acutely unwell simulated patient, handover / SBAR-style communication with a colleague, a structured prioritisation task, and a practical or written data-style task such as prescribing, documentation or result interpretation embedded within a scenario.",
+      "The UKFPO-NCA is delivered as a **Clinical Competence Assessment (CCA)** conducted in person and consists of **12 scored stations**. Each station lasts **10 minutes**, including **1 minute of preparation time**, with the complete assessment session taking approximately **4 hours** in a single sitting. The assessment is delivered by **Manchester University NHS Foundation Trust on behalf of the UKFPO**."
     ],
   },
   {
     id: "syllabus",
-    heading: "Skills, Domains & Blueprint",
+    heading: "Standard Assessed",
     paragraphs: [
-      "The NCA blueprint is mapped to the capabilities expected of a new Foundation Year 1 doctor in the UK. Broad domains assessed include: clinical assessment and examination, clinical management and decision-making, patient safety, communication with patients and carers, communication with the multi-disciplinary team, documentation and prescribing, and professional behaviours and ethics.",
-      "Questions and stations are rooted in realistic UK Foundation contexts: acute take scenarios, common ward issues, safe discharge, safeguarding concerns, end-of-life conversations, breaking bad news, managing relatives, prescribing common medications safely, and managing simple emergencies such as deterioration, sepsis or allergic reaction triggers.",
+      "The level of knowledge and clinical skill required is that of a recently qualified graduate from a UK medical school who is about to start work as an F1 doctor — i.e. the same practical standard expected of any UK graduate entering the Foundation Programme, applied consistently to IMG candidates."
     ],
   },
   {
     id: "eligibility",
-    heading: "Eligibility & Application",
+    heading: "Eligibility & Registration Process",
     paragraphs: [
-      "Eligibility to apply to the UK Foundation Programme and therefore to sit the NCA is set out each year in the UKFPO's person specification and applicant guide. In broad terms you will need an acceptable primary medical qualification, evidence of the required English language standard, the required internship / experience and any additional checks (including registration-status requirements) that apply to your applicant cohort.",
-      "The NCA itself is booked through the UKFPO's recruitment portal once your application has been accepted for the round. You should track all published dates carefully: late applications or missed NCA booking windows usually cannot be reversed within the same recruitment round.",
+      "Eligibility for the UKFPO-NCA is determined automatically as part of the **UK Foundation Programme (UKFP) application process**. Candidates do not opt in or register separately for the UKFPO-NCA; instead, the UKFPO identifies candidates who are required to sit the assessment based on their **qualification date**. The qualification cutoff date is **cycle-specific** and may change between recruitment cycles, so candidates should confirm the exact cutoff date for the relevant cycle on the official foundation programme website. Once eligibility is confirmed, the UKFPO contacts candidates directly with **payment instructions**, and candidates should not attempt to make payment before receiving this communication. Failure to complete payment within the specified payment window results in **automatic withdrawal of the application**, with no grace period or exceptions."
     ],
   },
   {
     id: "dates",
-    heading: "NCA Dates & Costs",
+    heading: " UKFPO-NCA Dates & Fees",
     paragraphs: [
-      "NCA dates are tied to each UK Foundation Programme recruitment round and are published in the UKFPO timeline for that year. There is typically a defined NCA window during which all eligible applicants must complete their assessment. Fees (if any) and any eligible pass-through costs are explained in the current applicant guide.",
-      "If you are applying from outside the UK you should also note whether the round you are entering offers a remote NCA option or requires travel to a UK or overseas test centre, and build any travel or technology requirements into your preparation timeline.",
+      "Fee has changed between recent cycles — reported at £850 for the UKFP2026 cycle (primary source: foundationprogramme.nhs.uk) rising to a reported £1,000 for the UKFP2027 cycle."
     ],
   },
   {
     id: "prepare",
-    heading: "How to Prepare for the NCA",
+    heading: "How to Prepare for the UKFPO-NCA",
     paragraphs: [
-      "Strong NCA preparation combines: (1) learning a repeatable, structured approach for each station type, (2) building familiarity with UK clinical systems and Foundation-level patient flows, (3) timed practice of realistic stations under pressure, and (4) repeated feedback on communication, organisation and safety. Because the NCA is used for ranking, the bar is not just \"passing\" — it is performing as highly as possible across every station.",
-      "Most applicants spread NCA preparation over 4-10 weeks depending on their clinical background and familiarity with UK-style consultations, and combine self-practice with a structured course, peer groups and at least one full mock circuit.",
+      "Manchester University NHS Foundation Trust does not recommend or endorse any specific training course for the UKFPO-NCA, so preparation should be viewed as **general skills-building support rather than an officially endorsed pathway**. Candidates should practise the **12-station CCA format**, focusing on short, structured stations where the limited **1-minute preparation time** makes speed and organisation important. Preparation should cover core **F1-level ward skills**, including safe prescribing, appropriate escalation, basic clinical procedures, and clear communication under time pressure. Candidates should also rehearse under realistic conditions, completing each station within the **10-minute timeframe, including reading and preparation**. For those coming from a non-UK clinical background, reviewing **UK-specific ward processes, terminology, and clinical practices** can help familiarise them with the standards expected of a UK F1 starter."
     ],
   },
   {
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach's NCA course is written and delivered by doctors who have recent direct experience of UK Foundation training and NCA-style assessment. The programme covers every high-frequency station type with clear frameworks, concise notes, role-player-led practice stations, and structured examiner-style feedback after each circuit.",
-      "You also receive a dedicated prescribing and documentation module, NCA-style prioritisation tasks, and multiple full mock NCAs run to realistic timings so that you build both technique and stamina. Repeat stations and optional 1-to-1 coaching are available for weaker station types or for candidates who need a top ranking to secure a competitive region.",
+      "PLABcoach’s UKFPO-NCA preparation includes **SmartNotes covering the UKFPO-NCA station format** and **Self-Paced Mastery Videos** to support flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline. While no course can guarantee an examination result, **structured station practice can improve exam readiness and help candidates identify and avoid common mistakes that may otherwise contribute to repeat attempts**."
     ],
   },
   {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "This course is for any applicant to the UK Foundation Programme — whether a UK final-year student, an IMG applying from abroad, or a doctor already working in the UK outside the Foundation Programme — who is required or electing to sit the NCA as part of their ranking.",
-      "It is particularly recommended for international medical graduates who want to close any gap in familiarity with UK communication styles, Foundation-level ward tasks and the specific marking behaviour the NCA examiners are trained to reward.",
+      "This course is designed for **international medical graduates applying to the UK Foundation Programme who qualified on or before the relevant cycle’s cutoff date**. It is also suitable for candidates who already hold a **PLAB pass but may not realise that this does not exempt them from the UKFPO-NCA**, as well as doctors who need to familiarise themselves with **UK ward-level F1 practice, prescribing, and escalation processes**. Candidates who have previously attempted the UKFPO-NCA and want more **structured, timed station practice** may also benefit from the course, as can those preparing remotely before their assessment date."
     ],
   },
 ];
 
 const faqsNca: FAQItem[] = [
   {
-    question: "Is the NCA the same as PLAB 2?",
+    question: "What does UKFPO-NCA stand for?",
     answer:
-      "No. The NCA is a ranking assessment run by UKFPO as part of Foundation Programme recruitment, whereas PLAB 2 is the GMC's OSCE for full registration. The two assessments share some station styles and domains, but they are used for different purposes and are marked to a different purpose — NCA candidates are competing on rankable performance, not simply against a pass/fail bar.",
+      "UKFPO-NCA stands for National Clinical Assessment. The UKFPO's own materials label it the Clinical Assessment — both refer to the same eligibility requirement for the UK Foundation Programme.",
   },
   {
-    question: "How much does the NCA contribute to my overall rank?",
+    question: "Does passing PLAB exempt me from the UKFPO-NCA?",
     answer:
-      "The weighting of the NCA is published by UKFPO for each recruitment round and can vary between applicant groups and between years. You should read the most up-to-date UKFPO applicant guide to see how the NCA combines with your educational performance, SJT-style elements and any other scoring in the round you are entering.",
+      "No. PLAB satisfies GMC registration requirements; the UKFPO-NCA separately confirms clinical readiness for Foundation training. Passing one does not exempt a candidate from the other.",
   },
   {
-    question: "Can I resit the NCA in the same recruitment round if I do poorly?",
+    question: "Who has to take the UKFPO-NCA? ",
     answer:
-      "In most UKFPO rounds the NCA is a one-time assessment for that round — there is no internal resit mechanism once you have completed it. This is exactly why structured preparation and high-quality mock practice matter so much: you need to deliver your best performance on the day.",
+      " Candidates applying to the UK Foundation Programme who qualified from medical school on or before the current cycle's cutoff date, regardless of nationality or GMC registration status.",
   },
   {
-    question: "Is there a minimum pass mark on the NCA?",
+    question: "How many stations does the UKFPO-NCA have?",
     answer:
-      "UKFPO publishes whether a particular NCA round operates on a pure ranking basis or also has a threshold or safety element. You should check the current guidance, but even where there is no formal threshold, a low NCA performance will severely limit your overall ranking and therefore your choice of foundation school.",
+      " 12 stations, each 10 minutes including 1 minute of preparation time, in a single session of approximately 4 hours.",
   },
   {
-    question: "Should I also prepare for the PSA at the same time?",
+    question: "What happens if I miss the UKFPO-NCA payment window?",
     answer:
-      "For many applicants the Prescribing Safety Assessment (PSA) or a PSA-style prescribing task is either part of the NCA itself or a closely related requirement. Our NCA package includes a dedicated prescribing module, and you can also take our full PSA course alongside for the safest combined preparation.",
+      "Your UKFP application is automatically withdrawn — there is no grace period or exception.",
   },
   {
-    question: "Can the NCA be taken outside the UK?",
+    question: "What is the current UKFPO-NCA fee?",
     answer:
-      "This changes between UKFPO rounds. Some years the NCA has been delivered remotely or at overseas centres; other years it may require attendance at a UK centre. Always check the UKFPO's published assessment delivery plan for the exact round you are applying to before booking flights or accommodation.",
+      "Check on foundationprogramme.nhs.uk — recently reported figures range from £850 to £1,000 depending on cycle",
   },
 ];
 
 const tocPsa: TocItem[] = [
   {
-    id: "what-is", label: "What is the PSA?" },
-  { id: "who-needs", label: "Who Needs the PSA" },
+    id: "what-is", label: "What is the UKFPO-PSA?" },
+  { id: "who-needs", label: "Who Needs to Take the UKFPO-PSA?" },
   {
     id: "format",
-    label: "PSA Format & Question Types",
+    label: "UKFPO-PSA Format & Question Types",
   },
   {
     id: "domains",
-    label: "Domains, Prescribing Skills & Blueprint",
+    label: "Standard Assessed",
   },
-  { id: "eligibility", label: "Eligibility & Application" },
-  { id: "dates", label: "PSA Dates & Fees" },
-  { id: "prepare", label: "How to Prepare for the PSA" },
+  { id: "eligibility", label: "Eligibility & Timing" },
+  { id: "dates", label: " UKFPO-PSA Dates & Funding " },
+  { id: "prepare", label: " How to Prepare for the UKFPO-PSA" },
   { id: "how-helps", label: "How PLABcoach Helps" },
   { id: "who-should", label: "Who Should Take This Course" },
 ];
@@ -789,109 +795,338 @@ const tocPsa: TocItem[] = [
 const sectionsPsa: CourseSection[] = [
   {
     id: "what-is",
-    heading: "What is the PSA?",
+    heading: "What is the UKFPO-PSA?",
     paragraphs: [
-      "The Prescribing Safety Assessment (PSA) is a UK-wide on-line assessment of a doctor's ability to prescribe safely and effectively. It tests practical prescribing skills, therapeutics knowledge and the routine calculations and decisions that new prescribers in the UK healthcare system must make correctly every working day.",
-      "For UK medical students and Foundation-level applicants, the PSA is often either a required hurdle to graduation or Foundation Programme entry, or a factor that feeds into ranking / readiness to prescribe on the first day of work. Similar PSA-style prescribing tasks also appear in related assessments such as parts of the UKFPO NCA.",
+      "The UKFPO Prescribing Safety Assessment (UKFPO-PSA) is a computer-based exam developed jointly by the British Pharmacological Society (BPS) and the Medical Schools Council (MSC). It tests the skills, judgement, and supporting knowledge required to prescribe medicines safely in the NHS, based on prescribing competencies the GMC defines for new medical graduates.",
+      "Unlike the NCA, the PSA is not a pre-entry eligibility requirement for the Foundation Programme — it is a requirement to complete F1 and progress to F2. Most UK medical students sit and pass it during their final year at medical school; those who haven't, along with international medical graduates entering F1, sit it during the F1 year itself.",
     ],
   },
   {
     id: "who-needs",
-    heading: "Who Needs the PSA",
+    heading: "Who Needs to Take the UKFPO-PSA?",
     paragraphs: [
-      "The PSA is taken by most UK medical students as a requirement of their degree or as a condition of entry to Foundation Year 1. International medical graduates entering the UK Foundation Programme, or applying to roles that require an immediate demonstration of UK prescribing competence, may also be required to pass the PSA or to sit an equivalent PSA-style assessment as part of their recruitment or induction.",
-      "Check the exact requirements for your route with your medical school, UKFPO applicant guidance or employer, as the mandatory status and acceptable pass validity period can vary between organisations and between training programmes.",
+      "The UKFPO-PSA is required for **all UK final-year medical students as part of their medical school assessment**. It is also required for **Foundation doctors who have not yet passed the PSA by the time they start F1**, including international medical graduates entering F1 through the UK Foundation Programme. For **F2 Standalone doctors**, sitting the PSA is recommended by the UKFPO but is not mandatory. A doctor who has not passed the PSA by the end of F1 does not automatically fail; the **ARCP panel will typically consider an extension to F1** to allow the doctor to complete the assessment, provided all other F1 requirements have been met."
     ],
   },
   {
     id: "format",
-    heading: "PSA Format & Question Types",
+    heading: "UKFPO-PSA Format & Question Types",
     paragraphs: [
-      "The PSA is a two-hour on-screen assessment. Questions are presented in realistic clinical contexts and cover several distinct prescribing skill domains. Standard question styles include: prescribing a suitable drug in a new scenario, reviewing a patient's existing prescriptions for errors or interactions, calculating correct doses and infusions, interpreting monitoring results and advising on next steps, handling adverse drug reactions, and communicating key prescribing information either to a patient or in documentation.",
-      "The exam is tightly timed and most candidates report that the main challenge is not simply knowing the answer but arriving at it accurately within the per-question time budget while double-checking calculations and dose units.",
+      "The UKFPO-PSA is a **60-question, computer-based examination** developed by the British Pharmacological Society (BPS) and the Medical Schools Council (MSC). The assessment covers key areas including **prescribing, prescription review, dose calculation, identification of adverse drug reactions and interactions, medicines communication, and data interpretation to support prescribing decisions**, with eight core question types covered in the BPS’s PSA preparation resources. The **exam duration should be confirmed on the official Prescribing Safety Assessment website**. During the assessment, candidates have access to the **BNF and BNF for Children (BNFc) through MedicinesComplete**, while UK candidates also have access to the NICE BNF; however, personal notes cannot be added to the BNF during the assessment",
+      
     ],
   },
   {
     id: "domains",
-    heading: "Domains, Prescribing Skills & Blueprint",
+    heading: "Standard Assessed",
     paragraphs: [
-      "The PSA blueprint covers the core prescribing capabilities of a safe new prescriber in UK practice. Key domains are: prescribing (choice of drug, route, dose, duration and formulation), prescription review (detection of errors, contraindications, interactions and duplicate therapy), planning monitoring and interpreting results, calculating doses, infusions and unit conversions, adverse drug reaction recognition and management, and communication about medicines with patients, families and colleagues.",
-      "Therapeutically the exam draws from common acute and chronic areas: cardiovascular, respiratory, diabetes and endocrinology, gastroenterology, infection and antibiotics, anticoagulation, analgesia, mental health, fluids and electrolytes, paediatric prescribing principles, obstetric prescribing principles, and palliative care / symptom control. Familiarity with the current BNF / BNFC and NICE guidance is assumed.",
+      "The PSA assesses competencies the GMC has defined for new medical graduates, including writing new prescriptions, reviewing and checking existing prescriptions, calculating drug doses accurately, identifying and avoiding adverse drug reactions and medication errors, and adjusting prescribing decisions to individual patient circumstances"
     ],
   },
   {
     id: "eligibility",
-    heading: "Eligibility & Application",
+    heading: "Eligibility & Timing",
     paragraphs: [
-      "For UK medical students, eligibility to sit the PSA and the booking process is usually managed centrally by the medical school. For Foundation applicants and other candidates the process can be routed through UKFPO, your employer or another authorised host organisation depending on the pathway.",
-      "If you are an international graduate unsure whether you need the PSA, confirm with the specific organisation you are applying through: in some pathways a recent PSA pass is a mandatory condition, in others it is desirable but not required, and in others it is replaced by a separate prescribing assessment during induction or probation.",
+      "International medical graduates entering F1 through the UK Foundation Programme are expected to sit the PSA during F1, not before starting.",
+      "Candidates are supported through this process by their Foundation School, not by self-service booking as with PLAB or PRES",
     ],
   },
   {
     id: "dates",
-    heading: "PSA Dates & Fees",
+    heading: " UKFPO-PSA Dates & Funding",
     paragraphs: [
-      "The PSA runs on multiple published dates during each academic year, with specific sittings aligned to medical school and UKFPO timelines. There are sometimes separate student sittings and separate sittings for post-graduation / Foundation-level candidates.",
-      "Fees (if any) depend on the host pathway — for example medical schools often fund student sittings, while some post-graduation sittings may charge the candidate or employer. You should confirm the latest dates, fees, remote vs in-centre delivery format and retake policy for the sitting you plan to enter.",
+      "Multiple sittings run across the academic year — recent published dates for the 2026/2027 cycle include 24 September 2026 (foundation year doctors), with further sittings in January, March, April and June 2027."
     ],
   },
   {
     id: "prepare",
-    heading: "How to Prepare for the PSA",
+    heading: " How to Prepare for the UKFPO-PSA",
     paragraphs: [
-      "A strong PSA preparation plan typically includes: (1) a structured review of high-yield therapeutics and common guidelines, (2) daily practice of PSA-style questions by domain, (3) repeated timed mocks under exam-like conditions, (4) targeted drilling of calculations, dose conversions and infusions, and (5) a clear lookup strategy for using the BNF efficiently where it is available.",
-      "Many candidates underestimate the need for speed and double-checking on the PSA. The most common failure pattern is not lack of knowledge, but running out of time on calculations or making avoidable unit errors — so deliberate practice on question technique is at least as important as memorising facts.",
+      "Work through each of the core question types individually — prescribing, review, calculation, adverse reaction identification, and communication — rather than generic pharmacology revision alone.",
+      "Practise dose calculations under time pressure, as this is a common area candidates lose marks in.Get comfortable navigating the BNF/BNFc quickly, since it's available during the real exam and speed of lookup matters as much as knowledge",
+
     ],
   },
   {
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach's PSA course is built around a large bank of realistic PSA-style questions covering every blueprint domain and every question style, including detailed worked explanations that teach not just the correct answer but the fastest route to it and the common distractors to watch for.",
-      "The package includes recorded concept lectures, a dedicated calculations and infusions module, full-length timed PSA mocks with performance analytics, and live Q&A sessions where tutors walk through high-error-rate questions and share time-saving lookup strategies. Optional 1-to-1 coaching is available for repeat candidates or for anyone who needs to be confident of a high, safe score on the first attempt.",
+      "PLABcoach’s UKFPO-PSA preparation includes **SmartNotes covering all core PSA question types**, along with **Self-Paced Mastery Videos** for flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline."
     ],
   },
   {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "This course is designed for any candidate sitting the PSA or a PSA-equivalent prescribing assessment, including UK medical students preparing for their mandatory student sitting, Foundation applicants needing a recent pass for ranking or eligibility, and doctors already in post who are preparing for a prescribing safety assessment as part of induction or sign-off.",
-      "It is also ideal for international medical graduates unfamiliar with the specifics of UK prescribing, BNF usage and the particular patient-safety emphases UK regulators look for in assessments of this kind.",
+      "This course is designed for **F1 doctors, including international medical graduates, who have not yet passed the PSA and need to complete it before progressing to F2**. It is particularly suitable for candidates who are confident in their clinical knowledge but want focused practice in **dose calculations and prescribing scenarios**. The course is also useful for doctors who want to become **faster and more confident navigating the BNF and BNFc** before sitting the examination, as well as candidates who did not sit or pass the PSA at medical school and are approaching the assessment for the first time during F1"
     ],
   },
 ];
 
 const faqsPsa: FAQItem[] = [
   {
-    question: "Is the PSA a closed-book or open-book exam?",
+    question: "What does PSA stand for?",
     answer:
-      "The PSA uses a controlled digital format, and the question design assumes that you are expected to look up details in the BNF / BNFC for certain questions — but time is so tight that you still need to know the commonest areas by heart. The exact digital resources available during the exam are confirmed by the PSA authority for each sitting and you should train using the same resources in your mocks.",
+      " PSA stands for Prescribing Safety Assessment — a 60-question exam developed by the British Pharmacological Society and the Medical Schools Council.",
   },
   {
-    question: "How long does a PSA pass remain valid?",
+    question: "Do I need to pass the PSA before starting F1? ",
     answer:
-      "Validity depends on the organisation using the pass. A medical school may accept a PSA pass only within the same graduation window, while UKFPO or an employer may apply a different validity rule (often a PSA pass achieved within a defined number of years of starting work). Always confirm with the specific body that is requiring you to take it.",
+      "No. Most candidates sit the PSA during F1, not before starting. It is a requirement to progress from F1 to F2, not a pre-entry eligibility requirement like the NCA.",
   },
   {
-    question: "How many times can I resit the PSA if I fail?",
+    question: "Do I have to pay for the PSA?",
     answer:
-      "Resit limits depend on the host pathway. Medical students typically have a small number of resit opportunities defined by their school; other candidates may be limited to the published sittings available within their current application round. Aim to pass first time with thorough preparation rather than counting on multiple attempts.",
+      "The PSA is typically funded by UKFPO for Foundation doctors sitting it during F1.",
   },
   {
-    question: "Are calculations weighted more than other question types?",
+    question: "What happens if I don't pass the PSA during F1?",
     answer:
-      "The PSA uses a defined number of questions per domain and does not simply double-weight calculations, but candidates who make repeated calculation errors (doses, rates, units, infusions, weight-based dosing) lose marks heavily and often run out of time. Structured calculation practice should be a non-negotiable part of any PSA revision plan.",
+      " The ARCP panel will typically consider an extension to F1 to allow the assessment to be completed, provided all other F1 requirements have been met.",
   },
   {
-    question: "Do I need to know rare drugs or rare conditions to pass the PSA?",
+    question: "Can I access the BNF during the exam?",
     answer:
-      "No. The PSA is built around routine, day-one, high-risk prescribing in UK clinical practice. Time spent drilling the commonest high-risk areas (anticoagulation, antibiotics, analgesia, fluids, electrolytes, diabetes, cardiovascular, mental health and common paediatric / obstetric principles) is almost always better rewarded than chasing obscure topics.",
+      "Yes. The BNF and BNFc are available via Medicines Complete throughout the exam; UK candidates also have NICE BNF access. No personal notes are permitted in the BNF during the assessment.",
   },
   {
-    question: "Is the PSA similar to prescribing questions in PLAB 1 or PRES 2?",
+    question: "How is the UKFPO-PSA different from the UKFPO-NCA?",
     answer:
-      "There is overlap, but the PSA is significantly more focused on the operational act of safe prescribing — writing the correct prescription, spotting an error in a chart, calculating an infusion, choosing a safe alternative when a drug is contraindicated — whereas PLAB 1 / PRES 2 prescribing questions are embedded within a broader clinical knowledge assessment. A candidate who is already strong on PLAB 1 therapeutics still needs dedicated PSA-style practice for format, speed and BNF-lookup technique.",
+      "The NCA is a pre-entry eligibility requirement sat before applying to the Foundation Programme; the PSA is sat during F1 itself, to progress to F2. They test different things at different points in the pathway and neither substitutes for the other.",
   },
+];
+const tocMsra: TocItem[] = [
+  {
+    id: "what-is", label: "What is the MSRA?" },
+  { id: "who-needs", label: "Who Needs to Take the MSRA?" },
+  {
+    id: "format",
+    label: "MSRA Format & Papers",
+  },
+  {
+    id: "domains",
+    label: "How Scoring Works",
+  },
+  { id: "eligibility", label: "Eligibility & Registration Process" },
+  { id: "dates", label: "MSRA Dates & Fees" },
+  { id: "prepare", label: " How to Prepare for the MSRA" },
+  { id: "how-helps", label: "How PLABcoach Helps" },
+  { id: "who-should", label: "Who Should Take This Course" },
+];
+
+const sectionsMsra: CourseSection[] = [
+  {
+    id: "what-is",
+    heading: "What is the UKFPO-PSA?",
+    paragraphs: [
+      "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based selection exam used by NHS specialty recruitment as part of the application process for GP training (ST1) and several other UK specialty training programmes. It is designed to provide a consistent, standardised way of comparing applicants' professional judgement and clinical problem-solving ability.",
+      "Both papers are based on the Foundation Programme curriculum and assess how well a candidate applies clinical knowledge to real decision-making — the MSRA is not a knowledge-recall exam in the way PLAB 1 is; it centres on judgement under realistic scenarios."
+    ],
+  },
+  {
+    id: "who-needs",
+    heading: "Who Needs to Take the MSRA?",
+    paragraphs: [
+      "Candidates applying to GP training (ST1) and a number of other specialty training programmes that use the MSRA as part of their selection process must sit it. Which specialties use the MSRA in a given recruitment year, and what score threshold each sets, is published annually by the relevant specialty recruitment office."
+    ],
+  },
+  {
+    id: "format",
+    heading: "MSRA Format & Papers",
+    paragraphs: [
+      "The MSRA is a **computer-based examination** with a total duration of approximately **2 hours and 55 minutes**, including a **5-minute break between the two papers**. The first paper, **Professional Dilemmas (PD)**, lasts **95 minutes** and contains approximately **50 scenario-based questions** in a situational judgement format, including ranking and single-best-answer questions. The second paper, **Clinical Problem Solving (CPS)**, lasts **75 minutes** and assesses **clinical knowledge and decision-making** through multiple-choice questions across approximately **12 clinical topic areas**. The examination is delivered at **Pearson VUE test centres**.",
+      
+    ],
+  },
+  {
+    id: "domains",
+    heading: "How Scoring Works",
+    paragraphs: [
+      "A candidate's overall MSRA result combines their Professional Dilemmas score and Clinical Problem Solving score. Each participating specialty sets its own minimum threshold score for that recruitment round, and the combined score is also used to rank candidates against each other — meaning a pass on both papers does not guarantee a training post if competition for a specialty is high that year."
+    ],
+  },
+  {
+    id: "eligibility",
+    heading: "Eligibility & Registration Process",
+    paragraphs: [
+      "Eligibility is set by the specific specialty training programme(s) a candidate is applying to, not by a single universal MSRA eligibility rule.",
+      "Candidates typically apply through Oriel (the national recruitment platform) as part of their specialty application, with MSRA booking instructions issued once an application is accepted into the assessment stage",
+    ],
+  },
+  {
+    id: "dates",
+    heading: "MSRA Dates & Fees",
+    paragraphs: [
+      "The MSRA runs in scheduled sitting windows tied to each recruitment round (commonly referenced rounds include a January window for posts starting later that year, and a September window for posts starting the following February"
+    ],
+  },
+  {
+    id: "prepare",
+    heading: " How to Prepare for the MSRA",
+    paragraphs: [
+      "To prepare for the MSRA, candidates should practise **Professional Dilemmas ranking questions** specifically, keeping in mind that each question asks for the single most appropriate action rather than a sequence of actions. Candidates should also build familiarity with **NHS structures, GMC ethical guidance, including Good Medical Practice, and typical primary and secondary care working environments**, as the Professional Dilemmas paper assumes this context. For **Clinical Problem Solving**, preparation should cover the full range of clinical topics rather than focusing only on familiar specialties. Candidates should also practise both papers under realistic timed conditions, allowing **95 minutes for Professional Dilemmas and 75 minutes for Clinical Problem Solving**, with only a short break between them."
+
+    ],
+  },
+  {
+    id: "how-helps",
+    heading: "How PLABcoach Helps",
+    paragraphs: [
+      "PLABcoach’s UKFPO-PSA preparation includes **SmartNotes covering all core MSRA question types**, along with **Self-Paced Mastery Videos** for flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline."
+    ],
+  },
+  {
+    id: "who-should",
+    heading: "Who Should Take This Course",
+    paragraphs: [
+      "This course is designed for **doctors applying to GP training (ST1) or other specialty programmes that use the MSRA**. It is particularly suitable for candidates who find **Professional Dilemmas ranking questions** unintuitive and want structured practice with judgement-based scenarios. The course also supports doctors seeking **focused Clinical Problem Solving revision across a broad range of specialty topics**, as well as candidates who have previously sat the MSRA and want to strengthen their performance across both papers."
+    ],
+  },
+];
+
+const faqsMsra: FAQItem[] = [
+  {
+    question: "What does MSRA stand for?",
+    answer:
+      " Multi-Specialty Recruitment Assessment — a computer-based exam used in recruitment for GP training and several other UK specialty training programmes.",
+  },
+  {
+    question: "What are the two MSRA papers? ",
+    answer:
+      "Professional Dilemmas (a 95-minute situational judgement test) and Clinical Problem Solving (a 75-minute clinical knowledge paper), completed in one sitting with a short break between",
+  },
+  {
+    question: "Does passing the MSRA guarantee a training post?",
+    answer:
+      "No. The MSRA score is used to rank candidates against each other for a limited number of posts, so a pass does not guarantee a place if competition for a specialty is high that year.",
+  },
+  {
+    question: "Where is the MSRA held?",
+    answer:
+      "At Pearson VUE test centres, on computer, under exam conditions.",
+  },
+  {
+    question: "Do all specialties use the same MSRA pass mark?",
+    answer:
+      "No. Each participating specialty sets its own minimum threshold score for each recruitment cycle.",
+  }
+];
+
+const tocMrcpAkt: TocItem[] = [
+  {
+    id: "what-is", label: "What is the MSRA?" },
+  { id: "who-needs", label: "Who Needs to Take the MSRA?" },
+  {
+    id: "format",
+    label: "MSRA Format & Papers",
+  },
+  {
+    id: "domains",
+    label: "How Scoring Works",
+  },
+  { id: "eligibility", label: "Eligibility & Registration Process" },
+  { id: "dates", label: "MSRA Dates & Fees" },
+  { id: "prepare", label: " How to Prepare for the MSRA" },
+  { id: "how-helps", label: "How PLABcoach Helps" },
+  { id: "who-should", label: "Who Should Take This Course" },
+];
+
+const sectionsMrcpAkt: CourseSection[] = [
+  {
+    id: "what-is",
+    heading: "What is the UKFPO-PSA?",
+    paragraphs: [
+      "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based selection exam used by NHS specialty recruitment as part of the application process for GP training (ST1) and several other UK specialty training programmes. It is designed to provide a consistent, standardised way of comparing applicants' professional judgement and clinical problem-solving ability.",
+      "Both papers are based on the Foundation Programme curriculum and assess how well a candidate applies clinical knowledge to real decision-making — the MSRA is not a knowledge-recall exam in the way PLAB 1 is; it centres on judgement under realistic scenarios."
+    ],
+  },
+  {
+    id: "who-needs",
+    heading: "Who Needs to Take the MSRA?",
+    paragraphs: [
+      "Candidates applying to GP training (ST1) and a number of other specialty training programmes that use the MSRA as part of their selection process must sit it. Which specialties use the MSRA in a given recruitment year, and what score threshold each sets, is published annually by the relevant specialty recruitment office."
+    ],
+  },
+  {
+    id: "format",
+    heading: "MSRA Format & Papers",
+    paragraphs: [
+      "The MSRA is a **computer-based examination** with a total duration of approximately **2 hours and 55 minutes**, including a **5-minute break between the two papers**. The first paper, **Professional Dilemmas (PD)**, lasts **95 minutes** and contains approximately **50 scenario-based questions** in a situational judgement format, including ranking and single-best-answer questions. The second paper, **Clinical Problem Solving (CPS)**, lasts **75 minutes** and assesses **clinical knowledge and decision-making** through multiple-choice questions across approximately **12 clinical topic areas**. The examination is delivered at **Pearson VUE test centres**.",
+      
+    ],
+  },
+  {
+    id: "domains",
+    heading: "How Scoring Works",
+    paragraphs: [
+      "A candidate's overall MSRA result combines their Professional Dilemmas score and Clinical Problem Solving score. Each participating specialty sets its own minimum threshold score for that recruitment round, and the combined score is also used to rank candidates against each other — meaning a pass on both papers does not guarantee a training post if competition for a specialty is high that year."
+    ],
+  },
+  {
+    id: "eligibility",
+    heading: "Eligibility & Registration Process",
+    paragraphs: [
+      "Eligibility is set by the specific specialty training programme(s) a candidate is applying to, not by a single universal MSRA eligibility rule.",
+      "Candidates typically apply through Oriel (the national recruitment platform) as part of their specialty application, with MSRA booking instructions issued once an application is accepted into the assessment stage",
+    ],
+  },
+  {
+    id: "dates",
+    heading: "MSRA Dates & Fees",
+    paragraphs: [
+      "The MSRA runs in scheduled sitting windows tied to each recruitment round (commonly referenced rounds include a January window for posts starting later that year, and a September window for posts starting the following February"
+    ],
+  },
+  {
+    id: "prepare",
+    heading: " How to Prepare for the MSRA",
+    paragraphs: [
+      "To prepare for the MSRA, candidates should practise **Professional Dilemmas ranking questions** specifically, keeping in mind that each question asks for the single most appropriate action rather than a sequence of actions. Candidates should also build familiarity with **NHS structures, GMC ethical guidance, including Good Medical Practice, and typical primary and secondary care working environments**, as the Professional Dilemmas paper assumes this context. For **Clinical Problem Solving**, preparation should cover the full range of clinical topics rather than focusing only on familiar specialties. Candidates should also practise both papers under realistic timed conditions, allowing **95 minutes for Professional Dilemmas and 75 minutes for Clinical Problem Solving**, with only a short break between them."
+
+    ],
+  },
+  {
+    id: "how-helps",
+    heading: "How PLABcoach Helps",
+    paragraphs: [
+      "PLABcoach’s UKFPO-PSA preparation includes **SmartNotes covering all core MSRA question types**, along with **Self-Paced Mastery Videos** for flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline."
+    ],
+  },
+  {
+    id: "who-should",
+    heading: "Who Should Take This Course",
+    paragraphs: [
+      "This course is designed for **doctors applying to GP training (ST1) or other specialty programmes that use the MSRA**. It is particularly suitable for candidates who find **Professional Dilemmas ranking questions** unintuitive and want structured practice with judgement-based scenarios. The course also supports doctors seeking **focused Clinical Problem Solving revision across a broad range of specialty topics**, as well as candidates who have previously sat the MSRA and want to strengthen their performance across both papers."
+    ],
+  },
+];
+
+const faqsMrcpAkt: FAQItem[] = [
+  {
+    question: "What does MSRA stand for?",
+    answer:
+      " Multi-Specialty Recruitment Assessment — a computer-based exam used in recruitment for GP training and several other UK specialty training programmes.",
+  },
+  {
+    question: "What are the two MSRA papers? ",
+    answer:
+      "Professional Dilemmas (a 95-minute situational judgement test) and Clinical Problem Solving (a 75-minute clinical knowledge paper), completed in one sitting with a short break between",
+  },
+  {
+    question: "Does passing the MSRA guarantee a training post?",
+    answer:
+      "No. The MSRA score is used to rank candidates against each other for a limited number of posts, so a pass does not guarantee a place if competition for a specialty is high that year.",
+  },
+  {
+    question: "Where is the MSRA held?",
+    answer:
+      "At Pearson VUE test centres, on computer, under exam conditions.",
+  },
+  {
+    question: "Do all specialties use the same MSRA pass mark?",
+    answer:
+      "No. Each participating specialty sets its own minimum threshold score for each recruitment cycle.",
+  }
 ];
 
 const COMMON_HERO_IMAGE = "/courses_individual_hero_image.webp";
@@ -1008,10 +1243,10 @@ export const courseDetails = {
   "pres-level-2": {
     slug: "pres-level-2",
     eyebrow: "PRES LEVEL 2",
-    title: "PRES Level 2 — Written:\nComplete Guide to Format,\nSyllabus & Preparation",
+    title: "PRES 2 Exam Ireland: \nComplete Guide to Format,\nSyllabus & Preparation",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
-      "PRES Level 2 is the written exam of Ireland's Pre-Registration Examination System, used by the Irish Medical Council to test the applied clinical knowledge of international medical graduates seeking intern / NCHD registration in Ireland. The exam consists of MCQ / SBA style questions across a 3-hour paper and covers the core knowledge needed for safe day-one practice as an Irish intern.",
+      "PRES 2 is the written multiple-choice exam set by the Irish Medical Council (IMC), the first sat component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates seeking Irish registration. It tests clinical knowledge across obstetrics & gynaecology, paediatrics, psychiatry, surgery, and medicine/general practice through clinical-scenario-based questions. Candidates must pass PRES 2 before attempting PRES 3, the OSCE component.",
     toc: tocPres2,
     sections: sectionsPres2,
     faqs: faqsPres2,
@@ -1037,8 +1272,8 @@ export const courseDetails = {
         { feature: "Registration granted", colA: "Ireland", colB: "UK (GMC)" },
         {
           feature: "Recognised equivalence",
-          colA: "IMC may accept PLAB 1 as PRES 2-equivalent",
-          colB: "PLAB 1 pass is benchmarked to UKMLA-AKT standard",
+          colA: "Irish Medical Council recognises PLAB 1 pass as PRES 2-equivalent",
+          colB: "PLAB 1 ≈ PRES 2 (exemption in practice)",
         },
       ],
       footerText:
@@ -1065,16 +1300,16 @@ export const courseDetails = {
         image: "/plab1_course.webp",
         href: "/courses/plab-1-ukmla",
       },
-      {
-        title: "UKFPO-NCA / UKFPO-PSA",
-        description: "relevant if also targeting UK Foundation Programme alongside Ireland",
-        tags: [
-          { label: "Parallel route", variant: 3 },
-          { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
-        ],
-        image: "/uk_course.webp",
-        href: "/courses/national-clinical-assessment",
-      },
+      // {
+      //   title: "UKFPO-NCA / UKFPO-PSA",
+      //   description: "relevant if also targeting UK Foundation Programme alongside Ireland",
+      //   tags: [
+      //     { label: "Parallel route", variant: 3 },
+      //     { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
+      //   ],
+      //   image: "/uk_course.webp",
+      //   href: "/courses/national-clinical-assessment",
+      // },
     ],
     pathway: pathwayIrelandPres,
     videoId: "cfrFBCcj840",
@@ -1087,10 +1322,10 @@ export const courseDetails = {
   "pres-3-osce": {
     slug: "pres-3-osce",
     eyebrow: "PRES 3",
-    title: "PRES 3 — OSCE & Data Interpretation:\nComplete Guide to Stations,\nSkills & Preparation",
+    title: "PRES 3 Exam Ireland:\nOSCE & Data Interpretation Guide",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
-      "PRES 3 is the Irish Medical Council's practical OSCE combined with a separate data interpretation assessment. It is the final clinical stage of the PRES pathway for international medical graduates applying for intern or NCHD registration in Ireland, testing real-world consultation skills, procedures, communication and the ability to act on ECGs, ABGs, imaging and lab results correctly.",
+      "PRES 3 is the clinical OSCE and data interpretation exam set by the Irish Medical Council (IMC), the second and final component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates. It is held in person in Dublin, combining an Objective Structured Clinical Examination (OSCE) of roughly 12–16 stations with a data interpretation assessment. Candidates must pass PRES 2 before they are eligible to sit PRES 3.",
     toc: tocPres3,
     sections: sectionsPres3,
     faqs: faqsPres3,
@@ -1099,9 +1334,10 @@ export const courseDetails = {
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
       buttonLabel: "Start Learning",
     },
+    comparison: comparisonPres3,
     relatedExams: [
       {
-        title: "PRES Level 2",
+        title: "PRES 2 ",
         description: "written exam required or exempted before PRES 3",
         tags: [
           { label: "Prerequisite", variant: 2 },
@@ -1120,16 +1356,16 @@ export const courseDetails = {
         image: "/plab_2_courses_img.webp",
         href: "/courses/plab-2-ukmla",
       },
-      {
-        title: "UKFPO-NCA / UKFPO-PSA",
-        description: "relevant if also applying to UK Foundation Programme",
-        tags: [
-          { label: "Parallel route", variant: 3 },
-          { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
-        ],
-        image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/national-clinical-assessment",
-      },
+      // {
+      //   title: "UKFPO-NCA / UKFPO-PSA",
+      //   description: "relevant if also applying to UK Foundation Programme",
+      //   tags: [
+      //     { label: "Parallel route", variant: 3 },
+      //     { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
+      //   ],
+      //   image: "/ukfpo_courses__indv_img.webp",
+      //   href: "/courses/national-clinical-assessment",
+      // },
     ],
     pathway: pathwayIrelandPres,
     videoId: "LXPbAtgIitI",
@@ -1142,10 +1378,10 @@ export const courseDetails = {
   "national-clinical-assessment": {
     slug: "national-clinical-assessment",
     eyebrow: "NCA",
-    title: "National Clinical Assessment (NCA):\nComplete Guide to Stations,\nRanking & Preparation",
+    title: "UKFPO-NCA: Complete \nGuide to Format & Preparation",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
-      "The National Clinical Assessment (NCA) is used by the UK Foundation Programme Office (UKFPO) as a core ranked component of UK Foundation Programme recruitment for eligible applicant groups. It combines short clinical, communication and prioritisation stations to assess the day-one capabilities of a safe FY1 doctor and to rank candidates competitively against each other across the country.",
+      "The UKFPO National Clinical Assessment (UKFPO-NCA) is a mandatory eligibility requirement for the UK Foundation Programme, set by the UKFPO, required for any candidate who qualified from medical school on or before 5 August 2024, regardless of nationality or GMC registration status. Delivered by Manchester University NHS Foundation Trust, it consists of 12 stations, each 10 minutes long including 1 minute of preparation time, run in a single session lasting approximately 4 hours.",
     toc: tocNca,
     sections: sectionsNca,
     faqs: faqsNca,
@@ -1156,8 +1392,8 @@ export const courseDetails = {
     },
     relatedExams: [
       {
-        title: "Prescribing Safety Assessment (PSA)",
-        description: "often required alongside NCA for UKFPO ranking / FY1 readiness",
+        title: "UKFPO-PSA",
+        description: "often required alongside PSA for UKFPO ranking / FY1 readiness",
         tags: [
           { label: "Next step", variant: 3 },
           { label: "prescribing-safety-assessment", variant: 3 },
@@ -1166,25 +1402,25 @@ export const courseDetails = {
         href: "/courses/prescribing-safety-assessment",
       },
       {
-        title: "PLAB 1 / UKMLA-AKT",
+        title: "PLAB 2 / UKMLA-CPSA",
         description: "relevant for GMC registration before UKFP applications",
         tags: [
           { label: "Prerequisite", variant: 1 },
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-1-ukmla",
-      },
-      {
-        title: "PLAB 2 / UKMLA-CPSA",
-        description: "relevant for GMC registration before UKFP applications",
-        tags: [
-          { label: "Prerequisite", variant: 1 },
-          { label: "plab-2-ukmla-cpsa", variant: 1 },
-        ],
-        image: "/plab_2_courses_img.webp",
         href: "/courses/plab-2-ukmla",
       },
+      // {
+      //   title: "PLAB 2 / UKMLA-CPSA",
+      //   description: "relevant for GMC registration before UKFP applications",
+      //   tags: [
+      //     { label: "Prerequisite", variant: 1 },
+      //     { label: "plab-2-ukmla-cpsa", variant: 1 },
+      //   ],
+      //   image: "/plab_2_courses_img.webp",
+      //   href: "/courses/plab-2-ukmla",
+      // },
     ],
     pathway: pathwayUkFoundation,
     videoId: "XBKh3msgunc",
@@ -1197,10 +1433,10 @@ export const courseDetails = {
   "prescribing-safety-assessment": {
     slug: "prescribing-safety-assessment",
     eyebrow: "PSA",
-    title: "Prescribing Safety Assessment (PSA):\nComplete Guide to Format,\nDomains & Preparation",
+    title: "UKFPO-PSA: Complete \nGuide to the Prescribing Safety Assessment",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
-      "The Prescribing Safety Assessment (PSA) is a two-hour online assessment that tests the core prescribing skills of a safe new prescriber in UK practice. It covers drug selection, prescription review, calculations and infusions, monitoring and interpretation of results, adverse-drug-reaction management and patient communication about medicines. A clear PSA pass is often required for UK medical student graduation, UKFPO Foundation entry or an employer's pre-induction prescribing sign-off.",
+      "The UKFPO Prescribing Safety Assessment (UKFPO-PSA) is a 60-question computer-based exam, developed jointly by the British Pharmacological Society (BPS) and the Medical Schools Council (MSC), that all Foundation Year 1 (F1) doctors must pass to progress to F2. Most UK medical graduates sit and pass the PSA at medical school; international medical graduates and any UK graduates who haven't yet passed it sit it during their F1 year, with the assessment typically funded by the UKFPO rather than paid for by the candidate.",
     toc: tocPsa,
     sections: sectionsPsa,
     faqs: faqsPsa,
@@ -1221,25 +1457,135 @@ export const courseDetails = {
         href: "/courses/national-clinical-assessment",
       },
       {
-        title: "PLAB 1 / UKMLA-AKT",
+        title: "MSRA",
+        description: "",
+        tags: [
+          { label: "Related", variant: 1 },
+          { label: "plab-1-ukmla-akt", variant: 1 },
+        ],
+        image: "/plab1_course.webp",
+        href: "/courses/msra",
+      },
+      // {
+      //   title: "PRES Level 2 (Ireland)",
+      //   description: "Irish written exam with prescribing and therapeutics overlap",
+      //   tags: [
+      //     { label: "Related", variant: 2 },
+      //     { label: "pres-level-2", variant: 2 },
+      //   ],
+      //   image: "/pres_2_courses_img.webp",
+      //   href: "/courses/pres-level-2",
+      // },
+    ],
+    pathway: pathwayUkFoundation,
+    videoId: "8vvnBr06HSI",
+    videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
+    ctaTitle: "READY TO ACE THE PSA?",
+    ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PSA Preparation",
+    subscribeHref: "/course-plan?course=prescribing-safety-assessment",
+  },
+    "msra": {
+    slug: "msra",
+    eyebrow: "MSRA",
+    title: "MSRA Exam: Complete \nGuide to Format, Scoring & Preparation",
+    heroImage: COMMON_HERO_IMAGE,
+    heroDescription:
+      "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based exam used as part of recruitment into GP training and several other UK specialty training programmes. It consists of two papers — Professional Dilemmas (a situational judgement test) and Clinical Problem Solving — completed in a single sitting of just under 3 hours at a Pearson VUE test centre. Each specialty sets its own minimum score threshold, and the MSRA score directly affects a candidate's ranking for training posts.",
+    toc: tocMsra,
+    sections: sectionsMsra,
+    faqs: faqsMsra,
+    faqCta: {
+      title: "Still have a questions?",
+      text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
+      buttonLabel: "Start Learning",
+    },
+    relatedExams: [
+      {
+        title: "UKFPO — NCA",
+        description: "UK Foundation Programme ranking assessment, often paired with PSA",
+        tags: [
+          { label: "Next step", variant: 3 },
+          { label: "national-clinical-assessment", variant: 3 },
+        ],
+        image: "/ukfpo_courses__indv_img.webp",
+        href: "/courses/national-clinical-assessment",
+      },
+      {
+        title: "UKFPO-PSA",
         description: "broader GMC written exam, overlapping therapeutics knowledge",
         tags: [
           { label: "Related", variant: 1 },
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-1-ukmla",
+        href: "/courses/prescribing-safety-assessment",
+      },
+      // {
+      //   title: "PRES Level 2 (Ireland)",
+      //   description: "Irish written exam with prescribing and therapeutics overlap",
+      //   tags: [
+      //     { label: "Related", variant: 2 },
+      //     { label: "pres-level-2", variant: 2 },
+      //   ],
+      //   image: "/pres_2_courses_img.webp",
+      //   href: "/courses/pres-level-2",
+      // },
+    ],
+    pathway: pathwayUkFoundation,
+    videoId: "8vvnBr06HSI",
+    videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
+    ctaTitle: "READY TO ACE THE PSA?",
+    ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
+    subscribeButtonLabel: "Start PSA Preparation",
+    subscribeHref: "/course-plan?course=prescribing-safety-assessment",
+  },
+    "mrcp-akt": {
+    slug: "mrcp-akt",
+    eyebrow: "MRCP-AKT",
+    title: "MRCP-AKT Exam: Complete \nGuide to Format, Scoring & Preparation",
+    heroImage: COMMON_HERO_IMAGE,
+    heroDescription:
+      "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based exam used as part of recruitment into GP training and several other UK specialty training programmes. It consists of two papers — Professional Dilemmas (a situational judgement test) and Clinical Problem Solving — completed in a single sitting of just under 3 hours at a Pearson VUE test centre. Each specialty sets its own minimum score threshold, and the MSRA score directly affects a candidate's ranking for training posts.",
+    toc: tocMrcpAkt,
+    sections: sectionsMrcpAkt,
+    faqs: faqsMrcpAkt,
+    faqCta: {
+      title: "Still have a questions?",
+      text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
+      buttonLabel: "Start Learning",
+    },
+    relatedExams: [
+      {
+        title: "UKFPO — NCA",
+        description: "UK Foundation Programme ranking assessment, often paired with PSA",
+        tags: [
+          { label: "Next step", variant: 3 },
+          { label: "national-clinical-assessment", variant: 3 },
+        ],
+        image: "/ukfpo_courses__indv_img.webp",
+        href: "/courses/national-clinical-assessment",
       },
       {
-        title: "PRES Level 2 (Ireland)",
-        description: "Irish written exam with prescribing and therapeutics overlap",
+        title: "UKFPO-PSA",
+        description: "broader GMC written exam, overlapping therapeutics knowledge",
         tags: [
-          { label: "Related", variant: 2 },
-          { label: "pres-level-2", variant: 2 },
+          { label: "Related", variant: 1 },
+          { label: "plab-1-ukmla-akt", variant: 1 },
         ],
-        image: "/pres_2_courses_img.webp",
-        href: "/courses/pres-level-2",
+        image: "/plab1_course.webp",
+        href: "/courses/prescribing-safety-assessment",
       },
+      // {
+      //   title: "PRES Level 2 (Ireland)",
+      //   description: "Irish written exam with prescribing and therapeutics overlap",
+      //   tags: [
+      //     { label: "Related", variant: 2 },
+      //     { label: "pres-level-2", variant: 2 },
+      //   ],
+      //   image: "/pres_2_courses_img.webp",
+      //   href: "/courses/pres-level-2",
+      // },
     ],
     pathway: pathwayUkFoundation,
     videoId: "8vvnBr06HSI",

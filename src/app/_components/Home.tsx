@@ -111,13 +111,13 @@ const exams = [
     title: "MSRA",
     subtitle: "Computer-based assessment for GP and specialty training entry",
     icon: "/msra_exam_icon.svg",
-    href:"#",
+    href:"/courses/msra",
   },
   {
     title: "MRCP-AKT",
     subtitle: "Applied Knowledge Test for GP trainees (ST3)",
     icon: "/mrcp_exam_icon.svg",
-    href:"#",
+    href:"/courses/mrcp-akt",
   },
 ];
 
