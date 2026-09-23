@@ -1014,15 +1014,15 @@ const faqsMsra: FAQItem[] = [
 
 const tocMrcpAkt: TocItem[] = [
   {
-    id: "what-is", label: "What is the MSRA?" },
-  { id: "who-needs", label: "Who Needs to Take the MSRA?" },
+    id: "what-is", label: "What is the MRCGP AKT" },
+  { id: "who-needs", label: "Who Needs to Take the MRCGP AKT?" },
   {
     id: "format",
-    label: "MSRA Format & Papers",
+    label: "MRCGP AKT Format & Content Weighting",
   },
   {
     id: "domains",
-    label: "How Scoring Works",
+    label: "Attempts & Fifth-Attempt Policy",
   },
   { id: "eligibility", label: "Eligibility & Registration Process" },
   { id: "dates", label: "MSRA Dates & Fees" },
@@ -1034,54 +1034,58 @@ const tocMrcpAkt: TocItem[] = [
 const sectionsMrcpAkt: CourseSection[] = [
   {
     id: "what-is",
-    heading: "What is the UKFPO-PSA?",
+    heading: "What is the MRCGP AKT",
     paragraphs: [
-      "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based selection exam used by NHS specialty recruitment as part of the application process for GP training (ST1) and several other UK specialty training programmes. It is designed to provide a consistent, standardised way of comparing applicants' professional judgement and clinical problem-solving ability.",
-      "Both papers are based on the Foundation Programme curriculum and assess how well a candidate applies clinical knowledge to real decision-making — the MSRA is not a knowledge-recall exam in the way PLAB 1 is; it centres on judgement under realistic scenarios."
+      "The Applied Knowledge Test (AKT) is one component of the MRCGP examination set by the Royal College of General Practitioners (RCGP). It is a summative assessment of the knowledge base underpinning independent general practice in the UK within the context of the NHS, sat by doctors in GP specialty training.",
+      "From October 2025, RCGP reduced the AKT from 200 items over 190 minutes to 160 items over 160 minutes, giving candidates slightly longer per item while shortening the overall exam — this is a recent change worth stating explicitly, since older third-party guides may still describe the previous 200-item format."
     ],
   },
   {
     id: "who-needs",
-    heading: "Who Needs to Take the MSRA?",
+    heading: "Who Needs to Take the MRCGP AKT?",
     paragraphs: [
-      "Candidates applying to GP training (ST1) and a number of other specialty training programmes that use the MSRA as part of their selection process must sit it. Which specialties use the MSRA in a given recruitment year, and what score threshold each sets, is published annually by the relevant specialty recruitment office."
+      "The AKT is required for doctors in UK GP specialty training working toward MRCGP and GMC GP Register entry. To book the AKT, a candidate's MRCGP membership must be active — resigned, lapsed, or suspended membership will prevent booking, so this should be confirmed well ahead of any booking window."
     ],
   },
   {
     id: "format",
-    heading: "MSRA Format & Papers",
+    heading: "MRCGP AKT Format & Content Weighting",
     paragraphs: [
-      "The MSRA is a **computer-based examination** with a total duration of approximately **2 hours and 55 minutes**, including a **5-minute break between the two papers**. The first paper, **Professional Dilemmas (PD)**, lasts **95 minutes** and contains approximately **50 scenario-based questions** in a situational judgement format, including ranking and single-best-answer questions. The second paper, **Clinical Problem Solving (CPS)**, lasts **75 minutes** and assesses **clinical knowledge and decision-making** through multiple-choice questions across approximately **12 clinical topic areas**. The examination is delivered at **Pearson VUE test centres**.",
+      "The MRCGP AKT consists of 160 items in a single-best-answer or extended-matching format and is delivered as a computer-based examination. The examination lasts 160 minutes, a change from the previous 190-minute duration that took effect from October 2025. Approximately 80% of the examination assesses clinical medicine, with 10% covering critical appraisal and evidence-based practice and a further 10% covering health informatics and administrative issues, in accordance with the published RCGP/Pearson VUE content weighting. The examination is delivered at Pearson VUE test centres in the UK and is available four times a year, in January, April, July and October.",
       
     ],
   },
   {
     id: "domains",
-    heading: "How Scoring Works",
+    heading: "Attempts & Fifth-Attempt Policy",
     paragraphs: [
-      "A candidate's overall MSRA result combines their Professional Dilemmas score and Clinical Problem Solving score. Each participating specialty sets its own minimum threshold score for that recruitment round, and the combined score is also used to rank candidates against each other — meaning a pass on both papers does not guarantee a training post if competition for a specialty is high that year."
+      "RCGP allows an exceptional fifth attempt at the AKT (or SCA) on the basis of additional educational attainment, via a specific application process. ⚠ Confirm the current standard attempt limit (commonly four) directly on rcgp.org.uk before publishing, alongside the fifth-attempt policy detail."
     ],
   },
   {
     id: "eligibility",
     heading: "Eligibility & Registration Process",
     paragraphs: [
-      "Eligibility is set by the specific specialty training programme(s) a candidate is applying to, not by a single universal MSRA eligibility rule.",
-      "Candidates typically apply through Oriel (the national recruitment platform) as part of their specialty application, with MSRA booking instructions issued once an application is accepted into the assessment stage",
+      "Active MRCGP membership is required before booking — check membership status in good time, since reinstating lapsed membership takes coordination with RCGP's membership team.",
+      "Candidates apply and book through MyRCGP (RCGP's membership portal), then complete payment before the final booking deadline.",
+      "Bookings can be made up to 12 months in advance; the final booking/payment deadline is typically 2–3 months ahead of the sitting."
     ],
   },
   {
     id: "dates",
-    heading: "MSRA Dates & Fees",
+    heading: "MRCGP AKT Dates & Fees",
     paragraphs: [
-      "The MSRA runs in scheduled sitting windows tied to each recruitment round (commonly referenced rounds include a January window for posts starting later that year, and a September window for posts starting the following February"
+      "The AKT runs four times a year — January, April, July, and October — at Pearson VUE centres across the UK. Recommend linking this section to the dedicated /exam-dates page rather than listing specific sitting dates here, since RCGP publishes exact dates and deadlines separately each year."
     ],
   },
   {
     id: "prepare",
-    heading: " How to Prepare for the MSRA",
+    heading: "How to Prepare for the MRCGP AKT",
     paragraphs: [
-      "To prepare for the MSRA, candidates should practise **Professional Dilemmas ranking questions** specifically, keeping in mind that each question asks for the single most appropriate action rather than a sequence of actions. Candidates should also build familiarity with **NHS structures, GMC ethical guidance, including Good Medical Practice, and typical primary and secondary care working environments**, as the Professional Dilemmas paper assumes this context. For **Clinical Problem Solving**, preparation should cover the full range of clinical topics rather than focusing only on familiar specialties. Candidates should also practise both papers under realistic timed conditions, allowing **95 minutes for Professional Dilemmas and 75 minutes for Clinical Problem Solving**, with only a short break between them."
+      "Weight your revision to match the exam's own content split — roughly 80% clinical medicine means the bulk of preparation time should go there, not evenly across all three areas.",
+      "Don't neglect the smaller-weighted areas (critical appraisal/evidence-based practice, health informatics/admin) — they're still worth roughly 20% combined and are often under-revised",
+      "Practise under the current 160-minute, 160-item timing specifically — resources describing the older 190-minute/200-item format will train the wrong pace",
+      "Use realistic single-best-answer and extended-matching style questions rather than generic MCQ banks not calibrated to AKT's specific format"
 
     ],
   },
@@ -1089,43 +1093,53 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach’s UKFPO-PSA preparation includes **SmartNotes covering all core MSRA question types**, along with **Self-Paced Mastery Videos** for flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline."
+      "PLABcoach’s current MRCGP-AKT course offering and materials should be confirmed with the team before this section is finalised. The live site currently lists MRCGP-AKT under “Upcoming Courses”, so specific details such as the question-bank size, question format, course structure, and delivery method should reflect the materials actually being developed rather than being inferred from the structure of other exam-preparation courses.",
+      "While no course can guarantee an examination result, structured revision aligned with the AKT’s published content weighting can support exam readiness and help candidates identify and address potential gaps across the different assessment areas."
     ],
   },
   {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "This course is designed for **doctors applying to GP training (ST1) or other specialty programmes that use the MSRA**. It is particularly suitable for candidates who find **Professional Dilemmas ranking questions** unintuitive and want structured practice with judgement-based scenarios. The course also supports doctors seeking **focused Clinical Problem Solving revision across a broad range of specialty topics**, as well as candidates who have previously sat the MSRA and want to strengthen their performance across both papers."
+      "GP trainees preparing for their first AKT sitting.",
+      "Candidates who have attempted the AKT before and want more structured, content-weighted revision",
+      "Trainees who are strong on clinical medicine but under-revise critical appraisal or health informatics — the smaller-weighted but still-scored areas",
+       "Doctors preparing under the current 160-item, 160-minute format who want practice calibrated to it, not the older 200-item version"
+
     ],
   },
 ];
 
 const faqsMrcpAkt: FAQItem[] = [
   {
-    question: "What does MSRA stand for?",
+    question: "How many questions are on the current MRCGP AKT?",
     answer:
-      " Multi-Specialty Recruitment Assessment — a computer-based exam used in recruitment for GP training and several other UK specialty training programmes.",
+      " 160 items, over 160 minutes — changed from the previous 200 items over 190 minutes, effective October 2025.",
   },
   {
-    question: "What are the two MSRA papers? ",
+    question: "What does the AKT cover? ",
     answer:
-      "Professional Dilemmas (a 95-minute situational judgement test) and Clinical Problem Solving (a 75-minute clinical knowledge paper), completed in one sitting with a short break between",
+      "Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practice, and 10% health informatics and administrative issues.",
   },
   {
-    question: "Does passing the MSRA guarantee a training post?",
+    question: "Do I need active MRCGP membership to book the AKT?",
     answer:
-      "No. The MSRA score is used to rank candidates against each other for a limited number of posts, so a pass does not guarantee a place if competition for a specialty is high that year.",
+      "Yes. Resigned, lapsed, or suspended membership will prevent booking — confirm your status with RCGP well before a booking window opens.",
   },
   {
-    question: "Where is the MSRA held?",
+    question: "How much does the MRCGP AKT cost? ",
     answer:
-      "At Pearson VUE test centres, on computer, under exam conditions.",
+      " £481 per RCGP's published fees page.",
   },
   {
-    question: "Do all specialties use the same MSRA pass mark?",
+    question: "How many times can I attempt the AKT?",
     answer:
-      "No. Each participating specialty sets its own minimum threshold score for each recruitment cycle.",
+      "RCGP does allow an exceptional fifth attempt on the basis of additional educational attainment, via a specific application.",
+  },
+  {
+    question: "Is the MRCGP AKT the same as the MRCGP [INT.] South Asia AKT?",
+    answer:
+      "No. The MRCGP [INT.] South Asia AKT is a separate 200-question, 3.5-hour exam sat in Abu Dhabi or Karachi, leading to International Membership rather than UK GP registration. This page covers the standard UK AKT only.",
   }
 ];
 
@@ -1542,11 +1556,11 @@ export const courseDetails = {
   },
     "mrcp-akt": {
     slug: "mrcp-akt",
-    eyebrow: "MRCP-AKT",
-    title: "MRCP-AKT Exam: Complete \nGuide to Format, Scoring & Preparation",
+    eyebrow: "MRCGP AKT",
+    title: "MRCGP AKT: Complete \n Guide to Format, Syllabus & Preparation",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
-      "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based exam used as part of recruitment into GP training and several other UK specialty training programmes. It consists of two papers — Professional Dilemmas (a situational judgement test) and Clinical Problem Solving — completed in a single sitting of just under 3 hours at a Pearson VUE test centre. Each specialty sets its own minimum score threshold, and the MSRA score directly affects a candidate's ranking for training posts.",
+      "The MRCGP Applied Knowledge Test (AKT) is the Royal College of General Practitioners' (RCGP) summative exam of the knowledge underpinning independent general practice in the UK. Since October 2025, it is a 160-item, 160-minute computer-based exam, held at Pearson VUE centres four times a year. Around 80% of items cover clinical medicine, with the remainder split between critical appraisal/evidence-based practice and health informatics/administrative issues. GP trainees must hold active MRCGP membership to book it.",
     toc: tocMrcpAkt,
     sections: sectionsMrcpAkt,
     faqs: faqsMrcpAkt,
@@ -1557,14 +1571,14 @@ export const courseDetails = {
     },
     relatedExams: [
       {
-        title: "UKFPO — NCA",
+        title: "MSRA ",
         description: "UK Foundation Programme ranking assessment, often paired with PSA",
         tags: [
           { label: "Next step", variant: 3 },
           { label: "national-clinical-assessment", variant: 3 },
         ],
         image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/national-clinical-assessment",
+        href: "/courses/msrat",
       },
       {
         title: "UKFPO-PSA",
@@ -1576,16 +1590,16 @@ export const courseDetails = {
         image: "/plab1_course.webp",
         href: "/courses/prescribing-safety-assessment",
       },
-      // {
-      //   title: "PRES Level 2 (Ireland)",
-      //   description: "Irish written exam with prescribing and therapeutics overlap",
-      //   tags: [
-      //     { label: "Related", variant: 2 },
-      //     { label: "pres-level-2", variant: 2 },
-      //   ],
-      //   image: "/pres_2_courses_img.webp",
-      //   href: "/courses/pres-level-2",
-      // },
+      {
+        title: "UKFPO-NCA",
+        description: "Irish written exam with prescribing and therapeutics overlap",
+        tags: [
+          { label: "Related", variant: 2 },
+          { label: "pres-level-2", variant: 2 },
+        ],
+        image: "/pres_2_courses_img.webp",
+        href: "/courses/national-clinical-assessment",
+      },
     ],
     pathway: pathwayUkFoundation,
     videoId: "8vvnBr06HSI",
