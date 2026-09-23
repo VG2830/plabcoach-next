@@ -269,7 +269,7 @@ function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
               <span className="absolute left-[27px] top-[56px] h-[calc(100%-40px)] w-[3px] rounded-full bg-gradient-to-b from-[#c3cbfd] to-[#8a9af9]" />
             )}
             <div className="relative z-10 grid h-[56px] w-[56px] shrink-0 place-items-center rounded-full bg-[#dee3fb]">
-              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] bg-[#151f52]">
+              <span className="grid h-[34px] w-[34px] place-items-center rounded-[11px] ">
                 <PathwayIcon icon={step.icon} />
               </span>
               <span className="absolute -left-[6px] -top-[6px] text-[15px] font-extrabold text-[#17225c]">{step.number}</span>
