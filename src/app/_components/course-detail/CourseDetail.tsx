@@ -552,9 +552,9 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
             <h2 className="mt-[6px] text-[28px] font-bold leading-[1.12] tracking-[-0.018em] text-[var(--course-detail-heading)] sm:text-[34px] lg:text-[38px] xl:text-[42px]">
               Related Exams
             </h2>
-            <p className="mt-[14px] max-w-[620px] text-[12.5px] leading-[1.55] text-[var(--course-detail-copy)] sm:mt-[16px] sm:text-[13.5px]">
+            {/* <p className="mt-[14px] max-w-[620px] text-[12.5px] leading-[1.55] text-[var(--course-detail-copy)] sm:mt-[16px] sm:text-[13.5px]">
               Link only to the genuine next steps in a candidate&apos;s pathway, woven into prose rather than a bare link list:
-            </p>
+            </p> */}
 
             <div className="mt-[36px] grid gap-[22px] sm:grid-cols-2 sm:gap-[24px] lg:mt-[42px] lg:grid-cols-3 lg:gap-[26px]">
               {course.relatedExams.map((exam, i) => (
