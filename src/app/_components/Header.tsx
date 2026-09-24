@@ -19,7 +19,7 @@ const courseMenu: CourseMenuGroup[] = [
     label: "UK PLAB / UKMLA",
     href: "/courses#uk-plab-ukmla",
     subCourses: [
-      { label: "PLAB 1 / UKMLA — AKT", href: "/courses/plab-1-ukmla" },
+      { label: "PLAB 1 / UKMLA — AKT", href: "/courses/plab-1-ukmla-akt" },
       { label: "PLAB 2 / UKMLA — CPSA", href: "/courses/plab-2-ukmla" },
     ],
   },
@@ -27,7 +27,7 @@ const courseMenu: CourseMenuGroup[] = [
     label: "Ireland PRES",
     href: "/courses#ireland-courses",
     subCourses: [
-      { label: "PRES Level 2", href: "/courses/pres-level-2" },
+      { label: "PRES Level 2", href: "/courses/pres-2" },
       { label: "PRES 3 — OSCE", href: "/courses/pres-3-osce" },
     ],
   },

@@ -71,6 +71,7 @@ export type CourseDetailData = {
   heroDescription: string;
   toc: TocItem[];
   sections: CourseSection[];
+  faqTitle?: string;
   faqs: FAQItem[];
   faqCta?: {
     title: string;
@@ -86,11 +87,14 @@ export type CourseDetailData = {
   ctaCopy: string;
   subscribeButtonLabel: string;
   subscribeHref?: string;
+  syllabusHref?: string;
+  plabCoachHelpCta:string;
+  plabCoachHelpCtaHref:string;
 };
 
 const tocPlab1: TocItem[] = [
   { id: "what-is", label: "What is PLAB 1?" },
-  { id: "who-needs", label: "Who Needs to Take PLAB 1" },
+  { id: "who-needs", label: "Who Needs to Take PLAB 1?" },
   { id: "format", label: "PLAB 1 Format & Structure" },
   { id: "syllabus", label: "PLAB 1 Syllabus / Blueprint" },
   { id: "eligibility", label: "Eligibility & Registration Process" },
@@ -111,7 +115,7 @@ const sectionsPlab1: CourseSection[] = [
   },
   {
     id: "who-needs",
-    heading: "Who Needs to Take PLAB 1",
+    heading: "Who Needs to Take PLAB 1?",
     paragraphs: [
       "PLAB 1 is required for any international medical graduate who wants to register with the GMC and practise medicine in the UK, and who does not hold a qualification the GMC recognises as exempting them (such as certain EEA-recognised degrees or an accepted alternative like a relevant Royal College membership). Candidates can sit PLAB 1 immediately after graduating from medical school — a completed internship is not required to sit the exam itself, though it is required later for full GMC registration."
     ],
@@ -164,7 +168,7 @@ const sectionsPlab1: CourseSection[] = [
     id: "prepare",
     heading: "How to Prepare for PLAB 1",
     paragraphs: [
-      "Effective PLAB 1 preparation centres on applying knowledge to most appropriate next step clinical reasoning rather than exhaustive textbook recall — GMC's SBA questions are deliberately designed to test decision-making under UK guidelines (principally NICE), not simply factual knowledge.",
+      "Effective PLAB 1 preparation centres on applying knowledge to 'most appropriate next step' clinical reasoning rather than exhaustive textbook recall — GMC's SBA questions are deliberately designed to test decision-making under UK guidelines (principally NICE), not simply factual knowledge.",
       "● Work through the full MLA content map systematically rather than topic-hopping.",
       "● Practise high volumes of realistic SBA questions under timed conditions",
       "● Anchor every answer to current NICE guidance and UK-standard first-line management, not home-country protocols",
@@ -220,12 +224,12 @@ const faqsPlab1: FAQItem[] = [
   {
     question: "What score do I need to pass PLAB 1?",
     answer:
-      "The pass mark is set per sitting using a standardised process rather than a single fixed number.",
+      "The pass mark is set per sitting using a standardised process rather than a single fixed number. GMC's own guidance is the authoritative source.",
   },
   {
     question: "How is PLAB 1 different from PRES 2 in Ireland?",
     answer:
-      "PRES 2 is the written exam of Ireland's Medical Council Pre-Registration Examination System. Although both exams test applied clinical knowledge through multiple-choice questions, they are set by different regulators for different national registration pathways. In practice the Irish Medical Council often recognises a PLAB 1 pass as equivalent to PRES 2, but candidates should always verify the current position directly with the Irish Medical Council before planning either route.",
+      "See the comparison section below.",
   },
 ];
 
@@ -251,7 +255,8 @@ const comparisonPlab1: ComparisonTable = {
     },
   ],
   footerText:
-    "",
+    "/courses/pres-2",
+
 };
 
 const relatedExamsDefault: RelatedExam[] = [
@@ -273,7 +278,7 @@ const relatedExamsDefault: RelatedExam[] = [
       { label: "pres-2", variant: 2 },
     ],
     image: "/pres_2_courses_img.webp",
-    href: "/courses/pres-level-2",
+    href: "/courses/pres-2",
   },
   {
     title: "UKFPO-NCA / UKFPO-PSA",
@@ -289,7 +294,7 @@ const relatedExamsDefault: RelatedExam[] = [
 
 const tocPlab2: TocItem[] = [
   { id: "what-is", label: "What is PLAB 2?" },
-  { id: "who-needs", label: "Who Needs to Take PLAB 2" },
+  { id: "who-needs", label: "Who Needs to Take PLAB 2?" },
   { id: "format", label: "PLAB 2 Format & Stations" },
   { id: "skills", label: "Marking Domains" },
   { id: "eligibility", label: "Eligibility & Registration Process" },
@@ -369,12 +374,12 @@ const sectionsPlab2: CourseSection[] = [
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach's PLAB 2 / UKMLA-CPSA preparation centres on hands-on, manikin-based practice rather than video-only learning.",
+      "PLABcoach's PLAB 2 / UKMLA-CPSA preparation centres on hands-on, manikin-based practice rather than video-only learning:",
       "● Small-group live coaching with manikins matching real exam equipment.",
       "● Full-circuit simulated mock exams under real 8-minute timing",
       "● Communication and breaking-bad-news station coaching, delivered by NHS-experienced instructors",
       "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK licensing exams.",
-      "While no course can guarantee an exam result, structured preparation can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
+      "While no course can guarantee an exam result, structured, feedback-driven OSCE practice can improve exam readiness and help candidates avoid the mistakes that most often lead to repeat attempts."
     ],
   },
   {
@@ -392,7 +397,7 @@ const sectionsPlab2: CourseSection[] = [
 
 const faqsPlab2: FAQItem[] = [
   {
-    question: "Can I sit PLAB 2 outside the UK?",
+    question: "Can I take PLAB 2 outside the UK?",
     answer:
       " No. Unlike PLAB 1, PLAB 2 is held only at the GMC's Clinical Assessment Centre in Manchester.",
   },
@@ -414,20 +419,19 @@ const faqsPlab2: FAQItem[] = [
   {
     question: "What is the PLAB 2 fee?",
     answer:
-      "£1,036, effective from 1 April 2026 — ⚠ confirm current figure on gmc-uk.org, as GMC revises fees annually.",
+      "£1,036, effective from 1 April 2026.",
   },
   {
     question: "How is PLAB 2 different from PRES 3 in Ireland?",
     answer:
-      "PRES 3 is the Irish Medical Council's OSCE + data interpretation assessment. It is a different exam run by a different regulator, although both are practical clinical assessments. You should not assume automatic portability of a pass; always check current reciprocity guidance directly with the GMC or Irish Medical Council for your intended route.",
+      "See the comparison section below.",
   },
 ];
 const comparisonPlab2: ComparisonTable = {
   heading: "PLAB 2 vs PRES 3 Comparison",
-  noteHeading: "Regulatory relationship (verify against Irish Medical Council before publish — active/evolving area)",
+  noteHeading: "",
   noteBullets: [
-    "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practice — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
-    "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
+    "",
   ],
   colAHeader: "PLAB 2",
   colBHeader: "PRES 3",
@@ -444,7 +448,7 @@ const comparisonPlab2: ComparisonTable = {
     },
   ],
   footerText:
-    "",
+    "/courses/pres-3-osce",
 };
 
 const tocPres2: TocItem[] = [
@@ -1277,6 +1281,14 @@ const pathwayUkPlab = [
   { id: "p6", number: "06", label: "Start your UK medical career", icon: "start-career" as const },
 ];
 
+const pathwayUkPlab2 = [
+  { id: "p1", number: "01", label: "Pass PLAB 1", icon: "pass-plab1" as const },
+  { id: "p2", number: "02", label: "Prepare for PLAB 2", icon: "prepare-plab2" as const },
+  { id: "p3", number: "03", label: "Pass PLAB 2", icon: "pass-plab2" as const },
+  { id: "p4", number: "04", label: "Apply for GMC registration", icon: "apply-registration" as const },
+  { id: "p5", number: "05", label: "Start your UK medical career", icon: "start-career" as const },
+];
+
 const pathwayIrelandPres = [
   { id: "p1", number: "01", label: "Check IMC / PRES eligibility", icon: "eligibility" as const },
   { id: "p2", number: "02", label: "Pass PRES 2 (or exempt via PLAB 1)", icon: "pass-pres2" as const },
@@ -1296,8 +1308,8 @@ const pathwayUkFoundation = [
 ];
 
 export const courseDetails = {
-  "plab-1-ukmla": {
-    slug: "plab-1-ukmla",
+  "plab-1-ukmla-akt": {
+    slug: "plab-1-ukmla-akt",
     eyebrow: "PLAB 1 / UKMLA-AKT",
     title: "PLAB 1 / UKMLA-AKT:\nComplete Guide to Format,\nSyllabus, Dates & Preparation",
     heroImage: COMMON_HERO_IMAGE,
@@ -1305,6 +1317,7 @@ export const courseDetails = {
       "PLAB 1 is the written knowledge exam set by the General Medical Council (GMC), part of the two-part PLAB assessment that international medical graduates (IMGs) must pass for UK medical registration. It consists of 180 single-best-answer (SBA) questions completed in 180 minutes, testing clinical knowledge at the standard of a doctor completing UK Foundation Year 1. Passing PLAB 1 is the prerequisite step before sitting PLAB 2, the clinical OSCE.",
     toc: tocPlab1,
     sections: sectionsPlab1,
+     faqTitle:"PLAB 1 FAQs",
     faqs: faqsPlab1,
     faqCta: {
       title: "Still have a questions?",
@@ -1319,7 +1332,10 @@ export const courseDetails = {
     ctaTitle: "READY TO ACE PLAB 1?",
     ctaCopy: "Choose your learning path and start your PLAB 1 / UKMLA preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PLAB 1 Preparation",
-    subscribeHref: "/course-plan?course=plab-1-ukmla",
+    subscribeHref: "/course-plan?course=plab-1-ukmla-akt",
+    syllabusHref: "https://www.gmc-uk.org/education/medical-licensing-assessment/mla-content-map",
+    plabCoachHelpCta:"Start PLAB 1 Preparation",
+    plabCoachHelpCtaHref:"https://plabcoach.com/smartqbank/"
   },
   "plab-2-ukmla": {
     slug: "plab-2-ukmla",
@@ -1330,6 +1346,7 @@ export const courseDetails = {
       "PLAB 2 is the clinical OSCE set by the General Medical Council (GMC), the second and final part of the PLAB assessment for international medical graduates (IMGs). It consists of 16 scored clinical stations plus rest stations, 8 minutes each, held only at the GMC's assessment centre in Manchester. Candidates are marked across three domains — data gathering, clinical management, and interpersonal skills — and must pass within 2 years of their PLAB 1 pass date.",
     toc: tocPlab2,
     sections: sectionsPlab2,
+    faqTitle:"PLAB 2 FAQs",
     faqs: faqsPlab2,
     faqCta: {
       title: "Still have a questions?",
@@ -1338,19 +1355,9 @@ export const courseDetails = {
     },
     comparison: comparisonPlab2,
     relatedExams: [
-      {
-        title: "PLAB 1 / UKMLA-AKT",
-        description: "mandatory written exam before PLAB 2",
-        tags: [
-          { label: "Prerequisite", variant: 1 },
-          { label: "plab-1-ukmla-akt", variant: 1 },
-        ],
-        image: "/plab1_course.webp",
-        href: "/courses/plab-1-ukmla",
-      },
-      {
+            {
         title: "PRES 3 (Ireland)",
-        description: "Irish IMC practical exam / comparison pathway",
+        description: "",
         tags: [
           { label: "Comparison", variant: 2 },
           { label: "pres-3-osce", variant: 2 },
@@ -1360,7 +1367,7 @@ export const courseDetails = {
       },
       {
         title: "UKFPO-NCA / UKFPO-PSA",
-        description: "relevant if applying to UK Foundation Programme after registration",
+        description: " ",
         tags: [
           { label: "Next step", variant: 3 },
           { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
@@ -1368,17 +1375,31 @@ export const courseDetails = {
         image: "/uk_course.webp",
         href: "/courses/national-clinical-assessment",
       },
+      {
+        title: "PLAB 1 / UKMLA-AKT",
+        description: "",
+        tags: [
+          { label: "Prerequisite", variant: 1 },
+          { label: "plab-1-ukmla-akt", variant: 1 },
+        ],
+        image: "/plab1_course.webp",
+        href: "/courses/plab-1-ukmla-akt",
+      },
+
+      
     ],
-    pathway: pathwayUkPlab,
+    pathway: pathwayUkPlab2,
     videoId: "6nXIgV_8TVY",
     videoTitle: "PLAB 2 / UKMLA clinical skills preparation with PLABCoach",
     ctaTitle: "READY TO ACE PLAB 2?",
     ctaCopy: "Choose your learning path and start your PLAB 2 / UKMLA clinical preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PLAB 2 Preparation",
     subscribeHref: "/course-plan?course=plab-2-ukmla",
+    plabCoachHelpCta:"PLAB 2 Course",
+    plabCoachHelpCtaHref:"https://plabcoach.com/plab2-ukmla-cpsa-subscription/"
   },
-  "pres-level-2": {
-    slug: "pres-level-2",
+  "pres-2": {
+    slug: "pres-2",
     eyebrow: "PRES LEVEL 2",
     title: "PRES 2 Exam Ireland: \nComplete Guide to Format,\nSyllabus & Preparation",
     heroImage: COMMON_HERO_IMAGE,
@@ -1386,6 +1407,7 @@ export const courseDetails = {
       "PRES 2 is the written multiple-choice exam set by the Irish Medical Council (IMC), the first sat component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates seeking Irish registration. It tests clinical knowledge across obstetrics & gynaecology, paediatrics, psychiatry, surgery, and medicine/general practice through clinical-scenario-based questions. Candidates must pass PRES 2 before attempting PRES 3, the OSCE component.",
     toc: tocPres2,
     sections: sectionsPres2,
+    faqTitle:"PRES 2 FAQs",
     faqs: faqsPres2,
     faqCta: {
       title: "Still have a questions?",
@@ -1435,7 +1457,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-1-ukmla",
+        href: "/courses/plab-1-ukmla-akt",
       },
       // {
       //   title: "UKFPO-NCA / UKFPO-PSA",
@@ -1454,7 +1476,9 @@ export const courseDetails = {
     ctaTitle: "READY TO ACE PRES 2?",
     ctaCopy: "Choose your learning path and start your PRES Level 2 preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PRES 2 Preparation",
-    subscribeHref: "/course-plan?course=pres-level-2",
+    subscribeHref: "/course-plan?course=pres-2",
+    plabCoachHelpCta:"",
+    plabCoachHelpCtaHref:""
   },
   "pres-3-osce": {
     slug: "pres-3-osce",
@@ -1465,6 +1489,7 @@ export const courseDetails = {
       "PRES 3 is the clinical OSCE and data interpretation exam set by the Irish Medical Council (IMC), the second and final component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates. It is held in person in Dublin, combining an Objective Structured Clinical Examination (OSCE) of roughly 12–16 stations with a data interpretation assessment. Candidates must pass PRES 2 before they are eligible to sit PRES 3.",
     toc: tocPres3,
     sections: sectionsPres3,
+    faqTitle:"PRES 3 FAQs",
     faqs: faqsPres3,
     faqCta: {
       title: "Still have a questions?",
@@ -1478,10 +1503,10 @@ export const courseDetails = {
         description: "written exam required or exempted before PRES 3",
         tags: [
           { label: "Prerequisite", variant: 2 },
-          { label: "pres-level-2", variant: 2 },
+          { label: "pres-2", variant: 2 },
         ],
         image: "/ireland_course.webp",
-        href: "/courses/pres-level-2",
+        href: "/courses/pres-2",
       },
       {
         title: "PLAB 2 / UKMLA-CPSA",
@@ -1511,6 +1536,8 @@ export const courseDetails = {
     ctaCopy: "Choose your learning path and start your preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PRES 3 Preparation",
     subscribeHref: "/course-plan?course=pres-3-osce",
+    plabCoachHelpCta:"",
+    plabCoachHelpCtaHref:""
   },
   "national-clinical-assessment": {
     slug: "national-clinical-assessment",
@@ -1521,6 +1548,7 @@ export const courseDetails = {
       "The UKFPO National Clinical Assessment (UKFPO-NCA) is a mandatory eligibility requirement for the UK Foundation Programme, set by the UKFPO, required for any candidate who qualified from medical school on or before 5 August 2024, regardless of nationality or GMC registration status. Delivered by Manchester University NHS Foundation Trust, it consists of 12 stations, each 10 minutes long including 1 minute of preparation time, run in a single session lasting approximately 4 hours.",
     toc: tocNca,
     sections: sectionsNca,
+    faqTitle: "NCA FAQs",
     faqs: faqsNca,
     faqCta: {
       title: "Still have a questions?",
@@ -1566,6 +1594,8 @@ export const courseDetails = {
     ctaCopy: "Choose your learning path and start your National Clinical Assessment preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start NCA Preparation",
     subscribeHref: "/course-plan?course=national-clinical-assessment",
+    plabCoachHelpCta:"",
+    plabCoachHelpCtaHref:""
   },
   "prescribing-safety-assessment": {
     slug: "prescribing-safety-assessment",
@@ -1576,6 +1606,7 @@ export const courseDetails = {
       "The UKFPO Prescribing Safety Assessment (UKFPO-PSA) is a 60-question computer-based exam, developed jointly by the British Pharmacological Society (BPS) and the Medical Schools Council (MSC), that all Foundation Year 1 (F1) doctors must pass to progress to F2. Most UK medical graduates sit and pass the PSA at medical school; international medical graduates and any UK graduates who haven't yet passed it sit it during their F1 year, with the assessment typically funded by the UKFPO rather than paid for by the candidate.",
     toc: tocPsa,
     sections: sectionsPsa,
+    faqTitle: "PSA FAQs",
     faqs: faqsPsa,
     faqCta: {
       title: "Still have a questions?",
@@ -1608,10 +1639,10 @@ export const courseDetails = {
       //   description: "Irish written exam with prescribing and therapeutics overlap",
       //   tags: [
       //     { label: "Related", variant: 2 },
-      //     { label: "pres-level-2", variant: 2 },
+      //     { label: "pres-2", variant: 2 },
       //   ],
       //   image: "/pres_2_courses_img.webp",
-      //   href: "/courses/pres-level-2",
+      //   href: "/courses/pres-2",
       // },
     ],
     pathway: pathwayUkFoundation,
@@ -1621,6 +1652,8 @@ export const courseDetails = {
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PSA Preparation",
     subscribeHref: "/course-plan?course=prescribing-safety-assessment",
+    plabCoachHelpCta:"",
+    plabCoachHelpCtaHref:""
   },
     "msra": {
     slug: "msra",
@@ -1631,6 +1664,7 @@ export const courseDetails = {
       "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based exam used as part of recruitment into GP training and several other UK specialty training programmes. It consists of two papers — Professional Dilemmas (a situational judgement test) and Clinical Problem Solving — completed in a single sitting of just under 3 hours at a Pearson VUE test centre. Each specialty sets its own minimum score threshold, and the MSRA score directly affects a candidate's ranking for training posts.",
     toc: tocMsra,
     sections: sectionsMsra,
+    faqTitle: "MSRA FAQs",
     faqs: faqsMsra,
     faqCta: {
       title: "Still have a questions?",
@@ -1676,6 +1710,8 @@ export const courseDetails = {
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PSA Preparation",
     subscribeHref: "/course-plan?course=prescribing-safety-assessment",
+    plabCoachHelpCta:"",
+    plabCoachHelpCtaHref:""
   },
     "mrcp-akt": {
     slug: "mrcp-akt",
@@ -1686,6 +1722,7 @@ export const courseDetails = {
       "The MRCGP Applied Knowledge Test (AKT) is the Royal College of General Practitioners' (RCGP) summative exam of the knowledge underpinning independent general practice in the UK. Since October 2025, it is a 160-item, 160-minute computer-based exam, held at Pearson VUE centres four times a year. Around 80% of items cover clinical medicine, with the remainder split between critical appraisal/evidence-based practice and health informatics/administrative issues. GP trainees must hold active MRCGP membership to book it.",
     toc: tocMrcpAkt,
     sections: sectionsMrcpAkt,
+    faqTitle: "MRCGP AKT FAQs",
     faqs: faqsMrcpAkt,
     faqCta: {
       title: "Still have a questions?",
@@ -1718,7 +1755,7 @@ export const courseDetails = {
         description: "Irish written exam with prescribing and therapeutics overlap",
         tags: [
           { label: "Related", variant: 2 },
-          { label: "pres-level-2", variant: 2 },
+          { label: "pres-2", variant: 2 },
         ],
         image: "/pres_2_courses_img.webp",
         href: "/courses/national-clinical-assessment",
@@ -1731,6 +1768,8 @@ export const courseDetails = {
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PSA Preparation",
     subscribeHref: "/course-plan?course=prescribing-safety-assessment",
+    plabCoachHelpCta:"",
+    plabCoachHelpCtaHref:""
   },
 } satisfies Record<string, CourseDetailData>;
 

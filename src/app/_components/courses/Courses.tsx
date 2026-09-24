@@ -42,7 +42,7 @@ const ukCourses: CourseItem[] = [
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
-    href: "/courses/plab-1-ukmla",
+    href: "/courses/plab-1-ukmla-akt",
   },
   {
     image: "/plab1_course.webp",
@@ -63,7 +63,7 @@ const irelandCourses: CourseItem[] = [
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
-    href: "/courses/pres-level-2",
+    href: "/courses/pres-2",
   },
   {
     image: "/ireland_course.webp",

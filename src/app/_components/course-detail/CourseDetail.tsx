@@ -27,7 +27,7 @@ function FAQAccordionItem({ question, answer, isOpen, onToggle }: { question: st
         onClick={onToggle}
         className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left sm:px-7 sm:py-6"
       >
-        <span className={`text-[13px] font-semibold leading-[1.35] sm:text-[14px] ${isOpen ? "text-white" : "text-[var(--course-detail-faq-text)]"}`}>
+        <span className={`text-[18px] font-semibold leading-[1.35] sm:text-[16px] ${isOpen ? "text-white" : "text-[var(--course-detail-faq-text)]"}`}>
           {question}
         </span>
         <span className={`grid h-6 w-6 shrink-0 place-items-center rounded-full transition-all duration-200 ${isOpen ? "bg-white/10" : "bg-transparent"}`}>
@@ -284,6 +284,8 @@ function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
 
 export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const plansHref = course.subscribeHref ?? `/course-plan?course=${encodeURIComponent(course.slug)}`;
+  const plab1SyllabusHref = course.syllabusHref ?? "";
+  const importantDatesHref= "/important-exam";
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeTocId, setActiveTocId] = useState<string>(course.toc[0]?.id ?? "");
 
@@ -434,6 +436,31 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 {course.subscribeButtonLabel}
               </SubscribeButton>
             )}
+            {activeSection.id === "syllabus" && (
+              <SubscribeButton
+                href={plab1SyllabusHref}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Complete Syllabus
+              </SubscribeButton>
+            )}
+            {activeSection.id === "dates" && (
+              <SubscribeButton
+                href={importantDatesHref}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Exam Dates
+              </SubscribeButton>
+            )}
+            {activeSection.id === "how-helps" && (
+              <SubscribeButton
+                href={course.plabCoachHelpCtaHref}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+               {course.plabCoachHelpCta}
+              </SubscribeButton>
+            )}
+
           </div>
         </article>
       )}
@@ -449,7 +476,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
               <div>
                 <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">FAQS</p>
                 <h2 className="mt-[6px] text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-[var(--course-detail-heading)] sm:text-[36px] lg:text-[40px] xl:text-[44px]">
-                  {course.eyebrow.split(" ")[0]} FAQs
+                  {course.faqTitle}
                 </h2>
 
                 <div className="mt-[30px] flex flex-col gap-[14px] sm:mt-[36px] sm:gap-[16px]">
@@ -548,9 +575,15 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
               </div>
 
               {course.comparison.footerText && (
-                <p className="mt-[28px] max-w-[1100px] text-[12px] leading-[1.65] text-[#8a8a8a] sm:mt-[32px] sm:text-[13px]">
-                  {course.comparison.footerText}
-                </p>
+                // <p className="mt-[28px] max-w-[1100px] text-[12px] leading-[1.65] text-[#8a8a8a] sm:mt-[32px] sm:text-[13px]">
+                //   {course.comparison.footerText}
+                // </p>
+                <SubscribeButton
+                href={course.comparison.footerText}
+                className="mt-[28px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+               {course.comparison.colBHeader}
+              </SubscribeButton>
               )}
             </div>
           </section>

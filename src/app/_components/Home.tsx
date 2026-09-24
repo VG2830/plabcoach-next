@@ -75,7 +75,7 @@ const exams = [
     title: "PLAB 1 / UKMLA-AKT",
     subtitle: "Written knowledge exam for UK GMC registration",
     icon: "/plab1_exam_icon.svg",
-    href: "/courses/plab-1-ukmla",
+    href: "/courses/plab-1-ukmla-akt",
   },
   {
     title: "PLAB 2 / UKMLA-CPSA",
@@ -87,7 +87,7 @@ const exams = [
     title: "PRES 2",
     subtitle: "Written exam for Irish Medical Council (IMC) registration",
     icon: "/pres2_exam_icon.svg",
-    href: "/courses/pres-level-2",
+    href: "/courses/pres-2",
   },
   {
     title: "PRES 3",
