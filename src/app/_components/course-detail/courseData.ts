@@ -94,7 +94,7 @@ const tocPlab1: TocItem[] = [
   { id: "format", label: "PLAB 1 Format & Structure" },
   { id: "syllabus", label: "PLAB 1 Syllabus / Blueprint" },
   { id: "eligibility", label: "Eligibility & Registration Process" },
-  { id: "dates", label: "LAB 1 Dates & Fees" },
+  { id: "dates", label: "PLAB 1 Dates & Fees" },
   { id: "prepare", label: "How to Prepare for PLAB 1" },
   { id: "how-helps", label: "How PLABcoach Helps" },
   { id: "who-should", label: "Who Should Take This Course" },
@@ -429,8 +429,8 @@ const comparisonPlab2: ComparisonTable = {
     "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practice — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
     "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
   ],
-  colAHeader: "PLAB 1",
-  colBHeader: "PRES 2",
+  colAHeader: "PLAB 2",
+  colBHeader: "PRES 3",
   colAColor: "var(--course-detail-comparison-plab1-header)",
   colBColor: "var(--course-detail-comparison-pres2-header)",
   rows: [
@@ -1044,7 +1044,10 @@ const sectionsMsra: CourseSection[] = [
     id: "format",
     heading: "MSRA Format & Papers",
     paragraphs: [
-      "The MSRA is a **computer-based examination** with a total duration of approximately **2 hours and 55 minutes**, including a **5-minute break between the two papers**. The first paper, **Professional Dilemmas (PD)**, lasts **95 minutes** and contains approximately **50 scenario-based questions** in a situational judgement format, including ranking and single-best-answer questions. The second paper, **Clinical Problem Solving (CPS)**, lasts **75 minutes** and assesses **clinical knowledge and decision-making** through multiple-choice questions across approximately **12 clinical topic areas**. The examination is delivered at **Pearson VUE test centres**.",
+      "● Total Exam Length: Approximately 2 hours 55 minutes (Includes a 5-minute break between the two papers.)",
+      "● Paper 1: Professional Dilemmas (PD) — 95 minutes, situational judgement test, 70 questions, ranking format",
+      "● Paper 2: Clinical Problem Solving (CPS) — 75 minutes, clinical knowledge test, 50 questions, multiple-choice format",
+      "● Delivery: Computer-based, at Pearson VUE test centres"
       
     ],
   },
@@ -1059,8 +1062,8 @@ const sectionsMsra: CourseSection[] = [
     id: "eligibility",
     heading: "Eligibility & Registration Process",
     paragraphs: [
-      "Eligibility is set by the specific specialty training programme(s) a candidate is applying to, not by a single universal MSRA eligibility rule.",
-      "Candidates typically apply through Oriel (the national recruitment platform) as part of their specialty application, with MSRA booking instructions issued once an application is accepted into the assessment stage",
+      "● Eligibility is set by the specific specialty training programme(s) a candidate is applying to, not by a single universal MSRA eligibility rule.",
+      "● Candidates typically apply through Oriel (the national recruitment platform) as part of their specialty application, with MSRA booking instructions issued once an application is accepted into the assessment stage",
     ],
   },
   {
@@ -1074,7 +1077,10 @@ const sectionsMsra: CourseSection[] = [
     id: "prepare",
     heading: " How to Prepare for the MSRA",
     paragraphs: [
-      "To prepare for the MSRA, candidates should practise **Professional Dilemmas ranking questions** specifically, keeping in mind that each question asks for the single most appropriate action rather than a sequence of actions. Candidates should also build familiarity with **NHS structures, GMC ethical guidance, including Good Medical Practice, and typical primary and secondary care working environments**, as the Professional Dilemmas paper assumes this context. For **Clinical Problem Solving**, preparation should cover the full range of clinical topics rather than focusing only on familiar specialties. Candidates should also practise both papers under realistic timed conditions, allowing **95 minutes for Professional Dilemmas and 75 minutes for Clinical Problem Solving**, with only a short break between them."
+      "● Practise Professional Dilemmas ranking questions specifically — remember only one action is ever most appropriate, not a sequence (A or B or C, not A then B).",
+      "● Build familiarity with NHS structures, GMC ethical guidance (Good Medical Practice), and typical primary/secondary care working environments, since PD questions assume this context.",
+      "● For Clinical Problem Solving, drill across the full range of clinical topics rather than concentrating only on familiar specialties",
+      "● Time both papers separately under realistic conditions — 95 minutes for PD, 75 minutes for CPS, with only a short break between"
 
     ],
   },
@@ -1082,14 +1088,18 @@ const sectionsMsra: CourseSection[] = [
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach’s UKFPO-PSA preparation includes **SmartNotes covering all core MSRA question types**, along with **Self-Paced Mastery Videos** for flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline."
+      "PLABcoach’s UKFPO-PSA preparation includes **SmartNotes covering all core MSRA question types**, along with **Self-Paced Mastery Videos** for flexible, independent preparation. Candidates can also access **Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli**, available both online and offline.",
+      "While no course can guarantee a training post, structured practice on both Professional Dilemmas and Clinical Problem Solving can improve exam readiness and help candidates avoid common scoring mistakes."
     ],
   },
   {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "This course is designed for **doctors applying to GP training (ST1) or other specialty programmes that use the MSRA**. It is particularly suitable for candidates who find **Professional Dilemmas ranking questions** unintuitive and want structured practice with judgement-based scenarios. The course also supports doctors seeking **focused Clinical Problem Solving revision across a broad range of specialty topics**, as well as candidates who have previously sat the MSRA and want to strengthen their performance across both papers."
+      "● Doctors applying to GP training (ST1) or another MSRA-using specialty programme.",
+      "● Candidates who find Professional Dilemmas ranking questions unintuitive and want structured practice on judgement-based scenarios",
+      "● Doctors who want focused Clinical Problem Solving revision across the full range of specialty topics",
+      "● Candidates who have sat the MSRA before and want to improve their combined score for a more competitive specialty"
     ],
   },
 ];
@@ -1161,7 +1171,9 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "format",
     heading: "MRCGP AKT Format & Content Weighting",
     paragraphs: [
-      "The MRCGP AKT consists of 160 items in a single-best-answer or extended-matching format and is delivered as a computer-based examination. The examination lasts 160 minutes, a change from the previous 190-minute duration that took effect from October 2025. Approximately 80% of the examination assesses clinical medicine, with 10% covering critical appraisal and evidence-based practice and a further 10% covering health informatics and administrative issues, in accordance with the published RCGP/Pearson VUE content weighting. The examination is delivered at Pearson VUE test centres in the UK and is available four times a year, in January, April, July and October.",
+      "● Format: 160 questions in 160 minutes, single-best-answer (SBA) and extended matching style.",
+      "● Content weighting: Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practice, and 10% health informatics and administrative issues.",
+      "● Delivery: Computer-based, at Pearson VUE test centres across the UK."
       
     ],
   },
@@ -1176,9 +1188,10 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "eligibility",
     heading: "Eligibility & Registration Process",
     paragraphs: [
-      "Active MRCGP membership is required before booking — check membership status in good time, since reinstating lapsed membership takes coordination with RCGP's membership team.",
-      "Candidates apply and book through MyRCGP (RCGP's membership portal), then complete payment before the final booking deadline.",
-      "Bookings can be made up to 12 months in advance; the final booking/payment deadline is typically 2–3 months ahead of the sitting."
+      "● Active MRCGP membership is required before booking — check membership status in good time, since reinstating lapsed membership takes coordination with RCGP's membership team.",
+      "● Candidates apply and book through MyRCGP (RCGP's membership portal), then complete payment before the final booking deadline.",
+      "● Bookings can be made up to 12 months in advance; the final booking/payment deadline is typically 2–3 months ahead of the sitting.",
+      "● From 1 April 2026, RCGP introduced a staged payment option — 25% of the fee at reservation or 6 months before the exam (whichever is later), a further 25% at 12 weeks before "
     ],
   },
   {
@@ -1192,10 +1205,10 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "prepare",
     heading: "How to Prepare for the MRCGP AKT",
     paragraphs: [
-      "Weight your revision to match the exam's own content split — roughly 80% clinical medicine means the bulk of preparation time should go there, not evenly across all three areas.",
-      "Don't neglect the smaller-weighted areas (critical appraisal/evidence-based practice, health informatics/admin) — they're still worth roughly 20% combined and are often under-revised",
-      "Practise under the current 160-minute, 160-item timing specifically — resources describing the older 190-minute/200-item format will train the wrong pace",
-      "Use realistic single-best-answer and extended-matching style questions rather than generic MCQ banks not calibrated to AKT's specific format"
+      "● Weight your revision to match the exam's own content split — roughly 80% clinical medicine means the bulk of preparation time should go there, not evenly across all three areas.",
+      "● Don't neglect the smaller-weighted areas (critical appraisal/evidence-based practice, health informatics/admin) — they're still worth roughly 20% combined and are often under-revised",
+      "● Practise under the current 160-minute, 160-item timing specifically — resources describing the older 190-minute/200-item format will train the wrong pace",
+      "● Use realistic single-best-answer and extended-matching style questions rather than generic MCQ banks not calibrated to AKT's specific format"
 
     ],
   },
@@ -1211,10 +1224,10 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
-      "GP trainees preparing for their first AKT sitting.",
-      "Candidates who have attempted the AKT before and want more structured, content-weighted revision",
-      "Trainees who are strong on clinical medicine but under-revise critical appraisal or health informatics — the smaller-weighted but still-scored areas",
-       "Doctors preparing under the current 160-item, 160-minute format who want practice calibrated to it, not the older 200-item version"
+      "● GP trainees preparing for their first AKT sitting.",
+      "● Candidates who have attempted the AKT before and want more structured, content-weighted revision",
+      "● Trainees who are strong on clinical medicine but under-revise critical appraisal or health informatics — the smaller-weighted but still-scored areas",
+       "● Doctors preparing under the current 160-item, 160-minute format who want practice calibrated to it, not the older 200-item version"
 
     ],
   },
@@ -1640,21 +1653,21 @@ export const courseDetails = {
         description: "broader GMC written exam, overlapping therapeutics knowledge",
         tags: [
           { label: "Related", variant: 1 },
-          { label: "plab-1-ukmla-akt", variant: 1 },
+          { label: "ukfpo-psa", variant: 1 },
         ],
         image: "/plab1_course.webp",
         href: "/courses/prescribing-safety-assessment",
       },
-      // {
-      //   title: "PRES Level 2 (Ireland)",
-      //   description: "Irish written exam with prescribing and therapeutics overlap",
-      //   tags: [
-      //     { label: "Related", variant: 2 },
-      //     { label: "pres-level-2", variant: 2 },
-      //   ],
-      //   image: "/pres_2_courses_img.webp",
-      //   href: "/courses/pres-level-2",
-      // },
+      {
+        title: "MRCGP-AKT",
+        description: "",
+        tags: [
+          { label: "Related", variant: 2 },
+          { label: "mrcp-akt", variant: 2 },
+        ],
+        image: "/pres_2_courses_img.webp",
+        href: "/courses/mrcp-akt",
+      },
     ],
     pathway: pathwayUkFoundation,
     videoId: "8vvnBr06HSI",

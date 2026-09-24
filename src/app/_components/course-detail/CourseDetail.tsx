@@ -358,77 +358,88 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
         </section>
 
         {/* TOC + Content sections */}
-        <section id="course-sections" className="relative overflow-hidden bg-[var(--course-detail-content-bg)] pb-[70px] pt-[70px] sm:pb-[90px] sm:pt-[84px] lg:pb-[40px] lg:pt-[37px]">
-          <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-            <div className="grid gap-[30px] lg:grid-cols-[454px_minmax(0,1fr)] lg:items-start lg:gap-[26px]">
-              {/* TOC — shows only the currently active section */}
-              <aside className="max-h-none overflow-visible lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[calc((100vw-var(--container-max))*-0.5)] lg:w-[calc(454px+(100vw-var(--container-max))*0.5)] lg:max-h-[calc(100vh-var(--header-height)-24px)] lg:overflow-x-hidden lg:overflow-y-auto">
-                <div className="relative overflow-hidden rounded-r-[36px] bg-[var(--course-detail-toc-bg)] px-[28px] py-[34px] shadow-[0_18px_40px_rgba(23,36,90,0.06)] sm:px-[32px] sm:py-[40px] lg:w-full lg:rounded-l-none lg:px-0 lg:py-[44px]">
-                  <div className="lg:pl-[calc((100vw-var(--container-max))*0.5)]">
-                  <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">TOC</p>
-                  <h2 className="mt-[6px] text-[26px] font-bold leading-[1.1] tracking-[-0.016em] text-[var(--course-detail-heading)] sm:text-[30px] lg:text-[34px]">
-                    Table of Contents
-                  </h2>
+        
+       <section
+  id="course-sections"
+  className="relative overflow-hidden bg-[var(--course-detail-content-bg)] px-4 pb-[50px] pt-[50px] sm:px-6 sm:pb-[70px] sm:pt-[70px] md:pb-[84px] md:pt-[80px] lg:px-8 lg:pb-[40px] lg:pt-[37px]"
+>
+  <div className="mx-auto w-full max-w-[var(--container-max)]">
+    <div className="grid gap-[24px] md:gap-[26px] lg:grid-cols-[454px_minmax(0,1fr)] lg:items-start lg:gap-[26px]">
+      {/* TOC — full-bleed only on large screens, normal box on small screens, no internal scroll anywhere */}
+      <aside className="w-full lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[calc((100vw-var(--container-max))*-0.5)] lg:w-[calc(454px+(100vw-var(--container-max))*0.5)]">
+        <div className="relative overflow-hidden rounded-[24px] bg-[var(--course-detail-toc-bg)] px-5 py-6 shadow-[0_18px_40px_rgba(23,36,90,0.06)] sm:px-8 sm:py-9 lg:w-full lg:rounded-l-none lg:rounded-r-[36px] lg:px-0 lg:py-[44px]">
+          <div className="lg:pl-[calc((100vw-var(--container-max))*0.5)]">
+            <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">
+              TOC
+            </p>
+            <h2 className="mt-[6px] text-[22px] font-bold leading-[1.15] tracking-[-0.016em] text-[var(--course-detail-heading)] sm:text-[26px] lg:text-[34px]">
+              Table of Contents
+            </h2>
 
-                  <nav className="mt-[22px] flex flex-col gap-[10px]">
-                    {course.toc.map((item) => {
-                      const isActive = item.id === activeTocItem?.id;
-                      return (
-                        <button
-                          key={item.id}
-                          type="button"
-                          onClick={() => setActiveTocId(item.id)}
-                          className={`flex min-h-[44px] items-center gap-2  px-[8px] py-[9px] text-left transition-colors duration-200 ${
-                            isActive ? "bg-[var(--course-detail-toc-item-active)]" : "hover:bg-[var(--course-detail-toc-item-bg)]"
-                          }`}
-                        >
-                          <span
-                            className="block h-[26px] w-[26px] shrink-0 rounded-full bg-[var(--course-detail-toc-dot)]"
-                          />
-                          <span
-                            className={`text-[16px] leading-[1.2] ${
-                              isActive ? "font-bold text-[var(--course-detail-primary)]" : "font-semibold text-[var(--course-detail-heading)]"
-                            }`}
-                          >
-                            {item.label}
-                          </span>
-                        </button>
-                      );
-                    })}
-                  </nav>
-                  </div>
-                </div>
-              </aside>
-
-              {/* Active section only — content swaps when a TOC item is selected */}
-              {activeSection && (
-                <article key={activeSection.id} className="lg:pt-[110px]">
-                  <div className="flex items-start gap-[18px]">
-                    <span className="mt-[6px] h-[46px] w-[46px] shrink-0 rounded-full bg-[var(--course-detail-section-dot)]" />
-                    <h3 className="text-[26px] font-bold leading-[1.15] tracking-[-0.018em] text-[var(--course-detail-section-heading)] sm:text-[30px] lg:text-[34px]">
-                      {activeSection.heading}
-                    </h3>
-                  </div>
-                  <div className="mt-[22px] space-y-[18px] pl-[64px] sm:pl-[66px]">
-                    {activeSection.paragraphs.map((p, i) => (
-                      <p
-                        key={i}
-                        className="text-[13.5px] leading-[1.8] text-[var(--course-detail-body-strong)] sm:text-[14.5px] lg:text-[15.5px]"
-                      >
-                        {p}
-                      </p>
-                    ))}
-                    {activeSection.id === "what-is" && (
-                      <SubscribeButton href={plansHref} className="mt-[8px] h-[48px] px-[24px]">
-                        {course.subscribeButtonLabel}
-                      </SubscribeButton>
-                    )}
-                  </div>
-                </article>
-              )}
-            </div>
+            <nav className="mt-[18px] flex flex-col gap-[10px] sm:mt-[22px]">
+              {course.toc.map((item) => {
+                const isActive = item.id === activeTocItem?.id;
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setActiveTocId(item.id)}
+                    className={`flex min-h-[44px] w-full items-center gap-2 rounded-lg px-[8px] py-[9px] text-left transition-colors duration-200 ${
+                      isActive
+                        ? "bg-[var(--course-detail-toc-item-active)]"
+                        : "hover:bg-[var(--course-detail-toc-item-bg)]"
+                    }`}
+                  >
+                    <span className="block h-[22px] w-[22px] shrink-0 rounded-full bg-[var(--course-detail-toc-dot)] sm:h-[26px] sm:w-[26px]" />
+                    <span
+                      className={`text-[14px] leading-[1.3] sm:text-[16px] ${
+                        isActive
+                          ? "font-bold text-[var(--course-detail-primary)]"
+                          : "font-semibold text-[var(--course-detail-heading)]"
+                      }`}
+                    >
+                      {item.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </nav>
           </div>
-        </section>
+        </div>
+      </aside>
+
+      {/* Active section only — content swaps when a TOC item is selected */}
+      {activeSection && (
+        <article key={activeSection.id} className="w-full lg:pt-[110px]">
+          <div className="flex items-start gap-[12px] sm:gap-[18px]">
+            <span className="mt-[4px] h-[36px] w-[36px] shrink-0 rounded-full bg-[var(--course-detail-section-dot)] sm:mt-[6px] sm:h-[46px] sm:w-[46px]" />
+            <h3 className="text-[20px] font-bold leading-[1.2] tracking-[-0.018em] text-[var(--course-detail-section-heading)] sm:text-[26px] lg:text-[34px]">
+              {activeSection.heading}
+            </h3>
+          </div>
+          <div className="mt-[16px] space-y-[16px] pl-[48px] sm:mt-[22px] sm:space-y-[18px] sm:pl-[64px]">
+            {activeSection.paragraphs.map((p, i) => (
+              <p
+                key={i}
+                className="text-[13.5px] leading-[1.8] text-[var(--course-detail-body-strong)] sm:text-[14.5px] lg:text-[15.5px]"
+              >
+                {p}
+              </p>
+            ))}
+            {activeSection.id === "what-is" && (
+              <SubscribeButton
+                href={plansHref}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                {course.subscribeButtonLabel}
+              </SubscribeButton>
+            )}
+          </div>
+        </article>
+      )}
+    </div>
+  </div>
+</section>
 
        
         {/* FAQs */}
