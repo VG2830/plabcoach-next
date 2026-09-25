@@ -288,7 +288,7 @@ const relatedExamsDefault: RelatedExam[] = [
       { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
     ],
     image: "/ukfpo_courses__indv_img.webp",
-    href: "/courses/national-clinical-assessment",
+    href: "/courses/ukfpo-nca",
   },
 ];
 
@@ -314,7 +314,7 @@ const sectionsPlab2: CourseSection[] = [
   },
   {
     id: "who-needs",
-    heading: "Who Needs to Take PLAB 2",
+    heading: "Who Needs to Take PLAB 2?",
     paragraphs: [
       "Any candidate who has passed PLAB 1 and wishes to proceed to full GMC registration must sit and pass PLAB 2. GMC requires PLAB 2 to be passed within 2 years of the PLAB 1 pass date (measured from the date PLAB 1 was sat, not the date results were issued) — candidates should factor this window into their booking timeline, since Manchester seats are in high demand.",
     ],
@@ -595,7 +595,7 @@ const faqsPres2: FAQItem[] = [
 
 const tocPres3: TocItem[] = [
   { id: "what-is", label: "What is PRES 3?" },
-  { id: "who-needs", label: "Who Needs PRES 3" },
+  { id: "who-needs", label: "Who Needs to Take PRES 3?" },
   { id: "format", label: "PRES 3 Format & Stations" },
   { id: "data-interpret", label: "Domains Assessed" },
   { id: "eligibility", label: " Eligibility & Registration Process" },
@@ -773,8 +773,7 @@ const sectionsNca: CourseSection[] = [
     id: "what-is",
     heading: "What is the UKFPO-NCA?",
     paragraphs: [
-      "The UKFPO National Clinical Assessment (UKFPO-NCA) is an eligibility requirement set by the UK Foundation Programme Office (UKFPO), delivered by Manchester University NHS Foundation Trust. The UKFPO's own materials label it the Clinical Assessment — worth citing accurately when linking to foundationprogramme.nhs.uk — but UKFPO-NCA is the name used throughout this page and PLABcoach's course, as it's the term candidates search for and recognise. It is not a GMC exam and is separate from PLAB: it exists specifically to confirm that a candidate applying to the UK Foundation Programme has the clinical skills to work safely as an F1 doctor, at the point of eligibility application rather than at the point of GMC registration.",
-      "It applies only to candidates who qualified from medical school on or before a specific cutoff date set for each UKFP application cycle (5 August 2024 for the UKFP2026 cycle) — candidates who qualify after that date are assessed differently. There are no exceptions or exemptions once a candidate falls within the required group.",
+      "The UKFPO National Clinical Assessment (UKFPO-NCA) is a mandatory eligibility requirement for the UK Foundation Programme, set by the UKFPO, required for any candidate who qualified from medical school on or before 5 August 2024, regardless of nationality or GMC registration status. Delivered by Manchester University NHS Foundation Trust, it consists of 12 stations, each 10 minutes long including 1 minute of preparation time, run in a single session lasting approximately 4 hours."
     ],
   },
   {
@@ -859,7 +858,7 @@ const faqsNca: FAQItem[] = [
   {
     question: "What does UKFPO-NCA stand for?",
     answer:
-      "UKFPO-NCA stands for National Clinical Assessment. The UKFPO's own materials label it the Clinical Assessment — both refer to the same eligibility requirement for the UK Foundation Programme.",
+      "UKFPO-NCA stands for National Clinical Assessment. The UKFPO's own materials label it the 'Clinical Assessment' — both refer to the same eligibility requirement for the UK Foundation Programme.",
   },
   {
     question: "Does passing PLAB exempt me from the UKFPO-NCA?",
@@ -920,16 +919,19 @@ const sectionsPsa: CourseSection[] = [
     id: "who-needs",
     heading: "Who Needs to Take the UKFPO-PSA?",
     paragraphs: [
-      "The UKFPO-PSA is required for **all UK final-year medical students as part of their medical school assessment**. It is also required for **Foundation doctors who have not yet passed the PSA by the time they start F1**, including international medical graduates entering F1 through the UK Foundation Programme. For **F2 Standalone doctors**, sitting the PSA is recommended by the UKFPO but is not mandatory. A doctor who has not passed the PSA by the end of F1 does not automatically fail; the **ARCP panel will typically consider an extension to F1** to allow the doctor to complete the assessment, provided all other F1 requirements have been met."
+      "● All UK final-year medical students, as part of medical school assessment.",
+      "● Any Foundation doctor who has not yet passed the PSA by the time they start F1, including international medical graduates entering F1 through the UK Foundation Programme",
+      "● F2 Standalone post doctors — sitting is recommended by UKFPO but not mandatory for this group",
+      "A doctor who has not passed the PSA by the end of F1 does not automatically fail — the ARCP panel will typically consider an extension to F1 to allow the assessment to be completed, provided all other F1 requirements are met."
     ],
   },
   {
     id: "format",
     heading: "UKFPO-PSA Format & Question Types",
     paragraphs: [
-      "● Format: 60-question, computer-based examination (Developed by BPS and MSC)",
-      "● Question types: Prescribing,Prescription review,Dose calculation,Adverse drug reaction / interaction identification,Medicines communication,Data interpretation for prescribing decisions",
-      "● Reference access:BNF and BNFc available via Medicines Complete throughout the examination"
+      "● Format: 60-question, computer-based examination (Developed by BPS and MSC).",
+      "● Question types: Prescribing,Prescription review,Dose calculation,Adverse drug reaction / interaction identification,Medicines communication,Data interpretation for prescribing decisions.",
+      "● Reference access:BNF and BNFc available via Medicines Complete throughout the examination."
       
     ],
   },
@@ -937,7 +939,7 @@ const sectionsPsa: CourseSection[] = [
     id: "domains",
     heading: "Standard Assessed",
     paragraphs: [
-      "The PSA assesses competencies the GMC has defined for new medical graduates, including writing new prescriptions, reviewing and checking existing prescriptions, calculating drug doses accurately, identifying and avoiding adverse drug reactions and medication errors, and adjusting prescribing decisions to individual patient circumstances"
+      "The PSA assesses competencies the GMC has defined for new medical graduates, including writing new prescriptions, reviewing and checking existing prescriptions, calculating drug doses accurately, identifying and avoiding adverse drug reactions and medication errors, and adjusting prescribing decisions to individual patient circumstances."
     ],
   },
   {
@@ -962,6 +964,7 @@ const sectionsPsa: CourseSection[] = [
       "● Work through each of the core question types individually — prescribing, review, calculation, adverse reaction identification, and communication — rather than generic pharmacology revision alone.",
       "● Practise dose calculations under time pressure, as this is a common area candidates lose marks in.",
       "● Get comfortable navigating the BNF/BNFc quickly, since it's available during the real exam and speed of lookup matters as much as knowledge",
+      "● Use BPS's own free PSA Prep eLearning sessions as a baseline, then supplement with realistic timed practice"
 
     ],
   },
@@ -1042,7 +1045,7 @@ const tocMsra: TocItem[] = [
 const sectionsMsra: CourseSection[] = [
   {
     id: "what-is",
-    heading: "What is the UKFPO-PSA?",
+    heading: "What is the MSRA?",
     paragraphs: [
       "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based selection exam used by NHS specialty recruitment as part of the application process for GP training (ST1) and several other UK specialty training programmes. It is designed to provide a consistent, standardised way of comparing applicants' professional judgement and clinical problem-solving ability.",
       "Both papers are based on the Foundation Programme curriculum and assess how well a candidate applies clinical knowledge to real decision-making — the MSRA is not a knowledge-recall exam in the way PLAB 1 is; it centres on judgement under realistic scenarios."
@@ -1085,14 +1088,14 @@ const sectionsMsra: CourseSection[] = [
     id: "dates",
     heading: "MSRA Dates & Fees",
     paragraphs: [
-      "The MSRA runs in scheduled sitting windows tied to each recruitment round (commonly referenced rounds include a January window for posts starting later that year, and a September window for posts starting the following February"
+      "The MSRA runs in scheduled sitting windows tied to each recruitment round (commonly referenced rounds include a January window for posts starting later that year, and a September window for posts starting the following February)."
     ],
   },
   {
     id: "prepare",
     heading: " How to Prepare for the MSRA",
     paragraphs: [
-      "● Practise Professional Dilemmas ranking questions specifically — remember only one action is ever most appropriate, not a sequence (A or B or C, not A then B).",
+      "● Practise Professional Dilemmas ranking questions specifically — remember only one action is ever 'most appropriate', not a sequence (A or B or C, not A then B).",
       "● Build familiarity with NHS structures, GMC ethical guidance (Good Medical Practice), and typical primary/secondary care working environments, since PD questions assume this context.",
       "● For Clinical Problem Solving, drill across the full range of clinical topics rather than concentrating only on familiar specialties",
       "● Time both papers separately under realistic conditions — 95 minutes for PD, 75 minutes for CPS, with only a short break between"
@@ -1128,7 +1131,7 @@ const faqsMsra: FAQItem[] = [
   {
     question: "What are the two MSRA papers? ",
     answer:
-      "Professional Dilemmas (a 95-minute situational judgement test) and Clinical Problem Solving (a 75-minute clinical knowledge paper), completed in one sitting with a short break between",
+      "Professional Dilemmas (a 95-minute situational judgement test) and Clinical Problem Solving (a 75-minute clinical knowledge paper), completed in one sitting with a short break between.",
   },
   {
     question: "Does passing the MSRA guarantee a training post?",
@@ -1149,7 +1152,7 @@ const faqsMsra: FAQItem[] = [
 
 const tocMrcpAkt: TocItem[] = [
   {
-    id: "what-is", label: "What is the MRCGP AKT" },
+    id: "what-is", label: "What is the MRCGP AKT?" },
   { id: "who-needs", label: "Who Needs to Take the MRCGP AKT?" },
   {
     id: "format",
@@ -1160,8 +1163,8 @@ const tocMrcpAkt: TocItem[] = [
     label: "Attempts & Fifth-Attempt Policy",
   },
   { id: "eligibility", label: "Eligibility & Registration Process" },
-  { id: "dates", label: "MSRA Dates & Fees" },
-  { id: "prepare", label: " How to Prepare for the MSRA" },
+  { id: "dates", label: "MRCGP AKT Dates & Fees" },
+  { id: "prepare", label: "How to Prepare for the MRCGP AKT" },
   { id: "how-helps", label: "How PLABcoach Helps" },
   { id: "who-should", label: "Who Should Take This Course" },
 ];
@@ -1169,7 +1172,7 @@ const tocMrcpAkt: TocItem[] = [
 const sectionsMrcpAkt: CourseSection[] = [
   {
     id: "what-is",
-    heading: "What is the MRCGP AKT",
+    heading: "What is the MRCGP AKT?",
     paragraphs: [
       "The Applied Knowledge Test (AKT) is one component of the MRCGP examination set by the Royal College of General Practitioners (RCGP). It is a summative assessment of the knowledge base underpinning independent general practice in the UK within the context of the NHS, sat by doctors in GP specialty training.",
       "From October 2025, RCGP reduced the AKT from 200 items over 190 minutes to 160 items over 160 minutes, giving candidates slightly longer per item while shortening the overall exam — this is a recent change worth stating explicitly, since older third-party guides may still describe the previous 200-item format."
@@ -1187,6 +1190,7 @@ const sectionsMrcpAkt: CourseSection[] = [
     heading: "MRCGP AKT Format & Content Weighting",
     paragraphs: [
       "● Format: 160 questions in 160 minutes, single-best-answer (SBA) and extended matching style.",
+      "● Duration:160 minutes (Changed from 190 minutes, effective October 2025)",
       "● Content weighting: Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practice, and 10% health informatics and administrative issues.",
       "● Delivery: Computer-based, at Pearson VUE test centres across the UK."
       
@@ -1196,7 +1200,7 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "domains",
     heading: "Attempts & Fifth-Attempt Policy",
     paragraphs: [
-      "RCGP allows an exceptional fifth attempt at the AKT (or SCA) on the basis of additional educational attainment, via a specific application process. ⚠ Confirm the current standard attempt limit (commonly four) directly on rcgp.org.uk before publishing, alongside the fifth-attempt policy detail."
+      "RCGP allows an exceptional fifth attempt at the AKT (or SCA) on the basis of additional educational attainment, via a specific application process."
     ],
   },
   {
@@ -1315,15 +1319,34 @@ const pathwayPres3 = [
   { id: "p4", number: "04", label: "Apply for Irish Medical Council registration", icon: "apply-imc" as const },
   { id: "p5", number: "05", label: "Start your Ireland medical career", icon: "start-career" as const },
 ];
-const pathwayUkFoundation = [
-  { id: "p1", number: "01", label: "Check UKFP / GMC eligibility", icon: "eligibility" as const },
-  { id: "p2", number: "02", label: "Prepare for NCA & PSA", icon: "prepare-nca" as const },
-  { id: "p3", number: "03", label: "Pass NCA with a strong ranking score", icon: "pass-nca" as const },
-  { id: "p4", number: "04", label: "Pass the PSA", icon: "pass-psa" as const },
-  { id: "p5", number: "05", label: "Apply for UK Foundation Programme allocation", icon: "apply-fp" as const },
-  { id: "p6", number: "06", label: "Start your UK FY1 medical career", icon: "start-career" as const },
+const pathwayNca = [
+  { id: "p1", number: "01", label: "Meet UKFP eligibility", icon: "eligibility" as const },
+  { id: "p2", number: "02", label: "Pass the UKFPO-NCA", icon: "pass-nca" as const },
+  { id: "p3", number: "03", label: "Apply to the UK Foundation Programme", icon: "apply-fp" as const },
+  { id: "p4", number: "04", label: "Start F1", icon: "start-career" as const },
+  { id: "p5", number: "05", label: "Pass the UKFPO-PSA and progress to F2", icon: "pass-psa" as const },
 ];
-
+const pathwayPsa = [
+  { id: "p1", number: "01", label: "Start F1", icon: "start-career" as const },
+  { id: "p2", number: "02", label: "Pass the UKFPO-PSA", icon: "pass-psa" as const },
+  { id: "p3", number: "03", label: "Progress to F2", icon: "eligibility" as const },
+  { id: "p4", number: "04", label: "Complete the Foundation Programme", icon: "apply-registration" as const },
+  { id: "p5", number: "05", label: "Apply for GP or specialty training (e.g. via MSRA)", icon: "apply-fp" as const },
+];
+const pathwayUkFoundation = [
+  { id: "p1", number: "01", label: "Start GP specialty training", icon: "eligibility" as const },
+  { id: "p2", number: "02", label: "Pass the MRCGP AKT", icon: "prepare-nca" as const },
+  { id: "p3", number: "03", label: "Pass the MRCGP SCA", icon: "pass-nca" as const },
+  { id: "p4", number: "04", label: "Complete MRCGP requirements", icon: "pass-psa" as const },
+  { id: "p5", number: "05", label: "Join the GMC GP Register", icon: "apply-fp" as const }
+];
+const pathwayMsra = [
+  { id: "p1", number: "01", label: "Apply to GP", icon: "apply-fp" as const },
+  { id: "p2", number: "02", label: "Sit the MSRA", icon: "prepare-nca" as const },
+  { id: "p3", number: "03", label: "Ranking/shortlisting based on MSRA score", icon: "pass-nca" as const },
+  { id: "p4", number: "04", label: "Interview or offer stage", icon: "eligibility" as const },
+  { id: "p5", number: "05", label: "Start specialty training (e.g. GP ST1)", icon: "apply-fp" as const },
+];
 export const courseDetails = {
   "plab-1-ukmla-akt": {
     slug: "plab-1-ukmla-akt",
@@ -1390,7 +1413,7 @@ export const courseDetails = {
           { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
         ],
         image: "/uk_course.webp",
-        href: "/courses/national-clinical-assessment",
+        href: "/courses/ukfpo-nca",
       },
       {
         title: "PLAB 1 / UKMLA-AKT",
@@ -1545,7 +1568,7 @@ export const courseDetails = {
       "The UKFPO National Clinical Assessment (UKFPO-NCA) is a mandatory eligibility requirement for the UK Foundation Programme, set by the UKFPO, required for any candidate who qualified from medical school on or before 5 August 2024, regardless of nationality or GMC registration status. Delivered by Manchester University NHS Foundation Trust, it consists of 12 stations, each 10 minutes long including 1 minute of preparation time, run in a single session lasting approximately 4 hours.",
     toc: tocNca,
     sections: sectionsNca,
-    faqTitle: "NCA FAQs",
+    faqTitle: "UKFPO-NCA FAQs",
     faqs: faqsNca,
     faqCta: {
       title: "Still have a questions?",
@@ -1561,7 +1584,7 @@ export const courseDetails = {
           { label: "prescribing-safety-assessment", variant: 3 },
         ],
         image: "/uk_course.webp",
-        href: "/courses/prescribing-safety-assessment",
+        href: "/courses/ukfpo-psa",
       },
       {
         title: "PLAB 2 / UKMLA-CPSA",
@@ -1584,15 +1607,15 @@ export const courseDetails = {
       //   href: "/courses/plab-2-ukmla",
       // },
     ],
-    pathway: pathwayUkFoundation,
+    pathway: pathwayNca,
     videoId: "XBKh3msgunc",
     videoTitle: "Master the UKFPO National Clinical Assessment NCA with PLABCOACH",
     ctaTitle: "READY TO ACE THE NCA?",
     ctaCopy: "Choose your learning path and start your National Clinical Assessment preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start NCA Preparation",
-    subscribeHref: "/course-plan?course=national-clinical-assessment",
-    plabCoachHelpCta:"",
-    plabCoachHelpCtaHref:""
+    subscribeHref: "/course-plan?course=ukfpo-nca",
+    plabCoachHelpCta:"Start UKFPO-NCA Preparation",
+    plabCoachHelpCtaHref:"/course-plan?course=ukfpo-nca"
   },
   "prescribing-safety-assessment": {
     slug: "prescribing-safety-assessment",
@@ -1603,7 +1626,7 @@ export const courseDetails = {
       "The UKFPO Prescribing Safety Assessment (UKFPO-PSA) is a 60-question computer-based exam, developed jointly by the British Pharmacological Society (BPS) and the Medical Schools Council (MSC), that all Foundation Year 1 (F1) doctors must pass to progress to F2. Most UK medical graduates sit and pass the PSA at medical school; international medical graduates and any UK graduates who haven't yet passed it sit it during their F1 year, with the assessment typically funded by the UKFPO rather than paid for by the candidate.",
     toc: tocPsa,
     sections: sectionsPsa,
-    faqTitle: "PSA FAQs",
+    faqTitle: " UKFPO-PSA FAQs",
     faqs: faqsPsa,
     faqCta: {
       title: "Still have a questions?",
@@ -1613,17 +1636,17 @@ export const courseDetails = {
     relatedExams: [
       {
         title: "UKFPO — NCA",
-        description: "UK Foundation Programme ranking assessment, often paired with PSA",
+        description: "The pre-entry eligibility exam most candidates encounter before the PSA in their overall pathway",
         tags: [
           { label: "Next step", variant: 3 },
           { label: "national-clinical-assessment", variant: 3 },
         ],
         image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/national-clinical-assessment",
+        href: "/courses/ukfpo-nca",
       },
       {
         title: "MSRA",
-        description: "",
+        description: "Relevant for candidates planning beyond F1/F2 toward GP or specialty training",
         tags: [
           { label: "Related", variant: 1 },
           { label: "plab-1-ukmla-akt", variant: 1 },
@@ -1631,26 +1654,16 @@ export const courseDetails = {
         image: "/plab1_course.webp",
         href: "/courses/msra",
       },
-      // {
-      //   title: "PRES Level 2 (Ireland)",
-      //   description: "Irish written exam with prescribing and therapeutics overlap",
-      //   tags: [
-      //     { label: "Related", variant: 2 },
-      //     { label: "pres-2", variant: 2 },
-      //   ],
-      //   image: "/pres_2_courses_img.webp",
-      //   href: "/courses/pres-2",
-      // },
     ],
-    pathway: pathwayUkFoundation,
+    pathway: pathwayPsa,
     videoId: "8vvnBr06HSI",
     videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
     ctaTitle: "READY TO ACE THE PSA?",
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
-    subscribeButtonLabel: "Start PSA Preparation",
-    subscribeHref: "/course-plan?course=prescribing-safety-assessment",
-    plabCoachHelpCta:"",
-    plabCoachHelpCtaHref:""
+    subscribeButtonLabel: "Start UKFPO-PSA Preparation",
+    subscribeHref: "/course-plan?course=ukfpo-psa",
+    plabCoachHelpCta:"Start UKFPO-PSA Preparation",
+    plabCoachHelpCtaHref:"/course-plan?course=ukfpo-psa"
   },
     "msra": {
     slug: "msra",
@@ -1670,28 +1683,8 @@ export const courseDetails = {
     },
     relatedExams: [
       {
-        title: "UKFPO — NCA",
-        description: "UK Foundation Programme ranking assessment, often paired with PSA",
-        tags: [
-          { label: "Next step", variant: 3 },
-          { label: "national-clinical-assessment", variant: 3 },
-        ],
-        image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/national-clinical-assessment",
-      },
-      {
-        title: "UKFPO-PSA",
-        description: "broader GMC written exam, overlapping therapeutics knowledge",
-        tags: [
-          { label: "Related", variant: 1 },
-          { label: "ukfpo-psa", variant: 1 },
-        ],
-        image: "/plab1_course.webp",
-        href: "/courses/prescribing-safety-assessment",
-      },
-      {
         title: "MRCGP-AKT",
-        description: "",
+        description: "The natural next step for candidates on the GP training pathway",
         tags: [
           { label: "Related", variant: 2 },
           { label: "mrcp-akt", variant: 2 },
@@ -1699,16 +1692,37 @@ export const courseDetails = {
         image: "/pres_2_courses_img.webp",
         href: "/courses/mrcp-akt",
       },
+      {
+        title: "UKFPO — NCA",
+        description: "Relevant earlier steps for candidates who entered via the Foundation Programme route ",
+        tags: [
+          { label: "Next step", variant: 3 },
+          { label: "national-clinical-assessment", variant: 3 },
+        ],
+        image: "/ukfpo_courses__indv_img.webp",
+        href: "/courses/ukfpo-nca",
+      },
+      {
+        title: "UKFPO-PSA",
+        description: "Relevant earlier steps for candidates who entered via the Foundation Programme route ",
+        tags: [
+          { label: "Related", variant: 1 },
+          { label: "ukfpo-psa", variant: 1 },
+        ],
+        image: "/plab1_course.webp",
+        href: "/courses/ukfpo-psa",
+      },
+      
     ],
-    pathway: pathwayUkFoundation,
+    pathway: pathwayMsra,
     videoId: "8vvnBr06HSI",
     videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
     ctaTitle: "READY TO ACE THE PSA?",
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
-    subscribeButtonLabel: "Start PSA Preparation",
-    subscribeHref: "/course-plan?course=prescribing-safety-assessment",
-    plabCoachHelpCta:"",
-    plabCoachHelpCtaHref:""
+    subscribeButtonLabel: "Start MSRA Preparation",
+    subscribeHref: "/course-plan?course=msra",
+    plabCoachHelpCta:"Register Interest — MSRA Preparation",
+    plabCoachHelpCtaHref:"/course-plan?course=msra"
   },
     "mrcp-akt": {
     slug: "mrcp-akt",
@@ -1735,7 +1749,7 @@ export const courseDetails = {
           { label: "national-clinical-assessment", variant: 3 },
         ],
         image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/msrat",
+        href: "/courses/msra",
       },
       {
         title: "UKFPO-PSA",
@@ -1745,7 +1759,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/prescribing-safety-assessment",
+        href: "/courses/ukfpo-psa",
       },
       {
         title: "UKFPO-NCA",
@@ -1755,7 +1769,7 @@ export const courseDetails = {
           { label: "pres-2", variant: 2 },
         ],
         image: "/pres_2_courses_img.webp",
-        href: "/courses/national-clinical-assessment",
+        href: "/courses/ukfpo-nca",
       },
     ],
     pathway: pathwayUkFoundation,
@@ -1763,10 +1777,10 @@ export const courseDetails = {
     videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
     ctaTitle: "READY TO ACE THE PSA?",
     ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
-    subscribeButtonLabel: "Start PSA Preparation",
-    subscribeHref: "/course-plan?course=prescribing-safety-assessment",
-    plabCoachHelpCta:"",
-    plabCoachHelpCtaHref:""
+    subscribeButtonLabel: "Start MRCCP Preparation",
+    subscribeHref: "/course-plan?course=mrcp-akt",
+    plabCoachHelpCta:"Register Interest — MRCGP AKT Preparation",
+    plabCoachHelpCtaHref:"/course-plan?course=mrcp-akt"
   },
 } satisfies Record<string, CourseDetailData>;
 

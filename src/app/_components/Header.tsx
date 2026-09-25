@@ -37,11 +37,25 @@ const courseMenu: CourseMenuGroup[] = [
     subCourses: [
       {
         label: "National Clinical Assessment (NCA)",
-        href: "/courses/national-clinical-assessment",
+        href: "/courses/ukfpo-nca",
       },
       {
         label: "Prescribing Safety Assessment (PSA)",
-        href: "/courses/prescribing-safety-assessment",
+        href: "/courses/ukfpo-psa",
+      },
+    ],
+  },
+  {
+    label: "Upcoming Courses",
+    href: "#",
+    subCourses: [
+      {
+        label: "Multi-Specialty Recruitment Assessment (MSRA)",
+        href: "/courses/msra",
+      },
+      {
+        label: "MRCGP Applied Knowledge Test (AKT)",
+        href: "/courses/mrcp-akt",
       },
     ],
   },

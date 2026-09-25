@@ -99,13 +99,13 @@ const exams = [
     title: "UKFPO-NCA",
     subtitle: "Clinical assessment for UK Foundation Programme eligibility",
     icon: "/nca_exam_icon.svg",
-    href: "/courses/national-clinical-assessment",
+    href: "/courses/ukfpo-nca",
   },
   {
     title: "UKFPO-PSA",
     subtitle: "Prescribing Safety Assessment for Foundation Programme candidates",
     icon: "/psa_exam_icon.svg",
-    href: "/courses/prescribing-safety-assessment",
+    href: "/courses/ukfpo-psa",
   },
   {
     title: "MSRA",

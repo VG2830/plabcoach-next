@@ -84,7 +84,7 @@ const foundationCourses: CourseItem[] = [
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
-    href: "/courses/national-clinical-assessment",
+    href: "/courses/ukfpo-nca",
   },
   {
     image: "/uk_course.webp",
@@ -93,7 +93,7 @@ const foundationCourses: CourseItem[] = [
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/courses/prescribing-safety-assessment",
+    href: "/courses/ukfpo-psa",
   },
 ];
 
