@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 
@@ -199,72 +199,30 @@ function OfferCard({ offer }: { offer: (typeof offers)[number] }) {
   );
 }
 
-function ReviewCard({
-  review,
-  position,
-}: {
-  review: (typeof reviews)[number];
-  position: -2 | -1 | 0 | 1 | 2;
-}) {
-  const active = position === 0;
-  const positionClass =
-    position === 0
-      ? "z-30 w-[728px] translate-x-[-50%] translate-y-0 opacity-100"
-      : position === -1
-        ? "z-20 w-[440px] translate-x-[calc(-50%_-_550px)] translate-y-[45px] scale-[0.90] opacity-[0.48]"
-        : position === 1
-          ? "z-20 w-[440px] translate-x-[calc(-50%_+_550px)] translate-y-[45px] scale-[0.90] opacity-[0.48]"
-          : position === -2
-            ? "z-0 w-[520px] translate-x-[calc(-50%_-_930px)] translate-y-[95px] scale-[0.82] opacity-0"
-            : "z-0 w-[520px] translate-x-[calc(-50%_+_930px)] translate-y-[95px] scale-[0.82] opacity-0";
-
-  return (
-    <article
-      className={`absolute left-1/2 top-0 transition-[transform,width,opacity,filter] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${positionClass}`}
-      aria-hidden={!active}
-    >
-      <div
-        className={`relative bg-transparent transition-[height] duration-700 ${active ? "h-[467px]" : "h-[310px]"}`}
-      >
-        <div className={`absolute inset-x-0 bottom-0 rounded-[22px] bg-[var(--appraisal-review-card)] ${active ? "top-[35px] shadow-[0_28px_66px_rgba(29,48,97,0.14)]" : "top-[24px]"}`} />
-        <div className={`absolute bg-[var(--appraisal-review-card)] ${active ? "left-0 top-0 h-[126px] w-[138px] rounded-full" : "left-[12px] top-[2px] h-[86px] w-[94px] rounded-full"}`} />
-        <div className={`absolute right-0 bg-[var(--appraisal-review-stars-bg)] ${active ? "top-0 h-[82px] w-[315px] rounded-bl-[45px] rounded-tl-[45px] rounded-tr-[22px]" : "top-[2px] h-[58px] w-[215px] rounded-bl-[32px] rounded-tl-[32px] rounded-tr-[18px]"}`} />
-
-        <div className={`absolute overflow-hidden rounded-full bg-white shadow-[0_7px_20px_rgba(29,48,97,0.10)] ${active ? "left-[38px] top-[-47px] h-[140px] w-[140px]" : "left-[24px] top-[-22px] h-[88px] w-[88px]"}`}>
-          <Image src={review.image} alt={review.name} fill sizes={active ? "140px" : "88px"} className="object-cover object-top" />
-        </div>
-
-        <div className={`absolute flex items-center justify-center ${active ? "right-[24px] top-[20px] w-[270px] gap-[12px]" : "right-[17px] top-[17px] w-[180px] gap-[7px]"}`} aria-label="5 star review">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <span key={index} className={`${active ? "text-[38px]" : "text-[24px]"} leading-none text-[var(--appraisal-star)]`}>★</span>
-          ))}
-        </div>
-
-        <div className={`absolute ${active ? "left-[200px] top-[24px]" : "left-[122px] top-[31px]"}`}>
-          <p className={`${active ? "text-[22px]" : "text-[15px]"} font-bold leading-none text-[var(--appraisal-ink)]`}>{review.name}</p>
-          <p className={`${active ? "mt-[10px] text-[14px]" : "mt-[6px] text-[10px]"} font-semibold text-[var(--appraisal-card-copy)]`}>{review.role}</p>
-        </div>
-
-        <div className={`absolute ${active ? "left-[31px] right-[31px] top-[125px]" : "left-[22px] right-[22px] top-[101px]"}`}>
-          <p className={`${active ? "text-[14px] leading-[1.62]" : "text-[9px] leading-[1.58]"} text-[var(--appraisal-review-copy)]`}>{review.text}</p>
-          <p className={`${active ? "mt-[52px] text-[13px]" : "mt-[22px] text-[9px]"} font-bold text-[var(--appraisal-ink)]`}>Country: {review.country}</p>
-        </div>
-      </div>
-    </article>
-  );
-}
-
-function getCircularPosition(index: number, activeIndex: number): -2 | -1 | 0 | 1 | 2 {
-  let delta = index - activeIndex;
-  if (delta > 2) delta -= reviews.length;
-  if (delta < -2) delta += reviews.length;
-  return delta as -2 | -1 | 0 | 1 | 2;
-}
 export default function AppraisalPage() {
   const [reviewIndex, setReviewIndex] = useState(0);
+  const swipeStartX = useRef<number | null>(null);
+  const swipeCurrentX = useRef<number | null>(null);
 
   const moveReview = (direction: -1 | 1) => {
     setReviewIndex((current) => (current + direction + reviews.length) % reviews.length);
+  };
+
+  const handleSwipeStart = (clientX: number) => {
+    swipeStartX.current = clientX;
+    swipeCurrentX.current = clientX;
+  };
+
+  const handleSwipeMove = (clientX: number) => {
+    if (swipeStartX.current !== null) swipeCurrentX.current = clientX;
+  };
+
+  const handleSwipeEnd = () => {
+    if (swipeStartX.current === null || swipeCurrentX.current === null) return;
+    const distance = swipeCurrentX.current - swipeStartX.current;
+    if (Math.abs(distance) > 55) moveReview(distance > 0 ? -1 : 1);
+    swipeStartX.current = null;
+    swipeCurrentX.current = null;
   };
 
   return (
@@ -323,36 +281,37 @@ export default function AppraisalPage() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-white pt-[14px] sm:pt-[20px] lg:pt-[28px] xl:pt-[34px]">
+        <section className="relative overflow-hidden bg-white pt-[24px] sm:pt-[34px] lg:pt-[46px] xl:pt-[54px]">
           <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
-            <div className="mx-auto grid w-full max-w-[1480px] items-center gap-[40px] sm:gap-[52px] lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:gap-[66px] xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-[82px]">
-              <div className="relative mx-auto w-full max-w-[540px] lg:mx-0">
+            <div className="mx-auto grid max-w-[1220px] items-center gap-[42px] lg:min-h-[470px] lg:grid-cols-[0.96fr_1.04fr] lg:gap-[64px] xl:min-h-[500px] xl:gap-[76px]">
+              <div className="relative mx-auto w-full max-w-[545px] lg:mx-0 lg:justify-self-end">
                 <div className="relative aspect-[604/383] w-full overflow-visible">
                   <Image
                     src="/about_doctor_appraisal-iamge.webp"
                     alt="Doctor appraisal specialist"
                     fill
-                    sizes="(max-width: 639px) 92vw, (max-width: 1023px) 540px, (max-width: 1279px) 520px, 540px"
-                    className="object-contain object-left-top"
+                    sizes="(max-width: 1023px) 86vw, 545px"
+                    className="object-contain object-center"
                   />
                   <Image
                     src="/complaint_assist_image.svg"
                     alt="GMC compliant appraisal support"
                     width={187}
                     height={188}
-                    className="absolute bottom-[-18px] right-[-12px] z-20 h-auto w-[124px] object-contain sm:w-[138px] lg:bottom-[-20px] lg:right-[-18px] lg:w-[142px] xl:bottom-[-24px] xl:right-[-22px] xl:w-[150px]"
+                    className="absolute bottom-[-18px] right-[-8px] z-20 h-auto w-[118px] object-contain sm:w-[134px] lg:bottom-[-22px] lg:right-[-16px] lg:w-[145px]"
                   />
                 </div>
               </div>
 
-              <div className="w-full max-w-[590px] lg:pb-[6px]">
-                <p className="text-[10px] font-bold uppercase tracking-[0.015em] text-[var(--appraisal-accent)] sm:text-[11px] lg:text-[11px] xl:text-[12px]">
+              <div className="mx-auto w-full max-w-[590px] text-center lg:mx-0 lg:justify-self-start lg:text-left">
+                <p className="text-[10px] font-bold uppercase tracking-[0.06em] text-[var(--appraisal-accent)] sm:text-[11px] xl:text-[12px]">
                   About Dr Appraisals
                 </p>
-                <h2 className="mt-[8px] text-[31px] font-bold leading-[1.04] tracking-[-0.025em] text-[var(--appraisal-ink)] sm:text-[35px] lg:text-[37px] xl:text-[40px]">
+                <h2 className="mt-[10px] text-[32px] font-bold leading-[1.05] tracking-[-0.025em] text-[var(--appraisal-ink)] sm:text-[38px] lg:text-[42px] xl:text-[44px]">
                   Trusted UK Compliance Partner
                 </h2>
-                <div className="mt-[24px] max-w-[590px] space-y-[18px] text-[11px] leading-[1.68] text-[var(--appraisal-copy)] sm:text-[12px] lg:mt-[26px] lg:space-y-[20px] lg:text-[12px] xl:text-[13px] xl:leading-[1.72]">
+
+                <div className="mt-[28px] space-y-[18px] text-[12px] leading-[1.75] text-[var(--appraisal-copy)] sm:text-[13px] lg:mt-[30px] lg:space-y-[20px] lg:text-[14px]">
                   <p>Dr Christopher Boyson is a UK-based General Practitioner, medical appraiser, and educator with significant expertise in clinical practice and professional development.</p>
                   <p>He serves as a Training Programme Director for postgraduate GP training, an examiner, and an NHS appraiser.</p>
                   <p>He has supported doctors across all career stages, from international medical graduates joining the NHS to experienced clinicians preparing for revalidation.</p>
@@ -454,30 +413,39 @@ export default function AppraisalPage() {
           </div>
         </section>
 
-        <section className="bg-white py-[78px] sm:py-[96px] lg:h-[747px] lg:pb-0 lg:pt-[120px]">
+        <section className="bg-white py-[78px] sm:py-[96px] lg:pb-[110px] lg:pt-[120px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="mx-auto max-w-[1480px]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.02em] text-[var(--appraisal-accent)] sm:text-[11px] lg:text-[12px]">How it works</p>
-              <h2 className="mt-[16px] text-[37px] font-bold leading-[1.05] tracking-[-0.027em] text-[var(--appraisal-ink)] sm:text-[44px] lg:text-[48px]">Your Journey to Success</h2>
+              <div className="text-center lg:text-left">
+                <p className="text-[10px] font-bold uppercase tracking-[0.04em] text-[var(--appraisal-accent)] sm:text-[11px] lg:text-[12px]">How it works</p>
+                <h2 className="mt-[14px] text-[37px] font-bold leading-[1.05] tracking-[-0.027em] text-[var(--appraisal-ink)] sm:text-[44px] lg:text-[48px]">Your Journey to Success</h2>
+              </div>
 
-              <div className="mt-[72px] grid gap-[44px] sm:grid-cols-2 lg:mt-[110px] lg:grid-cols-4 lg:gap-0">
+              <div className="mt-[64px] grid gap-[34px] sm:grid-cols-2 lg:mt-[94px] lg:grid-cols-4 lg:gap-0">
                 {journey.map((step, index) => (
-                  <article key={step.title} className="group relative min-h-[330px] px-1 sm:px-[18px] lg:min-h-[360px] lg:px-[0px] lg:pr-[42px] xl:pr-[48px]">
-                    {index > 0 ? (
-                      <div aria-hidden="true" className="pointer-events-none absolute left-[-18px] top-[-46px] hidden h-[360px] w-[38px] lg:block">
-                        <span className="absolute left-[3px] top-0 h-full w-[3px] rounded-full bg-gradient-to-b from-transparent via-[var(--appraisal-journey-line)] to-transparent opacity-80" />
-                        <span className="absolute left-[-7px] top-[109px] h-[30px] w-[30px] rotate-45 border-r-[5px] border-t-[5px] border-[var(--appraisal-journey-line)]" />
-                      </div>
+                  <article
+                    key={step.title}
+                    className="group relative min-h-[315px] rounded-[22px] bg-white px-[20px] py-[24px] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(31,48,102,0.08)] sm:px-[24px] lg:min-h-[345px] lg:rounded-none lg:bg-transparent lg:px-[28px] lg:py-0 lg:shadow-none lg:hover:translate-y-0 lg:hover:shadow-none xl:px-[34px]"
+                  >
+                    {index < journey.length - 1 ? (
+                      <Image
+                        src="/fourth_sec_side_support.svg"
+                        alt=""
+                        aria-hidden="true"
+                        width={97}
+                        height={289}
+                        className="pointer-events-none absolute right-[-43px] top-[-36px] z-0 hidden h-[270px] w-[91px] object-contain lg:block xl:right-[-46px] xl:h-[286px] xl:w-[96px]"
+                      />
                     ) : null}
 
-                    <div className="relative h-[90px] w-full">
+                    <div className="relative z-10 h-[92px] w-full">
                       <Image src={step.idle} alt={`Step ${index + 1}`} width={step.width} height={90} className="absolute left-0 top-0 h-[88px] w-auto max-w-none object-contain object-left transition-opacity duration-300 group-hover:opacity-0" />
                       <Image src={step.active} alt="" aria-hidden="true" width={step.width} height={90} className="absolute left-0 top-0 h-[88px] w-auto max-w-none object-contain object-left opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </div>
-                    <h3 className="mt-[37px] max-w-[275px] text-[19px] font-bold leading-[1.12] text-[var(--appraisal-journey-muted)] transition-colors duration-300 group-hover:text-[var(--appraisal-ink)] sm:text-[21px] lg:text-[23px]">
+                    <h3 className="relative z-10 mt-[32px] max-w-[265px] text-[19px] font-bold leading-[1.15] text-[var(--appraisal-journey-muted)] transition-colors duration-300 group-hover:text-[var(--appraisal-ink)] sm:text-[21px] lg:text-[22px] xl:text-[23px]">
                       {step.title}
                     </h3>
-                    <p className="mt-[18px] max-w-[275px] text-[12px] leading-[1.72] text-[var(--appraisal-copy)] sm:text-[13px] lg:text-[15px]">{step.copy}</p>
+                    <p className="relative z-10 mt-[16px] max-w-[275px] text-[12px] leading-[1.72] text-[var(--appraisal-copy)] sm:text-[13px] lg:text-[14px] xl:text-[15px]">{step.copy}</p>
                   </article>
                 ))}
               </div>
@@ -485,47 +453,103 @@ export default function AppraisalPage() {
           </div>
         </section>
 
-        <section className="overflow-hidden bg-[var(--appraisal-reviews-bg)] py-[78px] sm:py-[98px] lg:h-[1038px] lg:pb-[120px] lg:pt-[120px]">
+        <section className="overflow-hidden bg-[var(--appraisal-reviews-bg)] py-[78px] sm:py-[98px] lg:pb-[120px] lg:pt-[120px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="mx-auto max-w-[1480px]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.02em] text-[var(--appraisal-accent)] sm:text-[11px] lg:text-[12px]">Testimonials</p>
-              <h2 className="mt-[10px] max-w-[690px] text-[34px] font-bold uppercase leading-[1.03] tracking-[-0.024em] text-[var(--appraisal-ink)] sm:text-[43px] lg:text-[50px]">
-                What Do People Praise About PLABcoach?
-              </h2>
-
-              <div className="relative mt-[94px] hidden h-[542px] md:block lg:mt-[126px]">
-                {reviews.map((review, index) => (
-                  <ReviewCard key={review.name} review={review} position={getCircularPosition(index, reviewIndex)} />
-                ))}
-
-                <div className="absolute bottom-[0px] left-1/2 z-40 flex -translate-x-1/2 gap-[56px]">
-                  <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="grid h-[52px] w-[52px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_8px_18px_rgba(125,195,255,0.24)] transition duration-200 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--appraisal-slider-arrow)] focus-visible:ring-offset-2">
-                    <ArrowIcon direction="left" />
-                  </button>
-                  <button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="grid h-[52px] w-[52px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_8px_18px_rgba(125,195,255,0.24)] transition duration-200 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--appraisal-slider-arrow)] focus-visible:ring-offset-2">
-                    <ArrowIcon direction="right" />
-                  </button>
-                </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.02em] text-[var(--appraisal-accent)] sm:text-[11px] lg:text-[12px]">Testimonials</p>
+                <h2 className="mt-[10px] max-w-[690px] text-[34px] font-bold uppercase leading-[1.03] tracking-[-0.024em] text-[var(--appraisal-ink)] sm:text-[43px] lg:text-[50px]">
+                  What Do People Praise About PLABcoach?
+                </h2>
               </div>
 
-              <div className="mt-[70px] md:hidden">
-                <div className="relative mx-auto max-w-[520px] rounded-[20px] bg-[var(--appraisal-review-card)] px-[20px] pb-[26px] pt-[78px] shadow-[0_18px_42px_rgba(29,48,97,0.12)]">
-                  <div className="absolute left-[20px] top-[-42px] h-[105px] w-[105px] overflow-hidden rounded-full bg-white shadow-sm">
-                    <Image src={reviews[reviewIndex].image} alt={reviews[reviewIndex].name} fill sizes="105px" className="object-cover object-top" />
-                  </div>
-                  <div className="absolute right-[14px] top-[16px] flex gap-[5px] rounded-full bg-[var(--appraisal-review-stars-bg)] px-[12px] py-[7px]">
-                    {Array.from({ length: 5 }).map((_, index) => <span key={index} className="text-[18px] leading-none text-[var(--appraisal-star)]">★</span>)}
-                  </div>
-                  <div className="ml-[110px] -mt-[45px] mb-[34px]">
-                    <p className="text-[16px] font-bold text-[var(--appraisal-ink)]">{reviews[reviewIndex].name}</p>
-                    <p className="mt-[5px] text-[10px] font-semibold text-[var(--appraisal-card-copy)]">{reviews[reviewIndex].role}</p>
-                  </div>
-                  <p className="text-[12px] leading-[1.7] text-[var(--appraisal-review-copy)]">{reviews[reviewIndex].text}</p>
-                  <p className="mt-[24px] text-[10px] font-bold text-[var(--appraisal-ink)]">Country: {reviews[reviewIndex].country}</p>
+              <div
+                className="relative mx-auto mt-[62px] max-w-[1320px] select-none touch-pan-y sm:mt-[78px] lg:mt-[92px]"
+                onTouchStart={(event) => handleSwipeStart(event.touches[0].clientX)}
+                onTouchMove={(event) => handleSwipeMove(event.touches[0].clientX)}
+                onTouchEnd={handleSwipeEnd}
+                onPointerDown={(event) => {
+                  if (event.pointerType === "mouse") handleSwipeStart(event.clientX);
+                }}
+                onPointerMove={(event) => {
+                  if (event.pointerType === "mouse" && swipeStartX.current !== null) handleSwipeMove(event.clientX);
+                }}
+                onPointerUp={(event) => {
+                  if (event.pointerType === "mouse") handleSwipeEnd();
+                }}
+                onPointerLeave={(event) => {
+                  if (event.pointerType === "mouse" && swipeStartX.current !== null) handleSwipeEnd();
+                }}
+              >
+                <div className="relative flex min-h-[560px] items-center justify-center overflow-hidden px-[8px] py-[22px] sm:min-h-[590px] lg:min-h-[620px] lg:px-[54px]">
+                  {reviews.map((review, index) => {
+                    const rawOffset = index - reviewIndex;
+                    const half = Math.floor(reviews.length / 2);
+                    let offset = rawOffset;
+                    if (offset > half) offset -= reviews.length;
+                    if (offset < -half) offset += reviews.length;
+
+                    const isActive = offset === 0;
+                    const isNear = Math.abs(offset) === 1;
+                    const isVisible = Math.abs(offset) <= 1;
+
+                    return (
+                      <article
+                        key={review.name}
+                        className={`absolute left-1/2 top-1/2 w-[86%] max-w-[760px] rounded-[26px] bg-[var(--appraisal-review-card)] px-[22px] pb-[30px] pt-[76px] shadow-[0_24px_64px_rgba(29,48,97,0.13)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:w-[72%] sm:px-[38px] sm:pb-[38px] sm:pt-[86px] lg:w-[58%] lg:max-w-[720px] lg:px-[48px] lg:pb-[44px] lg:pt-[92px] ${isVisible ? "pointer-events-auto" : "pointer-events-none"}`}
+                        style={{
+                          transform: `translate(-50%, -50%) translateX(${offset * 72}%) scale(${isActive ? 1 : isNear ? 0.82 : 0.7})`,
+                          opacity: isActive ? 1 : isNear ? 0.52 : 0,
+                          zIndex: isActive ? 30 : isNear ? 20 : 10,
+                        }}
+                      >
+                        <div className="absolute left-[22px] top-[-46px] h-[106px] w-[106px] overflow-hidden rounded-full bg-white shadow-[0_8px_22px_rgba(29,48,97,0.12)] sm:left-[38px] sm:top-[-52px] sm:h-[122px] sm:w-[122px] lg:left-[48px] lg:h-[128px] lg:w-[128px]">
+                          <Image src={review.image} alt={review.name} fill sizes="128px" className="object-cover object-top" />
+                        </div>
+
+                        <div className="absolute right-[18px] top-[18px] flex gap-[4px] rounded-full bg-[var(--appraisal-review-stars-bg)] px-[12px] py-[8px] sm:right-[28px] sm:top-[24px] sm:gap-[6px] sm:px-[16px]" aria-label="5 star review">
+                          {Array.from({ length: 5 }).map((_, starIndex) => (
+                            <span key={starIndex} className="text-[17px] leading-none text-[var(--appraisal-star)] sm:text-[21px]">★</span>
+                          ))}
+                        </div>
+
+                        <div className="mb-[26px] ml-[118px] min-h-[42px] sm:mb-[30px] sm:ml-[140px] lg:ml-[148px]">
+                          <p className="text-[17px] font-bold leading-none text-[var(--appraisal-ink)] sm:text-[20px]">{review.name}</p>
+                          <p className="mt-[7px] text-[11px] font-semibold text-[var(--appraisal-card-copy)] sm:text-[13px]">{review.role}</p>
+                        </div>
+
+                        <p className={`text-[12px] leading-[1.72] text-[var(--appraisal-review-copy)] transition-opacity duration-300 sm:text-[13px] lg:text-[14px] ${isActive ? "opacity-100" : "opacity-70"}`}>{review.text}</p>
+                        <p className="mt-[26px] text-[11px] font-bold text-[var(--appraisal-ink)] sm:text-[12px]">Country: {review.country}</p>
+                      </article>
+                    );
+                  })}
                 </div>
-                <div className="mt-[32px] flex justify-center gap-[18px]">
-                  <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="grid h-[44px] w-[44px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white"><ArrowIcon direction="left" /></button>
-                  <button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="grid h-[44px] w-[44px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white"><ArrowIcon direction="right" /></button>
+
+                <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="absolute left-[0px] top-1/2 z-40 hidden h-[50px] w-[50px] -translate-y-1/2 place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:-translate-y-[55%] hover:brightness-105 sm:grid lg:left-[10px]">
+                  <ArrowIcon direction="left" />
+                </button>
+                <button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="absolute right-[0px] top-1/2 z-40 hidden h-[50px] w-[50px] -translate-y-1/2 place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:-translate-y-[55%] hover:brightness-105 sm:grid lg:right-[10px]">
+                  <ArrowIcon direction="right" />
+                </button>
+
+                <div className="mt-[4px] flex items-center justify-center gap-[14px] sm:mt-[10px]">
+                  <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="grid h-[44px] w-[44px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white sm:hidden">
+                    <ArrowIcon direction="left" />
+                  </button>
+                  <div className="flex items-center gap-[8px]">
+                    {reviews.map((review, index) => (
+                      <button
+                        key={review.name}
+                        type="button"
+                        aria-label={`Go to review ${index + 1}`}
+                        onClick={() => setReviewIndex(index)}
+                        className={`h-[8px] rounded-full transition-all duration-300 ${index === reviewIndex ? "w-[26px] bg-[var(--appraisal-slider-arrow)]" : "w-[8px] bg-[var(--appraisal-journey-line)]/45"}`}
+                      />
+                    ))}
+                  </div>
+                  <button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="grid h-[44px] w-[44px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white sm:hidden">
+                    <ArrowIcon direction="right" />
+                  </button>
                 </div>
               </div>
             </div>
