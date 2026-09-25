@@ -284,6 +284,7 @@ function PathwayVisual({ steps }: { steps: PathwayStep[] }) {
 
 export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const plansHref = course.subscribeHref ?? `/course-plan?course=${encodeURIComponent(course.slug)}`;
+  const contactHref ="/contact-us";
   const plab1SyllabusHref = course.syllabusHref ?? "";
   const importantDatesHref= "/important-exam";
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -501,7 +502,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                     <p className="mt-[14px] text-[13px] leading-[1.65] text-[var(--course-detail-copy)] sm:text-[14px]">
                       {course.faqCta.text}
                     </p>
-                    <SubscribeButton href={plansHref} className="mt-[22px] h-[48px] rounded-[10px] px-[24px]">
+                    <SubscribeButton href={contactHref} className="mt-[22px] h-[48px] rounded-[10px] px-[24px]">
                       {course.faqCta.buttonLabel}
                     </SubscribeButton>
                   </div>

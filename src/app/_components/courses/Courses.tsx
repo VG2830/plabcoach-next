@@ -51,7 +51,7 @@ const ukCourses: CourseItem[] = [
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/courses/plab-2-ukmla",
+    href: "/courses/plab-2-ukmla-cpsa",
   },
 ];
 
@@ -72,7 +72,7 @@ const irelandCourses: CourseItem[] = [
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/courses/pres-3-osce",
+    href: "/courses/pres-3",
   },
 ];
 

@@ -268,7 +268,7 @@ const relatedExamsDefault: RelatedExam[] = [
       { label: "plab-2-ukmla-cpsa", variant: 1 },
     ],
     image: "/plab_2_courses_img.webp",
-    href: "/courses/plab-2-ukmla",
+    href: "/courses/plab-2-ukmla-cpsa",
   },
   {
     title: "PRES 2 (Ireland)",
@@ -448,7 +448,7 @@ const comparisonPlab2: ComparisonTable = {
     },
   ],
   footerText:
-    "/courses/pres-3-osce",
+    "/courses/pres-3",
 };
 
 const tocPres2: TocItem[] = [
@@ -484,6 +484,7 @@ const sectionsPres2: CourseSection[] = [
     heading: "PRES 2 Format & Structure",
     paragraphs: [
       "● Question format: Multiple-choice questions, based on clinical scenarios.",
+      "● Duration: Approximately 3 hours",
       "● Delivery: Written examination",
       "● Content areas:Obstetrics & gynaecology,Paediatrics,Psychiatry,Surgery,Medicine / general practice"
     ],
@@ -505,9 +506,15 @@ const sectionsPres2: CourseSection[] = [
     heading: "Eligibility & Registration Process",
     paragraphs: [
       "● Primary medical qualification from a school outside the EU/EEA/Switzerland.",
-      "No qualifying exemption (e.g. relevant higher qualification, equivalent internship, or accepted alternative exam pass)",
+      "● No qualifying exemption (e.g. relevant higher qualification, equivalent internship, or accepted alternative exam pass)",
       "● English language evidence: IELTS Academic (typically 7.5 overall, minimum 7.0 in each component) or OET Grade B.",
-      "● Credentials verified via EPIC (Education Commission for Foreign Medical Graduates' verification service) before an eligibility decision is issued"
+      "● Credentials verified via EPIC (Education Commission for Foreign Medical Graduates' verification service) before an eligibility decision is issued",
+      "Registration Process: ",
+      "● Submit application and credentials for IMC eligibility review",
+      "● Credentials verified via EPIC ",
+      "● Eligibility confirmed ",
+      "● Booking link issued for PRES 2",
+      "● Sit and pass PRES 2 before PRES 3"
     ],
   },
   {
@@ -609,9 +616,9 @@ const sectionsPres3: CourseSection[] = [
   },
   {
     id: "who-needs",
-    heading: "Who Needs PRES 3",
+    heading: "Who Needs to Take PRES 3?",
     paragraphs: [
-      "Any candidate who has passed PRES 2 and does not hold an accepted exemption must sit and pass PRES 3 to proceed toward Irish Medical Council registration. Candidates who hold a PLAB 2 pass should check the Irish Medical Council's current position on PLAB 2 recognition before assuming automatic exemption from PRES 3 — as of mid-2026 this recognition was a proposed rule change"
+      "Any candidate who has passed PRES 2 and does not hold an accepted exemption must sit and pass PRES 3 to proceed toward Irish Medical Council registration. Candidates who hold a PLAB 2 pass should check the Irish Medical Council's current position on PLAB 2 recognition before assuming automatic exemption from PRES 3 — as of mid-2026 this recognition was a proposed rule change,not yet confirmed."
     ],
   },
   {
@@ -672,7 +679,10 @@ const sectionsPres3: CourseSection[] = [
       "● SmartNotes covering all assessed domains — communication, data interpretation, and practical skills",
       "● Self-Paced Mastery Videos for flexible, on-your-own-schedule preparation",
       "● Live Coaching, available both online and offline, with manikin-based practical skills training",
-      "● Mock exams — OSCE mocks held live in Dublin, data interpretation mocks available online"
+      "● Mock exams — OSCE mocks held live in Dublin, data interpretation mocks available online",
+      "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
+      "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
+
     ],
   },
   {
@@ -712,12 +722,12 @@ const faqsPres3: FAQItem[] = [
   {
     question: "How many stations does PRES 3 have?",
     answer:
-      "Approximately 12–16 stations, each around 8 minutes — ⚠ confirm the current exact figure on medicalcouncil.ie.",
+      "Approximately 12–16 stations, each around 8 minutes.",
   },
   {
     question: "What is the PRES 3 fee??",
     answer:
-      "Reported at approximately €1,500 in recent published figures — ⚠ confirm current fee on medicalcouncil.ie, separate from travel/accommodation costs.",
+      "Reported at approximately €1,500 in recent published figures.",
   },
 ];
 const comparisonPres3: ComparisonTable = {
@@ -740,9 +750,10 @@ const comparisonPres3: ComparisonTable = {
       colA: "Formal recognition of PLAB 2 as alternative proposed — verify current status",
       colB: "Irish Medical Council has proposed recognising PLAB 2 as a PRES 3 alternative — not yet confirmed",
     },
+    { feature:" Venue", colA: "Dublin only, in person", colB: "Manchester only, in person" },
   ],
   footerText:
-    "",
+    "/courses/plab-2-ukmla-cpsa",
 };
 
 const tocNca: TocItem[] = [
@@ -1290,14 +1301,20 @@ const pathwayUkPlab2 = [
 ];
 
 const pathwayIrelandPres = [
-  { id: "p1", number: "01", label: "Check IMC / PRES eligibility", icon: "eligibility" as const },
-  { id: "p2", number: "02", label: "Pass PRES 2 (or exempt via PLAB 1)", icon: "pass-pres2" as const },
+  { id: "p1", number: "01", label: "Check PRES eligibility", icon: "eligibility" as const },
+  { id: "p2", number: "02", label: "Pass PRES 2", icon: "pass-pres2" as const },
   { id: "p3", number: "03", label: "Prepare for PRES 3", icon: "prepare-pres3" as const },
   { id: "p4", number: "04", label: "Pass PRES 3", icon: "pass-pres3" as const },
-  { id: "p5", number: "05", label: "Apply for Irish Medical Council intern / NCHD registration", icon: "apply-imc" as const },
-  { id: "p6", number: "06", label: "Start your Irish medical career", icon: "start-career" as const },
+  { id: "p5", number: "05", label: "Apply for Irish Medical Council registration", icon: "apply-imc" as const },
+  { id: "p6", number: "06", label: "Start your Ireland medical career", icon: "start-career" as const },
 ];
-
+const pathwayPres3 = [
+  { id: "p1", number: "01", label: "Pass PRES 2", icon: "pass-pres2" as const },
+  { id: "p2", number: "02", label: "Prepare for PRES 3", icon: "prepare-pres3" as const },
+  { id: "p3", number: "03", label: "Pass PRES 3", icon: "pass-pres3" as const },
+  { id: "p4", number: "04", label: "Apply for Irish Medical Council registration", icon: "apply-imc" as const },
+  { id: "p5", number: "05", label: "Start your Ireland medical career", icon: "start-career" as const },
+];
 const pathwayUkFoundation = [
   { id: "p1", number: "01", label: "Check UKFP / GMC eligibility", icon: "eligibility" as const },
   { id: "p2", number: "02", label: "Prepare for NCA & PSA", icon: "prepare-nca" as const },
@@ -1322,7 +1339,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     comparison: comparisonPlab1,
     relatedExams: relatedExamsDefault,
@@ -1351,7 +1368,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     comparison: comparisonPlab2,
     relatedExams: [
@@ -1360,10 +1377,10 @@ export const courseDetails = {
         description: "",
         tags: [
           { label: "Comparison", variant: 2 },
-          { label: "pres-3-osce", variant: 2 },
+          { label: "pres-3", variant: 2 },
         ],
         image: "/ireland_course.webp",
-        href: "/courses/pres-3-osce",
+        href: "/courses/pres-3",
       },
       {
         title: "UKFPO-NCA / UKFPO-PSA",
@@ -1394,7 +1411,7 @@ export const courseDetails = {
     ctaTitle: "READY TO ACE PLAB 2?",
     ctaCopy: "Choose your learning path and start your PLAB 2 / UKMLA clinical preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PLAB 2 Preparation",
-    subscribeHref: "/course-plan?course=plab-2-ukmla",
+    subscribeHref: "/course-plan?course=plab-2-ukmla-cpsa",
     plabCoachHelpCta:"PLAB 2 Course",
     plabCoachHelpCtaHref:"https://plabcoach.com/plab2-ukmla-cpsa-subscription/"
   },
@@ -1412,7 +1429,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     comparison: {
       heading: "PRES 2 vs PLAB 1 Comparison",
@@ -1436,22 +1453,22 @@ export const courseDetails = {
         },
       ],
       footerText:
-        "",
+        "/courses/plab-1-ukmla-akt",
     },
     relatedExams: [
       {
-        title: "PRES 3 — OSCE (Ireland)",
-        description: "required practical stage after PRES 2 / exemption",
+        title: "PRES 3 ",
+        description: "Required next exam after passing PRES 2",
         tags: [
           { label: "Next step", variant: 2 },
-          { label: "pres-3-osce", variant: 2 },
+          { label: "pres-3", variant: 2 },
         ],
         image: "/ireland_course.webp",
-        href: "/courses/pres-3-osce",
+        href: "/courses/pres-3",
       },
       {
         title: "PLAB 1 / UKMLA-AKT",
-        description: "alternative/parallel UK GMC pathway",
+        description: "Comparison/alternative pathway for UK-focused candidates",
         tags: [
           { label: "Comparison", variant: 1 },
           { label: "plab-1-ukmla-akt", variant: 1 },
@@ -1459,26 +1476,16 @@ export const courseDetails = {
         image: "/plab1_course.webp",
         href: "/courses/plab-1-ukmla-akt",
       },
-      // {
-      //   title: "UKFPO-NCA / UKFPO-PSA",
-      //   description: "relevant if also targeting UK Foundation Programme alongside Ireland",
-      //   tags: [
-      //     { label: "Parallel route", variant: 3 },
-      //     { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
-      //   ],
-      //   image: "/uk_course.webp",
-      //   href: "/courses/national-clinical-assessment",
-      // },
     ],
     pathway: pathwayIrelandPres,
     videoId: "cfrFBCcj840",
     videoTitle: "Crack PRES2 with Confidence",
     ctaTitle: "READY TO ACE PRES 2?",
     ctaCopy: "Choose your learning path and start your PRES Level 2 preparation with PLABCOACH today.",
-    subscribeButtonLabel: "Start PRES 2 Preparation",
-    subscribeHref: "/course-plan?course=pres-2",
-    plabCoachHelpCta:"",
-    plabCoachHelpCtaHref:""
+    subscribeButtonLabel: "Subscribe to SmartQBank for PRES 2",
+    subscribeHref: "https://plabcoach.com/smartqbank-pres2/",
+    plabCoachHelpCta:"Subscribe to SmartQBank for PRES 2",
+    plabCoachHelpCtaHref:"https://plabcoach.com/smartqbank-pres2/"
   },
   "pres-3-osce": {
     slug: "pres-3-osce",
@@ -1494,10 +1501,20 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     comparison: comparisonPres3,
     relatedExams: [
+       {
+        title: "PLAB 2 / UKMLA-CPSA",
+        description: "Comparison/alternative pathway",
+        tags: [
+          { label: "Comparison", variant: 1 },
+          { label: "plab-2-ukmla-cpsa", variant: 1 },
+        ],
+        image: "/plab_2_courses_img.webp",
+        href: "/courses/plab-2-ukmla-cpsa",
+      },
       {
         title: "PRES 2 ",
         description: "written exam required or exempted before PRES 3",
@@ -1507,37 +1524,17 @@ export const courseDetails = {
         ],
         image: "/ireland_course.webp",
         href: "/courses/pres-2",
-      },
-      {
-        title: "PLAB 2 / UKMLA-CPSA",
-        description: "UK GMC practical exam for comparison / parallel planning",
-        tags: [
-          { label: "Comparison", variant: 1 },
-          { label: "plab-2-ukmla-cpsa", variant: 1 },
-        ],
-        image: "/plab_2_courses_img.webp",
-        href: "/courses/plab-2-ukmla",
-      },
-      // {
-      //   title: "UKFPO-NCA / UKFPO-PSA",
-      //   description: "relevant if also applying to UK Foundation Programme",
-      //   tags: [
-      //     { label: "Parallel route", variant: 3 },
-      //     { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
-      //   ],
-      //   image: "/ukfpo_courses__indv_img.webp",
-      //   href: "/courses/national-clinical-assessment",
-      // },
+      }
     ],
-    pathway: pathwayIrelandPres,
+    pathway: pathwayPres3,
     videoId: "LXPbAtgIitI",
     videoTitle: "Preparing Doctors for Safe, Ethical & Effective Medical Practice in Ireland",
     ctaTitle: "READY TO ACE PRES 3?",
     ctaCopy: "Choose your learning path and start your preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PRES 3 Preparation",
-    subscribeHref: "/course-plan?course=pres-3-osce",
-    plabCoachHelpCta:"",
-    plabCoachHelpCtaHref:""
+    subscribeHref: "/course-plan?course=pres-3",
+    plabCoachHelpCta:"Subscribe — PRES 3 OSCE & Data Interpretation",
+    plabCoachHelpCtaHref:"https://plabcoach.com/pres-3-osce-data-interpretation-subscription-plans/"
   },
   "national-clinical-assessment": {
     slug: "national-clinical-assessment",
@@ -1553,7 +1550,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     relatedExams: [
       {
@@ -1574,7 +1571,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-2-ukmla",
+        href: "/courses/plab-2-ukmla-cpsa",
       },
       // {
       //   title: "PLAB 2 / UKMLA-CPSA",
@@ -1611,7 +1608,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     relatedExams: [
       {
@@ -1669,7 +1666,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     relatedExams: [
       {
@@ -1727,7 +1724,7 @@ export const courseDetails = {
     faqCta: {
       title: "Still have a questions?",
       text: "Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!",
-      buttonLabel: "Start Learning",
+      buttonLabel: "Contact us",
     },
     relatedExams: [
       {

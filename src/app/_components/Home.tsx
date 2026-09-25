@@ -81,7 +81,7 @@ const exams = [
     title: "PLAB 2 / UKMLA-CPSA",
     subtitle: "Clinical OSCE for UK GMC registration",
     icon: "/plab2_exam_icon.svg",
-    href: "/courses/plab-2-ukmla",
+    href: "/courses/plab-2-ukmla-cpsa",
   },
   {
     title: "PRES 2",
@@ -93,7 +93,7 @@ const exams = [
     title: "PRES 3",
     subtitle: "OSCE + data interpretation for Irish Medical Council (IMC) registration",
     icon: "/pres3_exam_icon.svg",
-    href: "/courses/pres-3-osce",
+    href: "/courses/pres-3",
   },
   {
     title: "UKFPO-NCA",
