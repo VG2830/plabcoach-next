@@ -372,9 +372,9 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
       <aside className="w-full lg:sticky lg:top-[calc(var(--header-height)+24px)] lg:ml-[calc((100vw-var(--container-max))*-0.5)] lg:w-[calc(454px+(100vw-var(--container-max))*0.5)]">
         <div className="relative overflow-hidden rounded-[24px] bg-[var(--course-detail-toc-bg)] px-5 py-6 shadow-[0_18px_40px_rgba(23,36,90,0.06)] sm:px-8 sm:py-9 lg:w-full lg:rounded-l-none lg:rounded-r-[36px] lg:px-0 lg:py-[44px]">
           <div className="lg:pl-[calc((100vw-var(--container-max))*0.5)]">
-            <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">
+            {/* <p className="text-[11.5px] font-bold uppercase tracking-[0.08em] text-[var(--course-detail-label)]">
               TOC
-            </p>
+            </p> */}
             <h2 className="mt-[6px] text-[22px] font-bold leading-[1.15] tracking-[-0.016em] text-[var(--course-detail-heading)] sm:text-[26px] lg:text-[34px]">
               Table of Contents
             </h2>
@@ -557,7 +557,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                   </div>
                 </div>
 
-                {course.comparison.rows.map((row, i) => (
+                {course.comparison.rows.map((row) => (
                   <div
                     key={row.feature}
                     className="grid grid-cols-3 border-t border-[var(--course-detail-comparison-table-border)] bg-[#F6F6F6]"
@@ -576,16 +576,19 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
               </div>
 
               {course.comparison.footerText && (
-                // <p className="mt-[28px] max-w-[1100px] text-[12px] leading-[1.65] text-[#8a8a8a] sm:mt-[32px] sm:text-[13px]">
-                //   {course.comparison.footerText}
-                // </p>
-                <SubscribeButton
-                href={course.comparison.footerText}
-                className="mt-[28px] h-[48px] w-full px-[24px] sm:w-auto"
-              >
-               {course.comparison.colBHeader}
-              </SubscribeButton>
+                <p className="mt-[28px] max-w-[1100px] text-[12px] leading-[1.65] text-[#8a8a8a] sm:mt-[32px] sm:text-[13px]">
+                  {course.comparison.footerText}
+                </p>
+          
               )}
+                {course.comparison.footerBtnUrl && (
+                  <SubscribeButton
+                    href={course.comparison.footerBtnUrl}
+                    className="mt-[28px] h-[48px] w-full px-[24px] sm:w-auto"
+                  >
+                    {course.comparison.colBHeader}
+                  </SubscribeButton>
+                )}
             </div>
           </section>
         )}

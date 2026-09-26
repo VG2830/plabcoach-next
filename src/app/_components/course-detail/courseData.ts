@@ -30,6 +30,7 @@ export type ComparisonTable = {
   colBColor?: string;
   rows: ComparisonRow[];
   footerText?: string;
+  footerBtnUrl?: string;
 };
 
 export type RelatedExam = {
@@ -138,6 +139,7 @@ const sectionsPlab1: CourseSection[] = [
     id: "syllabus",
     heading: "PLAB 1 Syllabus / Blueprint",
     paragraphs: [
+      "PLAB 1 content is mapped to the GMC's MLA content map, which organises clinical knowledge by presentation (e.g. chest pain, breathlessness) rather than by specialty alone. Broad areas covered include:",
       "● Medicine (cardiology, respiratory, gastroenterology, endocrinology, renal, neurology, haematology, infectious disease).",
       "● Surgery and peri-operative care",
       "● Obstetrics & gynaecology",
@@ -156,15 +158,17 @@ const sectionsPlab1: CourseSection[] = [
       "● English language evidence: IELTS Academic (typically 7.5 overall, minimum 7.0 in each component) or OET Grade B.",
       "● A verified GMC Online account",
       "● Primary qualification verified via EPIC (or equivalent) where required",
-      "● Booking is done directly through the candidate's GMC Online account once eligibility is confirmed"
+      "● Booking is done directly through the candidate's GMC Online account once eligibility is confirmed",
+      "Registration Process:",
+       "Create GMC Online account → Upload and verify primary qualification and English language evidence → Wait for eligibility confirmation → Book an available PLAB 1 seat when released."
     ],
   },
   {
     id: "dates",
     heading: "PLAB 1 Dates & Fees",
     paragraphs: [
-      "PLAB 1 sittings are published in advance by the GMC with four or more exam dates per calendar year across UK and overseas centres. The booking window usually opens several months before each sitting and places can fill quickly.",
-      "The current examination fee is set by the GMC and reviewed annually. Overseas centre fees may differ slightly due to local test-centre costs. Candidates should always check the latest dates, venues and fees directly on the GMC's official PLAB pages before booking.",
+      " PLAB 1 seats are released periodically (historically quarterly for international centres) and often fill within minutes in high-demand markets (India, Pakistan, Nigeria, UAE). ",
+     
     ],
   },
   {
@@ -183,7 +187,7 @@ const sectionsPlab1: CourseSection[] = [
     heading: "How PLABcoach Helps",
     paragraphs: [
       "PLABcoach's PLAB 1 / UKMLA-AKT preparation is built around three components:",
-      "● SmartQBank — 5,000+ high-yield SBA questions",
+      "● SmartQBank — 5,000+ high-yield SBA questions mapped to the current MLA content map",
       "● SmartNotes — rapid revision summaries organised by clinical presentation",
       "● SmartMock — unlimited realistic 180-question, 180-minute practice exams",
       "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK licensing exams.",
@@ -257,8 +261,9 @@ const comparisonPlab1: ComparisonTable = {
       colB: "Irish Medical Council recognises PLAB 1 pass as PRES 2-equivalent",
     },
   ],
-  footerText:
+  footerBtnUrl:
     "/courses/pres-2",
+    footerText:"Candidates targeting UK GMC registration primarily should sit PLAB 1; candidates targeting Ireland who already hold a PLAB 1 pass do not need to separately sit PRES 2.",
 
 };
 
@@ -312,7 +317,8 @@ const sectionsPlab2: CourseSection[] = [
     id: "what-is",
     heading: "What is PLAB 2?",
     paragraphs: [
-      "PLAB 2 is the practical, clinical component of the GMC's PLAB assessment — an Objective Structured Clinical Examination (OSCE) that tests whether an international medical graduate can safely manage real clinical encounters, not just recall knowledge. It is sat only after passing PLAB 1, and only at the GMC's dedicated assessment centre in Manchester; unlike PLAB 1, it cannot be taken at any international venue."
+      "PLAB 2 is the practical, clinical component of the GMC's PLAB assessment — an Objective Structured Clinical Examination (OSCE) that tests whether an international medical graduate can safely manage real clinical encounters, not just recall knowledge. It is sat only after passing PLAB 1, and only at the GMC's dedicated assessment centre in Manchester; unlike PLAB 1, it cannot be taken at any international venue.",
+      "Since its alignment with the MLA content map, PLAB 2 is delivered to the same clinical and professional skills standard as the UKMLA Clinical and Professional Skills Assessment (CPSA) that UK medical graduates sit — the underlying competency bar is shared, even though IMGs continue to book an exam named PLAB 2."
     ],
   },
   {
@@ -351,15 +357,17 @@ const sectionsPlab2: CourseSection[] = [
       "● A valid PLAB 1 pass, within the current 2-year validity window",
       "● Primary medical qualification already verified (carried over from PLAB 1 booking)",
       "● A verified GMC Online account with PLAB 2 booking access unlocked after PLAB 1 results are issued",
-      "● Candidates are responsible for securing any visa required to travel to and sit the exam in Manchester"
+      "● Candidates are responsible for securing any visa required to travel to and sit the exam in Manchester",
+      "Registration Process:",
+      "PLAB 1 pass confirmed → PLAB 2 booking option appears in GMC Online → select an available Manchester date → pay the fee to confirm the seat."
     ],
   },
   {
     id: "dates",
     heading: "PLAB 2 Dates & Fees",
     paragraphs: [
-      "PLAB 2 is run at dedicated OSCE centres in the UK, primarily in Manchester. Sittings occur regularly across the year with dates published in advance on the GMC website. Candidates should allow enough notice to plan travel, accommodation, visa (if needed) and final preparation before the exam date.",
-      "Because PLAB 2 can only be sat in the UK, international candidates should also factor in any visa requirements, travel costs and the time needed to practice their structured approach to stations after arrival in the UK.",
+      "PLAB 2 fee: £1,036, effective from 1 April 2026-this is more consistently reported across sources than the PLAB 1 fee,since GMC revises fees annually each April.",
+      "PLAB 2 runs year-round in Manchester (unlike PLAB 1's periodic international release cycle), but seats are still limited and candidates should book as early as their PLAB 1 result and 2-year window allow.",
     ],
   },
   {
@@ -382,6 +390,12 @@ const sectionsPlab2: CourseSection[] = [
       "● Full-circuit simulated mock exams under real 8-minute timing",
       "● Communication and breaking-bad-news station coaching, delivered by NHS-experienced instructors",
       "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK licensing exams.",
+      "PLAB 2 Comprehensive Course 10 Days",
+      "Our PLAB 2 Comprehensive Course is designed to provide structured preparation through a combination of online teaching, hands-on clinical skills training, and intensive OSCE practice.The programme includes:",
+      "4 Days of Online Training covering Data Interpretation, History Taking, and Communication Skills.",
+      "2 Days of LIVE OSCE Training with expert faculty guidance and real-exam focused scenarios.",
+      "1 Day of Supervised SIMMAN Practice to enhance confidence in managing acute and emergency scenarios.",
+      "3 Days of OSCE Practice Sessions with Manikins to develop practical skills and improve examination technique in a simulated clinical environment.",
       "While no course can guarantee an exam result, structured, feedback-driven OSCE practice can improve exam readiness and help candidates avoid the mistakes that most often lead to repeat attempts."
     ],
   },
@@ -450,8 +464,9 @@ const comparisonPlab2: ComparisonTable = {
       colB: "Irish Medical Council recognises PLAB 1 pass as PRES 2-equivalent",
     },
   ],
-  footerText:
+  footerBtnUrl:
     "/courses/pres-3",
+    footerText:" Candidates targeting UK GMC registration should sit PLAB 2 regardless; candidates also considering Ireland should check the Irish Medical Council's current position on PLAB 2 recognition before assuming exemption from PRES 3, since this is not yet finalised.",
 };
 
 const tocPres2: TocItem[] = [
@@ -524,8 +539,7 @@ const sectionsPres2: CourseSection[] = [
     id: "dates",
     heading: "PRES 2 Dates & Fees",
     paragraphs: [
-      "The Irish Medical Council normally runs PRES diets on a scheduled calendar each year, often with two or more sittings. Exact dates, venues and closing dates are published in the current PRES information booklet on the IMC website. The exam is run in Dublin and / or in approved test centres.",
-      "Fees for PRES 2 and PRES 3 are set separately and are published each diet. Candidates should budget for both written and clinical components as well as any travel or visa costs if travelling to Ireland from abroad.",
+      "The Medical Council Irish publishes PRES sitting dates at the start of each calendar year.",
     ],
   },
   {
@@ -755,8 +769,9 @@ const comparisonPres3: ComparisonTable = {
     },
     { feature:" Venue", colA: "Dublin only, in person", colB: "Manchester only, in person" },
   ],
-  footerText:
+  footerBtnUrl:
     "/courses/plab-2-ukmla-cpsa",
+    footerText:"Candidates already holding a PLAB 2 pass should check the Irish Medical Council's current published position on recognition before booking PRES 3, given limited PRES 3 sitting availability; candidates without a PLAB 2 pass should proceed with PRES 3 directly once PRES 2 is complete",
 };
 
 const tocNca: TocItem[] = [
@@ -841,6 +856,9 @@ const sectionsNca: CourseSection[] = [
       "● SmartNotes covering the UKFPO-NCA station format",
       "● Self-Paced Mastery Videos for flexible preparation",
       "● Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli, online and offline",
+      "● SmartMocks Online & Offline",
+      "● Manikin Practice - Practice till your Exam",
+      "● One Day Crash Course",
       "While no course can guarantee an exam result, structured station practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
     ],
   },
@@ -1292,11 +1310,12 @@ const COMMON_HERO_IMAGE = "/courses_individual_hero_image.webp";
 
 const pathwayUkPlab = [
   { id: "p1", number: "01", label: "Check PLAB eligibility", icon: "eligibility" as const },
-  { id: "p2", number: "02", label: "Pass PLAB 1", icon: "pass-plab1" as const },
-  { id: "p3", number: "03", label: "Prepare for PLAB 2", icon: "prepare-plab2" as const },
-  { id: "p4", number: "04", label: "Pass PLAB 2", icon: "pass-plab2" as const },
-  { id: "p5", number: "05", label: "Apply for GMC registration", icon: "apply-registration" as const },
-  { id: "p6", number: "06", label: "Start your UK medical career", icon: "start-career" as const },
+  {id: "p2", number: "02", label: "OET /TOEFL", icon: "start-career" as const },
+  { id: "p3", number: "03", label: "Pass PLAB 1", icon: "pass-plab1" as const },
+  { id: "p4", number: "04", label: "Prepare for PLAB 2", icon: "prepare-plab2" as const },
+  { id: "p5", number: "05", label: "Pass PLAB 2", icon: "pass-plab2" as const },
+  { id: "p6", number: "06", label: "Apply for GMC registration", icon: "apply-registration" as const },
+  { id: "p7", number: "07", label: "Start your UK medical career", icon: "start-career" as const },
 ];
 
 const pathwayUkPlab2 = [
@@ -1309,11 +1328,12 @@ const pathwayUkPlab2 = [
 
 const pathwayIrelandPres = [
   { id: "p1", number: "01", label: "Check PRES eligibility", icon: "eligibility" as const },
-  { id: "p2", number: "02", label: "Pass PRES 2", icon: "pass-pres2" as const },
-  { id: "p3", number: "03", label: "Prepare for PRES 3", icon: "prepare-pres3" as const },
-  { id: "p4", number: "04", label: "Pass PRES 3", icon: "pass-pres3" as const },
-  { id: "p5", number: "05", label: "Apply for Irish Medical Council registration", icon: "apply-imc" as const },
-  { id: "p6", number: "06", label: "Start your Ireland medical career", icon: "start-career" as const },
+  { id: "p2", number: "02", label: "OET / TOEFL", icon: "start-career" as const },
+  { id: "p3", number: "03", label: "Pass PRES 2", icon: "pass-pres2" as const },
+  { id: "p4", number: "04", label: "Prepare for PRES 3", icon: "prepare-pres3" as const },
+  { id: "p5", number: "05", label: "Pass PRES 3", icon: "pass-pres3" as const },
+  { id: "p6", number: "06", label: "Apply for Irish Medical Council registration", icon: "apply-imc" as const },
+  { id: "p7", number: "07", label: "Start your Ireland medical career", icon: "start-career" as const },
 ];
 const pathwayPres3 = [
   { id: "p1", number: "01", label: "Pass PRES 2", icon: "pass-pres2" as const },
@@ -1380,8 +1400,8 @@ export const courseDetails = {
     subscribeButtonLabel: "Start PLAB 1 Preparation",
     subscribeHref: "/course-plan?course=plab-1-ukmla-akt",
     syllabusHref: "https://www.gmc-uk.org/education/medical-licensing-assessment/mla-content-map",
-    plabCoachHelpCta:"Start PLAB 1 Preparation",
-    plabCoachHelpCtaHref:"https://plabcoach.com/smartqbank/"
+    plabCoachHelpCta:"See SmartQBank Pricing",
+    plabCoachHelpCtaHref:"https://plabcoach.com/smartqbank/" 
   },
   "plab-2-ukmla": {
     slug: "plab-2-ukmla",
@@ -1487,8 +1507,9 @@ export const courseDetails = {
           colB: "PLAB 1 ≈ PRES 2 (exemption in practice)",
         },
       ],
-      footerText:
+      footerBtnUrl:
         "/courses/plab-1-ukmla-akt",
+        footerText:"Candidates targeting Ireland who don't yet hold a PLAB 1 pass should sit PRES 2 directly; candidates who already hold a PLAB 1 pass should check current IMC exemption rules before booking PRES 2, as they may not need to sit it separately.",
     },
     relatedExams: [
       {
