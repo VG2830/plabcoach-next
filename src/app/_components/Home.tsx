@@ -760,7 +760,7 @@ export default function Home() {
 
               <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
                 <Image
-                  src="/video_learning_laptop.webp"
+                  src="/video_learning_laptop_2.webp"
                   alt="PLABCoach video lesson on a laptop"
                   fill
                   sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 50vw, 900px"

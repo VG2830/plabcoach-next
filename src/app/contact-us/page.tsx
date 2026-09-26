@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
+import CourseSelect from "./_components/CourseSelect";
 
 export const metadata: Metadata = {
   title: "Contact Us | PLABCoach",
@@ -44,18 +45,18 @@ function ContactInfoCard() {
           {/* <span className="mt-[2px]"><LocationIcon /></span> */}
           <span className="mt-[2px]"><Image src="/location_icon.svg" width={17} height={23} alt="location icon" className="mt-1 h-[23px] w-[17px] shrink-0"/></span>
 
-          <p>
+          <a href="https://www.google.com/maps/search/?api=1&query=9+The+Pavilions,+Cranmore+Drive,+Shirley,+B90+4SB,+UK" target="_blank" rel="noopener noreferrer" className="hover:underline">
             9 The Pavilions, Cranmore Drive,
             <br />
             Shirley, UK B90 4SB
-          </p>
+          </a>
         </div>
 
         <div className="flex items-start gap-[16px]">
           <span className="mt-[2px]"><Image src="/mail_icon.svg" width={24} height={24} alt="mail icon" className="mt-1 h-[24px] w-[24px] shrink-0"/></span>
           <div>
-            <p>support@plabcoach.com</p>
-            <p>info@plabcoach.com</p>
+            <p><a href="mailto:support@plabcoach.com" className="hover:underline">support@plabcoach.com</a></p>
+            <p><a href="mailto:info@plabcoach.com" className="hover:underline">info@plabcoach.com</a></p>
           </div>
         </div>
 
@@ -64,12 +65,12 @@ function ContactInfoCard() {
           <div className="grid w-full gap-x-[22px] gap-y-[10px] sm:grid-cols-2 xl:grid-cols-2">
             <div>
               <p className="mb-[5px] whitespace-nowrap font-medium text-[var(--contact-heading)]">UK Contact Number</p>
-              <p>+44 7712 222818</p>
-              <p>+44 7956 835626</p>
+              <p><a href="tel:+447712222818" className="hover:underline">+44 7712 222818</a></p>
+              <p><a href="tel:+447956835626" className="hover:underline">+44 7956 835626</a></p>
             </div>
             <div>
               <p className="mb-[5px] whitespace-nowrap font-medium text-[var(--contact-heading)]">Indian Contact Number</p>
-              <p>+91 81300 14412</p>
+              <p><a href="tel:+918130014412" className="hover:underline">+91 81300 14412</a></p>
             </div>
           </div>
         </div>
@@ -129,30 +130,44 @@ export default function ContactUsPage() {
                       <input type="text" name="name" placeholder="Your Name" className={inputClass} />
                     </div>
 
-                    <div className="relative flex h-[58px] items-center rounded-[21px] border border-[var(--contact-field-border)] bg-[var(--contact-field-bg)] px-[24px]">
-                      <select
-                        name="course"
-                        defaultValue=""
-                        className="h-full w-full appearance-none border-0 bg-transparent pr-[32px] text-[13px] text-[var(--contact-placeholder)] outline-none"
-                      >
-                        <option value="" disabled>Course You Are Interested In</option>
-                        <option value="plab-1">PLAB 1 / UKMLA</option>
-                        <option value="plab-2">PLAB 2 / UKMLA</option>
-                        <option value="pres-3">PRES 3</option>
-                        <option value="psa">Prescribing Safety Assessment</option>
-                      </select>
-                      <span className="pointer-events-none absolute right-[25px] top-1/2 -translate-y-1/2 text-[13px] text-[var(--contact-placeholder)]">▾</span>
-                    </div>
+                    <CourseSelect />
 
                     <div className="grid gap-[24px] sm:grid-cols-[1.08fr_0.9fr] sm:gap-[48px]">
                       <div className="flex h-[58px] items-center rounded-[21px] border border-[var(--contact-field-border)] bg-[var(--contact-field-bg)] px-[24px]">
                         <input type="email" name="email" placeholder="Email Address" className={inputClass} />
                       </div>
 
-                      <div className="flex h-[58px] items-center gap-[12px] rounded-[21px] border border-[var(--contact-field-border)] bg-[var(--contact-field-bg)] px-[20px]">
-                        <span className="text-[20px] leading-none" aria-hidden="true">🇮🇳</span>
+                      <div className="flex h-[58px] items-center gap-[12px] rounded-[21px] border border-[var(--contact-field-border)] bg-[var(--contact-field-bg)] px-[16px] transition-colors focus-within:border-[var(--contact-button)] focus-within:ring-2 focus-within:ring-[var(--contact-button)]/15 sm:px-[20px]">
+                        <select
+                          name="countryCode"
+                          defaultValue="+91"
+                          aria-label="Country calling code"
+                          className="h-full w-[112px] shrink-0 cursor-pointer appearance-none border-0 bg-transparent text-[12px] text-[var(--contact-heading)] outline-none"
+                        >
+                          <option value="+91">India (+91)</option>
+                          <option value="+44">United Kingdom (+44)</option>
+                          <option value="+1">United States / Canada (+1)</option>
+                          <option value="+61">Australia (+61)</option>
+                          <option value="+353">Ireland (+353)</option>
+                          <option value="+971">United Arab Emirates (+971)</option>
+                          <option value="+966">Saudi Arabia (+966)</option>
+                          <option value="+92">Pakistan (+92)</option>
+                          <option value="+880">Bangladesh (+880)</option>
+                          <option value="+234">Nigeria (+234)</option>
+                          <option value="+233">Ghana (+233)</option>
+                          <option value="+977">Nepal (+977)</option>
+                          <option value="+94">Sri Lanka (+94)</option>
+                          <option value="+20">Egypt (+20)</option>
+                          <option value="+27">South Africa (+27)</option>
+                          <option value="+254">Kenya (+254)</option>
+                          <option value="+974">Qatar (+974)</option>
+                          <option value="+965">Kuwait (+965)</option>
+                          <option value="+968">Oman (+968)</option>
+                          <option value="+49">Germany (+49)</option>
+                          <option value="+33">France (+33)</option>
+                        </select>
                         <span className="h-[20px] w-px bg-[#d9dce7]" aria-hidden="true" />
-                        <input type="tel" name="phone" placeholder="Phone Number" className={inputClass} />
+                        <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number" className={inputClass} />
                       </div>
                     </div>
 
@@ -185,13 +200,16 @@ export default function ContactUsPage() {
         <section className="relative pb-[94px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="relative h-[250px] w-full overflow-hidden rounded-[17px] bg-white shadow-[0_6px_18px_rgba(23,36,90,0.05)] sm:h-[330px] xl:h-[454px]">
-              <Image
-                src="/contact_us_map.webp"
-                alt="Map showing PLABCoach at The Pavilions, Cranmore Drive, Shirley"
-                fill
-                priority
-                sizes="(max-width: 1536px) 96vw, 1480px"
-                className="object-cover object-center"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.954175025284!2d-1.8054587000000004!3d52.4007043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870b98811c530c3%3A0x23581506e46ed6e1!2sPlab%20Coach!5e1!3m2!1sen!2sae!4v1790399070582!5m2!1sen!2sae"
+                title="Map showing PLABCoach at The Pavilions, Cranmore Drive, Shirley"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="absolute inset-0 h-full w-full"
               />
             </div>
           </div>

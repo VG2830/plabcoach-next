@@ -463,24 +463,25 @@ export default function AppraisalPage() {
                 </h2>
               </div>
 
+              
               <div
-                className="relative mx-auto mt-[62px] max-w-[1320px] select-none touch-pan-y sm:mt-[78px] lg:mt-[92px]"
-                onTouchStart={(event) => handleSwipeStart(event.touches[0].clientX)}
-                onTouchMove={(event) => handleSwipeMove(event.touches[0].clientX)}
-                onTouchEnd={handleSwipeEnd}
-                onPointerDown={(event) => {
-                  if (event.pointerType === "mouse") handleSwipeStart(event.clientX);
-                }}
-                onPointerMove={(event) => {
-                  if (event.pointerType === "mouse" && swipeStartX.current !== null) handleSwipeMove(event.clientX);
-                }}
-                onPointerUp={(event) => {
-                  if (event.pointerType === "mouse") handleSwipeEnd();
-                }}
-                onPointerLeave={(event) => {
-                  if (event.pointerType === "mouse" && swipeStartX.current !== null) handleSwipeEnd();
-                }}
-              >
+  className="relative mx-auto mt-[62px] max-w-[1480px] select-none touch-pan-y sm:mt-[78px] lg:mt-[92px] lg:w-screen lg:max-w-none lg:left-1/2 lg:right-1/2 lg:-mx-[50vw]"
+  onTouchStart={(event) => handleSwipeStart(event.touches[0].clientX)}
+  onTouchMove={(event) => handleSwipeMove(event.touches[0].clientX)}
+  onTouchEnd={handleSwipeEnd}
+  onPointerDown={(event) => {
+    if (event.pointerType === "mouse") handleSwipeStart(event.clientX);
+  }}
+  onPointerMove={(event) => {
+    if (event.pointerType === "mouse" && swipeStartX.current !== null) handleSwipeMove(event.clientX);
+  }}
+  onPointerUp={(event) => {
+    if (event.pointerType === "mouse") handleSwipeEnd();
+  }}
+  onPointerLeave={(event) => {
+    if (event.pointerType === "mouse" && swipeStartX.current !== null) handleSwipeEnd();
+  }}
+>
                 <div className="relative flex min-h-[560px] items-center justify-center overflow-hidden px-[8px] py-[22px] sm:min-h-[590px] lg:min-h-[620px] lg:px-[54px]">
                   {reviews.map((review, index) => {
                     const rawOffset = index - reviewIndex;
@@ -525,32 +526,39 @@ export default function AppraisalPage() {
                   })}
                 </div>
 
-                <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="absolute left-[0px] top-1/2 z-40 hidden h-[50px] w-[50px] -translate-y-1/2 place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:-translate-y-[55%] hover:brightness-105 sm:grid lg:left-[10px]">
+                {/* <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="absolute left-[0px] top-1/2 z-40 hidden h-[50px] w-[50px] -translate-y-1/2 place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:-translate-y-[55%] hover:brightness-105 sm:grid lg:left-[10px]">
                   <ArrowIcon direction="left" />
                 </button>
                 <button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="absolute right-[0px] top-1/2 z-40 hidden h-[50px] w-[50px] -translate-y-1/2 place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:-translate-y-[55%] hover:brightness-105 sm:grid lg:right-[10px]">
                   <ArrowIcon direction="right" />
-                </button>
-
-                <div className="mt-[4px] flex items-center justify-center gap-[14px] sm:mt-[10px]">
-                  <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="grid h-[44px] w-[44px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white sm:hidden">
-                    <ArrowIcon direction="left" />
-                  </button>
-                  <div className="flex items-center gap-[8px]">
-                    {reviews.map((review, index) => (
-                      <button
-                        key={review.name}
-                        type="button"
-                        aria-label={`Go to review ${index + 1}`}
-                        onClick={() => setReviewIndex(index)}
-                        className={`h-[8px] rounded-full transition-all duration-300 ${index === reviewIndex ? "w-[26px] bg-[var(--appraisal-slider-arrow)]" : "w-[8px] bg-[var(--appraisal-journey-line)]/45"}`}
-                      />
-                    ))}
-                  </div>
-                  <button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="grid h-[44px] w-[44px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white sm:hidden">
-                    <ArrowIcon direction="right" />
-                  </button>
-                </div>
+                </button> */}
+              {/* <button type="button" aria-label="Previous review" onClick={() => moveReview(-1)} className="absolute bottom-[16px] right-[70px] z-40 hidden h-[50px] w-[50px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:brightness-105 sm:grid">
+  <ArrowIcon direction="left" />
+</button>
+<button type="button" aria-label="Next review" onClick={() => moveReview(1)} className="absolute bottom-[16px] right-[8px] z-40 hidden h-[50px] w-[50px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:brightness-105 sm:grid">
+  <ArrowIcon direction="right" />
+</button> */}
+              {/* Arrow wrapper - constrains arrows back to container width */}
+<div className="pointer-events-none absolute inset-x-0 bottom-[16px] z-40 mx-auto hidden max-w-[1480px] px-[8px] sm:block lg:px-[54px]">
+  <div className="relative h-[50px] w-full">
+    <button
+      type="button"
+      aria-label="Previous review"
+      onClick={() => moveReview(-1)}
+      className="pointer-events-auto absolute right-[62px] grid h-[50px] w-[50px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:brightness-105"
+    >
+      <ArrowIcon direction="left" />
+    </button>
+    <button
+      type="button"
+      aria-label="Next review"
+      onClick={() => moveReview(1)}
+      className="pointer-events-auto absolute right-0 grid h-[50px] w-[50px] place-items-center rounded-full bg-[var(--appraisal-slider-arrow)] text-white shadow-[0_10px_24px_rgba(125,195,255,0.28)] transition hover:brightness-105"
+    >
+      <ArrowIcon direction="right" />
+    </button>
+  </div>
+</div>
               </div>
             </div>
           </div>

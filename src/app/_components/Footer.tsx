@@ -69,28 +69,28 @@ export default function Footer() {
               <ul className="divide-y divide-[#dedede]">
                 <li className="flex gap-4 pb-4">
                   <Image src="/location_icon.svg" alt="" aria-hidden="true" width={17} height={23} className="mt-1 h-[23px] w-[17px] shrink-0" />
-                  <span>9 The Pavilions, Cranmore Drive, Shirley,<br />UK B90 4SB</span>
+                  <a href="https://www.google.com/maps/search/?api=1&query=9+The+Pavilions,+Cranmore+Drive,+Shirley,+B90+4SB,+UK" target="_blank" rel="noopener noreferrer" className="hover:underline">9 The Pavilions, Cranmore Drive, Shirley,<br />UK B90 4SB</a>
                 </li>
                 <li className="flex gap-4 py-4">
                   <Image src="/mail_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="mt-1 h-[24px] w-[24px] shrink-0" />
-                  <span>support@plabcoach.com</span>
+                  <a href="mailto:support@plabcoach.com" className="hover:underline">support@plabcoach.com</a>
                 </li>
                 <li className="flex gap-4 py-4">
                   <Image src="/phone_icon.svg" alt="" aria-hidden="true" width={20} height={20} className="mt-1 h-[20px] w-[20px] shrink-0" />
-                  <span>UK: +44 7712 222818, UK: +44 7956 835626<br />UK: +44 7737 713749, IN: +91 81300 14412</span>
+                  <span>UK: <a href="tel:+447712222818" className="hover:underline">+44 7712 222818</a>, UK: <a href="tel:+447956835626" className="hover:underline">+44 7956 835626</a><br />UK: <a href="tel:+447737713749" className="hover:underline">+44 7737 713749</a>, IN: <a href="tel:+918130014412" className="hover:underline">+91 81300 14412</a></span>
                 </li>
               </ul>
             </section>
           </div>
 
-          <div className="relative overflow-hidden sm:h-[260px] lg:h-[280px]">
+          <div className="relative">
             <Image
               src="/footer_logo_with_blur.webp"
               alt=""
               aria-hidden="true"
               width={1480}
               height={398}
-              className="relative block h-auto w-full opacity-[0.92] sm:absolute sm:inset-x-0 sm:top-0"
+              className="relative block h-auto w-full opacity-[0.92]"
             />
           </div>
         </div>
