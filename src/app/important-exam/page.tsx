@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
+import Link from "next/link";
 
 type ExamScheduleRow = {
   venue: string;
@@ -20,6 +21,7 @@ type ExamEntry = {
   note?: string;
   schedule?: ExamScheduleRow[];
   dateLines?: string[];
+  officialLink?:string;
 };
 
 type ExamGroup = {
@@ -41,6 +43,7 @@ const examGroups: ExamGroup[] = [
         icon: "/plab1_exam_pg_icon.svg",
         category: "UK PLAB / UKMLA",
         examDate: "12th February 2026, 21st May 2026, August & November",
+         officialLink:"https://www.gmc-uk.org/",
       },
       {
         id: "plab-2-ukmla-cpsa",
@@ -49,6 +52,7 @@ const examGroups: ExamGroup[] = [
         category: "UK PLAB / UKMLA",
         note:
           "Dates remain available throughout the year and candidates must log in and book the slots through their GMC account to know more about the availability of dates and slots for the given venue.",
+        officialLink:"https://www.gmc-uk.org/",
       },
     ],
   },
@@ -69,6 +73,7 @@ const examGroups: ExamGroup[] = [
             examDate: "21st May 2026 / 6th Aug 2026 / 5th Nov 2026",
           },
         ],
+        officialLink:"https://www.gmc-uk.org/",
       },
       {
         id: "pres-3-osce",
@@ -79,6 +84,7 @@ const examGroups: ExamGroup[] = [
           { venue: "Cork", examDate: "19th September 2026" },
           { venue: "Dublin", examDate: "31st October 2026" },
         ],
+         officialLink:"https://www.gmc-uk.org/",
       },
     ],
   },
@@ -94,6 +100,7 @@ const examGroups: ExamGroup[] = [
         category: "UK Foundation Programme",
         primaryDate: "Nov 2026",
         examDate: "9th, 10th, 11th, & 12th Nov 2026",
+         officialLink:"https://www.gmc-uk.org/",
       },
       {
         id: "prescribing-safety-assessment",
@@ -105,6 +112,7 @@ const examGroups: ExamGroup[] = [
           "Thursday 26th March 2026, All Candidates",
           "Thursday 23rd April 2026, All Candidates",
         ],
+         officialLink:"https://www.gmc-uk.org/",
       },
     ],
   },
@@ -216,6 +224,11 @@ function ExamCard({ exam }: { exam: ExamEntry }) {
           ) : null}
         </dl>
       ) : null}
+       {
+        exam.officialLink? (
+          <Link href={exam.officialLink} className="mt-5 inline-flex w-fit items-center justify-center rounded-[10px] bg-[var(--primary)] px-4 py-2.5 text-[13px] font-semibold text-white shadow-[0_12px_24px_rgba(11,93,168,0.18)] transition hover:-translate-y-0.5 hover:brightness-105">Check on Official site</Link>
+        )
+      :null}
     </article>
   );
 }

@@ -287,6 +287,10 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const contactHref ="/contact-us";
   const plab1SyllabusHref = course.syllabusHref ?? "";
   const importantDatesHref= "/important-exam";
+  const freePlab1SmartQBankUrl="https://courses.plabcoach.com/course/SmartQBankDEMO-100135";
+  const paidPlab1SmartQBank="https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015";
+  const freePres2SmartQBankUrl="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881";
+  const paidPres2SmartQBankUrl="https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501";
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeTocId, setActiveTocId] = useState<string>(course.toc[0]?.id ?? "");
 
@@ -459,6 +463,38 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
               >
                {course.plabCoachHelpCta}
+              </SubscribeButton>
+            )}
+            { activeSection.id === "format" && course.slug=== "plab-1-ukmla-akt" &&(
+               <SubscribeButton
+                href={freePlab1SmartQBankUrl}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Free SmartQBank
+              </SubscribeButton>
+            )}
+            { activeSection.id === "prepare" && course.slug=== "plab-1-ukmla-akt" &&(
+               <SubscribeButton
+                href={paidPlab1SmartQBank}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Prepare with  SmartQBank
+              </SubscribeButton>
+            )}
+            { activeSection.id === "format" && course.slug=== "pres-2" &&(
+               <SubscribeButton
+                href={freePres2SmartQBankUrl}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Free SmartQBank
+              </SubscribeButton>
+            )}
+            { activeSection.id === "prepare" && course.slug=== "pres-2" &&(
+               <SubscribeButton
+                href={paidPres2SmartQBankUrl}
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Prepare with  SmartQBank
               </SubscribeButton>
             )}
 

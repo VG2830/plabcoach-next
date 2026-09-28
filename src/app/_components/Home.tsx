@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Link from "next/link";
 
 const stats = [
-  { value: "10K+", label: "Students", icon: "/hero_sec_students_icon_1.svg" },
+  { value: "10526", label: "Students", icon: "/hero_sec_students_icon_1.svg" },
   { value: "95%", label: "Success Rate", icon: "/hero_sec_success_icon_1.svg" },
   { value: "100+", label: "Expert Sessions", icon: "/hero_sec_expert_icon_1.svg" },
   { value: "24/7", label: "Learning Access", icon: "/hero_sec_time_icon_1.svg" },
@@ -229,6 +229,11 @@ const blogs = [
   "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
   "PRES 3 vs PLAB 2: Everything International Medical Graduates Need to Know",
 ];
+const offerSlides = [
+  { src: "/offer_section_image.webp", alt: "Medical learner" },
+  { src: "/third_section_dr_img.webp", alt: "Doctors collaborating" },
+  // { src: "/offer_section_image.webp", alt: "Student studying" },
+];
 
 function OfferCard({
   title,
@@ -343,8 +348,18 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
 
   const goToTestimonial = (direction: number) => {
-    setActiveTestimonial((current) => (current + direction + testimonials.length) % testimonials.length);
+    setActiveTestimonial((current) => (current + direction + testimonials.length) % testimonials.length);  
   };
+  const [activeSlide, setActiveSlide] = useState(0);
+const [sliderPaused, setSliderPaused] = useState(false);
+
+useEffect(() => {
+  if (sliderPaused || offerSlides.length < 2) return;
+  const id = setInterval(() => {
+    setActiveSlide((prev) => (prev + 1) % offerSlides.length);
+  }, 4000);
+  return () => clearInterval(id);
+}, [sliderPaused]);
 
   return (
     <div className="min-h-screen bg-white text-[var(--ink)]">
@@ -408,8 +423,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="relative overflow-hidden bg-white pb-[118px] pt-[72px] lg:pb-[126px] lg:pt-[78px] xl:pt-[82px]">
+        
+        {/* #What We Offer */}
+        {/* <section className="relative overflow-hidden bg-white pb-[118px] pt-[72px] lg:pb-[126px] lg:pt-[78px] xl:pt-[82px]">
           <Image
             src="/ellipse_offer_section.webp"
             alt=""
@@ -455,7 +471,92 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="relative overflow-hidden bg-white pb-[118px] pt-[72px] lg:pb-[126px] lg:pt-[78px] xl:pt-[82px]">
+  <Image
+    src="/ellipse_offer_section.webp"
+    alt=""
+    width={1116}
+    height={815}
+    aria-hidden="true"
+    className="pointer-events-none absolute z-0 hidden max-w-none lg:right-[-225px] lg:top-[38px] lg:block lg:w-[930px] xl:right-[-175px] xl:top-[16px] xl:w-[1010px] 2xl:right-[-130px] 2xl:top-[-8px] 2xl:w-[1080px]"
+  />
+  <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
+    <div className="mb-10 lg:mb-12">
+      <p className="text-[13px] font-semibold uppercase tracking-[0.01em] text-[var(--accent)]">What We Offer</p>
+      <h2 className="mt-1 text-[38px] font-bold leading-tight tracking-[-0.025em] text-[var(--ink)] lg:text-[46px]">Everything You Need to Succeed</h2>
+      <p className="mt-3 text-[15px] text-[var(--body-muted)]">Comprehensive resources and expert guidance for your UK medical journey</p>
+    </div>
+
+    <div className="grid gap-6 lg:grid-cols-[0.96fr_2fr]">
+      {/* Image slider (same heights as before, no prev/next buttons) */}
+      <div
+        className="group relative min-h-[420px] overflow-hidden rounded-[28px] shadow-[0_12px_30px_rgba(25,53,96,0.04)] lg:min-h-[560px]"
+        onMouseEnter={() => setSliderPaused(true)}
+        onMouseLeave={() => setSliderPaused(false)}
+      >
+        {offerSlides.map((slide, i) => (
+          <Image
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={i === 0}
+            sizes="(max-width: 1024px) 100vw, 35vw"
+            aria-hidden={i !== activeSlide}
+            className={`object-cover object-center transition-opacity duration-1000 ease-in-out motion-reduce:transition-none ${
+              i === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+
+        {/* Dots (optional: delete this block for a pure autoplay slider) */}
+        <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+          {offerSlides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => setActiveSlide(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === activeSlide ? "w-6 bg-white" : "w-2 bg-white/60 hover:bg-white/80"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-1 xl:grid-cols-[1.75fr_1fr]">
+        <div className="grid gap-5">
+          <div className="grid gap-5 sm:grid-cols-[0.75fr_1.15fr]">
+            {offerTop.map((feature) => <OfferCard key={feature.title} {...feature} />)}
+          </div>
+          <div className="grid gap-5 sm:grid-cols-[1.15fr_0.75fr]">
+            {offerBottom.map((feature) => <OfferCard key={feature.title} {...feature} />)}
+          </div>
+        </div>
+
+        <article className="grid overflow-hidden rounded-[28px] border border-white/55 bg-[var(--soft-blue)] shadow-[0_10px_30px_rgba(36,70,128,0.035)] sm:grid-cols-2 xl:grid-cols-1 xl:grid-rows-2">
+          {offerTall.map((feature, index) => (
+            <div
+              key={feature.title}
+              className={`group px-6 py-7 transition-all duration-300 hover:bg-white/28 lg:px-7 lg:py-8 ${
+                index === 0 ? "border-b border-[var(--divider)] sm:border-b-0 sm:border-r xl:border-b xl:border-r-0" : ""
+              }`}
+            >
+              <Image src={feature.icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
+              <h3 className="text-[22px] font-bold leading-tight">{feature.title}</h3>
+              <p className="mt-3 text-[15px] leading-7 text-[var(--body-muted)]">{feature.description}</p>
+              <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
+                Know More
+              </span>
+            </div>
+          ))}
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
         <section id="courses" className="relative overflow-hidden bg-[var(--courses-bg)] py-16 sm:py-20 lg:py-[94px] xl:py-[96px]">
           <Image
             src="/featured_courses_ellipse.webp"
@@ -526,7 +627,7 @@ export default function Home() {
 
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
               <Image src="/third_sec_upfront_img.webp" alt="" width={728} height={554} aria-hidden="true" className="absolute inset-0 h-full w-full object-contain" />
-              <div className="absolute left-[24%] top-[3%] h-[78%] w-[65%] overflow-hidden rounded-[34px]">
+              <div className="absolute left-[22%] top-[7%] h-[78%] w-[65%] overflow-hidden rounded-[34px]">
                 <Image src="/third_section_dr_img.webp" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
               </div>
             </div>
@@ -726,7 +827,7 @@ export default function Home() {
               <h2 className="mt-2 text-[34px] font-bold leading-[1.08] text-black lg:text-[42px]">Subscription-Based Coaching</h2>
               <p className="mt-4 text-[14px] leading-6 text-[#676767]">At PLABcoach, we understand the importance of flexibility in your learning journey. Our self-paced learning modules let you study at your own convenience with expert-curated content, question banks, and video lessons - tailored to fit your schedule and goals.</p>
               <div className="mt-8 bg-[#f4f9ff] p-6">
-                <span className="grid h-10 w-10 place-items-center rounded-full  shadow-sm"><Image src="/icon.svg" alt="Icon" width={20} height={20} /></span>
+                <span className="grid h-10 w-10 place-items-center rounded-full  shadow-sm"><Image src="/scriptionIcon.svg" alt="Icon" width={20} height={20} /></span>
                 <p className="mt-4 text-[13px] font-semibold leading-5 text-black">Learn at your pace. Prepare with confidence. Succeed in your exams.</p>
                 <p className="mt-4 text-[13px] leading-5 text-[#777]">Trusted by thousands of medical professionals worldwide</p>
               </div>
@@ -830,7 +931,7 @@ export default function Home() {
                 {/* <div className="grid h-11 w-11 place-items-center rounded-2xl bg-white text-[22px] text-[var(--primary)] shadow-sm">?</div> */}
                 <h3 className="mt-5 text-[22px] font-bold text-black">Still have a question?</h3>
                 <p className="mt-3 text-[13px] leading-6 text-[#74798a]">Can’t find the answer you need? Send us an email and our team will get back to you as soon as possible.</p>
-                <button type="button" className="mt-6 h-[48px] rounded-[10px] bg-[var(--primary)] px-6 text-[13px] font-semibold text-white shadow-[0_12px_24px_rgba(11,93,168,0.18)] transition hover:-translate-y-0.5 hover:brightness-105">Start Learning</button>
+                <Link href="/contact-us" type="button" className="mt-5 inline-flex w-fit items-center justify-center  h-[48px] rounded-[10px] bg-[var(--primary)] px-6 py-3 text-[13px] font-semibold text-white shadow-[0_12px_24px_rgba(11,93,168,0.18)] transition hover:-translate-y-0.5 hover:brightness-105">Contact Us </Link>
               </aside>
             </div>
 
