@@ -41,6 +41,14 @@ export default function Footer() {
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">We have been</h3>
               <p className="max-w-[390px]">We have been delivering high-quality online courses for nearly a decade. All our instructors are experts with extensive experience in their respective fields. We offer comprehensive course materials, ensuring our students have everything they need to succeed.</p>
+              <div className='flex space-between mt-4'>
+                <p className='font-semibold pr-4 text-[var(--footer-heading)]'>We Accept</p>
+                <Image src="/payment-cards.png" alt='' width={200} height={40}></Image>
+                {/* <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
+                <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
+                <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
+                <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image> */}
+              </div>
             </section>
 
             <section>
@@ -80,6 +88,13 @@ export default function Footer() {
                   <span>UK: <a href="tel:+447712222818" className="hover:underline">+44 7712 222818</a>, UK: <a href="tel:+447956835626" className="hover:underline">+44 7956 835626</a><br />UK: <a href="tel:+447737713749" className="hover:underline">+44 7737 713749</a>, IN: <a href="tel:+918130014412" className="hover:underline">+91 81300 14412</a></span>
                 </li>
               </ul>
+              {/* <div>
+              <h4>Download on the </h4>
+              <div className='flex space-between gap-2 '>
+                <Image src="/Playstore.svg" alt="" width={40} height={20} ></Image>
+              <Image src="/Apple.svg" alt="" width={40} height={20} ></Image></div>
+              </div> */}
+
             </section>
           </div>
 
@@ -93,6 +108,7 @@ export default function Footer() {
               className="relative block h-auto w-full opacity-[0.92]"
             />
           </div>
+          <div className='text-center'><span>2026. All Rights Reserved | Handcrafted by <a href="https://cogniq.in/" target="_blank"> Cogniq</a></span></div>
         </div>
       </footer>
     

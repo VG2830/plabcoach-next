@@ -104,7 +104,7 @@ const reviews = [
     name: "Nadia Rahman",
     role: "Doctor",
     country: "UNITED KINGDOM",
-    image: "/karam_image.webp",
+    image: "/karam_sir_new_img.webp",
     text: "The guidance was practical, clear and very focused on what doctors actually need. The support made the whole preparation process feel organised and manageable, with useful feedback at every stage.",
   },
   {

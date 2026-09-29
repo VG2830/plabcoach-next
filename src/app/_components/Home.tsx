@@ -333,7 +333,7 @@ function SubscriptionCard({ course }: { course: (typeof subscriptionCourses)[num
         <p className="mt-3 text-[14px] leading-6 text-white/75 transition-colors duration-500 group-hover:text-white/90">
           {course.subtitle}
         </p>
-        <Link href="" className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)] flex items-center justify-center">
+        <Link href="/courses" className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)] flex items-center justify-center">
           View Courses
         </Link>
       </div>
@@ -628,7 +628,7 @@ useEffect(() => {
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
               <Image src="/third_sec_upfront_img.webp" alt="" width={728} height={554} aria-hidden="true" className="absolute inset-0 h-full w-full object-contain" />
               <div className="absolute left-[22%] top-[7%] h-[78%] w-[65%] overflow-hidden rounded-[34px]">
-                <Image src="/third_section_dr_img.webp" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
+                <Image src="/karam_sir_coat.JPG" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
               </div>
             </div>
           </div>
