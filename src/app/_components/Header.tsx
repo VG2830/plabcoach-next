@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Phone } from "@deemlol/next-icons"
 
 type CourseMenuGroup = {
   label: string;
@@ -95,7 +96,59 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/[0.05] bg-white/95 backdrop-blur-md">
+    <>
+      <div className="bg-[#1760a6] text-white">
+        <div className="mx-auto grid min-h-[44px] w-[var(--site-width)] max-w-[var(--container-max)] grid-cols-[1fr_auto_1fr] items-center gap-2">
+          <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+            <a
+              href="mailto:support@plabcoach.com"
+              aria-label="Email support@plabcoach.com"
+              className="flex min-w-0 items-center gap-2 text-[12px] font-semibold hover:text-white/80"
+            >
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white">
+                <Image src="/mail_icon.svg" alt="" aria-hidden="true" width={13} height={11} />
+              </span>
+              <span className="hidden truncate sm:inline">support@plabcoach.com</span>
+            </a>
+            <a
+              href="tel:+447712222818"
+              aria-label="Call +44 7712 222818"
+              className="flex items-center gap-2 text-[12px] font-semibold hover:text-white/80"
+            >
+              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white">
+                {/* <Image src="/header_phone_icon.svg" alt="" aria-hidden="true" width={12} height={12} /> */}
+                <Phone size={16} color="#09539F" strokeWidth={1.5} />
+              </span>
+              <span className="hidden whitespace-nowrap sm:inline">+44 7712 222818 +91 81300 14412</span>
+            </a>
+          </div>
+
+          <div className="flex items-center justify-center gap-2.5">
+            <a href="https://www.facebook.com/plabcoach1" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-7 w-7 place-items-center rounded-full bg-white text-[#1760a6] transition hover:bg-white/80">
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.2l.8-4H13V9c0-.7.3-1 1-1Z" /></svg>
+            </a>
+            <a href="https://www.instagram.com/plab.coach/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid h-7 w-7 place-items-center rounded-full bg-white text-[#1760a6] transition hover:bg-white/80">
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current"><path fillRule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7Zm5 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2.2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM17.7 6.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" clipRule="evenodd" /></svg>
+            </a>
+            <a href="https://www.youtube.com/@plab_coach" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="grid h-7 w-7 place-items-center rounded-full bg-white text-[#1760a6] transition hover:bg-white/80">
+              <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" /></svg>
+            </a>
+          </div>
+
+          <div className="flex items-center justify-end gap-2">
+            <a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store" className="flex items-center gap-1.5 text-white transition hover:text-white/80">
+              <Image src="/Apple.svg" alt="" aria-hidden="true" width={14} height={18} />
+              <span className="hidden text-[10px] font-medium leading-tight sm:inline">Download on the<br /><strong className="text-[12px]">App Store</strong></span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play" className="flex items-center gap-1.5 text-white transition hover:text-white/80">
+              <Image src="/Playstore.svg" alt="" aria-hidden="true" width={16} height={18} />
+              <span className="hidden text-[10px] font-medium leading-tight sm:inline">Get it on<br /><strong className="text-[12px]">Google Play</strong></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-50 border-b border-black/[0.05] bg-white/95 backdrop-blur-md">
       <div className="relative mx-auto grid h-[var(--header-height)] w-[var(--site-width)] max-w-[var(--container-max)] grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-5">
         <nav className="hidden items-center gap-8 text-[14px] font-medium text-[var(--nav-muted)] lg:flex">
           {navigation.map((item) => {
@@ -256,7 +309,7 @@ export default function Header() {
             Sign in
           </a>
           <button className="h-[40px] rounded-[10px] bg-[var(--primary)] px-4 text-[11px] font-semibold text-white transition hover:brightness-105 sm:px-5 sm:text-[12px]">
-            Login Now
+            Sign up
           </button>
         </div>
 
@@ -405,6 +458,7 @@ export default function Header() {
           </nav>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   );
 }

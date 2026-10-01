@@ -1,6 +1,9 @@
 import Image from 'next/image';
-// const socialLabels = ["facebook", "linkedin", "instagram", "x", "whatsapp"];
-const socialLabels = ["facebook", "instagram", "whatsapp"];
+const socialLinks = [
+  { label: "facebook", href: "https://www.facebook.com/plabcoach1" },
+  { label: "instagram", href: "https://www.instagram.com/plab.coach/" },
+  { label: "whatsapp", href: "https://wa.me/447712222818" },
+];
 
 function SocialIcon({ label }: { label: string }) {
   const common = "h-[18px] w-[18px] fill-white";
@@ -26,9 +29,9 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
             <Image src="/new_plabcoach.webp" alt="PLABCOACH" width={212} height={57} className="h-auto w-[180px] lg:w-[198px] xl:w-[205px]" />
             <div className="flex w-full flex-wrap items-center gap-3 text-[14px] font-bold text-black sm:w-auto">
-              <span className="mr-1 sm:mr-3">Social Media</span>
-              {socialLabels.map((label) => (
-                <a key={label} href={`#${label}`} aria-label={label} className="grid h-8 w-8 place-items-center rounded-[4px] bg-black transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--primary)] hover:shadow-[0_8px_18px_rgba(11,93,168,0.22)]">
+              <span className="mr-1 sm:mr-3">Follow us on </span>
+              {socialLinks.map(({ label, href }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="grid h-8 w-8 place-items-center rounded-[4px] bg-black transition-all duration-300 hover:-translate-y-1 hover:bg-[var(--primary)] hover:shadow-[0_8px_18px_rgba(11,93,168,0.22)]">
                   <SocialIcon label={label} />
                 </a>
               ))}
@@ -43,7 +46,7 @@ export default function Footer() {
               <p className="max-w-[390px]">We have been delivering high-quality online courses for nearly a decade. All our instructors are experts with extensive experience in their respective fields. We offer comprehensive course materials, ensuring our students have everything they need to succeed.</p>
               <div className='flex space-between mt-4'>
                 <p className='font-semibold pr-4 text-[var(--footer-heading)]'>We Accept</p>
-                <Image src="/payment-cards.png" alt='' width={200} height={40}></Image>
+                <Image src="/payment-cards.webp" alt='' width={200} height={40}></Image>
                 {/* <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
                 <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
                 <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
@@ -88,12 +91,16 @@ export default function Footer() {
                   <span>UK: <a href="tel:+447712222818" className="hover:underline">+44 7712 222818</a>, UK: <a href="tel:+447956835626" className="hover:underline">+44 7956 835626</a><br />UK: <a href="tel:+447737713749" className="hover:underline">+44 7737 713749</a>, IN: <a href="tel:+918130014412" className="hover:underline">+91 81300 14412</a></span>
                 </li>
               </ul>
-              {/* <div>
-              <h4>Download on the </h4>
+              
               <div className='flex space-between gap-2 '>
-                <Image src="/Playstore.svg" alt="" width={40} height={20} ></Image>
-              <Image src="/Apple.svg" alt="" width={40} height={20} ></Image></div>
-              </div> */}
+                <a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer">
+                <Image src="/google-play-badge-light.svg" alt="" width={121} height={36} ></Image>
+                </a>
+                <a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer">
+                  <Image src="/appstore-badge-light.svg"  className="" alt="" width={108} height={36} ></Image>
+                </a>
+              </div>
+              
 
             </section>
           </div>

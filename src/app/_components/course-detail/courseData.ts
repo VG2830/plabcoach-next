@@ -1377,7 +1377,7 @@ export const courseDetails = {
     title: "PLAB 1 / UKMLA-AKT:\nComplete Guide to Format,\nSyllabus, Dates & Preparation",
     metaTitle: "PLAB 1 / UKMLA-AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
     metaDescription: "PLAB 1 (UKMLA-AKT) is GMC's 180-question written exam for IMGs seeking UK registration. Learn the format, syllabus, dates and how PLABcoach's SmartQBank & courses help you pass.",
-    ogImage: "/og/plab1.png",
+    ogImage: "/og/plab1.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "PLAB 1 is the written knowledge exam set by the General Medical Council (GMC), part of the two-part PLAB assessment that international medical graduates (IMGs) must pass for UK medical registration. It consists of 180 single-best-answer (SBA) questions completed in 180 minutes, testing clinical knowledge at the standard of a doctor completing UK Foundation Year 1. Passing PLAB 1 is the prerequisite step before sitting PLAB 2, the clinical OSCE.",
@@ -1409,7 +1409,7 @@ export const courseDetails = {
     title: "PLAB 2 / UKMLA-CPSA:\nComplete Guide to OSCE \nStations, Marking & Preparation",
     metaTitle: "PLAB 2 / UKMLA-CPSA Exam 2026 – OSCE Stations, Format & Preparation | PLABcoach",
     metaDescription: "PLAB 2 (UKMLA-CPSA) is GMC's 16-station OSCE for IMGs, held in Manchester. Learn the station format, marking domains, dates and how PLABcoach's manikin-based training helps you pass.",
-    ogImage: "/og/plab2.png",
+    ogImage: "/og/plab2.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "PLAB 2 is the clinical OSCE set by the General Medical Council (GMC), the second and final part of the PLAB assessment for international medical graduates (IMGs). It consists of 16 scored clinical stations plus rest stations, 8 minutes each, held only at the GMC's assessment centre in Manchester. Candidates are marked across three domains — data gathering, clinical management, and interpersonal skills — and must pass within 2 years of their PLAB 1 pass date.",
@@ -1473,7 +1473,7 @@ export const courseDetails = {
     title: "PRES 2 Exam Ireland: \nComplete Guide to Format,\nSyllabus & Preparation",
     metaTitle: "PRES 2 Exam Ireland 2026 – Format, Syllabus & Preparation | PLABcoach",
     metaDescription: "PRES 2 is the Irish Medical Council's written exam for international medical graduates. Learn the format, syllabus, fees and how PLABcoach's SmartQBank helps you pass.",
-    ogImage: "/og/pres2.png",
+    ogImage: "/og/pres2.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "PRES 2 is the written multiple-choice exam set by the Irish Medical Council (IMC), the first sat component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates seeking Irish registration. It tests clinical knowledge across obstetrics & gynaecology, paediatrics, psychiatry, surgery, and medicine/general practice through clinical-scenario-based questions. Candidates must pass PRES 2 before attempting PRES 3, the OSCE component.",
@@ -1549,7 +1549,7 @@ export const courseDetails = {
     title: "PRES 3 Exam Ireland:\nOSCE & Data Interpretation Guide",
     metaTitle: "PRES 3 Exam Ireland 2026 – OSCE & Data Interpretation Guide | PLABcoach",
     metaDescription: "PRES 3 is the Irish Medical Council's OSCE and data interpretation exam for international medical graduates, held in Dublin. Learn the format, stations and how PLABcoach helps you pass.",
-    ogImage: "/og/pres3.png",
+    ogImage: "/og/pres3.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "PRES 3 is the clinical OSCE and data interpretation exam set by the Irish Medical Council (IMC), the second and final component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates. It is held in person in Dublin, combining an Objective Structured Clinical Examination (OSCE) of roughly 12–16 stations with a data interpretation assessment. Candidates must pass PRES 2 before they are eligible to sit PRES 3.",
@@ -1601,7 +1601,7 @@ export const courseDetails = {
     title: "UKFPO-NCA: Complete \nGuide to Format & Preparation",
     metaTitle: "UKFPO-NCA Exam 2026 – Format & Preparation | PLABcoach",
     metaDescription: "The UKFPO-NCA is the UKFPO's required 12-station exam for eligible IMGs applying to the UK Foundation Programme. Learn the format, eligibility and how PLABcoach helps you pass.",
-    ogImage: "/og/nca.png",
+    ogImage: "/og/nca.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "The UKFPO National Clinical Assessment (UKFPO-NCA) is a mandatory eligibility requirement for the UK Foundation Programme, set by the UKFPO, required for any candidate who qualified from medical school on or before 5 August 2024, regardless of nationality or GMC registration status. Delivered by Manchester University NHS Foundation Trust, it consists of 12 stations, each 10 minutes long including 1 minute of preparation time, run in a single session lasting approximately 4 hours.",
@@ -1662,7 +1662,7 @@ export const courseDetails = {
     title: "UKFPO-PSA: Complete \nGuide to the Prescribing Safety Assessment",
     metaTitle: "UKFPO-PSA Exam 2026 – Prescribing Safety Assessment Guide | PLABcoach",
     metaDescription: "The UKFPO-PSA is the 60-question prescribing exam all F1 doctors must pass to progress to F2. Learn the format, question types and how PLABcoach helps you prepare.",
-    ogImage: "/og/psa.png",
+    ogImage: "/og/psa.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "The UKFPO Prescribing Safety Assessment (UKFPO-PSA) is a 60-question computer-based exam, developed jointly by the British Pharmacological Society (BPS) and the Medical Schools Council (MSC), that all Foundation Year 1 (F1) doctors must pass to progress to F2. Most UK medical graduates sit and pass the PSA at medical school; international medical graduates and any UK graduates who haven't yet passed it sit it during their F1 year, with the assessment typically funded by the UKFPO rather than paid for by the candidate.",
@@ -1713,7 +1713,7 @@ export const courseDetails = {
     title: "MSRA Exam: Complete \nGuide to Format, Scoring & Preparation",
     metaTitle: "MSRA Exam 2026 – Format, Question Bank & Preparation | PLABcoach",
     metaDescription: "The MSRA is a two-paper computer-based exam used for GP and other specialty training entry in the UK. Learn the format, scoring and how PLABcoach's question bank helps you prepare.",
-    ogImage: "/og/msra.png",
+    ogImage: "/og/msra.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "The Multi-Specialty Recruitment Assessment (MSRA) is a computer-based exam used as part of recruitment into GP training and several other UK specialty training programmes. It consists of two papers — Professional Dilemmas (a situational judgement test) and Clinical Problem Solving — completed in a single sitting of just under 3 hours at a Pearson VUE test centre. Each specialty sets its own minimum score threshold, and the MSRA score directly affects a candidate's ranking for training posts.",
@@ -1775,7 +1775,7 @@ export const courseDetails = {
     title: "MRCGP AKT: Complete \n Guide to Format, Syllabus & Preparation",
     metaTitle: "MRCGP AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
     metaDescription: "The MRCGP AKT is RCGP's 160-item computer-based exam for GP trainees. Learn the current format, syllabus weighting, fees and how PLABcoach helps you pass.",
-    ogImage: "/og/mrccp-akt.png",
+    ogImage: "/og/mrccp-akt.webp",
     heroImage: COMMON_HERO_IMAGE,
     heroDescription:
       "The MRCGP Applied Knowledge Test (AKT) is the Royal College of General Practitioners' (RCGP) summative exam of the knowledge underpinning independent general practice in the UK. Since October 2025, it is a 160-item, 160-minute computer-based exam, held at Pearson VUE centres four times a year. Around 80% of items cover clinical medicine, with the remainder split between critical appraisal/evidence-based practice and health informatics/administrative issues. GP trainees must hold active MRCGP membership to book it.",

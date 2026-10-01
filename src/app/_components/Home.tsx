@@ -232,7 +232,9 @@ const blogs = [
 const offerSlides = [
   { src: "/offer_section_image.webp", alt: "Medical learner" },
   { src: "/third_section_dr_img.webp", alt: "Doctors collaborating" },
-  // { src: "/offer_section_image.webp", alt: "Student studying" },
+  // { src: "/female_two_doctors.webp", alt: "Female doctors" },
+  // { src: "/alone_female_doc.webp", alt: "Female doctors" },
+  // { src: "/alone_female_doc_2.webp", alt: "Female doctors" },
 ];
 
 function OfferCard({
@@ -628,7 +630,7 @@ useEffect(() => {
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
               <Image src="/third_sec_upfront_img.webp" alt="" width={728} height={554} aria-hidden="true" className="absolute inset-0 h-full w-full object-contain" />
               <div className="absolute left-[22%] top-[7%] h-[78%] w-[65%] overflow-hidden rounded-[34px]">
-                <Image src="/karam_sir_coat.JPG" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
+                <Image src="/karam_sir_coat.webp" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
               </div>
             </div>
           </div>
