@@ -110,17 +110,25 @@ export default function Header() {
               </span>
               <span className="hidden truncate sm:inline">support@plabcoach.com</span>
             </a>
-            <a
-              href="tel:+447712222818"
-              aria-label="Call +44 7712 222818"
-              className="flex items-center gap-2 text-[12px] font-semibold hover:text-white/80"
-            >
-              <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white">
-                {/* <Image src="/header_phone_icon.svg" alt="" aria-hidden="true" width={12} height={12} /> */}
-                <Phone size={16} color="#09539F" strokeWidth={1.5} />
-              </span>
-              <span className="hidden whitespace-nowrap sm:inline">+44 7712 222818 +91 81300 14412</span>
-            </a>
+            <div className="flex items-center gap-2 text-[12px] font-semibold sm:gap-3">
+              <a
+                href="tel:+447712222818"
+                aria-label="Call +44 7712 222818"
+                className="flex items-center gap-2 hover:text-white/80"
+              >
+                <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white">
+                  <Phone size={16} color="#09539F" strokeWidth={1.5} />
+                </span>
+                <span className="hidden whitespace-nowrap sm:inline">+44 7712 222818</span>
+              </a>
+              <a
+                href="tel:+918130014412"
+                aria-label="Call +91 81300 14412"
+                className="hidden whitespace-nowrap hover:text-white/80 sm:inline"
+              >
+                +91 81300 14412
+              </a>
+            </div>
           </div>
 
           <div className="flex items-center justify-center gap-2.5">

@@ -4,7 +4,7 @@ const socialLinks = [
   { label: "instagram", href: "https://www.instagram.com/plab.coach/" },
   { label: "whatsapp", href: "https://wa.me/447712222818" },
 ];
-
+const COPYRIGHT_YEAR = new Date().getFullYear();
 function SocialIcon({ label }: { label: string }) {
   const common = "h-[18px] w-[18px] fill-white";
   if (label === "facebook") {
@@ -115,7 +115,7 @@ export default function Footer() {
               className="relative block h-auto w-full opacity-[0.92]"
             />
           </div>
-          <div className='text-center'><span>2026. All Rights Reserved | Handcrafted by <a href="https://cogniq.in/" target="_blank"> Cogniq</a></span></div>
+          <div className='text-center'><span>{COPYRIGHT_YEAR}. All Rights Reserved | Handcrafted by <a href="https://cogniq.in/" target="_blank"> Cogniq</a></span></div>
         </div>
       </footer>
     
