@@ -7,7 +7,7 @@ import Header from "./Header";
 import Link from "next/link";
 
 const stats = [
-  { value: "10526", label: "Students", icon: "/hero_sec_students_icon_1.svg" },
+  { value: "11389", label: "Students", icon: "/hero_sec_students_icon_1.svg" },
   { value: "95%", label: "Success Rate", icon: "/hero_sec_success_icon_1.svg" },
   { value: "100+", label: "Expert Sessions", icon: "/hero_sec_expert_icon_1.svg" },
   { value: "24/7", label: "Learning Access", icon: "/hero_sec_time_icon_1.svg" },
@@ -150,18 +150,35 @@ const videoBenefits = [
   },
 ];
 
-const subscriptionCourses = [
+type SubscriptionCourseMedia =
+  | { type: "image"; src: string }
+  | { type: "video"; src: string; poster: string };
+
+type SubscriptionCourse = {
+  title: string;
+  subtitle: string;
+  media: SubscriptionCourseMedia;
+  href: string;
+};
+
+const subscriptionCourses: SubscriptionCourse[] = [
   {
     title: "UK PLAB / UKMLA COURSES",
     subtitle: "Prepare for the knowledge and clinical assessments required to begin your medical career in the UK.The UKMLA assesses the core knowledge, skills and behaviours required for safe and effective medical practice.",
+    media: { type: "image", src: "/subs_ukPlab2_vertical.webp" },
+    href: "/courses#uk-plab-ukmla",
   },
   {
     title: "IRELAND COURSES",
     subtitle: "Focused preparation for doctors preparing for the Pre-Registration Examination System in Ireland.",
+    media: { type: "image", src: "/subs_ireland_vertical.webp" },
+    href: "/courses#ireland-courses",
   },
   {
     title: "UK FOUNDATION PROGRAMME COURSES",
     subtitle: "Build the knowledge and practical confidence required for key UK Foundation Programme assessments.",
+    media: { type: "image", src: "/subs_uk_vertical.webp" },
+    href: "/courses#uk-foundation",
   },
 ];
 
@@ -199,27 +216,35 @@ const testimonials = [
 const faqs = [
   {
     question: "What is PLABcoach?",
-    answer: "PLABCoach supports preparation for UK PLAB / UKMLA pathways, PLAB 1, PLAB 2, PRES and selected MRCP-focused learning programmes. Course availability may vary by exam cycle.",
+    answer: "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. We provide structured courses, question banks, mock exams and clinical skills coaching, led by Dr. Karam Singh, a practising NHS GP.",
   },
   {
     question: "Which exams does PLABcoach provide preparation for?",
-    answer: "Yes. Selected programmes include live expert-led sessions, guided revision and opportunities to ask questions alongside self-paced learning resources.",
+    answer: "We prepare candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and NCA and PSA for the UK Foundation Programme. Courses for MSRA, MRCGP AKT/SCA, USMLE and AMC are launching soon.",
   },
   {
-    question: "Does PLABcoach Offer both online and in-person courses?",
-    answer: "The learning experience is designed to work smoothly across modern browsers and mobile screens, so you can continue studying when you are away from your laptop.",
+    question: "Does PLABcoach offer both online and in-person courses?",
+    answer: `Yes. PLABcoach combines online study resources with live online and in-person training:
+
+• SmartNotes — flipbook-style notes designed for easy, convenient study
+• Self-Paced Mastery Videos — key topics taught by our coaches, available whenever suits you
+• SmartQBank — specially curated question sets, updated regularly, to get you exam ready
+• SmartMocks (offline & online) — simulate real OSCE exam conditions for efficient preparation
+• Manikin Practice — hands-on experience with various procedures on manikins to prepare for real-world scenarios
+• SimMan Sessions — further simulated OSCE practice sessions
+• LIVE Sessions (online & offline) — cover everything you need from an exam point of view, including scenario practice; every session streams live and the recording stays available afterward for revision`,
   },
   {
     question: "Who teaches the PLABcoach courses?",
-    answer: "Mocks are built to reflect exam-style timing, question patterns and decision-making pressure so you can practise in a focused, realistic environment.",
+    answer: "Our courses are led by Dr. Karam Singh and Dr. Anjum Kohli.",
   },
   {
     question: "How do I access the question banks and course materials?",
-    answer: "Mentor support is available with selected courses and coaching plans, including guidance from experienced medical educators and UK-based professionals.",
+    answer: "Sign up on the platform and enroll in your course for instant access to all the learning material included — SmartNotes, Self-Paced Mastery Videos, SmartQBank and more. Some courses offer free access so you can get a feel for the platform and its content before committing. Our mobile app is available on both Android and iOS.",
   },
   {
     question: "Does PLABcoach offer a free trial or sample questions?",
-    answer: "Choose the course that matches your target exam, create your account and begin with the recommended learning path. You can explore the course catalogue before enrolling.",
+    answer: "Yes. Try our free Self-Assessment for SmartQBank courses, or preview a selection of our Self-Paced Mastery Videos to get a feel for the content and platform.",
   },
 ];
 
@@ -251,9 +276,9 @@ function OfferCard({
       <Image src={icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
       <h3 className="text-[22px] font-bold leading-tight text-[var(--ink)]">{title}</h3>
       <p className="mt-3 max-w-[310px] text-[15px] leading-7 text-[var(--body-muted)]">{description}</p>
-      <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
+      {/* <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
         Know More
-      </span>
+      </span> */}
     </article>
   );
 }
@@ -317,13 +342,28 @@ function ExamCard({ exam }: { exam: (typeof exams)[number] }) {
 function SubscriptionCard({ course }: { course: (typeof subscriptionCourses)[number] }) {
   return (
     <article className="group relative min-h-[530px] cursor-pointer overflow-hidden rounded-[30px] bg-black shadow-[0_12px_32px_rgba(15,34,68,0.08)] ring-1 ring-black/[0.02] transition-all duration-500 ease-out hover:-translate-y-3 hover:shadow-[0_28px_64px_rgba(15,54,104,0.22)] hover:ring-[#3c8ee8]/25">
-      <Image
-        src="/woman-teaching-her-student-english.webp"
-        alt="Medical course"
-        fill
-        sizes="(max-width: 768px) 100vw, 33vw"
-        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.055]"
-      />
+      {course.media.type === "image" ? (
+        <Image
+          src={course.media.src}
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.055]"
+        />
+      ) : (
+        <video
+          src={course.media.src}
+          poster={course.media.poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.055]"
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/95 transition-colors duration-500 group-hover:via-black/5 group-hover:to-black" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.18),transparent_34%,transparent_68%,rgba(71,151,255,0.15))] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div className="absolute left-5 top-5 z-10 flex items-center gap-2 text-[12px] font-semibold text-[var(--primary)] transition-transform duration-500 group-hover:translate-x-1">
@@ -335,7 +375,7 @@ function SubscriptionCard({ course }: { course: (typeof subscriptionCourses)[num
         <p className="mt-3 text-[14px] leading-6 text-white/75 transition-colors duration-500 group-hover:text-white/90">
           {course.subtitle}
         </p>
-        <Link href="/courses" className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)] flex items-center justify-center">
+        <Link href={course.href} className="mt-6 h-[52px] w-full rounded-[10px] bg-[var(--primary)] text-[14px] font-semibold text-white shadow-[0_10px_24px_rgba(0,86,168,0.18)] transition-all duration-300 group-hover:bg-[#0872d0] group-hover:shadow-[0_14px_30px_rgba(0,86,168,0.30)] flex items-center justify-center">
           View Courses
         </Link>
       </div>
@@ -549,9 +589,9 @@ useEffect(() => {
               <Image src={feature.icon} alt="" width={60} height={60} className="mb-5 h-[54px] w-[54px] transition-transform duration-300 group-hover:scale-[1.06]" />
               <h3 className="text-[22px] font-bold leading-tight">{feature.title}</h3>
               <p className="mt-3 text-[15px] leading-7 text-[var(--body-muted)]">{feature.description}</p>
-              <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
+              {/* <span className="mt-auto pt-5 text-[13px] font-semibold text-[#075cae] transition-transform duration-300 group-hover:translate-x-1 xl:text-[14px]">
                 Know More
-              </span>
+              </span> */}
             </div>
           ))}
         </article>
@@ -573,7 +613,7 @@ useEffect(() => {
               Exams We Prepare You For
             </h2>
             <p className="mt-3 max-w-[730px] text-[13px] leading-[1.65] text-[#81848a] sm:text-[14px] xl:text-[16px]">
-              PLABcoach prepares candidates for [N] licensing and specialty exams across the UK and Ireland, from initial GMC/IMC registration through to GP-level entry.
+              PLABcoach prepares candidates for Medical licensing and specialty exams across the UK and Ireland, from initial GMC/IMC registration through to GP-level entry.
             </p>
 
             <div className="mt-10 grid gap-5 md:grid-cols-2 xl:mt-11 xl:gap-x-6 xl:gap-y-6">
@@ -920,7 +960,7 @@ useEffect(() => {
                         </button>
                         <div className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                           <div className="overflow-hidden">
-                            <p className="px-5 py-4 text-[13px] leading-6 text-[#6f7280]">{faq.answer}</p>
+                            <p className="whitespace-pre-line px-5 py-4 text-[13px] leading-6 text-[#6f7280]">{faq.answer}</p>
                           </div>
                         </div>
                       </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link";
 const socialLinks = [
   { label: "facebook", href: "https://www.facebook.com/plabcoach1" },
   { label: "instagram", href: "https://www.instagram.com/plab.coach/" },
@@ -10,16 +11,10 @@ function SocialIcon({ label }: { label: string }) {
   if (label === "facebook") {
     return <svg className={common} viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.2l.8-4H13V9c0-.7.3-1 1-1Z" /></svg>;
   }
-  // if (label === "linkedin") {
-  //   return <svg className={common} viewBox="0 0 24 24"><path d="M5 8.2H1.8V22H5V8.2ZM3.4 2A2 2 0 1 0 3.4 6 2 2 0 0 0 3.4 2ZM22 14c0-4.2-2.2-6.1-5.2-6.1-2.4 0-3.5 1.3-4.1 2.2V8.2H9.5V22h3.2v-6.8c0-1.8.3-3.6 2.7-3.6 2.3 0 2.4 2.2 2.4 3.7V22H22V14Z" /></svg>;
-  // }
   if (label === "instagram") {
     return <svg className={common} viewBox="0 0 24 24"><path fillRule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7Zm5 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2.2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM17.7 6.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" clipRule="evenodd" /></svg>;
   }
-  // if (label === "x") {
-  //   return <svg className={common} viewBox="0 0 24 24"><path d="M18.8 2H22l-7 8 8.2 12h-6.4l-5-6.6L6 22H2.8l7.5-8.6L2.4 2H9l4.5 6 5.3-6Zm-1.1 17.9h1.8L8 4H6.1l11.6 15.9Z" /></svg>;
-  // }
-  return <svg className={common} viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 17.8a7.8 7.8 0 0 1-4-1.1l-.3-.2-3 .8.8-2.9-.2-.3A7.8 7.8 0 1 1 12 19.8Zm4.3-5.8c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1a6.2 6.2 0 0 1-3-2.6c-.2-.4.2-.4.7-1.2.1-.2.1-.4 0-.6l-.8-1.9c-.2-.5-.5-.4-.7-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 1.8.8 2.5.8 3.4.7 1-.1 1.4-.7 1.6-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.2-.6-.4Z" /></svg>;
+  return <svg className={common} viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" /></svg>;
 }
 export default function Footer() {
     return(
@@ -42,28 +37,24 @@ export default function Footer() {
 
           <div className="grid gap-8 pb-4 pt-8 text-[15px] leading-7 sm:grid-cols-2 sm:gap-10 sm:pb-9 sm:pt-10 lg:grid-cols-[1.25fr_0.85fr_1fr_1.15fr] lg:gap-14">
             <section>
-              <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">We have been</h3>
+              {/* <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">We have been</h3> */}
               <p className="max-w-[390px]">We have been delivering high-quality online courses for nearly a decade. All our instructors are experts with extensive experience in their respective fields. We offer comprehensive course materials, ensuring our students have everything they need to succeed.</p>
               <div className='flex space-between mt-4'>
                 <p className='font-semibold pr-4 text-[var(--footer-heading)]'>We Accept</p>
                 <Image src="/payment-cards.webp" alt='' width={200} height={40}></Image>
-                {/* <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
-                <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
-                <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image>
-                <Image src="ireland_icon.svg" alt='' width={20} height={20}></Image> */}
               </div>
             </section>
 
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Courses</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]">UK PLAB / UKMLA Courses</li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]">Ireland Courses</li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]">UK Foundation Programme Courses</li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]">Upcoming Courses</li>
+                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-plab-ukmla">UK PLAB / UKMLA Courses</a></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#ireland-courses">Ireland Courses</a></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-foundation">UK Foundation Programme Courses</a></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses/msra">Upcoming Courses</a></li>
               </ul>
               <h3 className="mb-3 mt-6 font-semibold text-[var(--footer-heading)]">Important Links</h3>
-              <p>No Refund Policy</p>
+              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy">NO Refund Policy</Link></p>
             </section>
 
             <section>

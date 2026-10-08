@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+type CourseFeature = {
+  icon: string;
+  label: string;
+};
+
 type CourseCardProps = {
   image: string;
   title: string;
@@ -7,14 +12,11 @@ type CourseCardProps = {
   description: string;
   buttonLabel: string;
   href?: string;
+  badge?: string;
+  badgeClassName?: string;
+  buttonClassName?: string;
+  features?: CourseFeature[];
 };
-
-const cardFeatures = [
-  { icon: "/smart_banks_icon.svg", label: "SmartQBank" },
-  { icon: "/smart_notes_icon.svg", label: "SmartNotes" },
-  { icon: "/smart_mocks_cour_icon.svg", label: "SmartMocks" },
-  { icon: "/exam_style_icon.svg", label: "Exam-style practice" },
-];
 
 export default function CourseCard({
   image,
@@ -23,10 +25,27 @@ export default function CourseCard({
   description,
   buttonLabel,
   href = "#",
+  badge = "Course",
+  badgeClassName = "border-[#dfe8ff] bg-[#eef4ff] text-[#1d4f9d]",
+  buttonClassName = "bg-[var(--courses-cta)]",
+  features = [
+    { icon: "/smart_banks_icon.svg", label: "SmartQBank" },
+    { icon: "/smart_notes_icon.svg", label: "SmartNotes" },
+    { icon: "/smart_mocks_cour_icon.svg", label: "SmartMocks" },
+    { icon: "/exam_style_icon.svg", label: "Exam-style practice" },
+  ],
 }: CourseCardProps) {
   return (
-    <article className="flex h-full flex-col rounded-[20px] border border-[var(--courses-card-border)] bg-white p-[16px]">
-      <div className="relative aspect-[679/229] w-full overflow-hidden rounded-[17px] bg-[var(--courses-feature-bg)]">
+    <article className="flex h-full flex-col rounded-[20px] border border-[var(--courses-card-border)] bg-white p-[16px] shadow-[0_10px_30px_rgba(10,23,41,0.03)]">
+      <div className="flex items-center justify-between">
+        <span
+          className={`inline-flex rounded-full border px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.08em] sm:text-[10px] ${badgeClassName}`}
+        >
+          {badge}
+        </span>
+      </div>
+
+      <div className="relative mt-3 aspect-[679/229] w-full overflow-hidden rounded-[17px] bg-[var(--courses-feature-bg)]">
         <Image
           src={image}
           alt=""
@@ -51,7 +70,7 @@ export default function CourseCard({
       <div className="my-[15px] h-px w-full bg-[var(--courses-divider)]" />
 
       <div className="grid grid-cols-2 gap-[10px] sm:grid-cols-4 sm:gap-[12px]">
-        {cardFeatures.map((feature) => (
+        {features.map((feature) => (
           <div
             key={feature.label}
             className="flex min-h-[62px] flex-col items-start justify-center rounded-[10px] bg-[var(--courses-feature-bg)] px-[10px] py-[8px] sm:min-h-[60px] sm:px-[9px]"
@@ -73,10 +92,9 @@ export default function CourseCard({
 
       <a
         href={href}
-        className="mt-[26px] flex h-[42px] w-full items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-cta)] px-[14px] text-[10px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-105 sm:text-[16px]"
+        className={`mt-[26px] flex h-[42px] w-full items-center justify-center gap-[10px] rounded-[7px] px-[14px] text-[10px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-105 sm:text-[16px] ${buttonClassName}`}
       >
         <span>{buttonLabel}</span>
-        {/* <ArrowIcon /> */}
         <Image
           src="/courses_arrow.svg"
           alt=""

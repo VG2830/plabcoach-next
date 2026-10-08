@@ -24,6 +24,10 @@ type CourseItem = {
   description: string;
   buttonLabel: string;
   href: string;
+  badge?: string;
+  badgeClassName?: string;
+  buttonClassName?: string;
+  features?: { icon: string; label: string }[];
 };
 
 type CourseSectionProps = {
@@ -36,64 +40,122 @@ type CourseSectionProps = {
 
 const ukCourses: CourseItem[] = [
   {
-    image: "/plab1_course.webp",
+    image: "/courses_plab1.webp",
     title: "PLAB 1 / UKMLA",
     assessment: "Applied Knowledge Test (AKT)",
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
     href: "/courses/plab-1-ukmla-akt",
+    badge: "UK PLAB",
+    badgeClassName: "border-[#dfe8ff] bg-[#eef4ff] text-[#1d4f9d]",
+    buttonClassName: "bg-[var(--courses-cta)]",
+    features: [
+      { icon: "/smart_banks_icon.svg", label: "SmartQBank" },
+      { icon: "/smart_notes_icon.svg", label: "SmartNotes" },
+      { icon: "/smart_mocks_cour_icon.svg", label: "SmartMocks" },
+      // { icon: "/exam_style_icon.svg", label: "Exam-style practice" },
+    ],
   },
   {
-    image: "/plab1_course.webp",
+    image: "/courses_plab2.webp",
     title: "PLAB 2 / UKMLA",
     assessment: "Clinical and Professional Skills Assessment (CPSA)",
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
     href: "/courses/plab-2-ukmla-cpsa",
+    badge: "UK PLAB",
+    badgeClassName: "border-[#dfe8ff] bg-[#eef4ff] text-[#1d4f9d]",
+    buttonClassName: "bg-[var(--courses-cta)]",
+    features: [
+      { icon: "/smart_notes_icon.svg", label: "LIVE Training Sessions" },
+      { icon: "/smart_banks_icon.svg", label: "SmartNotes" },
+      { icon: "/smart_mocks_cour_icon.svg", label: "SmartMocks for OSCE" },
+      { icon: "/exam_style_icon.svg", label: "Manikin Practice" },
+    ],
   },
 ];
 
 const irelandCourses: CourseItem[] = [
   {
-    image: "/ireland_course.webp",
+    image: "/courses_pres2.webp",
     title: "PRES Level 2",
     assessment: "Applied Knowledge Test (AKT)",
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
     href: "/courses/pres-2",
+    badge: "Ireland PRES",
+    badgeClassName: "border-[#dff4ec] bg-[#edfdf7] text-[#0d5f4d]",
+    buttonClassName: "bg-[#0f7a68]",
+    features: [
+      { icon: "/smart_banks_icon.svg", label: "SmartQBank" },
+      { icon: "/smart_notes_icon.svg", label: "SmartNotes" },
+      { icon: "/smart_mocks_cour_icon.svg", label: "SmartMocks" },
+      // { icon: "/exam_style_icon.svg", label: "Case practice" },
+    ],
   },
   {
-    image: "/ireland_course.webp",
+    image: "/courses_pres3.webp",
     title: "PRES 3 - OSCE",
     assessment: "Clinical and Professional Skills Assessment (CPSA)",
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
     href: "/courses/pres-3",
+    badge: "Ireland PRES",
+    badgeClassName: "border-[#dff4ec] bg-[#edfdf7] text-[#0d5f4d]",
+    buttonClassName: "bg-[#0f7a68]",
+    features: [
+      { icon: "/smart_notes_icon.svg", label: "LIVE Training Sessions" },
+      { icon: "/smart_banks_icon.svg", label: "Self Paced Videos" },
+      { icon: "/smart_mocks_cour_icon.svg", label: "SmartNotes" },
+      { icon: "/exam_style_icon.svg", label: "SmartQBank" },
+      {icon: "/exam_style_icon.svg", label: "SmartMocks for OSCE"},
+      {icon: "/exam_style_icon.svg", label: "Manikin Practice"},
+
+    ],
   },
 ];
 
 const foundationCourses: CourseItem[] = [
   {
-    image: "/uk_course.webp",
+    image: "/courses_nca.webp",
     title: "National Clinical Assessment",
     assessment: "Applied Knowledge Test (AKT)",
     description:
-      "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
+      "Prepare confidently for the UKFPO NCA Exam with our comprehensive courses covering clinical knowledge, practical skills, communication, and exam-focused preparation.",
     buttonLabel: "Explore AKT Preparation",
     href: "/courses/ukfpo-nca",
+    badge: "Foundation",
+    badgeClassName: "border-[#e8e1ff] bg-[#f5f0ff] text-[#4f3ca9]",
+    buttonClassName: "bg-[#6d50d2]",
+    features: [
+      { icon: "/smart_banks_icon.svg", label: "LIVE Traning Sessions" },
+      { icon: "/smart_mocks_cour_icon.svg", label: "SmartNotes" },
+      { icon: "/smart_notes_icon.svg", label: "Self Paced Videos" },
+      { icon: "/exam_style_icon.svg", label: "SmartMocks" },
+       { icon: "/smart_mocks_cour_icon.svg", label: "Manikin Practice" },
+    ],
   },
   {
-    image: "/uk_course.webp",
+    image: "/courses_psa.webp",
     title: "Prescribing Safety Assessment",
     assessment: "Clinical and Professional Skills Assessment (CPSA)",
     description:
-      "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
+      "Prepare for the Prescribing Safety Assessment (PSA) with focused, exam-oriented training covering prescribing skills, calculations, clinical decision-making, and safe prescribing practice.",
     buttonLabel: "Explore CPSA Preparation",
     href: "/courses/ukfpo-psa",
+    badge: "Foundation",
+    badgeClassName: "border-[#e8e1ff] bg-[#f5f0ff] text-[#4f3ca9]",
+    buttonClassName: "bg-[#6d50d2]",
+    features: [
+      { icon: "/smart_banks_icon.svg", label: "LIVE Traning Sessions" },
+      { icon: "/smart_mocks_cour_icon.svg", label: "SmartNotes" },
+      { icon: "/smart_notes_icon.svg", label: "Self Paced Videos" },
+      { icon: "/exam_style_icon.svg", label: "SmartMocks" },
+    ],
   },
 ];
 
@@ -101,22 +163,26 @@ const learningOptions = [
   {
     title: "SmartQBank",
     description:
-      "Practice exam-focused questions and strengthen your understanding through active learning.",
+      "Expert-led video tutorials for PRES 3, NCA, and PSA, available on your own schedule.",
+    icon: "/smart_banks_icon.svg",
   },
   {
     title: "SmartNotes",
     description:
-      "Access concise and structured revision material designed to support efficient exam preparation.",
+      "Interactive sessions with Dr. Karam Singh and Dr. Anjum Kohli, delivered online and in person.",
+    icon:"/smart_notes_icon.svg",
   },
   {
     title: "SmartMocks",
     description:
-      "Test your knowledge and exam readiness with realistic practice assessments.",
+      "Full-length mock exams simulating real exam conditions, with personalised feedback.",
+    icon: "/smart_mocks_cour_icon.svg",
   },
   {
     title: "Live Coaching",
     description:
-      "Learn directly through structured live teaching and expert guidance.",
+      "Image-based flashcards for fast recall and clinical reasoning practice on the go.",
+    icon: "/exam_style_icon.svg",
   },
 ];
 
@@ -315,25 +381,21 @@ export default function Courses() {
                 Choose the preparation format that works best for your schedule and learning style.
               </p>
 
-              <div className="mt-[30px] grid grid-cols-1 gap-[16px] sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-[30px] grid grid-cols-1 gap-[18px] md:grid-cols-2">
                 {learningOptions.map((option) => (
                   <article
                     key={option.title}
-                    className="group relative min-h-[390px] overflow-hidden rounded-[20px] bg-[var(--courses-learning-card-bg)]"
+                    className="flex min-h-[220px] items-center gap-[22px] rounded-[28px] border border-[#d7e7f5] bg-[#dfeef9] p-[28px] shadow-[0_12px_28px_rgba(9,83,159,0.04)]"
                   >
-                    <Image
-                      src="/young-man-learning-virtual-classroom.svg"
-                      alt=""
-                      fill
-                      sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 47vw, 240px"
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/95" />
-                    <div className="absolute inset-x-[16px] bottom-[16px] z-10 text-white">
-                      <h3 className="text-[16px] font-bold leading-[1.2] sm:text-[24px]">
+                    <div className="flex h-[82px] w-[82px] shrink-0 items-center justify-center rounded-[22px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)]">
+                      <Image src={option.icon} alt={option.title} className="h-full w-full object-contain" width={65} height={65} />
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className="text-[22px] font-bold leading-[1.15] tracking-[-0.02em] text-[var(--courses-heading)] sm:text-[30px]">
                         {option.title}
                       </h3>
-                      <p className="mt-[9px] text-[10px] leading-[1.6] text-white/60 sm:text-[16px]">
+                      <p className="mt-[18px] text-[14px] leading-[1.6] text-[var(--courses-copy)] sm:text-[17px]">
                         {option.description}
                       </p>
                     </div>

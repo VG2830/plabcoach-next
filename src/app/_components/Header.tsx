@@ -288,7 +288,7 @@ export default function Header() {
         </Link>
 
         <div className="flex items-center justify-end gap-4 lg:gap-5">
-          <a href="#calendar" aria-label="Important dates" className="hidden lg:block">
+          {/* <a href="#calendar" aria-label="Important dates" className="hidden lg:block">
             <Image
               src="/calender_icon.svg"
               alt=""
@@ -298,7 +298,7 @@ export default function Header() {
               className="h-[17px] w-[17px]"
             />
           </a>
-          <span className="hidden h-[18px] w-px bg-[#dce5f0] lg:block" aria-hidden="true" />
+          <span className="hidden h-[18px] w-px bg-[#dce5f0] lg:block" aria-hidden="true" /> */}
           <Link href="/contact-us" aria-label="Contact Us" className="hidden lg:block">
             <Image
               src="/header_phone_icon.svg"
