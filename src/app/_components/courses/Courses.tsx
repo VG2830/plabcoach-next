@@ -278,11 +278,11 @@ export default function Courses() {
                   >
                     Find Your Exam
                   </a> */}
-                  <Link href="/important-exam" className="flex h-[51px] min-w-[186px] items-center justify-center rounded-[7px] border-[1.5px] border-[var(--courses-button-border)] bg-transparent px-[22px] text-[12px] font-bold text-[var(--courses-button-muted)] transition-colors duration-200 hover:border-[var(--courses-primary)] hover:text-[var(--courses-primary)] sm:text-[13px]">
+                  {/* <Link href="/important-exam" className="flex h-[51px] min-w-[186px] items-center justify-center rounded-[7px] border-[1.5px] border-[var(--courses-button-border)] bg-transparent px-[22px] text-[12px] font-bold text-[var(--courses-button-muted)] transition-colors duration-200 hover:border-[var(--courses-primary)] hover:text-[var(--courses-primary)] sm:text-[13px]">
                     
                       Find Your Exam
                     
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <Image

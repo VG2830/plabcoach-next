@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Header from "../../_components/Header";
 import Footer from "../../_components/Footer";
 import type {
@@ -12,7 +11,6 @@ import type {
   PlanCardData,
   SelfPacedPlan,
 } from "../_data/coursePlanData";
-import { getPlanSelectionHref } from "../_data/coursePlanData";
 import { CheckIcon, ScheduleIcon, StarIcon } from "./PlanIcons";
 
 const interactiveCard =
@@ -56,14 +54,22 @@ function DecorativeRings({
   );
 }
 
-function EnrolButton({ courseSlug, planId }: { courseSlug: string; planId: string }) {
+function EnrolButton({ href }: { href: string }) {
+  const className =
+    "grid h-[40px] w-full place-items-center rounded-[7px] bg-[var(--plan-button)] text-[10px] font-bold uppercase tracking-[-0.01em] text-white transition-[transform,filter,box-shadow] duration-200 hover:-translate-y-[1px] hover:brightness-105 hover:shadow-[0_7px_16px_rgba(91,101,220,0.20)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--plan-button)] focus-visible:ring-offset-2 sm:h-[42px]";
+
+  if (!href) {
+    return (
+      <button type="button" disabled className={`${className} cursor-not-allowed opacity-60`}>
+        ENROLL NOW
+      </button>
+    );
+  }
+
   return (
-    <Link
-      href={getPlanSelectionHref(courseSlug, planId)}
-      className="grid h-[40px] w-full place-items-center rounded-[7px] bg-[var(--plan-button)] text-[10px] font-bold uppercase tracking-[-0.01em] text-white transition-[transform,filter,box-shadow] duration-200 hover:-translate-y-[1px] hover:brightness-105 hover:shadow-[0_7px_16px_rgba(91,101,220,0.20)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--plan-button)] focus-visible:ring-offset-2 sm:h-[42px]"
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
       ENROLL NOW
-    </Link>
+    </a>
   );
 }
 
@@ -168,7 +174,7 @@ function TestimonialSlider({ testimonials }: { testimonials: CoursePlanConfig["t
   );
 }
 
-function PrimaryPlanCard({ plan, courseSlug }: { plan: PlanCardData; courseSlug: string }) {
+function PrimaryPlanCard({ plan }: { plan: PlanCardData }) {
   return (
     <article
       className={`group relative flex min-h-[516px] flex-col overflow-hidden rounded-[22px] border border-[var(--plan-card-border)] bg-[var(--plan-card)] px-4 pb-[14px] pt-4 sm:px-[17px] ${interactiveCard}`}
@@ -229,7 +235,7 @@ function PrimaryPlanCard({ plan, courseSlug }: { plan: PlanCardData; courseSlug:
       </div>
 
       <div className="relative z-10 mt-auto pt-3">
-        <EnrolButton courseSlug={courseSlug} planId={plan.id} />
+        <EnrolButton href={plan.externalHref} />
       </div>
     </article>
   );
@@ -252,7 +258,7 @@ function ProgrammeSection({ data }: { data: CoursePlanConfig }) {
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {data.primaryPlans.map((plan) => (
-              <PrimaryPlanCard key={plan.id} plan={plan} courseSlug={data.slug} />
+              <PrimaryPlanCard key={plan.id} plan={plan} />
             ))}
           </div>
         </div>
@@ -262,7 +268,7 @@ function ProgrammeSection({ data }: { data: CoursePlanConfig }) {
   );
 }
 
-function SelfPacedCard({ plan, courseSlug }: { plan: SelfPacedPlan; courseSlug: string }) {
+function SelfPacedCard({ plan }: { plan: SelfPacedPlan }) {
   return (
     <div className="relative flex h-[368px] items-center">
       <article className="group relative flex h-[296px] w-full flex-col overflow-hidden rounded-[20px] border border-[var(--plan-card-border)] bg-[var(--plan-card)] px-[15px] pb-[15px] pt-[13px] transition-[height,transform,box-shadow] duration-300 ease-out hover:h-[368px] hover:-translate-y-[1px] hover:shadow-[var(--plan-hover-shadow)] sm:px-[17px]">
@@ -288,7 +294,7 @@ function SelfPacedCard({ plan, courseSlug }: { plan: SelfPacedPlan; courseSlug: 
           </ul>
         </div>
         <div className="relative z-10 mt-auto">
-          <EnrolButton courseSlug={courseSlug} planId={plan.id} />
+          <EnrolButton href={plan.externalHref} />
         </div>
       </article>
     </div>
@@ -304,7 +310,7 @@ function SelfPacedSection({ data }: { data: CoursePlanConfig }) {
           <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px]">SmartNotes &amp; Self-Paced Mastery Videos</h2>
           <div className="mt-7 grid gap-4 md:grid-cols-3">
             {data.selfPacedPlans.map((plan) => (
-              <SelfPacedCard key={plan.id} plan={plan} courseSlug={data.slug} />
+              <SelfPacedCard key={plan.id} plan={plan} />
             ))}
           </div>
         </div>
@@ -313,7 +319,7 @@ function SelfPacedSection({ data }: { data: CoursePlanConfig }) {
   );
 }
 
-function HorizontalPlanCard({ plan, courseSlug }: { plan: HorizontalPlan; courseSlug: string }) {
+function HorizontalPlanCard({ plan }: { plan: HorizontalPlan }) {
   return (
     <article
       className={`group grid gap-7 rounded-[22px] border border-[var(--plan-card-border)] bg-[var(--plan-card)] px-[18px] py-[16px] shadow-[var(--plan-row-shadow)] sm:px-[20px] lg:grid-cols-[1.35fr_0.78fr_0.56fr] lg:gap-8 ${interactiveCard}`}
@@ -325,7 +331,7 @@ function HorizontalPlanCard({ plan, courseSlug }: { plan: HorizontalPlan; course
         </div>
         <h3 className="mt-2 text-[25px] font-bold leading-tight text-[var(--plan-blue)]">{plan.title}</h3>
         <div className="mt-auto pt-5 lg:max-w-[390px]">
-          <EnrolButton courseSlug={courseSlug} planId={plan.id} />
+          <EnrolButton href={plan.externalHref} />
         </div>
       </div>
       <div>
@@ -367,7 +373,7 @@ function DataInterpretationSection({ data }: { data: CoursePlanConfig }) {
         <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">Data Interpretation Course</h2>
         <div className="mx-auto mt-5 max-w-[1040px] space-y-4">
           {data.horizontalPlans.map((plan) => (
-            <HorizontalPlanCard key={plan.id} plan={plan} courseSlug={data.slug} />
+            <HorizontalPlanCard key={plan.id} plan={plan} />
           ))}
         </div>
         </div>
@@ -376,7 +382,7 @@ function DataInterpretationSection({ data }: { data: CoursePlanConfig }) {
   );
 }
 
-function MockPlanCard({ plan, courseSlug }: { plan: MockPlan; courseSlug: string }) {
+function MockPlanCard({ plan }: { plan: MockPlan }) {
   return (
     <article
       className={`group flex min-h-[370px] flex-col rounded-[20px] border border-[var(--plan-card-border)] bg-[var(--plan-card)] px-[16px] pb-[16px] pt-[13px] ${interactiveCard}`}
@@ -399,7 +405,7 @@ function MockPlanCard({ plan, courseSlug }: { plan: MockPlan; courseSlug: string
       </div>
       <p className="mt-auto pt-7 text-[15px] font-bold text-[var(--plan-text)]">{plan.note}</p>
       <div className="mt-7">
-        <EnrolButton courseSlug={courseSlug} planId={plan.id} />
+        <EnrolButton href={plan.externalHref} />
       </div>
     </article>
   );
@@ -415,7 +421,7 @@ function MockSection({ data }: { data: CoursePlanConfig }) {
         <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">Mock - Online Tests</h2>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           {data.mockPlans.map((plan) => (
-            <MockPlanCard key={plan.id} plan={plan} courseSlug={data.slug} />
+            <MockPlanCard key={plan.id} plan={plan} />
           ))}
         </div>
         </div>
@@ -430,10 +436,10 @@ export default function CoursePlanPage({ data }: { data: CoursePlanConfig }) {
       <Header />
       <main>
         <PlanHero data={data} />
-        <ProgrammeSection data={data} />
-        <SelfPacedSection data={data} />
-        <DataInterpretationSection data={data} />
-        <MockSection data={data} />
+        {data.primaryPlans.length > 0 ? <ProgrammeSection data={data} /> : null}
+        {data.selfPacedPlans.length > 0 ? <SelfPacedSection data={data} /> : null}
+        {data.horizontalPlans.length > 0 ? <DataInterpretationSection data={data} /> : null}
+        {data.mockPlans.length > 0 ? <MockSection data={data} /> : null}
       </main>
       <Footer />
     </div>

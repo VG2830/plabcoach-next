@@ -5,6 +5,7 @@ export type ScheduleItem = {
 
 export type PlanCardData = {
   id: string;
+  externalHref: string;
   price: string;
   oldPrice: string;
   title: string;
@@ -14,6 +15,7 @@ export type PlanCardData = {
 
 export type SelfPacedPlan = {
   id: string;
+  externalHref: string;
   price: string;
   oldPrice: string;
   title: string;
@@ -23,6 +25,7 @@ export type SelfPacedPlan = {
 
 export type HorizontalPlan = {
   id: string;
+  externalHref: string;
   price: string;
   oldPrice: string;
   title: string;
@@ -32,6 +35,7 @@ export type HorizontalPlan = {
 
 export type MockPlan = {
   id: string;
+  externalHref: string;
   price: string;
   oldPrice: string;
   title: string;
@@ -127,6 +131,7 @@ const pres3Plan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "live-course",
+      externalHref: "",
       price: "£660",
       oldPrice: "£800",
       title: "LIVE Course",
@@ -135,6 +140,7 @@ const pres3Plan: CoursePlanConfig = {
     },
     {
       id: "live-online",
+      externalHref: "",
       price: "£440",
       oldPrice: "£575",
       title: "LIVE Online only Mode",
@@ -145,6 +151,7 @@ const pres3Plan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "mastery-videos",
+      externalHref: "",
       price: "£195",
       oldPrice: "£250",
       title: "MASTERY VIDEOS",
@@ -153,6 +160,7 @@ const pres3Plan: CoursePlanConfig = {
     },
     {
       id: "full-bundle",
+      externalHref: "",
       price: "£275",
       oldPrice: "£330",
       title: "FULL BUNDLE",
@@ -161,6 +169,7 @@ const pres3Plan: CoursePlanConfig = {
     },
     {
       id: "smartnotes",
+      externalHref: "",
       price: "£140",
       oldPrice: "£175",
       title: "SMARTNOTES",
@@ -171,6 +180,7 @@ const pres3Plan: CoursePlanConfig = {
   horizontalPlans: [
     {
       id: "pres3-osce-programme",
+      externalHref: "",
       price: "£500",
       oldPrice: "£550",
       title: "PRES3 OSCE Programme",
@@ -188,6 +198,7 @@ const pres3Plan: CoursePlanConfig = {
     },
     {
       id: "data-interpretation-course",
+      externalHref: "",
       price: "£500",
       oldPrice: "£650",
       title: "Data Interpretation Course",
@@ -201,6 +212,7 @@ const pres3Plan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "data-interpretation-mock",
+      externalHref: "",
       price: "£49",
       oldPrice: "£75",
       title: "Data Interpretation Mock Exam",
@@ -209,6 +221,7 @@ const pres3Plan: CoursePlanConfig = {
     },
     {
       id: "osce-mock",
+      externalHref: "",
       price: "£125",
       oldPrice: "£175",
       title: "OSCE Mock Exam",
@@ -217,6 +230,7 @@ const pres3Plan: CoursePlanConfig = {
     },
     {
       id: "complete-mock-package",
+      externalHref: "",
       price: "£149",
       oldPrice: "£250",
       title: "Complete Mock Package",
@@ -260,6 +274,7 @@ const plab1Plan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "plab1-complete",
+      externalHref: "",
       price: "£299",
       oldPrice: "£399",
       title: "Complete PLAB 1 Pack",
@@ -273,6 +288,7 @@ const plab1Plan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "plab1-smartqbank",
+      externalHref: "",
       price: "£149",
       oldPrice: "£199",
       title: "SmartQBank",
@@ -281,6 +297,7 @@ const plab1Plan: CoursePlanConfig = {
     },
     {
       id: "plab1-smartnotes",
+      externalHref: "",
       price: "£89",
       oldPrice: "£120",
       title: "SmartNotes",
@@ -291,6 +308,7 @@ const plab1Plan: CoursePlanConfig = {
   horizontalPlans: [
     {
       id: "plab1-mastery-programme",
+      externalHref: "",
       price: "£199",
       oldPrice: "£259",
       title: "Mastery Programme",
@@ -301,6 +319,7 @@ const plab1Plan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "plab1-mock",
+      externalHref: "",
       price: "£39",
       oldPrice: "£65",
       title: "AKT Mock Exam",
@@ -309,6 +328,7 @@ const plab1Plan: CoursePlanConfig = {
     },
     {
       id: "plab1-complete-mock",
+      externalHref: "",
       price: "£69",
       oldPrice: "£99",
       title: "Mock + Review Pack",
@@ -375,6 +395,7 @@ const plab2Plan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "plab2-videos",
+      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11243",
       price: "£180",
       oldPrice: "£230",
       title: "Clinical Mastery Videos",
@@ -447,6 +468,7 @@ const pres2Plan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "pres2-complete",
+      externalHref: "",
       price: "£229",
       oldPrice: "£299",
       title: "PRES 2 Complete Plan",
@@ -457,6 +479,7 @@ const pres2Plan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "pres2-qbank",
+      externalHref: "",
       price: "£119",
       oldPrice: "£155",
       title: "PRES 2 QBank",
@@ -465,6 +488,7 @@ const pres2Plan: CoursePlanConfig = {
     },
     {
       id: "pres2-notes",
+      externalHref: "",
       price: "£89",
       oldPrice: "£120",
       title: "SmartNotes",
@@ -475,6 +499,7 @@ const pres2Plan: CoursePlanConfig = {
   horizontalPlans: [
     {
       id: "pres2-rapid-revision",
+      externalHref: "",
       price: "£149",
       oldPrice: "£199",
       title: "Rapid Revision Plan",
@@ -485,6 +510,7 @@ const pres2Plan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "pres2-mock",
+      externalHref: "",
       price: "£35",
       oldPrice: "£55",
       title: "PRES 2 Mock Test",
@@ -521,6 +547,7 @@ const ncaPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "nca-complete",
+      externalHref: "",
       price: "£189",
       oldPrice: "£249",
       title: "NCA Complete Plan",
@@ -531,6 +558,7 @@ const ncaPlan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "nca-videos",
+      externalHref: "",
       price: "£109",
       oldPrice: "£149",
       title: "Clinical Videos",
@@ -541,6 +569,7 @@ const ncaPlan: CoursePlanConfig = {
   horizontalPlans: [
     {
       id: "nca-rapid-plan",
+      externalHref: "",
       price: "£149",
       oldPrice: "£199",
       title: "NCA Rapid Review",
@@ -551,6 +580,7 @@ const ncaPlan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "nca-mock",
+      externalHref: "",
       price: "£39",
       oldPrice: "£59",
       title: "NCA Mock Session",
@@ -587,6 +617,7 @@ const psaPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "psa-complete",
+      externalHref: "",
       price: "£179",
       oldPrice: "£239",
       title: "PSA Complete Plan",
@@ -594,36 +625,9 @@ const psaPlan: CoursePlanConfig = {
       schedule: [{ label: "Revision access", dates: [{ name: "Flexible", date: "Self-paced" }] }],
     },
   ],
-  selfPacedPlans: [
-    {
-      id: "psa-notes",
-      price: "£99",
-      oldPrice: "£129",
-      title: "Drug Safety Notes",
-      subtitle: "Fast revision for high-yield prescribing",
-      features: ["Common prescriptions", "Risk review", "Clinical safety"],
-    },
-  ],
-  horizontalPlans: [
-    {
-      id: "psa-rapid-plan",
-      price: "£129",
-      oldPrice: "£169",
-      title: "PSA Rapid Review",
-      features: ["Short case practice", "Safety checks", "Exam technique", "Revision notes"],
-      schedule: [{ name: "Revision bundle", date: "Self-paced" }],
-    },
-  ],
-  mockPlans: [
-    {
-      id: "psa-mock",
-      price: "£39",
-      oldPrice: "£59",
-      title: "PSA Mock Test",
-      features: ["Case-based practice", "Timed decisions", "Feedback", "Risk awareness"],
-      note: "Strong final prep before the real assessment",
-    },
-  ],
+  selfPacedPlans: [],
+  horizontalPlans: [],
+  mockPlans: [],
 };
 
 const msraPlan: CoursePlanConfig = {
@@ -646,6 +650,7 @@ const msraPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "msra-core",
+      externalHref: "",
       price: "£219",
       oldPrice: "£289",
       title: "MSRA Core Plan",
@@ -656,6 +661,7 @@ const msraPlan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "msra-qbank",
+      externalHref: "",
       price: "£109",
       oldPrice: "£149",
       title: "MSRA QBank",
@@ -666,6 +672,7 @@ const msraPlan: CoursePlanConfig = {
   horizontalPlans: [
     {
       id: "msra-bootcamp",
+      externalHref: "",
       price: "£169",
       oldPrice: "£229",
       title: "MSRA Bootcamp",
@@ -676,6 +683,7 @@ const msraPlan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "msra-mock",
+      externalHref: "",
       price: "£45",
       oldPrice: "£69",
       title: "MSRA Mock Set",
@@ -705,6 +713,7 @@ const mrcpAktPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "mrcp-akt-plus",
+      externalHref: "",
       price: "£249",
       oldPrice: "£329",
       title: "AKT Plus Plan",
@@ -715,6 +724,7 @@ const mrcpAktPlan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "mrcp-akt-qbank",
+      externalHref: "",
       price: "£119",
       oldPrice: "£169",
       title: "AKT QBank",
@@ -725,6 +735,7 @@ const mrcpAktPlan: CoursePlanConfig = {
   horizontalPlans: [
     {
       id: "mrcp-akt-revision",
+      externalHref: "",
       price: "£159",
       oldPrice: "£219",
       title: "AKT Revision Route",
@@ -735,6 +746,7 @@ const mrcpAktPlan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "mrcp-akt-mock",
+      externalHref: "",
       price: "£49",
       oldPrice: "£79",
       title: "AKT Mock Set",
@@ -765,8 +777,4 @@ export const defaultCoursePlan = pres3Plan;
 
 export function getCoursePlanHref(courseSlug: string) {
   return `/course-plan?course=${encodeURIComponent(courseSlug)}`;
-}
-
-export function getPlanSelectionHref(courseSlug: string, planId: string) {
-  return `/course-plan?course=${encodeURIComponent(courseSlug)}&selectedPlan=${encodeURIComponent(planId)}`;
 }

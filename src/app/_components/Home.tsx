@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect,useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Link from "next/link";
@@ -213,7 +213,7 @@ const testimonials = [
   },
 ];
 
-const faqs = [
+const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
   {
     question: "What is PLABcoach?",
     answer: "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. We provide structured courses, question banks, mock exams and clinical skills coaching, led by Dr. Karam Singh, a practising NHS GP.",
@@ -236,15 +236,54 @@ const faqs = [
   },
   {
     question: "Who teaches the PLABcoach courses?",
-    answer: "Our courses are led by Dr. Karam Singh and Dr. Anjum Kohli.",
+    answer: "PLABcoach courses are taught by Dr Karam Singh (M.D., MRCGP), the founder of PLABcoach and an experienced UK and US-licensed doctor with over 10 years of teaching experience, and Dr Anjum Kohli, an experienced doctor with a strong passion for medical education. Both teach core GMC-required subjects and bring valuable clinical knowledge and personal experience to help aspiring doctors navigate medical licensing exams with confidence, including those returning after career breaks.",
   },
   {
     question: "How do I access the question banks and course materials?",
     answer: "Sign up on the platform and enroll in your course for instant access to all the learning material included — SmartNotes, Self-Paced Mastery Videos, SmartQBank and more. Some courses offer free access so you can get a feel for the platform and its content before committing. Our mobile app is available on both Android and iOS.",
+    afterAnswer: (
+      <div className="flex flex-wrap items-center gap-3 px-5 pb-4">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[13px] font-semibold text-[var(--primary)] hover:underline"
+        >
+          Sign Up
+        </a>
+        <span aria-hidden="true" className="text-[#6f7280]">|</span>
+        <a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer">
+          <Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer">
+          <Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} />
+        </a>
+      </div>
+    ),
   },
   {
     question: "Does PLABcoach offer a free trial or sample questions?",
     answer: "Yes. Try our free Self-Assessment for SmartQBank courses, or preview a selection of our Self-Paced Mastery Videos to get a feel for the content and platform.",
+    afterAnswer: (
+      <div className="flex flex-col items-start gap-2 px-5 pb-4 text-[13px] font-semibold text-[var(--primary)]">
+        <a
+          href="https://courses.plabcoach.com/course/SmartQBankDEMO-100135"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+        >
+           PLAB 1 FREE Self-Assessment SmartQBank
+        </a>
+        <a
+          href="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+        >
+           PRES 2 FREE Self-Assessment SmartQBank
+        </a>
+      </div>
+    ),
   },
 ];
 
@@ -961,6 +1000,7 @@ useEffect(() => {
                         <div className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                           <div className="overflow-hidden">
                             <p className="whitespace-pre-line px-5 py-4 text-[13px] leading-6 text-[#6f7280]">{faq.answer}</p>
+                            {faq.afterAnswer}
                           </div>
                         </div>
                       </div>
