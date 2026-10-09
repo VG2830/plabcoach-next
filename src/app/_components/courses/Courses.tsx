@@ -72,7 +72,7 @@ const ukCourses: CourseItem[] = [
       { icon: "/smart_notes_icon.svg", label: "LIVE Training Sessions" },
       { icon: "/smart_banks_icon.svg", label: "SmartNotes" },
       { icon: "/smart_mocks_cour_icon.svg", label: "SmartMocks for OSCE" },
-      { icon: "/exam_style_icon.svg", label: "Manikin Practice" },
+      { icon: "/exam_style_icon.svg", label: "SIMMAN /Manikin Practice" },
     ],
   },
 ];

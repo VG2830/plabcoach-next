@@ -289,9 +289,9 @@ const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
 
 
 const blogs = [
-  "OSCE Self-Assessment: 10 Signs You Need More Practice as an International Medical Graduate",
-  "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?",
-  "PRES 3 vs PLAB 2: Everything International Medical Graduates Need to Know",
+ { title: "OSCE Self-Assessment: 10 Signs You Need More Practice as an International Medical Graduate" , imgUrl: "/BLOG1.webp"},
+ { title: "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?" , imgUrl: "/BLOG2.webp"},
+ { title: "PRES 3 vs PLAB 2: Everything International Medical Graduates Need to Know" , imgUrl: "/BLOG3.webp"},
 ];
 const offerSlides = [
   { src: "/offer_section_image.webp", alt: "Medical learner" },
@@ -871,7 +871,7 @@ useEffect(() => {
                 >
                   <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
                     <Image
-                      src="/blogs_image.svg"
+                      src={blogs[index].imgUrl}
                       alt="blogs image"
                       fill
                       sizes="(max-width: 767px) 100vw, 33vw"
@@ -879,7 +879,7 @@ useEffect(() => {
                     />
                   </div>
                   <h3 className="mt-5 min-h-[72px] text-[20px] font-semibold leading-[1.12] text-[#17265c] lg:text-[22px] xl:min-h-[86px] xl:text-[25px]">
-                    {title}
+                    {blogs[index].title}
                   </h3>
                   <button
                     type="button"

@@ -3,7 +3,7 @@ import Link from "next/link";
 const socialLinks = [
   { label: "facebook", href: "https://www.facebook.com/plabcoach1" },
   { label: "instagram", href: "https://www.instagram.com/plab.coach/" },
-  { label: "whatsapp", href: "https://wa.me/447712222818" },
+  { label: "youtube", href: "https://www.youtube.com/@plab_coach" },
 ];
 const COPYRIGHT_YEAR = new Date().getFullYear();
 function SocialIcon({ label }: { label: string }) {
