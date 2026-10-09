@@ -383,13 +383,13 @@ export default function Courses() {
         <section className="bg-[var(--courses-learning-bg)] py-[64px] sm:py-[72px] lg:py-[66px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)] ">
             {/* <div className="mx-auto w-full max-w-[990px]"> */}
-              <p className="text-[10px] font-bold uppercase tracking-[0.01em] text-[var(--courses-label)] sm:text-[11px]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.01em] text-[var(--courses-label)] sm:text-[14px]">
                Why Choose One When You Can Have It All?
               </p>
-              <h2 className="mt-[5px] text-[25px] font-bold leading-[1.15] tracking-[-0.015em] text-[var(--courses-heading)] sm:text-[28px]">
-                Everything You Need. One Complete Learning Experience.
+              <h2 className="mt-[5px] text-[30px] font-bold leading-[1.15] tracking-[-0.015em] text-[var(--courses-heading)] sm:text-[34px]">
+                Everything You Need. <br></br>One Complete Learning Experience.
               </h2>
-              <p className="mt-[9px] text-[11px] leading-[1.5] text-[var(--courses-copy)] sm:text-[12px]">
+              <p className="mt-[9px] max-w-[560px] text-[14px] leading-[1.5] text-[var(--courses-copy)] sm:text-[16px]">
                From SmartNotes and SmartCards to SmartQBank, SmartMocks, expert-led live coaching, and hands-on Manikin Practice with SIMMAN — get everything you need to prepare smarter, practise better, and succeed with confidence.
               </p>
 

@@ -69,11 +69,11 @@ export default function CourseCard({
 
       <div className="my-[15px] h-px w-full bg-[var(--courses-divider)]" />
 
-      <div className="grid grid-cols-2 gap-[10px] sm:grid-cols-4 sm:gap-[12px]">
+      <div className="grid grid-cols-2 gap-[5px] sm:grid-cols-4 sm:gap-[6px]">
         {features.map((feature) => (
           <div
             key={feature.label}
-            className="flex min-h-[62px] flex-col items-start justify-center rounded-[10px] bg-[var(--courses-feature-bg)] px-[10px] py-[8px] sm:min-h-[60px] sm:px-[9px]"
+            className="flex w-fit min-h-[62px] flex-col items-start justify-center rounded-[10px] bg-[var(--courses-feature-bg)] px-[10px] py-[8px] sm:min-h-[60px] sm:px-[9px]"
           >
             <Image
               src={feature.icon}
