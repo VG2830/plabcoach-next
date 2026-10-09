@@ -60,9 +60,9 @@ export default function Footer() {
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Recent Posts</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="pb-3">PRES2 SBA Practice: The Art of Eliminating Wrong Options Strategically</li>
-                <li className="py-3">PRES 2 Question Bank: Why Quality Shapes Exam Performance More Than Question Volume</li>
-                <li className="py-3">How Many PRES 2 Practice Questions Do You Actually Need Before the Exam</li>
+                <li className="pb-3"><a href="/blogs" className="hover:underline">PRES2 SBA Practice: The Art of Eliminating Wrong Options Strategically</a></li>
+                <li className="py-3"><a href="/blogs" className="hover:underline">PRES 2 Question Bank: Why Quality Shapes Exam Performance More Than Question Volume</a></li>
+                <li className="py-3"><a href="/blogs" className="hover:underline">How Many PRES 2 Practice Questions Do You Actually Need Before the Exam</a></li>
               </ul>
             </section>
 

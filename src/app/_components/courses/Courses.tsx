@@ -109,7 +109,7 @@ const irelandCourses: CourseItem[] = [
     buttonClassName: "bg-[#0f7a68]",
     features: [
       { icon: "/smart_notes_icon.svg", label: "LIVE Training Sessions" },
-      { icon: "/smart_banks_icon.svg", label: "Self Paced Videos" },
+      { icon: "/smart_banks_icon.svg", label: "Self Paced Mastery Videos" },
       { icon: "/smart_mocks_cour_icon.svg", label: "SmartNotes" },
       { icon: "/exam_style_icon.svg", label: "SmartQBank" },
       {icon: "/exam_style_icon.svg", label: "SmartMocks for OSCE"},
@@ -134,7 +134,7 @@ const foundationCourses: CourseItem[] = [
     features: [
       { icon: "/smart_banks_icon.svg", label: "LIVE Traning Sessions" },
       { icon: "/smart_mocks_cour_icon.svg", label: "SmartNotes" },
-      { icon: "/smart_notes_icon.svg", label: "Self Paced Videos" },
+      { icon: "/smart_notes_icon.svg", label: "Self Paced Mastery Videos" },
       { icon: "/exam_style_icon.svg", label: "SmartMocks" },
        { icon: "/smart_mocks_cour_icon.svg", label: "Manikin Practice" },
     ],
@@ -153,7 +153,7 @@ const foundationCourses: CourseItem[] = [
     features: [
       { icon: "/smart_banks_icon.svg", label: "LIVE Traning Sessions" },
       { icon: "/smart_mocks_cour_icon.svg", label: "SmartNotes" },
-      { icon: "/smart_notes_icon.svg", label: "Self Paced Videos" },
+      { icon: "/smart_notes_icon.svg", label: "Self Paced Mastery Videos" },
       { icon: "/exam_style_icon.svg", label: "SmartMocks" },
     ],
   },
@@ -163,26 +163,38 @@ const learningOptions = [
   {
     title: "SmartQBank",
     description:
-      "Expert-led video tutorials for PRES 3, NCA, and PSA, available on your own schedule.",
+      "Extensive question bank with self-assessment tools to strengthen knowledge and exam readiness.",
     icon: "/smart_banks_icon.svg",
   },
   {
     title: "SmartNotes",
     description:
-      "Interactive sessions with Dr. Karam Singh and Dr. Anjum Kohli, delivered online and in person.",
+      "Comprehensive, exam-focused notes designed for quick revision and better conceptual understanding.",
     icon:"/smart_notes_icon.svg",
   },
   {
     title: "SmartMocks",
     description:
-      "Full-length mock exams simulating real exam conditions, with personalised feedback.",
+      "Realistic mock examinations to assess performance, build confidence, and improve exam technique.",
     icon: "/smart_mocks_cour_icon.svg",
   },
   {
-    title: "Live Coaching",
+    title: "Live Coaching– Online & Offline",
     description:
-      "Image-based flashcards for fast recall and clinical reasoning practice on the go.",
+      "Online & Offline: Expert-led interactive training with structured guidance, practical demonstrations, and personalised feedback.",
     icon: "/exam_style_icon.svg",
+  },
+  {
+    title: "Manikin Practice, Including SIMMAN",
+    description:
+      "Hands-on clinical skills training using medical manikins and SIMMAN simulators to develop practical competence and confidence.",
+    icon: "/exam_style_icon.svg",
+  },
+  {
+    title: "SmartCards",
+    description:
+      "Interactive visual flashcards for effective recall, rapid revision, and long-term retention.",
+    icon: "/smart_notes_icon.svg",
   },
 ];
 
@@ -372,13 +384,13 @@ export default function Courses() {
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)] ">
             {/* <div className="mx-auto w-full max-w-[990px]"> */}
               <p className="text-[10px] font-bold uppercase tracking-[0.01em] text-[var(--courses-label)] sm:text-[11px]">
-                Choose How You Want to Learn
+               Why Choose One When You Can Have It All?
               </p>
               <h2 className="mt-[5px] text-[25px] font-bold leading-[1.15] tracking-[-0.015em] text-[var(--courses-heading)] sm:text-[28px]">
-                Flexible Learning. Built Around You.
+                Everything You Need. One Complete Learning Experience.
               </h2>
               <p className="mt-[9px] text-[11px] leading-[1.5] text-[var(--courses-copy)] sm:text-[12px]">
-                Choose the preparation format that works best for your schedule and learning style.
+               From SmartNotes and SmartCards to SmartQBank, SmartMocks, expert-led live coaching, and hands-on Manikin Practice with SIMMAN — get everything you need to prepare smarter, practise better, and succeed with confidence.
               </p>
 
               <div className="mt-[30px] grid grid-cols-1 gap-[18px] md:grid-cols-2">

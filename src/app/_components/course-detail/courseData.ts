@@ -1401,7 +1401,7 @@ export const courseDetails = {
     subscribeHref: "/course-plan?course=plab-1-ukmla-akt",
     syllabusHref: "https://www.gmc-uk.org/education/medical-licensing-assessment/mla-content-map",
     plabCoachHelpCta:"See SmartQBank Pricing",
-    plabCoachHelpCtaHref:"https://plabcoach.com/smartqbank/" 
+    plabCoachHelpCtaHref:"/course-plan?course=plab-1-ukmla-akt" 
   },
   "plab-2-ukmla": {
     slug: "plab-2-ukmla",
@@ -1465,7 +1465,7 @@ export const courseDetails = {
     subscribeButtonLabel: "Start PLAB 2 Preparation",
     subscribeHref: "/course-plan?course=plab-2-ukmla-cpsa",
     plabCoachHelpCta:"PLAB 2 Course",
-    plabCoachHelpCtaHref:"https://plabcoach.com/plab2-ukmla-cpsa-subscription/"
+    plabCoachHelpCtaHref:"/course-plan?course=plab-2-ukmla-cpsa"
   },
   "pres-2": {
     slug: "pres-2",
@@ -1539,13 +1539,13 @@ export const courseDetails = {
     ctaTitle: "READY TO ACE PRES 2?",
     ctaCopy: "Choose your learning path and start your PRES Level 2 preparation with PLABCOACH today.",
     subscribeButtonLabel: "Subscribe to SmartQBank for PRES 2",
-    subscribeHref: "https://plabcoach.com/smartqbank-pres2/",
+    subscribeHref: "/course-plan?course=pres-2",
     plabCoachHelpCta:"Subscribe to SmartQBank for PRES 2",
-    plabCoachHelpCtaHref:"https://plabcoach.com/smartqbank-pres2/"
+    plabCoachHelpCtaHref:"/course-plan?course=pres-2"
   },
   "pres-3-osce": {
     slug: "pres-3-osce",
-    eyebrow: "PRES 3",
+    eyebrow: "PRES 3",  
     title: "PRES 3 Exam Ireland:\nOSCE & Data Interpretation Guide",
     metaTitle: "PRES 3 Exam Ireland 2026 – OSCE & Data Interpretation Guide | PLABcoach",
     metaDescription: "PRES 3 is the Irish Medical Council's OSCE and data interpretation exam for international medical graduates, held in Dublin. Learn the format, stations and how PLABcoach helps you pass.",
@@ -1593,7 +1593,7 @@ export const courseDetails = {
     subscribeButtonLabel: "Start PRES 3 Preparation",
     subscribeHref: "/course-plan?course=pres-3",
     plabCoachHelpCta:"Subscribe — PRES 3 OSCE & Data Interpretation",
-    plabCoachHelpCtaHref:"https://plabcoach.com/pres-3-osce-data-interpretation-subscription-plans/"
+    plabCoachHelpCtaHref:"/course-plan?course=pres-3"
   },
   "national-clinical-assessment": {
     slug: "national-clinical-assessment",

@@ -198,7 +198,7 @@ function PrimaryPlanCard({ plan }: { plan: PlanCardData }) {
           {plan.features.map((feature) => (
             <div key={feature} className="flex items-start gap-[5px] text-[14px] leading-[1.35] text-[var(--plan-text)]">
               <CheckIcon className="mt-[1px] h-[11px] w-[11px] shrink-0 text-[var(--plan-green)]" />
-              <span>{feature}</span>
+              <span className="text-[12px]">{feature}</span>
             </div>
           ))}
         </div>
@@ -288,7 +288,7 @@ function SelfPacedCard({ plan }: { plan: SelfPacedPlan }) {
             {plan.features.map((feature) => (
               <li key={feature} className="flex items-center gap-[5px] text-[10px] text-[var(--plan-text)]">
                 <CheckIcon className="h-[11px] w-[11px] shrink-0 text-[var(--plan-green)]" />
-                <span>{feature}</span>
+                <span className="text-[12px] ">{feature}</span>
               </li>
             ))}
           </ul>
@@ -340,7 +340,7 @@ function HorizontalPlanCard({ plan }: { plan: HorizontalPlan }) {
           {plan.features.map((feature) => (
             <li key={feature} className="flex items-start gap-[5px] text-[10px] leading-[1.35] text-[var(--plan-text)]">
               <CheckIcon className="mt-[1px] h-[11px] w-[11px] shrink-0 text-[var(--plan-green)]" />
-              <span>{feature}</span>
+              <span className="text-[12px]">{feature}</span>
             </li>
           ))}
         </ul>
@@ -398,7 +398,7 @@ function MockPlanCard({ plan }: { plan: MockPlan }) {
           {plan.features.map((feature) => (
             <li key={feature} className="flex items-center gap-[5px] text-[10px] text-[var(--plan-text)]">
               <CheckIcon className="h-[11px] w-[11px] shrink-0 text-[var(--plan-green)]" />
-              <span>{feature}</span>
+              <span className="text-[12px]">{feature}</span>
             </li>
           ))}
         </ul>

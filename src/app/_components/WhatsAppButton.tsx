@@ -1,7 +1,10 @@
 export default function WhatsAppButton() {
+  const message =
+    "Hello..\nI’m interested in learning more about PLABCoach courses.\n\nCould you please guide me on the available courses, the content and pricing?";
+
   return (
     <a
-      href="https://wa.me/+919996312468"
+      href={`https://wa.me/919996312468?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with PLABcoach on WhatsApp"

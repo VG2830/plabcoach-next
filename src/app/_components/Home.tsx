@@ -881,12 +881,12 @@ useEffect(() => {
                   <h3 className="mt-5 min-h-[72px] text-[20px] font-semibold leading-[1.12] text-[#17265c] lg:text-[22px] xl:min-h-[86px] xl:text-[25px]">
                     {blogs[index].title}
                   </h3>
-                  <button
+                  {/* <button
                     type="button"
                     className="mt-5 h-[52px] min-w-[190px] rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
                   >
                     Read more
-                  </button>
+                  </button> */}
                 </article>
               ))}
             </div>
