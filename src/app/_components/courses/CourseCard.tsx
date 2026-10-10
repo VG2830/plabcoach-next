@@ -69,11 +69,11 @@ export default function CourseCard({
 
       <div className="my-[15px] h-px w-full bg-[var(--courses-divider)]" />
 
-      <div className="grid grid-cols-2 gap-[5px] sm:grid-cols-4 sm:gap-[6px]">
+      <div className="flex flex-wrap gap-[10px]">
         {features.map((feature) => (
           <div
             key={feature.label}
-            className="flex w-fit min-h-[62px] flex-col items-start justify-center rounded-[10px] bg-[var(--courses-feature-bg)] px-[10px] py-[8px] sm:min-h-[60px] sm:px-[9px]"
+            className="flex min-w-0 max-w-full items-center gap-[6px] rounded-full bg-[var(--courses-feature-bg)] px-[10px] py-[7px]"
           >
             <Image
               src={feature.icon}
@@ -81,9 +81,9 @@ export default function CourseCard({
               aria-hidden="true"
               width={38}
               height={38}
-              className="h-[24px] w-[24px] object-contain sm:h-[25px] sm:w-[25px]"
+              className="h-[20px] w-[20px] shrink-0 object-contain"
             />
-            <span className="mt-[5px] whitespace-nowrap text-[9px] font-semibold leading-none text-[var(--courses-card-heading)] sm:text-[14px]">
+            <span className="min-w-0 break-words text-[10px] font-semibold leading-[1.25] text-[var(--courses-card-heading)] sm:text-[13px]">
               {feature.label}
             </span>
           </div>
