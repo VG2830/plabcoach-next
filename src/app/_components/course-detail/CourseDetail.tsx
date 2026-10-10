@@ -286,7 +286,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
   const plansHref = course.subscribeHref ?? `/course-plan?course=${encodeURIComponent(course.slug)}`;
   const contactHref ="/contact-us";
   const plab1SyllabusHref = course.syllabusHref ?? "";
-  const importantDatesHref= "/important-exam";
+  const importantDatesHref= "/important-exam-dates";
   const freePlab1SmartQBankUrl="https://courses.plabcoach.com/course/SmartQBankDEMO-100135";
   const paidPlab1SmartQBank="https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015";
   const freePres2SmartQBankUrl="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881";

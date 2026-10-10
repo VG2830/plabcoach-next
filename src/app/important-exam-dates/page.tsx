@@ -1,7 +1,17 @@
+import { createPageMetadata } from "../_components/pageMetadata";
 import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import Link from "next/link";
+
+export const metadata = createPageMetadata({
+  title: "Important Medical Exam Dates 2026 | PLABcoach",
+  description:
+    "Check important 2026 dates for PLAB, UKMLA, PRES and other medical exams, and plan your preparation with confidence.",
+  canonicalPath: "/important-exam-dates",
+  image: "/3d_floating_calender.webp",
+  imageAlt: "Calendar to help plan medical exam dates",
+});
 
 type ExamScheduleRow = {
   venue: string;

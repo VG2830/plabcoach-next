@@ -1,7 +1,17 @@
+import { createPageMetadata } from "../_components/pageMetadata";
 import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import Link from "next/link";
+
+export const metadata = createPageMetadata({
+  title: "About PLABcoach | Expert Guidance for Doctors",
+  description:
+    "Learn how PLABcoach supports international medical graduates with expert guidance and preparation for UK medical exams and careers.",
+  canonicalPath: "/about-us",
+  image: "/about_doctor_appraisal-iamge.webp",
+  imageAlt: "Doctor receiving professional guidance",
+});
 
 // function ArrowIcon() {
 //   return (

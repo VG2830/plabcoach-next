@@ -699,7 +699,7 @@ useEffect(() => {
                 About Us 
               </button> */}
               <Link
-                  href="/aboutus"
+                  href="/about-us"
                  className="mt-3 inline-flex h-[52px] min-w-[190px] items-center justify-center rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
                   >
                  About Us

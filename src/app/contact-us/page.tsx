@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import CourseSelect from "./_components/CourseSelect";
+import { createPageMetadata } from "../_components/pageMetadata";
 
-export const metadata: Metadata = {
-  title: "Contact Us | PLABCoach",
-  description: "Get in touch with PLABCoach for course support and enquiries.",
-};
+export const metadata = createPageMetadata({
+  title: "Contact PLABcoach | Course Support & Enquiries",
+  description:
+    "Contact PLABcoach for help with courses, subscriptions and admissions, or to get expert guidance from our team.",
+  canonicalPath: "/contact-us",
+  image: "/contact_us_map.webp",
+  imageAlt: "PLABcoach contact location map",
+});
 
 // function LocationIcon() {
 //   return (

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { CourseDetailData } from "./courseData";
 
 // const siteUrl = "https://plabcoach.com";
-const siteUrl = "https://plabcoach-next.vercel.app";
+const siteUrl = "https://plabcoach.cogniq.in/";
 
 
 export function createCourseMetadata(course: CourseDetailData, routePath: string): Metadata {
