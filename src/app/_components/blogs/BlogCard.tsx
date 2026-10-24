@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type BlogCardProps = {
   image: string;
@@ -58,66 +59,72 @@ export default function BlogCard({
 }: BlogCardProps) {
   if (featured) {
     return (
-      <article className="min-w-0">
-        <div className="relative aspect-[477/359] w-full overflow-hidden rounded-[22px] bg-[var(--blogs-image-bg)]">
-          <Image
-            src={image}
-            alt=""
-            fill
-            sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 48vw, 477px"
-            className="object-cover"
-          />
-        </div>
+      <Link
+        href={href}
+        aria-label={`Read ${title}`}
+        className="group block"
+      >
+        <article className="min-w-0">
+          <div className="relative aspect-[477/359] w-full overflow-hidden rounded-[22px] bg-[var(--blogs-image-bg)]">
+            <Image
+              src={image}
+              alt=""
+              fill
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 48vw, 477px"
+              className="object-cover"
+            />
+          </div>
 
-        <div className="mt-[13px]">
-          <BlogMeta date={date} author={author} compact />
-          <h3 className="mt-[18px] text-[20px] font-bold leading-[1.08] tracking-[-0.015em] text-[var(--blogs-heading)] sm:text-[22px] lg:text-[24px]">
-            {title}
-          </h3>
-          <p className="mt-[14px] text-[12px] leading-[1.6] text-[var(--blogs-muted)] sm:text-[13px] lg:text-[14px]">
-            {excerpt}
-          </p>
-          <a
-            href={href}
-            className="mt-[30px] inline-flex h-[60px] min-w-[228px] items-center justify-center gap-[15px] rounded-[7px] bg-[var(--blogs-primary)] px-[24px] text-[12px] font-bold text-white transition-[filter] duration-200 hover:brightness-105 sm:text-[13px]"
-          >
-            Read More
-            <Image src="/courses_arrow.svg" alt="" aria-hidden="true" width={20} height={15} className="h-[15px] w-[20px]" />
-          </a>
-        </div>
-      </article>
+          <div className="mt-[13px]">
+            <BlogMeta date={date} author={author} compact />
+            <h3 className="mt-[18px] text-[20px] font-bold leading-[1.08] tracking-[-0.015em] text-[var(--blogs-heading)] transition-colors group-hover:text-[var(--blogs-primary)] sm:text-[22px] lg:text-[24px]">
+              {title}
+            </h3>
+            <p className="mt-[14px] text-[12px] leading-[1.6] text-[var(--blogs-muted)] sm:text-[13px] lg:text-[14px]">
+              {excerpt}
+            </p>
+            <span className="mt-[30px] inline-flex h-[60px] min-w-[228px] items-center justify-center gap-[15px] rounded-[7px] bg-[var(--blogs-primary)] px-[24px] text-[12px] font-bold text-white transition-[filter] duration-200 group-hover:brightness-105 sm:text-[13px]">
+              Read More
+              <Image src="/courses_arrow.svg" alt="" aria-hidden="true" width={20} height={15} className="h-[15px] w-[20px]" />
+            </span>
+          </div>
+        </article>
+      </Link>
     );
   }
 
   return (
-    <article className="rounded-[22px] border border-[var(--blogs-border)] bg-white p-[24px] sm:p-[25px]">
-      <div className="relative aspect-[929/450] w-full overflow-hidden rounded-[22px] bg-[var(--blogs-image-bg)]">
-        <Image
-          src={image}
-          alt=""
-          fill
-          priority
-          sizes="(max-width: 1023px) calc(100vw - 82px), 930px"
-          className="object-cover"
-        />
-      </div>
+    <Link
+      href={href}
+      aria-label={`Read ${title}`}
+      className="group block rounded-[22px] border border-[var(--blogs-border)] bg-white p-[24px] sm:p-[25px]"
+    >
+      <article>
+        <div className="relative aspect-[929/450] w-full overflow-hidden rounded-[22px] bg-[var(--blogs-image-bg)]">
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            sizes="(max-width: 1023px) calc(100vw - 82px), 930px"
+            className="object-cover"
+          />
+        </div>
 
-      <div className="mt-[14px]">
-        <BlogMeta date={date} author={author} />
-        <h2 className="mt-[20px] text-[22px] font-bold leading-[1.08] tracking-[-0.015em] text-[var(--blogs-heading)] sm:text-[24px] lg:text-[25px]">
-          {title}
-        </h2>
-        <p className="mt-[17px] max-w-[900px] text-[13px] leading-[1.55] text-[var(--blogs-muted)] sm:text-[14px]">
-          {excerpt}
-        </p>
-        <a
-          href={href}
-          className="mt-[31px] inline-flex h-[60px] min-w-[228px] items-center justify-center gap-[15px] rounded-[7px] bg-[var(--blogs-primary)] px-[24px] text-[12px] font-bold text-white transition-[filter] duration-200 hover:brightness-105 sm:text-[13px]"
-        >
-          Read More
-          <Image src="/courses_arrow.svg" alt="" aria-hidden="true" width={20} height={15} className="h-[15px] w-[20px]" />
-        </a>
-      </div>
-    </article>
+        <div className="mt-[14px]">
+          <BlogMeta date={date} author={author} />
+          <h2 className="mt-[20px] text-[22px] font-bold leading-[1.08] tracking-[-0.015em] text-[var(--blogs-heading)] transition-colors group-hover:text-[var(--blogs-primary)] sm:text-[24px] lg:text-[25px]">
+            {title}
+          </h2>
+          <p className="mt-[17px] max-w-[900px] text-[13px] leading-[1.55] text-[var(--blogs-muted)] sm:text-[14px]">
+            {excerpt}
+          </p>
+          <span className="mt-[31px] inline-flex h-[60px] min-w-[228px] items-center justify-center gap-[15px] rounded-[7px] bg-[var(--blogs-primary)] px-[24px] text-[12px] font-bold text-white transition-[filter] duration-200 group-hover:brightness-105 sm:text-[13px]">
+            Read More
+            <Image src="/courses_arrow.svg" alt="" aria-hidden="true" width={20} height={15} className="h-[15px] w-[20px]" />
+          </span>
+        </div>
+      </article>
+    </Link>
   );
 }

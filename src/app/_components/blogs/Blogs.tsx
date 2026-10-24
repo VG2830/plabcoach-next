@@ -4,14 +4,16 @@ import Header from "../Header";
 import BlogCard from "./BlogCard";
 import RecentPost from "./RecentPost";
 
-const blogTitle =
-  "OSCE Self-Assessment: 10 Signs You Need More Practice as an International Medical Graduate";
-
-const blogExcerpt =
-  "If you're aiming for the UK as an international doctor, you've probably heard two acronyms thrown around constantly: PLAB and UKMLA.";
-
-const featuredBlogs = [1, 2, 3];
-const recentPosts = [1, 2, 3];
+type BlogPost = {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  image: string;
+  href: string;
+};
 
 function SearchIcon() {
   return (
@@ -43,7 +45,11 @@ function CarouselArrow({ direction }: { direction: "left" | "right" }) {
   );
 }
 
-export default function Blogs() {
+export default function Blogs({ posts }: { posts: BlogPost[] }) {
+  const [latestPost, ...otherPosts] = posts;
+  const recentPosts = otherPosts.slice(0, 3);
+  const featuredBlogs = otherPosts.slice(3);
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[var(--blogs-heading)]">
       <Header />
@@ -100,12 +106,20 @@ export default function Blogs() {
                 Blogs
               </h2>
               <div className="mt-[18px]">
-                <BlogCard
-                  image="/blogs_second_sec_main_image.webp"
-                  title={blogTitle}
-                  excerpt={blogExcerpt}
-                  href="#"
-                />
+                {latestPost ? (
+                  <BlogCard
+                    image={latestPost.image}
+                    title={latestPost.title}
+                    excerpt={latestPost.excerpt}
+                    date={latestPost.date}
+                    author={latestPost.author}
+                    href={latestPost.href}
+                  />
+                ) : (
+                  <p className="rounded-[22px] border border-[var(--blogs-border)] bg-white p-[24px] text-[var(--blogs-muted)]">
+                    No blog posts are available right now.
+                  </p>
+                )}
               </div>
             </div>
 
@@ -128,8 +142,13 @@ export default function Blogs() {
               </h2>
               <div className="mt-[18px] rounded-[22px] border border-[var(--blogs-border)] bg-white p-[23px]">
                 <div className="space-y-[23px]">
-                  {recentPosts.map((item) => (
-                    <RecentPost key={item} title={blogTitle} />
+                  {recentPosts.map((post) => (
+                    <RecentPost
+                      key={post.id}
+                      image={post.image}
+                      title={post.title}
+                      href={post.href}
+                    />
                   ))}
                 </div>
               </div>
@@ -155,13 +174,15 @@ export default function Blogs() {
             <div className="relative mt-[40px]">
               <CarouselArrow direction="left" />
               <div className="grid grid-cols-1 gap-[34px] sm:grid-cols-2 sm:gap-[24px] xl:grid-cols-3 xl:gap-[24px]">
-                {featuredBlogs.map((item) => (
+                {featuredBlogs.map((post) => (
                   <BlogCard
-                    key={item}
-                    image="/blogs_featured_image.webp"
-                    title={blogTitle}
-                    excerpt={blogExcerpt}
-                    href="#"
+                    key={post.id}
+                    image={post.image}
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    date={post.date}
+                    author={post.author}
+                    href={post.href}
                     featured
                   />
                 ))}
