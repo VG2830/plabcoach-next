@@ -172,7 +172,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
             </h2>
 
             <div className="relative mt-[40px]">
-              <CarouselArrow direction="left" />
+              {/* <CarouselArrow direction="left" /> */}
               <div className="grid grid-cols-1 gap-[34px] sm:grid-cols-2 sm:gap-[24px] xl:grid-cols-3 xl:gap-[24px]">
                 {featuredBlogs.map((post) => (
                   <BlogCard
@@ -187,7 +187,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
                   />
                 ))}
               </div>
-              <CarouselArrow direction="right" />
+              {/* <CarouselArrow direction="right" /> */}
             </div>
           </div>
         </section>
