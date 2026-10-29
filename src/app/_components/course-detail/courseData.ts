@@ -1776,7 +1776,7 @@ export const courseDetails = {
     metaTitle: "MRCGP AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
     metaDescription: "The MRCGP AKT is RCGP's 160-item computer-based exam for GP trainees. Learn the current format, syllabus weighting, fees and how PLABcoach helps you pass.",
     ogImage: "/og/mrccp-akt.webp",
-    heroImage: "/course_eight.webp",
+    heroImage: "/course_eight_1.webp",
     heroDescription:
       "The MRCGP Applied Knowledge Test (AKT) is the Royal College of General Practitioners' (RCGP) summative exam of the knowledge underpinning independent general practice in the UK. Since October 2025, it is a 160-item, 160-minute computer-based exam, held at Pearson VUE centres four times a year. Around 80% of items cover clinical medicine, with the remainder split between critical appraisal/evidence-based practice and health informatics/administrative issues. GP trainees must hold active MRCGP membership to book it.",
     toc: tocMrcpAkt,

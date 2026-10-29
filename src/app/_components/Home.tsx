@@ -295,7 +295,7 @@ const blogs = [
 ];
 const offerSlides = [
   { src: "/offer_section_image.webp", alt: "Medical learner" },
-  { src: "/third_section_dr_img_2.webp", alt: "Doctors collaborating" },
+  { src: "/third_section_dr_img_two.webp", alt: "Doctors collaborating" },
   // { src: "/female_two_doctors.webp", alt: "Female doctors" },
   // { src: "/alone_female_doc.webp", alt: "Female doctors" },
   // { src: "/alone_female_doc_2.webp", alt: "Female doctors" },
