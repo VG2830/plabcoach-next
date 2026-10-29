@@ -901,7 +901,7 @@ useEffect(() => {
           </div>
         </section>
         {/* subscription courses */}
-        <section className="bg-white py-[95px] lg:py-[110px]">
+        <section className="bg-white py-[25px] sm:py-[0]">
           <div className="mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] gap-8 lg:grid-cols-[280px_1fr] lg:gap-10">
             <aside className="flex flex-col">
               <p className="text-[12px] font-semibold uppercase text-[#7d56ff]">Our Courses</p>
