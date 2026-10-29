@@ -660,7 +660,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
               </h2>
             </div>
 
-            <div className="mt-[50px] w-full sm:mt-[60px] lg:mt-[74px]">
+            <div className=" w-full mt-[60px] sm:mt-0 ">
               <PathwayVisual steps={course.pathway} />
             </div>
           </div>
