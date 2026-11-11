@@ -5,6 +5,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Link from "next/link";
+import type { RecentWordPressPost } from "../_lib/wordpress";
 
 const stats = [
   { value: "11389", label: "Students", icon: "/hero_sec_students_icon_1.svg" },
@@ -114,8 +115,8 @@ const exams = [
     href:"/courses/msra",
   },
   {
-    title: "MRCP-AKT",
-    subtitle: "Applied Knowledge Test for GP trainees (ST3)",
+    title: "MRCGP AKT",
+    subtitle: "Applied Knowledge Test for GP specialty trainees (ST2 and ST3)",
     icon: "/mrcp_exam_icon.svg",
     href:"/courses/mrcp-akt",
   },
@@ -216,31 +217,30 @@ const testimonials = [
 const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
   {
     question: "What is PLABcoach?",
-    answer: "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. We provide structured courses, question banks, mock exams and clinical skills coaching, led by Dr. Karam Singh, a practising NHS GP.",
+    answer: " PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, question banks, mock exams and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams.",
   },
   {
-    question: "Which exams does PLABcoach provide preparation for?",
-    answer: "We prepare candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and NCA and PSA for the UK Foundation Programme. Courses for MSRA, MRCGP AKT/SCA, USMLE and AMC are launching soon.",
+    question: "Which exams does PLABcoach prepare you for?",
+    answer: " PLABcoach prepares candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and the National Clinical Assessment (NCA) and Prescribing Safety Assessment (PSA) for the UK Foundation Programme. Courses for the MRCGP AKT and MSRA are launching soon, and USMLE and AMC courses are coming soon.",
+  },
+  {
+    question: "Is PLAB the same as the UKMLA?",
+    answer: " PLAB now meets the GMC’s Medical Licensing Assessment (MLA) requirements. PLAB 1 is set to the same standard as the UKMLA Applied Knowledge Test (AKT), and PLAB 2 to the same standard as the Clinical and Professional Skills Assessment (CPSA). International medical graduates still book exams called PLAB 1 and PLAB 2 through the GMC.",
   },
   {
     question: "Does PLABcoach offer both online and in-person courses?",
     answer: `Yes. PLABcoach combines online study resources with live online and in-person training:
-
-• SmartNotes — flipbook-style notes designed for easy, convenient study
-• Self-Paced Mastery Videos — key topics taught by our coaches, available whenever suits you
-• SmartQBank — specially curated question sets, updated regularly, to get you exam ready
-• SmartMocks (offline & online) — simulate real OSCE exam conditions for efficient preparation
-• Manikin Practice — hands-on experience with various procedures on manikins to prepare for real-world scenarios
-• SimMan Sessions — further simulated OSCE practice sessions
-• LIVE Sessions (online & offline) — cover everything you need from an exam point of view, including scenario practice; every session streams live and the recording stays available afterward for revision`,
+• Online resources include —  SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks.
+• In-person training includes — Manikin practice, SimMan sessions and offline SmartMocks.
+• Live sessions run online and in person, and every session is recorded so you can revise from it afterwards`,
   },
   {
     question: "Who teaches the PLABcoach courses?",
-    answer: "PLABcoach courses are taught by Dr Karam Singh (M.D., MRCGP), the founder of PLABcoach and an experienced UK and US-licensed doctor with over 10 years of teaching experience, and Dr Anjum Kohli, an experienced doctor with a strong passion for medical education. Both teach core GMC-required subjects and bring valuable clinical knowledge and personal experience to help aspiring doctors navigate medical licensing exams with confidence, including those returning after career breaks.",
+    answer: " Courses are taught by Dr Karam Singh (M.D., MRCGP), founder of PLABcoach and an NHS GP with over a decade of teaching experience, and Dr Anjum Kohli (M.D.). Both teach the core subjects the GMC requires and draw on their own clinical experience to help doctors prepare for licensing exams, including doctors returning after a career break.",
   },
   {
     question: "How do I access the question banks and course materials?",
-    answer: "Sign up on the platform and enroll in your course for instant access to all the learning material included — SmartNotes, Self-Paced Mastery Videos, SmartQBank and more. Some courses offer free access so you can get a feel for the platform and its content before committing. Our mobile app is available on both Android and iOS.",
+    answer: "Sign up on the PLABcoach website or app and enroll in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.",
     afterAnswer: (
       <div className="flex flex-wrap items-center gap-3 px-5 pb-4">
         <a
@@ -288,11 +288,6 @@ const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
 ];
 
 
-const blogs = [
- { title: "OSCE Self-Assessment: 10 Signs You Need More Practice as an International Medical Graduate" , imgUrl: "/BLOG1.webp"},
- { title: "What Should You Do One Month Before the UKFP National Clinical Assessment Exam?" , imgUrl: "/BLOG2.webp"},
- { title: "PRES 3 vs PLAB 2: Everything International Medical Graduates Need to Know" , imgUrl: "/BLOG3.webp"},
-];
 const offerSlides = [
   { src: "/offer_section_image.webp", alt: "Medical learner" },
   { src: "/third_section_dr_img_two.webp", alt: "Doctors collaborating" },
@@ -424,7 +419,7 @@ function SubscriptionCard({ course }: { course: (typeof subscriptionCourses)[num
 
 
 
-export default function Home() {
+export default function Home({ blogPosts }: { blogPosts: RecentWordPressPost[] }) {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [openFaq, setOpenFaq] = useState(0);
 
@@ -465,11 +460,11 @@ useEffect(() => {
               </p>
               <h1 className="mt-[14px] max-w-[700px] text-[33px] font-bold leading-[1.07] tracking-[-0.032em] text-[var(--ink)] sm:text-[52px] lg:text-[58px] xl:text-[48px]">
                 {/* Prepare for PLAB &amp; UK Medical Exams with Confidence */}
-                PLAB, UKMLA, PRES & UK Foundation Programme Exam Preparation for International Medical Graduates
+                PLAB, UKMLA & PRES Exam Preparation for International Doctors
               </h1>
              <div className="mt-6 max-w-[720px] rounded-[22px] bg-white/68 px-5 py-4 shadow-[0_10px_30px_rgba(53,79,128,0.04)] backdrop-blur-sm sm:px-6 sm:py-5 xl:mt-7 xl:px-7 xl:py-6">
                 <p className="text-[12px] font-medium leading-[1.65] text-[#185b99] sm:text-[13px] xl:text-[14px]">
-                  PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr. Karam Singh, an NHS doctor and educator. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, MRCP-AKT — combining live coaching with self-paced online learning.
+                  PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr. Karam Singh(M.D., MRCGP), NHS GP and founder of PLABcoach. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, MRCGP AKT — combining live coaching with self-paced online learning.
                 </p>
               </div>
             </div>
@@ -502,6 +497,7 @@ useEffect(() => {
                 </div>
               ))}
             </div>
+            <span className="text-[12px] font-normal text-[var(--accent)] lg:text-[14px] xl:text-[16px]">Based on PLABcoach enrolment data, 2026</span>
           </div>
         </section>
         
@@ -667,7 +663,7 @@ useEffect(() => {
         <section id="about-us" className="bg-[var(--about-us-bg)] py-[110px] lg:py-[125px]">
           <div className="mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
             {/* <div>
-              <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Why PLABCoach</p>
+              <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Why PLABcoach</p>
               <h2 className="mt-2 max-w-[660px] text-[42px] font-bold leading-[1.12] tracking-[-0.025em] lg:text-[52px]">Prepared by Doctors. Trusted by Thousands.</h2>
               <div className="mt-10 space-y-7">
                 {trustPoints.map((point, index) => (
@@ -684,10 +680,10 @@ useEffect(() => {
             </div> */}
             <div>
               <h2 className="text-[39px] font-bold uppercase tracking-[0.015em] text-[#17265c] sm:text-[44px] lg:text-[48px] xl:text-[50px]">
-                Why PLABCoach
+                Why PLABcoach
               </h2>
               <p className="mt-5 max-w-[540px] text-[15px] leading-[2] text-[#353943] sm:text-[16px] xl:mt-6 xl:text-[18px]">
-                Led by Dr. Karam Singh, an NHS doctor and educator, PLABcoach has provided structured exam preparation for international medical graduates for over 10 years. Courses combine live coaching, self-paced video content, and exam-realistic question banks, with teaching tailored to each candidate&apos;s weak areas
+                Led by Dr. Karam Singh(M.D., MRCGP), NHS GP and founder of PLABcoach, PLABcoach has provided structured exam preparation for international medical graduates for over a decade. Courses combine live coaching, self-paced video content, and exam-realistic question banks, with teaching tailored to each candidate&apos;s weak areas
               </p>
               <p className="mt-10 text-[13px] font-semibold text-[#222] xl:text-[15px]">
                 Read Our Full Story
@@ -709,7 +705,7 @@ useEffect(() => {
             <div className="relative mx-auto h-[520px] w-full max-w-[650px] lg:h-[560px]">
               <Image src="/third_sec_upfront_img.webp" alt="" width={728} height={554} aria-hidden="true" className="absolute inset-0 h-full w-full object-contain" />
               <div className="absolute left-[22%] top-[7%] h-[78%] w-[65%] overflow-hidden rounded-[34px]">
-                <Image src="/karam_sir_coat.webp" alt="Doctor studying on a laptop" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
+                <Image src="/karam_sir_coat.webp" alt="Dr Karam Singh, founder of PLABcoach" fill sizes="(max-width: 1024px) 70vw, 34vw" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -864,23 +860,25 @@ useEffect(() => {
               Our Latest News &amp; Blogs
             </h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3 xl:mt-11">
-              {blogs.map((title, index) => (
+              {blogPosts.map((post) => (
                 <article
-                  key={`${title}-${index}`}
+                  key={post.id}
                   className="group rounded-[28px] bg-[#d4e3ff] p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#cadafa] hover:shadow-[0_18px_42px_rgba(46,83,143,0.13)] xl:p-6"
                 >
-                  <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
-                    <Image
-                      src={blogs[index].imgUrl}
-                      alt="blogs image"
-                      fill
-                      sizes="(max-width: 767px) 100vw, 33vw"
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <h3 className="mt-5 min-h-[72px] text-[20px] font-semibold leading-[1.12] text-[#17265c] lg:text-[22px] xl:min-h-[86px] xl:text-[25px]">
-                    {blogs[index].title}
-                  </h3>
+                  <Link href={`/blogs/${encodeURIComponent(post.slug)}`} className="block">
+                    <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 767px) 100vw, 33vw"
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <h3 className="mt-5 min-h-[72px] text-[20px] font-semibold leading-[1.12] text-[#17265c] lg:text-[22px] xl:min-h-[86px] xl:text-[25px]">
+                      {post.title}
+                    </h3>
+                  </Link>
                   {/* <button
                     type="button"
                     className="mt-5 h-[52px] min-w-[190px] rounded-[9px] bg-[#075cae] px-7 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95] xl:h-[60px] xl:min-w-[228px] xl:text-[15px]"
@@ -943,7 +941,7 @@ useEffect(() => {
               <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
                 <Image
                   src="/video_learning_laptop_2.webp"
-                  alt="PLABCoach video lesson on a laptop"
+                  alt="PLABcoach video lesson on a laptop"
                   fill
                   sizes="(max-width: 1023px) 100vw, (max-width: 1535px) 50vw, 900px"
                   className="object-contain object-left transition-transform duration-500 hover:scale-[1.008]"
@@ -1041,7 +1039,7 @@ useEffect(() => {
                     className="pointer-events-none absolute -right-[26px] top-[42px] hidden h-auto w-[90px] lg:block xl:-right-[40px] xl:top-[44px] xl:w-[102px]"
                   />
                 </div>
-                <p className="mt-5 max-w-[360px] text-[15px] leading-[1.65] text-white/80 lg:text-[16px]">Join thousands of doctors preparing with PLABCoach.</p>
+                <p className="mt-5 max-w-[360px] text-[15px] leading-[1.65] text-white/80 lg:text-[16px]">Join thousands of doctors preparing with PLABcoach.</p>
                 <div className="mt-7 flex flex-wrap gap-4 lg:mt-8">
                   <button type="button" className="flex h-[52px] min-w-[132px] items-center gap-2 rounded-[7px] bg-black px-4 text-left text-white shadow-[0_8px_18px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 hover:bg-black/90">
                     <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0 fill-white" aria-hidden="true"><path d="M17.6 13.1c0-2.8 2.3-4.2 2.4-4.3-1.3-1.9-3.4-2.2-4.1-2.2-1.7-.2-3.4 1-4.3 1-.9 0-2.2-1-3.7-1-1.9 0-3.7 1.1-4.7 2.8-2 3.5-.5 8.7 1.4 11.5.9 1.4 2 2.9 3.5 2.8 1.4-.1 1.9-.9 3.6-.9s2.2.9 3.7.9c1.5 0 2.5-1.4 3.4-2.7 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-2.8-1.1-2.8-4.6ZM14.8 4.8c.8-1 1.3-2.3 1.2-3.6-1.2.1-2.6.8-3.4 1.7-.7.8-1.4 2.2-1.2 3.4 1.3.1 2.6-.6 3.4-1.5Z" /></svg>
@@ -1057,7 +1055,7 @@ useEffect(() => {
               <div className="relative z-10 mt-10 flex w-full items-end justify-center lg:absolute lg:right-[-52px] lg:top-[-30px] lg:mt-0 lg:w-[58%] xl:right-[-62px] xl:top-[-31px] 2xl:right-[-68px]">
                 <Image
                   src="/medical_journey_devices.webp"
-                  alt="PLABCoach learning platform shown across desktop, laptop, tablet and mobile"
+                  alt="PLABcoach learning platform shown across desktop, laptop, tablet and mobile"
                   width={855}
                   height={483}
                   sizes="(max-width: 640px) 92vw, (max-width: 1024px) 82vw, 58vw"
@@ -1068,7 +1066,7 @@ useEffect(() => {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer blogPosts={blogPosts} />
 
      
     </div>
