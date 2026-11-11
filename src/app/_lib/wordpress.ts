@@ -12,6 +12,13 @@ export type WordPressPost = {
   };
 };
 
+export type RecentWordPressPost = {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+};
+
 const WORDPRESS_API_URL =
   process.env.WORDPRESS_API_URL?.replace(/\/+$/, "") ??
   "https://plabcoach.com/wp-json/wp/v2";
@@ -32,6 +39,19 @@ export async function getWordPressPosts() {
   }
 
   return posts;
+}
+
+export async function getRecentWordPressPosts(): Promise<RecentWordPressPost[]> {
+  const posts = await getWordPressPosts();
+
+  return posts.slice(0, 3).map((post) => ({
+    id: post.id,
+    slug: post.slug,
+    title: toPlainText(post.title.rendered),
+    image:
+      post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
+      "/blogs_featured_image.webp",
+  }));
 }
 
 export async function getWordPressPostBySlug(slug: string) {

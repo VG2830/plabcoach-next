@@ -28,7 +28,7 @@ export default async function BlogsPage() {
     image:
       post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ??
       "/blogs_featured_image.webp",
-    href: `/blogs/${encodeURIComponent(post.slug)}`,
+    href: `/${encodeURIComponent(post.slug)}/`,
   }));
 
   return <Blogs posts={formattedPosts} />;

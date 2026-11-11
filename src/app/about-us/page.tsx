@@ -105,7 +105,7 @@ export default function AboutUsPage() {
               <div className="relative aspect-[1246/556] w-full overflow-hidden rounded-[22px] bg-[#102a32] shadow-[0_18px_34px_rgba(32,43,70,0.20)] sm:rounded-[28px]">
                 <iframe
                   className="absolute inset-0 h-full w-full border-0"
-                  src="https://www.youtube.com/embed/6nXIgV_8TVY?si=0u8-r7v4rnh-eADI"
+                  src="https://www.youtube-nocookie.com/embed/6nXIgV_8TVY?si=0u8-r7v4rnh-eADI"
                   title="Every Doctor's Journey Needs the Right Guidance - PLABCoach"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"

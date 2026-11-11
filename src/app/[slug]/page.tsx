@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Footer from "../../_components/Footer";
-import Header from "../../_components/Header";
+import Footer from "../_components/Footer";
+import Header from "../_components/Header";
 import {
   getWordPressPostBySlug,
   toDisplayContent,
   toPlainText,
-} from "../../_lib/wordpress";
+} from "../_lib/wordpress";
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
@@ -30,7 +30,7 @@ export async function generateMetadata({
   return {
     title: `${title} | PLABcoach`,
     description,
-    alternates: { canonical: `/blogs/${encodeURIComponent(post.slug)}` },
+    alternates: { canonical: `/${encodeURIComponent(post.slug)}/` },
     openGraph: {
       type: "article",
       title,
@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
           <div className="relative mx-auto w-[var(--site-width)] max-w-[var(--container-max)] pb-16 pt-8 sm:pb-24 sm:pt-12">
             <Link
-              href="/blogs"
+              href="/blogs/"
               className="inline-flex items-center gap-2 rounded-full border border-[#dce2f5] bg-white/80 px-4 py-2 text-sm font-semibold text-[var(--blogs-primary)] shadow-sm transition-colors hover:bg-white"
             >
               <span aria-hidden="true">←</span>
@@ -167,7 +167,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <div className="mt-12 border-t border-[#e9ebf2] pt-7">
               <Link
-                href="/blogs"
+                href="/blogs/"
                 className="inline-flex items-center gap-2 text-sm font-bold text-[var(--blogs-primary)] transition-colors hover:text-[var(--blogs-heading)]"
               >
                 <span aria-hidden="true">←</span>

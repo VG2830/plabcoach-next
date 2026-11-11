@@ -208,35 +208,76 @@ const sectionsPlab1: CourseSection[] = [
 ];
 
 const faqsPlab1: FAQItem[] = [
-  {
-    question: "Is PLAB 1 the same as UKMLA?",
+    {
+    question: "What is PLAB 1?",
     answer:
-      "Not exactly — GMC states PLAB has become compliant with the Medical Licensing Assessment (MLA) content map, not that it has been renamed. IMGs sit an exam still called \"PLAB 1,\" calibrated to the same MLA standard that UK graduates' UKMLA-AKT paper is calibrated to.",
+      "PLAB 1 is the first part of the GMC’s Professional and Linguistic Assessments Board test, the main route for international medical graduates who want to register and work as doctors in the UK. It is an applied knowledge test. Rather than checking how many facts you can recall, it checks how well you use your knowledge to look after patients safely in a UK setting.",
   },
   {
-    question: "Can I take PLAB 1 without completing my internship?",
+    question: "Is PLAB 1 the same as the UKMLA AKT?",
     answer:
-      " Yes. PLAB 1 can be sat immediately after graduating from medical school; a completed internship is required later, for full GMC registration, not for sitting the exam.",
+      "PLAB 1 meets the GMC’s Medical Licensing Assessment (MLA) requirements, so it is set to the same standard as the UKMLA Applied Knowledge Test that UK graduates sit. The GMC still uses the name PLAB for international candidates and expects to keep it for some time yet.",
   },
   {
-    question: "How many attempts am I allowed at PLAB 1?",
+    question: "What is the PLAB 1 exam format?",
     answer:
-      "You can sit PLAB 1 until you have failed it four times. After a fourth fail, you can apply for one fifth and final attempt once you have completed at least 12 months of further learning.",
+      " PLAB 1 is a written exam of 180 multiple choice questions, and you have three hours to answer them all. Each question opens with a short clinical scenario, then asks a question with five possible answers. You choose the single best one.",
+  },
+  {
+    question: "What topics does PLAB 1 cover?",
+    answer:
+      "The exam can include any common, important or acute condition that a Foundation Year 2 (F2) doctor would see, including presentations common in emergency departments. It also covers how long-term conditions are managed in primary care. The advanced duties of a GP are not tested.",
+  },
+  {
+    question: "Should I answer using UK practice or my home country’s practice?",
+    answer:
+      "Always UK practice. Questions are based on current UK best practice and the equipment you would find in a UK hospital. Answer according to published evidence, not the way things are done where you trained..",
+  },
+  {
+    question: "When is PLAB 1 held?",
+    answer:
+      "The GMC runs PLAB 1 four times a year, in February, May, August and November. Once you are eligible, you can see the available dates in the PLAB booking service in your GMC Online account.",
   },
   {
     question: "Where can I sit PLAB 1?",
     answer:
-      " At British Council or GMC-approved test centres worldwide, including UK and international venues — unlike PLAB 2, which is only held in Manchester.",
+      "In the UK, the exam runs in Belfast, Birmingham, Cardiff, Edinburgh, London, Manchester, Newcastle, Oxford and Sheffield. In the EU, you can sit it in Dublin or Madrid, and a number of international centres are run with the British Council. UK and EU candidates receive their venue address within seven days of the exam, while candidates at other overseas centres get venue details from the British Council.",
   },
-  {
-    question: "What score do I need to pass PLAB 1?",
+    {
+    question: "Are there any changes to PLAB 1 in 2027?",
     answer:
-      "The pass mark is set per sitting using a standardised process rather than a single fixed number. GMC's own guidance is the authoritative source.",
+      "Yes. From February 2027, PLAB 1 will no longer run in Dhaka, Alexandria, Accra or Chennai, and the February sitting will only be held in UK and EU locations. If you planned to sit internationally in February 2027 and your English language evidence expires between 1 February and 31 May 2027, email plab@gmc-uk.org to ask about an extension before 19 March 2027.",
   },
-  {
-    question: "How is PLAB 1 different from PRES 2 in Ireland?",
+    {
+    question: "Who can book PLAB 1?",
     answer:
-      "See the comparison section below.",
+      "You need an acceptable primary medical qualification, approved evidence of your English language skills and a GMC Online account. Places can only be booked through GMC Online, by the account holder. Never share your login with an agent or third party, as the GMC treats this as misconduct and it can affect your future registration.",
+  },
+    {
+    question: "How much does PLAB 1 cost?",
+    answer:
+      "The GMC sets the PLAB fees and lists the current amounts on its Fees page, under the PLAB tab. A cancellation fee applies if you cancel your booking, so check the current terms before you book.",
+  },
+   {
+    question: "How should I prepare for PLAB 1?",
+    answer:
+      "Start with the MLA content map, which is the official guide to what the exam covers. The GMC also publishes a set of 85 sample questions written to the same content map, which are a good way to get used to the question style.",
+  },
+    {
+    question: "When will I get my PLAB 1 results?",
+    answer:
+      "Results are published six weeks after the exam, and the GMC emails you when they are ready in the ‘My Tests’ section of GMC Online. Every correct answer earns one mark. Your results show your score, the score needed to pass and the average score across all candidates.",
+  },
+     
+      {
+    question: "How many times can I take PLAB 1?",
+    answer:
+      "You can keep sitting PLAB 1 until you have failed it four times. After a fourth fail, you can apply for one fifth and final attempt, but only after at least 12 months of further learning, shown through 12 months of clinical practice or a relevant postgraduate qualification. If the fifth attempt is unsuccessful, you can no longer sit PLAB.",
+  },
+      {
+    question: "What happens after I pass PLAB 1?",
+    answer:
+      "You can apply for PLAB 2 straight away through GMC Online, though not until your PLAB 1 results have been issued. You must pass PLAB 2 within two years of passing PLAB 1, and the clock starts from the date you sat PLAB 1, not the date your results came out.",
   },
 ];
 
@@ -414,34 +455,79 @@ const sectionsPlab2: CourseSection[] = [
 
 const faqsPlab2: FAQItem[] = [
   {
-    question: "Can I take PLAB 2 outside the UK?",
+    question: "What is PLAB 2?",
     answer:
-      " No. PLAB 2 is only held at the GMC’s two Clinical Assessment Centre sites in Manchester: 3 Hardman Square and 3 Hardman Street.",
+      "PLAB 2 is a clinical and professional skills assessment (CPSA). It is a practical exam that looks at how you actually perform as a doctor: your clinical skills, knowledge and professional behaviour. The format is an objective structured clinical exam, usually called an OSCE.",
   },
   {
-    question: "How long do I have to pass PLAB 2 after passing PLAB 1?",
+    question: "Is PLAB 2 the same as the UKMLA CPSA?",
     answer:
-      "GMC requires PLAB 2 to be passed within 2 years of the PLAB 1 pass date — plan your booking timeline around this window.",
+      "PLAB 2 meets the GMC’s Medical Licensing Assessment requirements for the CPSA, so it is held to the same standard expected of UK graduates. The GMC still calls it PLAB 2, and you will see both names used while the transition continues.",
   },
   {
-    question: "How many stations does PLAB 2 have?",
+    question: "What is the PLAB 2 exam format?",
     answer:
-      "16 scenarios of eight minutes each, plus at least two rest stations. The whole exam takes around three hours.",
+      "The exam has 16 scenarios, each lasting eight minutes, set up to feel like real clinical settings such as a GP consultation or an acute ward. There are at least two rest stations so you can take short breaks. The whole exam takes around three hours.",
   },
   {
-    question: "How many attempts am I allowed at PLAB 2?",
+    question: "How does a PLAB 2 station work?",
     answer:
-      "You have four attempts. After a fourth fail you can apply for a fifth and final attempt once you have completed at least 12 months of further learning.",
+      "Outside each room you read the instructions and patient information, then you go in and carry out the task. A timer tells you when to move to the next station. Some stations may involve a telephone consultation or a prescribing task, and the GMC gives you everything you need to complete them on the day.",
   },
   {
-    question: "What is the PLAB 2 fee?",
+    question: "What does PLAB 2 cover?",
     answer:
-      "The current PLAB 2 fee is listed on the GMC’s Fees page.",
+      "Anything a Foundation Year 2 (F2) doctor could expect to meet at work. The focus is on applying your knowledge to patient care, not reciting facts, and everything is based on current published evidence rather than local practice. Drug names follow the latest edition of the British National Formulary (BNF).",
   },
   {
-    question: "How is PLAB 2 different from PRES 3 in Ireland?",
+    question: "How is PLAB 2 marked?",
     answer:
-      "See the comparison section below.",
+      "Every station is marked across three areas, which the GMC calls domains. The first is data gathering, technical and assessment skills, such as history taking, examination and procedures. The second is clinical management, such as reaching a diagnosis, explaining it and agreeing a plan. The third is interpersonal skills: building rapport, using open and closed questions, involving the patient and showing professionalism and sound ethics.",
+  },
+  {
+    question: "What is the PLAB 2 pass mark?",
+    answer:
+      "There is no fixed pass mark. To pass, you need to reach the overall pass mark and also pass a minimum number of stations. The overall pass mark is worked out from the cut score of each station plus a statistical margin, so it can differ between exam days and between the two centres.",
+  },
+   {
+    question: "Where is PLAB 2 held?",
+    answer:
+      "PLAB 2 only runs at the GMC’s two Clinical Assessment Centre sites in Manchester: 3 Hardman Square (M3 3EB) and 3 Hardman Street (M3 3AW). The addresses look very similar, so check your booking confirmation carefully to see which one you are attending.",
+  },
+   {
+    question: "When can I book PLAB 2?",
+    answer:
+      "PLAB 2 dates run all year round, but you can only see and book them in GMC Online once you have your PLAB 1 results. Demand can be high, so there may be a wait for a date. If you hold an NHS job offer that needs GMC registration, or you have UK refugee status, email plab@gmc-uk.org and the GMC will try to offer you an earlier place.",
+  },
+   {
+    question: "Who is eligible to sit PLAB 2?",
+    answer:
+      "You need an acceptable overseas primary medical qualification and a valid PLAB 1 pass. You must pass PLAB 2 within two years of passing PLAB 1, counted from the date you sat PLAB 1.",
+  },
+   {
+    question: "How much does PLAB 2 cost?",
+    answer:
+      "The current fee is listed on the GMC’s Fees page. Refugee doctors living in the UK get 50% off the PLAB 2 fee for their first two attempts, and can arrange this by calling the GMC on 0161 923 6602.",
+  },
+  {
+    question: "When will I get my PLAB 2 results?",
+    answer:
+      "Results are published within a month of your exam, and the GMC emails you when they are ready in the ‘My Tests’ section of GMC Online. Results are not given out over the phone or at the centre reception.",
+  },
+  {
+    question: "How many times can I take PLAB 2?",
+    answer:
+      "You have four attempts. After a fourth fail you can apply for a fifth and final attempt, once you have completed at least 12 months of further learning. If your PLAB 1 pass has expired by then, you may need to sit PLAB 1 again first.",
+  },
+  {
+    question: "Can I appeal my PLAB 2 result?",
+    answer:
+      "Yes, but only on limited grounds, such as a problem on the day that affected your performance and was not resolved at the time. Appeals must reach the GMC within ten working days of your results being published. An appeal will not be accepted just because you feel you were under-marked or disagree with an examiner’s judgement.",
+  },
+  {
+    question: "What happens after I pass PLAB 2?",
+    answer:
+      "You can apply for GMC registration with a licence to practise, and your application should be approved within two years of passing PLAB 2. If more than two years have passed, the GMC will ask for extra evidence of your knowledge and skills. In some cases, a recent PLAB 2 pass can also count as evidence of your English language skills when you register.",
   },
 ];
 const comparisonPlab2: ComparisonTable = {

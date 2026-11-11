@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import type { CourseDetailData } from "./courseData";
 
 // const siteUrl = "https://plabcoach.com";
-const siteUrl = "https://plabcoach.cogniq.in/";
+const siteUrl = "https://plabcoach.cogniq.in";
 
 
 export function createCourseMetadata(course: CourseDetailData, routePath: string): Metadata {
-  const canonicalPath = `/courses/${routePath}`;
+  const canonicalPath = `/courses/${routePath}/`;
 
   return {
     title: course.metaTitle,

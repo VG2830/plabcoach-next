@@ -17,15 +17,17 @@ export function createPageMetadata({
   image,
   imageAlt,
 }: PageMetadataOptions): Metadata {
+  const canonicalUrl = `${siteUrl}${canonicalPath.endsWith("/") ? canonicalPath : `${canonicalPath}/`}`;
+
   return {
     title,
     description,
     alternates: {
-      canonical: `${siteUrl}${canonicalPath}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       type: "website",
-      url: `${siteUrl}${canonicalPath}`,
+      url: canonicalUrl,
       title,
       description,
       images: [

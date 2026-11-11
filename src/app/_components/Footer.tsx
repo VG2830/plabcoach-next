@@ -1,5 +1,9 @@
+"use client";
+
 import Image from 'next/image';
 import Link from "next/link";
+import type { RecentWordPressPost } from "../_lib/wordpress";
+import { useRecentBlogPosts } from "./blogs/useRecentBlogPosts";
 const socialLinks = [
   { label: "facebook", href: "https://www.facebook.com/plabcoach1" },
   { label: "instagram", href: "https://www.instagram.com/plab.coach/" },
@@ -16,7 +20,13 @@ function SocialIcon({ label }: { label: string }) {
   }
   return <svg className={common} viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" /></svg>;
 }
-export default function Footer() {
+export default function Footer({
+  blogPosts,
+}: {
+  blogPosts?: RecentWordPressPost[];
+}) {
+    const { posts, isLoading, error } = useRecentBlogPosts(blogPosts);
+
     return(
     <>
      <footer id="blogs" className="relative overflow-hidden bg-[var(--footer-bg)] pt-8 text-[var(--footer-text)] lg:pt-10">
@@ -48,21 +58,38 @@ export default function Footer() {
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Courses</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-plab-ukmla">UK PLAB / UKMLA Courses</a></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#ireland-courses">Ireland Courses</a></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-foundation">UK Foundation Programme Courses</a></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses/msra">Upcoming Courses</a></li>
+                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><Link href="/courses/#uk-plab-ukmla">UK PLAB / UKMLA Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/#ireland-courses">Ireland Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/#uk-foundation">UK Foundation Programme Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/msra/">Upcoming Courses</Link></li>
               </ul>
               <h3 className="mb-3 mt-6 font-semibold text-[var(--footer-heading)]">Important Links</h3>
-              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy">NO Refund Policy</Link></p>
+              <ul className="divide-y divide-[#dedede]">
+                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy/">No Refund Policy</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/privacy-policy/">Privacy Policy</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/terms-and-conditions/">Terms &amp; Conditions</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/cookie-policy/">Cookie Policy</Link></li>
+              </ul>
             </section>
 
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Recent Posts</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="pb-3"><a href="/blogs" className="hover:underline">PRES2 SBA Practice: The Art of Eliminating Wrong Options Strategically</a></li>
-                <li className="py-3"><a href="/blogs" className="hover:underline">PRES 2 Question Bank: Why Quality Shapes Exam Performance More Than Question Volume</a></li>
-                <li className="py-3"><a href="/blogs" className="hover:underline">How Many PRES 2 Practice Questions Do You Actually Need Before the Exam</a></li>
+                {posts.map((post, index) => (
+                  <li key={post.id} className={index === 0 ? "pb-3" : "py-3"}>
+                    <Link
+                      href={`/${encodeURIComponent(post.slug)}/`}
+                      className="hover:underline"
+                    >
+                      {post.title}
+                    </Link>
+                  </li>
+                ))}
+                {isLoading && <li className="py-3">Loading recent posts...</li>}
+                {error && <li className="py-3">{error}</li>}
+                {!isLoading && !error && posts.length === 0 && (
+                  <li className="py-3">No blog posts are available right now.</li>
+                )}
               </ul>
             </section>
 

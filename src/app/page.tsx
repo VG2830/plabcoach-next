@@ -1,7 +1,8 @@
 
 import Homepage from "./_components/Home";
 import { createPageMetadata } from "./_components/pageMetadata";
-
+import { getRecentWordPressPosts } from "./_lib/wordpress";
+import homeFaqSchema from "./_components/homeFaqSchema";
 export const metadata = createPageMetadata({
   title: "PLAB, UKMLA & Medical Exam Preparation | PLABcoach",
   description:
@@ -11,12 +12,18 @@ export const metadata = createPageMetadata({
   imageAlt: "Doctors preparing for medical exams with PLABcoach",
 });
 
-export default function Home() {
+export default async function Home() {
+  const blogPosts = await getRecentWordPressPosts();
+
   return (
-      <> 
-      <Homepage/>
-      </>
-      
-      
+     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeFaqSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+      <Homepage blogPosts={blogPosts} />
+    </>
   );
 }

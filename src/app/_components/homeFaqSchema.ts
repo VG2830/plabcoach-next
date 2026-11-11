@@ -1,0 +1,15 @@
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is PLABcoach?", "acceptedAnswer": { "@type": "Answer", "text": "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, question banks, mock exams and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams." } },
+    { "@type": "Question", "name": "Which exams does PLABcoach prepare you for?", "acceptedAnswer": { "@type": "Answer", "text": "PLABcoach prepares candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and the National Clinical Assessment (NCA) and Prescribing Safety Assessment (PSA) for the UK Foundation Programme. Courses for the MRCGP AKT and MSRA are launching soon, and USMLE and AMC courses are coming soon." } },
+    { "@type": "Question", "name": "Is PLAB the same as the UKMLA?", "acceptedAnswer": { "@type": "Answer", "text": "PLAB now meets the GMC’s Medical Licensing Assessment (MLA) requirements. PLAB 1 is set to the same standard as the UKMLA Applied Knowledge Test (AKT), and PLAB 2 to the same standard as the Clinical and Professional Skills Assessment (CPSA). International medical graduates still book exams called PLAB 1 and PLAB 2 through the GMC." } },
+    { "@type": "Question", "name": "Does PLABcoach offer online and in-person courses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards." } },
+    { "@type": "Question", "name": "Who teaches the PLABcoach courses?", "acceptedAnswer": { "@type": "Answer", "text": "Courses are taught by Dr Karam Singh (M.D., MRCGP), founder of PLABcoach and an NHS GP with over a decade of teaching experience, and Dr Anjum Kohli (M.D.). Both teach the core subjects the GMC requires and draw on their own clinical experience to help doctors prepare for licensing exams, including doctors returning after a career break." } },
+    { "@type": "Question", "name": "How do I access the courses and question banks?", "acceptedAnswer": { "@type": "Answer", "text": "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android." } },
+    { "@type": "Question", "name": "Can I try PLABcoach for free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can take a free Self-Assessment on the PLAB 1 and PRES 2 SmartQBanks" } }
+  ]
+};
+
+export default homeFaqSchema;

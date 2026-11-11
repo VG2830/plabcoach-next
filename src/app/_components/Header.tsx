@@ -28,7 +28,7 @@ const courseMenu: CourseMenuGroup[] = [
     label: "Ireland PRES",
     href: "/courses#ireland-courses",
     subCourses: [
-      { label: "PRES Level 2", href: "/courses/pres-2" },
+      { label: "PRES 2", href: "/courses/pres-2" },
       { label: "PRES 3 — OSCE", href: "/courses/pres-3" },
     ],
   },
@@ -57,6 +57,14 @@ const courseMenu: CourseMenuGroup[] = [
       {
         label: "MRCGP Applied Knowledge Test (AKT)",
         href: "/courses/mrcp-akt",
+      },
+      {
+        label: "USMLE",
+        href: "/courses/usmle",
+      },
+      {
+        label: "AMC",
+        href: "/courses/amc",
       },
     ],
   },
