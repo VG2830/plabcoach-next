@@ -79,14 +79,14 @@ function RelatedExamCard({ exam, index }: { exam: RelatedExam; index: number }) 
       <h3 className="text-[18px] font-bold tracking-[-0.012em] text-[var(--course-detail-heading)] sm:text-[19px]">{exam.title}</h3>
       <p className="mt-2 text-[12.5px] leading-[1.55] text-[var(--course-detail-copy)] sm:text-[13px]">{exam.description}</p>
       <div className="mt-4 flex flex-wrap gap-2">
-        {exam.tags.map((t) => (
+        {/* {exam.tags.map((t) => (
           <span
             key={t.label}
             className={`inline-flex items-center rounded-full px-3 py-[6px] text-[11.5px] font-semibold ${style.tagBg} ${style.tagText}`}
           >
             {t.label}
           </span>
-        ))}
+        ))} */}
       </div>
       <div className="relative mt-5 min-h-[170px] w-full flex-1">
         <Image src={exam.image} alt="" aria-hidden="true" fill sizes="(max-width: 768px) 100vw, 360px" className="object-contain object-center" />
@@ -380,7 +380,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
               TOC
             </p> */}
             <h2 className="mt-[6px] text-[22px] font-bold leading-[1.15] tracking-[-0.016em] text-[var(--course-detail-heading)] sm:text-[26px] lg:text-[34px]">
-              Table of Contents
+              On this page
             </h2>
 
             <nav className="mt-[18px] flex flex-col gap-[10px] sm:mt-[22px]">
@@ -648,7 +648,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
           </div>
         </section>
 
-        {/* Pathway Visual */}
+        {/* Your pathway */}
         <section className="relative overflow-hidden bg-[#f4f5ff] pb-[110px] pt-[74px] sm:pb-[140px] sm:pt-[86px] lg:pb-[160px] lg:pt-[96px]">
           <div className="mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
             <div className="max-w-[900px]">
@@ -656,7 +656,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 YOUR PATHWAY
               </p>
               <h2 className="mt-[10px] text-[32px] font-bold leading-[1.05] tracking-[-0.024em] text-[var(--course-detail-heading)] sm:text-[40px] lg:text-[46px] xl:text-[50px]">
-                Pathway Visual
+                Your pathway
               </h2>
             </div>
 
