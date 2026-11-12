@@ -58,18 +58,14 @@ export default function Footer({
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Courses</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><Link href="/courses/#uk-plab-ukmla">UK PLAB / UKMLA Courses</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/#ireland-courses">Ireland Courses</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/#uk-foundation">UK Foundation Programme Courses</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/msra/">Upcoming Courses</Link></li>
+                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-plab-ukmla">UK PLAB / UKMLA Courses</a></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#ireland-courses">Ireland Courses</a></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-foundation">UK Foundation Programme Courses</a></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses/msra">Upcoming Courses</a></li>
               </ul>
               <h3 className="mb-3 mt-6 font-semibold text-[var(--footer-heading)]">Important Links</h3>
-              <ul className="divide-y divide-[#dedede]">
-                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy/">No Refund Policy</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/privacy-policy/">Privacy Policy</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/terms-and-conditions/">Terms &amp; Conditions</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/cookie-policy/">Cookie Policy</Link></li>
-              </ul>
+              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy">NO Refund Policy</Link></p>
+              <button type="button" onClick={() => window.dispatchEvent(new Event("plabcoach:open-cookie-settings"))} className="mt-2 text-left transition-colors hover:text-[var(--primary)]">Cookie settings</button>
             </section>
 
             <section>
@@ -78,7 +74,7 @@ export default function Footer({
                 {posts.map((post, index) => (
                   <li key={post.id} className={index === 0 ? "pb-3" : "py-3"}>
                     <Link
-                      href={`/${encodeURIComponent(post.slug)}/`}
+                      href={`/blogs/${encodeURIComponent(post.slug)}`}
                       className="hover:underline"
                     >
                       {post.title}

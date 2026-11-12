@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import WhatsAppButton from "./_components/WhatsAppButton";
+import CookieConsent from "./_components/CookieConsent";
+import { JsonLd, organizationSchema } from "./_components/seo/JsonLd";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +15,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <JsonLd data={organizationSchema} />
         {children}
+        <CookieConsent />
         <WhatsAppButton />
       </body>
     </html>

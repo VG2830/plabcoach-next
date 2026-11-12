@@ -3,6 +3,7 @@ import Homepage from "./_components/Home";
 import { createPageMetadata } from "./_components/pageMetadata";
 import { getRecentWordPressPosts } from "./_lib/wordpress";
 import homeFaqSchema from "./_components/homeFaqSchema";
+import { JsonLd, websiteSchema } from "./_components/seo/JsonLd";
 export const metadata = createPageMetadata({
   title: "PLAB, UKMLA & Medical Exam Preparation | PLABcoach",
   description:
@@ -17,12 +18,8 @@ export default async function Home() {
 
   return (
      <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(homeFaqSchema).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={websiteSchema} />
+      <JsonLd data={homeFaqSchema} />
       <Homepage blogPosts={blogPosts} />
     </>
   );

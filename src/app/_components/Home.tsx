@@ -215,76 +215,13 @@ const testimonials = [
 ];
 
 const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
-  {
-    question: "What is PLABcoach?",
-    answer: " PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, question banks, mock exams and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams.",
-  },
-  {
-    question: "Which exams does PLABcoach prepare you for?",
-    answer: " PLABcoach prepares candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and the National Clinical Assessment (NCA) and Prescribing Safety Assessment (PSA) for the UK Foundation Programme. Courses for the MRCGP AKT and MSRA are launching soon, and USMLE and AMC courses are coming soon.",
-  },
-  {
-    question: "Is PLAB the same as the UKMLA?",
-    answer: " PLAB now meets the GMC’s Medical Licensing Assessment (MLA) requirements. PLAB 1 is set to the same standard as the UKMLA Applied Knowledge Test (AKT), and PLAB 2 to the same standard as the Clinical and Professional Skills Assessment (CPSA). International medical graduates still book exams called PLAB 1 and PLAB 2 through the GMC.",
-  },
-  {
-    question: "Does PLABcoach offer both online and in-person courses?",
-    answer: `Yes. PLABcoach combines online study resources with live online and in-person training:
-• Online resources include —  SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks.
-• In-person training includes — Manikin practice, SimMan sessions and offline SmartMocks.
-• Live sessions run online and in person, and every session is recorded so you can revise from it afterwards`,
-  },
-  {
-    question: "Who teaches the PLABcoach courses?",
-    answer: " Courses are taught by Dr Karam Singh (M.D., MRCGP), founder of PLABcoach and an NHS GP with over a decade of teaching experience, and Dr Anjum Kohli (M.D.). Both teach the core subjects the GMC requires and draw on their own clinical experience to help doctors prepare for licensing exams, including doctors returning after a career break.",
-  },
-  {
-    question: "How do I access the question banks and course materials?",
-    answer: "Sign up on the PLABcoach website or app and enroll in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.",
-    afterAnswer: (
-      <div className="flex flex-wrap items-center gap-3 px-5 pb-4">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[13px] font-semibold text-[var(--primary)] hover:underline"
-        >
-          Sign Up
-        </a>
-        <span aria-hidden="true" className="text-[#6f7280]">|</span>
-        <a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer">
-          <Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} />
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer">
-          <Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} />
-        </a>
-      </div>
-    ),
-  },
-  {
-    question: "Does PLABcoach offer a free trial or sample questions?",
-    answer: "Yes. Try our free Self-Assessment for SmartQBank courses, or preview a selection of our Self-Paced Mastery Videos to get a feel for the content and platform.",
-    afterAnswer: (
-      <div className="flex flex-col items-start gap-2 px-5 pb-4 text-[13px] font-semibold text-[var(--primary)]">
-        <a
-          href="https://courses.plabcoach.com/course/SmartQBankDEMO-100135"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-        >
-           PLAB 1 FREE Self-Assessment SmartQBank
-        </a>
-        <a
-          href="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-        >
-           PRES 2 FREE Self-Assessment SmartQBank
-        </a>
-      </div>
-    ),
-  },
+  { question: "What is PLABcoach?", answer: "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, question banks, mock exams and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams." },
+  { question: "Which exams does PLABcoach prepare you for?", answer: "PLABcoach prepares candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and the National Clinical Assessment (NCA) and Prescribing Safety Assessment (PSA) for the UK Foundation Programme. Courses for the MRCGP AKT and MSRA are launching soon, and USMLE and AMC courses are coming soon." },
+  { question: "Is PLAB the same as the UKMLA?", answer: "PLAB now meets the GMC’s Medical Licensing Assessment (MLA) requirements. PLAB 1 is set to the same standard as the UKMLA Applied Knowledge Test (AKT), and PLAB 2 to the same standard as the Clinical and Professional Skills Assessment (CPSA). International medical graduates still book exams called PLAB 1 and PLAB 2 through the GMC." },
+  { question: "Does PLABcoach offer online and in-person courses?", answer: "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards." },
+  { question: "Who teaches the PLABcoach courses?", answer: "Courses are taught by Dr Karam Singh (M.D., MRCGP), founder of PLABcoach and an NHS GP with over a decade of teaching experience, and Dr Anjum Kohli (M.D.). Both teach the core subjects the GMC requires and draw on their own clinical experience to help doctors prepare for licensing exams, including doctors returning after a career break." },
+  { question: "How do I access the courses and question banks?", answer: "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.", afterAnswer: (<> <div className="flex flex-wrap items-center gap-3 px-5 pb-4"><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer" className="text-[13px] font-semibold text-[var(--primary)] hover:underline">Sign Up</a><span aria-hidden="true" className="text-[#6f7280]">|</span><a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer"><Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} /></a><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer"><Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} /></a></div></>) },
+  { question: "Can I try PLABcoach for free?", answer: "Yes. You can take a free Self-Assessment on the PLAB 1 and PRES 2 SmartQBanks, and preview a selection of Self-Paced Mastery Videos before you buy.", afterAnswer: (<div className="flex flex-col items-start gap-2 px-5 pb-4 text-[13px] font-semibold text-[var(--primary)]"><a href="https://courses.plabcoach.com/course/SmartQBankDEMO-100135" target="_blank" rel="noopener noreferrer" className="hover:underline">PLAB 1 FREE Self-Assessment SmartQBank</a><a href="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881" target="_blank" rel="noopener noreferrer" className="hover:underline">PRES 2 FREE Self-Assessment SmartQBank</a></div>) },
 ];
 
 
@@ -865,7 +802,7 @@ useEffect(() => {
                   key={post.id}
                   className="group rounded-[28px] bg-[#d4e3ff] p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#cadafa] hover:shadow-[0_18px_42px_rgba(46,83,143,0.13)] xl:p-6"
                 >
-                  <Link href={`/${encodeURIComponent(post.slug)}/`} className="block">
+                  <Link href={`/blogs/${encodeURIComponent(post.slug)}`} className="block">
                     <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
                       <Image
                         src={post.image}
