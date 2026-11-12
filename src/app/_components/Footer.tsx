@@ -48,7 +48,7 @@ export default function Footer({
           <div className="grid gap-8 pb-4 pt-8 text-[15px] leading-7 sm:grid-cols-2 sm:gap-10 sm:pb-9 sm:pt-10 lg:grid-cols-[1.25fr_0.85fr_1fr_1.15fr] lg:gap-14">
             <section>
               {/* <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">We have been</h3> */}
-              <p className="max-w-[390px]">We have been delivering high-quality online courses for nearly a decade. All our instructors are experts with extensive experience in their respective fields. We offer comprehensive course materials, ensuring our students have everything they need to succeed.</p>
+              <p className="max-w-[390px]">We have been delivering high-quality online courses for over a decade. All our instructors are experts with extensive experience in their respective fields. We offer comprehensive course materials, ensuring our students have everything they need to succeed.</p>
               <div className='flex space-between mt-4'>
                 <p className='font-semibold pr-4 text-[var(--footer-heading)]'>We Accept</p>
                 <Image src="/payment-cards.webp" alt='' width={200} height={40}></Image>

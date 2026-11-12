@@ -1,6 +1,6 @@
 export default function WhatsAppButton() {
   const message =
-    "Hello..\nI’m interested in learning more about PLABCoach courses.\n\nCould you please guide me on the available courses, the content and pricing?";
+    "Hello..\nI’m interested in learning more about PLABcoach courses.\n\nCould you please guide me on the available courses, the content and pricing?";
 
   return (
     <a

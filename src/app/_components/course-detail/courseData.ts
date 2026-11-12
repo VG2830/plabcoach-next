@@ -128,11 +128,11 @@ const sectionsPlab1: CourseSection[] = [
     id: "format",
     heading: "PLAB 1 Format & Structure",
     paragraphs: [
-      "● Question format: 180 Single Best Answer (SBA) questions (Computer-based)",
+      "● Question format: 180 Single Best Answer (SBA) questions (written exam)",
       "● Duration: 180 minutes (Approximately 1 minute per question)",
-      "● Delivery: Computer-based, closed venue (British Council / VICTVS test centres worldwide)",
+      "● Delivery:  Written exam at GMC venues in the UK and EU, and at British Council centres overseas",
       "● Content basis: GMC Medical Licensing Assessment (MLA) (Approximately 430 core conditions, organised by clinical presentation)",
-      "● Pass mark: Set per sitting using statistical standardisation (confirm the current approach on gmc-uk.org)"
+      "● Pass mark: Set per sitting using statistical standardisation.Your results show your score and the score needed to pass."
     ],
   },
   {
@@ -146,7 +146,7 @@ const sectionsPlab1: CourseSection[] = [
       "● Paediatrics",
       "● Psychiatry and mental health",
       "● Prescribing and therapeutics ",
-      "● Ethics, law, and professionalism (Good Medical practise)",
+      "● Ethics, law, and professionalism (Good Medical Practice)",
       "● Public health and population medicine"
     ],
   },
@@ -190,7 +190,7 @@ const sectionsPlab1: CourseSection[] = [
       "● SmartQBank — 5,000+ high-yield SBA questions mapped to the current MLA content map",
       "● SmartNotes — rapid revision summaries organised by clinical presentation",
       "● SmartMock — unlimited realistic 180-question, 180-minute practise exams",
-      "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK licensing exams.",
+      "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK licensing exams.",
       "While no course can guarantee an exam result, structured preparation can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
     ],
   },
@@ -283,9 +283,9 @@ const faqsPlab1: FAQItem[] = [
 
 const comparisonPlab1: ComparisonTable = {
   heading: "PLAB 1 vs PRES 2 Comparison",
-  noteHeading: "Regulatory relationship (verify against Irish Medical Council before publish — active/evolving area)",
+  // noteHeading: "",
   noteBullets: [
-    "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practise — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
+    "The Irish Medical Council accepts a PLAB 1 pass as an alternative to PRES 2, so candidates who have passed PLAB 1 can apply directly for PRES 3. A PLAB 1 pass is valid for 2 years from the exam date.",
     "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
   ],
   colAHeader: "PLAB 1",
@@ -298,7 +298,7 @@ const comparisonPlab1: ComparisonTable = {
     { feature: "Registration granted", colA: "UK (GMC)", colB: "Ireland" },
     {
       feature: "Recognised equivalence",
-      colA: "PLAB 1 ≈ PRES 2 (exemption in practise)",
+      colA: "PLAB 1 ≈ PRES 2 (accepted as an alternative)",
       colB: "Irish Medical Council recognises PLAB 1 pass as PRES 2-equivalent",
     },
   ],
@@ -358,7 +358,7 @@ const sectionsPlab2: CourseSection[] = [
     id: "what-is",
     heading: "What is PLAB 2?",
     paragraphs: [
-      "PLAB 2 is the practical, clinical component of the GMC's PLAB assessment — an Objective Structured Clinical Examination (OSCE) that tests whether an international medical graduate can safely manage real clinical encounters, not just recall knowledge. It is sat only after passing PLAB 1, and only at the GMC's dedicated assessment centre in Manchester; unlike PLAB 1, it cannot be taken at any international venue.",
+      "PLAB 2 is the practical, clinical component of the GMC's PLAB assessment — an Objective Structured Clinical Examination (OSCE) that tests whether an international medical graduate can safely manage real clinical encounters, not just recall knowledge. It is sat only after passing PLAB 1, and only at one of the GMC's two Clinical Assessment Centre sites in Manchester; unlike PLAB 1, it cannot be taken at any international venue.",
       "Since its alignment with the MLA content map, PLAB 2 is delivered to the same clinical and professional skills standard as the UKMLA Clinical and Professional Skills Assessment (CPSA) that UK medical graduates sit — the underlying competency bar is shared, even though IMGs continue to book an exam named PLAB 2."
     ],
   },
@@ -430,7 +430,7 @@ const sectionsPlab2: CourseSection[] = [
       "● Small-group live coaching with manikins matching real exam equipment.",
       "● Full-circuit simulated mock exams under real 8-minute timing",
       "● Communication and breaking-bad-news station coaching, delivered by NHS-experienced instructors",
-      "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK licensing exams.",
+      "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK licensing exams.",
       "PLAB 2 Comprehensive Course 10 Days",
       "Our PLAB 2 Comprehensive Course is designed to provide structured preparation through a combination of online teaching, hands-on clinical skills training, and intensive OSCE practise.The programme includes:",
       "4 Days of Online Training covering Data Interpretation, History Taking, and Communication Skills.",
@@ -604,7 +604,7 @@ const sectionsPres2: CourseSection[] = [
     id: "who-needs",
     heading: "Who Needs to Take PRES 2?",
     paragraphs: [
-      "PRES 2 is required for IMGs who qualified outside the EU/EEA/Switzerland, do not hold a higher qualification or an internship the IMC deems equivalent to the Irish internship programme, and do not qualify for an exemption. Candidates who have passed the UK's PLAB 1 are generally recognised by the IMC as PRES 2-equivalent in practise and may be exempt.",
+      "PRES 2 is required for IMGs who qualified outside the EU/EEA/Switzerland, do not hold a higher qualification or an internship the IMC deems equivalent to the Irish internship programme, and do not qualify for an exemption. Candidates who have passed the UK's PLAB 1 can use it in place of PRES 2 and apply directly for PRES 3.",
     ],
   },
   {
@@ -669,7 +669,7 @@ const sectionsPres2: CourseSection[] = [
       "PLABcoach's PRES 2 preparation includes:",
       "● SmartQBank for PRES 2 — question bank with online mock tests",
       "● Structured coverage across all five PRES 2 content areas",
-      "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
+      "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
       "While no course can guarantee an exam result, structured preparation across all five PRES 2 content areas can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
     ],
   },
@@ -783,7 +783,7 @@ const sectionsPres3: CourseSection[] = [
     id: "dates",
     heading: "PRES 3 Dates & Fees",
     paragraphs: [
-      "PRES 3 fee: reported at approximately €1,500 in the most recently published 2026 figures referenced by third-party sources — the most significant single cost in the Irish registration process.",
+      "PRES 3 fee: set by the Irish Medical Council. See the current fee on the Medical Council's Fees page. It is usually the largest single cost in the Irish registration process.",
       "PRES 3 availability has historically been limited relative to demand — as of early 2026, reported figures showed several hundred candidates waiting to sit PRES 3, with only a small number of sittings run per year. This scarcity is the direct reason behind the Irish Medical Council's proposed PLAB 2 recognition (see comparison section below) — worth mentioning briefly in this section as useful context for candidates weighing their options, cited to a specific published source rather than stated as a general claim.",
     ],
   },
@@ -807,7 +807,7 @@ const sectionsPres3: CourseSection[] = [
       "● Self-Paced Mastery Videos for flexible, on-your-own-schedule preparation",
       "● Live Coaching, available both online and offline, with manikin-based practical skills training",
       "● Mock exams — OSCE mocks held live in Dublin, data interpretation mocks available online",
-      "Courses are led by Dr. Karam Singh (MD, MRCGP), an NHS doctor and educator with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
+      "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
       "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practise can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
 
     ],
@@ -852,9 +852,9 @@ const faqsPres3: FAQItem[] = [
       "Approximately 12–16 stations, each around 8 minutes.",
   },
   {
-    question: "What is the PRES 3 fee??",
+    question: "What is the PRES 3 fee?",
     answer:
-      "The PRES Level 3 fee is €1,500, set by the Irish Medical Council.",
+      "The Irish Medical Council sets the PRES 3 fee. See the current fee on the Medical Council's Fees page, under Pre-Registration Exam System.",
   },
 ];
 const comparisonPres3: ComparisonTable = {
@@ -935,7 +935,7 @@ const sectionsNca: CourseSection[] = [
     heading: "Eligibility & Registration Process",
     paragraphs: [
       "● Eligibility is determined automatically as part of the UKFP application process — candidates do not opt in or register for the UKFPO-NCA separately; the UKFPO identifies who is required to sit it based on qualification date.",
-      "● The qualification cutoff date ( 3 August 2025 for UKFP2027) is cycle-specific and has historically shifted — confirm the current cycle's exact cutoff date on foundationprogramme.nhs.uk",
+      "● The qualification cutoff date (3 August 2025 for UKFP 2027) changes each year. Check the date for your application year on the UKFPO website.",
       "● Once eligibility is confirmed, UKFPO contacts the candidate directly with payment instructions — candidates should not attempt payment before receiving this email",
       "● Missing the payment window results in automatic application withdrawal — no grace period, no exceptions"
     ],
@@ -1322,7 +1322,7 @@ const sectionsMrcpAkt: CourseSection[] = [
     paragraphs: [
       "● Format: 160 questions in 160 minutes, single-best-answer (SBA) and extended matching style.",
       "● Duration:160 minutes (Changed from 190 minutes, effective October 2025)",
-      "● Content weighting: Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practise, and 10% health informatics and administrative issues.",
+      "● Content weighting: Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practice, and 10% health informatics and administrative issues.",
       "● Delivery: Computer-based, at Pearson VUE test centres across the UK."
       
     ],
@@ -1438,7 +1438,7 @@ const pathwayUkPlab2 = [
 
 const pathwayIrelandPres = [
   { id: "p1", number: "01", label: "Check PRES eligibility", icon: "eligibility" as const },
-  { id: "p2", number: "02", label: "OET / TOEFL", icon: "start-career" as const },
+  { id: "p2", number: "02", label: "IELTS / OET", icon: "start-career" as const },
   { id: "p3", number: "03", label: "Pass PRES 2", icon: "pass-pres2" as const },
   { id: "p4", number: "04", label: "Prepare for PRES 3", icon: "prepare-pres3" as const },
   { id: "p5", number: "05", label: "Pass PRES 3", icon: "pass-pres3" as const },
@@ -1484,7 +1484,7 @@ export const courseDetails = {
   "plab-1-ukmla-akt": {
     slug: "plab-1-ukmla-akt",
     eyebrow: "PLAB 1 / UKMLA-AKT",
-    title: "PLAB 1 / UKMLA-AKT:\nComplete Guide to Format,\nSyllabus, Dates & Preparation",
+    title: "PLAB 1 / UKMLA-AKT: \nComplete Guide to Format,\nSyllabus, Dates & Preparation",
     metaTitle: "PLAB 1 / UKMLA-AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
     metaDescription: "PLAB 1 (UKMLA-AKT) is GMC's 180-question written exam for IMGs seeking UK registration. Learn the format, syllabus, dates and how PLABcoach's SmartQBank & courses help you pass.",
     ogImage: "/og/plab1.webp",
@@ -1504,9 +1504,9 @@ export const courseDetails = {
     relatedExams: relatedExamsDefault,
     pathway: pathwayUkPlab,
     videoId: "weKtryoKwqc",
-    videoTitle: "Ace PLAB1 With PlabCoach",
+    videoTitle: "Ace PLAB1 With PLABcoach",
     ctaTitle: "READY TO ACE PLAB 1?",
-    ctaCopy: "Choose your learning path and start your PLAB 1 / UKMLA preparation with PLABCOACH today.",
+    ctaCopy: "Choose your learning path and start your PLAB 1 / UKMLA preparation with PLABcoach today.",
     subscribeButtonLabel: "Start PLAB 1 Preparation",
     subscribeHref: "/course-plan?course=plab-1-ukmla-akt",
     syllabusHref: "https://www.gmc-uk.org/education/medical-licensing-assessment/mla-content-map",
@@ -1516,7 +1516,7 @@ export const courseDetails = {
   "plab-2-ukmla": {
     slug: "plab-2-ukmla",
     eyebrow: "PLAB 2 / UKMLA-CPSA",
-    title: "PLAB 2 / UKMLA-CPSA:\nComplete Guide to OSCE \nStations, Marking & Preparation",
+    title: "PLAB 2 / UKMLA-CPSA: \nComplete Guide to OSCE \nStations, Marking & Preparation",
     metaTitle: "PLAB 2 / UKMLA-CPSA Exam 2026 – OSCE Stations, Format & Preparation | PLABcoach",
     metaDescription: "PLAB 2 (UKMLA-CPSA) is GMC's 16-station OSCE for IMGs, held in Manchester. Learn the station format, marking domains, dates and how PLABcoach's manikin-based training helps you pass.",
     ogImage: "/og/plab2.webp",
@@ -1598,9 +1598,9 @@ export const courseDetails = {
     },
     comparison: {
       heading: "PRES 2 vs PLAB 1 Comparison",
-      noteHeading: "Equivalence note (verify against Irish Medical Council before publish — evolving area)",
+      noteHeading: "",
       noteBullets: [
-        "The Irish Medical Council currently treats a PLAB 1 pass as PRES-2 equivalent in practise, allowing many PLAB 1 pass holders to progress directly to PRES 3.",
+        "The Irish Medical Council accepts a PLAB 1 pass as an alternative to PRES 2, so PLAB 1 pass holders can apply directly for PRES 3. A PLAB 1 pass is valid for 2 years from the exam date.",
         "PRES 2 and PLAB 1 remain separate exams, booked and run independently by their respective regulators (Irish Medical Council vs GMC), even where mutual recognition applies.",
       ],
       colAHeader: "PRES 2",
@@ -1647,7 +1647,7 @@ export const courseDetails = {
     videoId: "cfrFBCcj840",
     videoTitle: "Crack PRES2 with Confidence",
     ctaTitle: "READY TO ACE PRES 2?",
-    ctaCopy: "Choose your learning path and start your PRES Level 2 preparation with PLABCOACH today.",
+    ctaCopy: "Choose your learning path and start your PRES 2 preparation with PLABCOACH today.",
     subscribeButtonLabel: "Subscribe to SmartQBank for PRES 2",
     subscribeHref: "/course-plan?course=pres-2",
     plabCoachHelpCta:"Subscribe to SmartQBank for PRES 2",
@@ -1656,7 +1656,7 @@ export const courseDetails = {
   "pres-3-osce": {
     slug: "pres-3-osce",
     eyebrow: "PRES 3",  
-    title: "PRES 3 Exam Ireland:\nOSCE & Data Interpretation Guide",
+    title: "PRES 3 Exam Ireland: \n OSCE & Data Interpretation Guide",
     metaTitle: "PRES 3 Exam Ireland 2026 – OSCE & Data Interpretation Guide | PLABcoach",
     metaDescription: "PRES 3 is the Irish Medical Council's OSCE and data interpretation exam for international medical graduates, held in Dublin. Learn the format, stations and how PLABcoach helps you pass.",
     ogImage: "/og/pres3.webp",
@@ -1727,7 +1727,7 @@ export const courseDetails = {
     relatedExams: [
       {
         title: "UKFPO-PSA",
-        description: "often required alongside PSA for UKFPO ranking / FY1 readiness",
+        description: "Prescribing Safety Assessment taken during Foundation Year 1",
         tags: [
           { label: "Next step", variant: 3 },
           { label: "prescribing-safety-assessment", variant: 3 },
@@ -1838,7 +1838,7 @@ export const courseDetails = {
     },
     relatedExams: [
       {
-        title: "MRCGP-AKT",
+        title: "MRCGP AKT",
         description: "The natural next step for candidates on the GP training pathway",
         tags: [
           { label: "Related", variant: 2 },
@@ -1871,24 +1871,25 @@ export const courseDetails = {
     ],
     pathway: pathwayMsra,
     videoId: "8vvnBr06HSI",
-    videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
+    videoTitle: "MSRA preparation with PLABcoach",
     ctaTitle: "READY TO ACE THE PSA?",
-    ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
+    ctaCopy: " Choose your learning path and start your MSRA preparation with PLABcoach today.",
     subscribeButtonLabel: "Start MSRA Preparation",
-    subscribeHref: "/course-plan?course=msra",
+    subscribeHref: "",
+    // subscribeHref: "/course-plan?course=msra",
     plabCoachHelpCta:"Register Interest — MSRA Preparation",
-    plabCoachHelpCtaHref:"/course-plan?course=msra"
+    plabCoachHelpCtaHref:"/contact-us/"
   },
     "mrcp-akt": {
     slug: "mrcp-akt",
     eyebrow: "MRCGP AKT",
-    title: "MRCGP AKT: Complete \n Guide to Format, Syllabus & Preparation",
+    title: "MRCGP AKT: Complete \nGuide to Format, Syllabus & Preparation",
     metaTitle: "MRCGP AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
     metaDescription: "The MRCGP AKT is RCGP's 160-item computer-based exam for GP trainees. Learn the current format, syllabus weighting, fees and how PLABcoach helps you pass.",
     ogImage: "/og/mrccp-akt.webp",
     heroImage: "/course_eight_1.webp",
     heroDescription:
-      "The MRCGP Applied Knowledge Test (AKT) is the Royal College of General Practitioners' (RCGP) summative exam of the knowledge underpinning independent general practise in the UK. Since October 2025, it is a 160-item, 160-minute computer-based exam, held at Pearson VUE centres four times a year. Around 80% of items cover clinical medicine, with the remainder split between critical appraisal/evidence-based practise and health informatics/administrative issues. GP trainees must hold active MRCGP membership to book it.Your training record must also show you are in ST2 or ST3 when you book.",
+      "The MRCGP Applied Knowledge Test (AKT) is the Royal College of General Practitioners' (RCGP) summative exam of the knowledge underpinning independent general practice in the UK. Since October 2025, it is a 160-item, 160-minute computer-based exam, held at Pearson VUE centres four times a year. Around 80% of items cover clinical medicine, with the remainder split between critical appraisal/evidence-based practice and health informatics/administrative issues. GP trainees must hold active MRCGP membership to book it. Your training record must also show you are in ST2 or ST3 when you book.",
     toc: tocMrcpAkt,
     sections: sectionsMrcpAkt,
     faqTitle: "MRCGP AKT FAQs",
@@ -1901,7 +1902,7 @@ export const courseDetails = {
     relatedExams: [
       {
         title: "MSRA ",
-        description: "UK Foundation Programme ranking assessment, often paired with PSA",
+        description: "Entry assessment for GP specialty training",
         tags: [
           { label: "Next step", variant: 3 },
           { label: "national-clinical-assessment", variant: 3 },
@@ -1911,7 +1912,7 @@ export const courseDetails = {
       },
       {
         title: "UKFPO-PSA",
-        description: "broader GMC written exam, overlapping therapeutics knowledge",
+        description: "Prescribing Safety Assessment taken during Foundation Year 1",
         tags: [
           { label: "", variant: 1 },
           { label: "", variant: 1 },
@@ -1921,7 +1922,7 @@ export const courseDetails = {
       },
       {
         title: "UKFPO-NCA",
-        description: "Irish written exam with prescribing and therapeutics overlap",
+        description: "Clinical assessment for UK Foundation Programme applicants",
         tags: [
           { label: "Related", variant: 2 },
           { label: "pres-2", variant: 2 },
@@ -1932,10 +1933,10 @@ export const courseDetails = {
     ],
     pathway: pathwayUkFoundation,
     videoId: "8vvnBr06HSI",
-    videoTitle: "Prescribing Safety Assessment preparation with PLABCoach",
+    videoTitle: "MRCGP AKT preparation with PLABcoach",
     ctaTitle: "READY TO ACE THE PSA?",
-    ctaCopy: "Choose your learning path and start your Prescribing Safety Assessment preparation with PLABCOACH today.",
-    subscribeButtonLabel: "Start MRCCP AKT Preparation",
+    ctaCopy: "Choose your learning path and start your MRCGP AKT preparation with PLABcoach today.",
+    subscribeButtonLabel: "Start MRCGP AKT Preparation",
     subscribeHref: "/course-plan?course=mrcp-akt",
     plabCoachHelpCta:"Register Interest — MRCGP AKT Preparation",
     plabCoachHelpCtaHref:"/course-plan?course=mrcp-akt"

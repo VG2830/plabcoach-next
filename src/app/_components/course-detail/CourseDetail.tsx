@@ -557,7 +557,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 {course.comparison.heading}
               </h2>
 
-              {course.comparison.noteHeading && (
+              {course.comparison.noteBullets && (
                 <div className="mt-[28px] rounded-[22px] border border-[#dbe7ff] bg-[var(--course-detail-comparison-note-bg)] px-[26px] py-[24px] sm:mt-[34px] sm:px-[32px] sm:py-[28px]">
                   <p className="text-[12.5px] font-semibold leading-[1.4] text-[var(--course-detail-comparison-note-text)] sm:text-[13.5px]">
                     {course.comparison.noteHeading}

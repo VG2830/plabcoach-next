@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   // metadataBase: new URL("https://plabcoach.com"),
   metadataBase: new URL("https://plabcoach-next.vercel.app"),
-  title: "PLABCoach - UK Medical Exam Preparation",
+  title: "PLABcoach - UK Medical Exam Preparation",
   description: "Expert-led preparation for PLAB, UKMLA and UK medical exams.",
 };
 

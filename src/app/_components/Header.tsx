@@ -12,6 +12,7 @@ type CourseMenuGroup = {
   subCourses: {
     label: string;
     href: string;
+    status?: "Launching soon" | "Coming soon";
   }[];
 };
 
@@ -48,23 +49,27 @@ const courseMenu: CourseMenuGroup[] = [
   },
   {
     label: "Upcoming Courses",
-    href: "#",
+    href: "/courses/",
     subCourses: [
       {
         label: "Multi-Specialty Recruitment Assessment (MSRA)",
         href: "/courses/msra",
+        status: "Launching soon",
       },
       {
         label: "MRCGP Applied Knowledge Test (AKT)",
         href: "/courses/mrcp-akt",
+        status: "Launching soon",
       },
       {
         label: "USMLE",
         href: "/courses/usmle",
+        status: "Coming soon",
       },
       {
         label: "AMC",
-        href: "/courses/amc",
+        href: "/contact-us/",
+        status: "Coming soon",
       },
     ],
   },
@@ -218,9 +223,20 @@ export default function Header() {
                                 <Link
                                   key={subCourse.href}
                                   href={subCourse.href}
-                                  className="flex min-h-[44px] items-center rounded-[8px] px-3.5 py-2 text-[12.5px] font-medium leading-[1.35] text-[var(--nav-muted)] transition-colors duration-150 hover:bg-[#F5F8FD] hover:text-[var(--primary)]"
+                                  className="flex min-h-[44px] items-center justify-between gap-2 rounded-[8px] px-3.5 py-2 text-[12.5px] font-medium leading-[1.35] text-[var(--nav-muted)] transition-colors duration-150 hover:bg-[#F5F8FD] hover:text-[var(--primary)]"
                                 >
-                                  {subCourse.label}
+                                  <span>{subCourse.label}</span>
+                                  {subCourse.status && (
+                                    <span
+                                      className={`shrink-0 rounded-full px-2 py-1 text-[9px] font-semibold leading-none ${
+                                        subCourse.status === "Launching soon"
+                                          ? "bg-amber-100 text-amber-800"
+                                          : "bg-sky-100 text-sky-800"
+                                      }`}
+                                    >
+                                      {subCourse.status}
+                                    </span>
+                                  )}
                                 </Link>
                               ))}
                             </div>
@@ -319,14 +335,17 @@ export default function Header() {
           </Link>
           <span className="hidden h-[18px] w-px bg-[#dce5f0] lg:block" aria-hidden="true" />
           <a
-            href="#sign-in"
+            href="https://courses.plabcoach.com/"
             className="hidden text-[14px] font-medium text-[var(--nav-muted)] transition hover:text-[var(--primary)] sm:inline"
           >
             Sign in
           </a>
-          <button className="h-[40px] rounded-[10px] bg-[var(--primary)] px-4 text-[11px] font-semibold text-white transition hover:brightness-105 sm:px-5 sm:text-[12px]">
+          <a
+            href="https://courses.plabcoach.com/"
+            className="inline-flex h-[40px] items-center justify-center rounded-[7px] bg-[var(--primary)] px-4 text-[14px] font-semibold text-white shadow-[0_8px_18px_rgba(11,93,168,0.18)] transition-[filter] hover:brightness-105"
+          >
             Sign up
-          </button>
+          </a>
         </div>
 
         <div
@@ -425,9 +444,20 @@ export default function Header() {
                                     key={subCourse.href}
                                     href={subCourse.href}
                                     onClick={closeMobileMenu}
-                                    className="flex min-h-[40px] min-w-0 items-center rounded-[7px] px-3 py-2 text-[12px] font-medium leading-[1.35] text-[var(--nav-muted)] transition-colors hover:bg-[#F5F8FD] hover:text-[var(--primary)]"
+                                    className="flex min-h-[40px] min-w-0 items-center justify-between gap-2 rounded-[7px] px-3 py-2 text-[12px] font-medium leading-[1.35] text-[var(--nav-muted)] transition-colors hover:bg-[#F5F8FD] hover:text-[var(--primary)]"
                                   >
                                     <span className="min-w-0 break-words">{subCourse.label}</span>
+                                    {subCourse.status && (
+                                      <span
+                                        className={`shrink-0 rounded-full px-2 py-1 text-[9px] font-semibold leading-none ${
+                                          subCourse.status === "Launching soon"
+                                            ? "bg-amber-100 text-amber-800"
+                                            : "bg-sky-100 text-sky-800"
+                                        }`}
+                                      >
+                                        {subCourse.status}
+                                      </span>
+                                    )}
                                   </Link>
                                 ))}
                               </div>

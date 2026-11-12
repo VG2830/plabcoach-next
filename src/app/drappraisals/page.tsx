@@ -28,29 +28,29 @@ const offers = [
     copy: "Complete GMC-compliant appraisal including portfolio review, appraisal meeting, and documentation (REV12).",
   },
   {
-    save: "Save £10",
-    code: "APP10COACH",
+    save: "Save £15",
+    code: "APP15COACH",
     title: "Appraisal Advice (Virtual)",
     copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
   },
-  {
-    save: "Save £5",
-    code: "PREP5COACH",
-    title: "Appraisal Advice (Virtual)",
-    copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
-  },
-  {
-    save: "Save £5",
-    code: "PREP5COACH",
-    title: "Appraisal Advice (Virtual)",
-    copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
-  },
-  {
-    save: "Save £5",
-    code: "PREP5COACH",
-    title: "Appraisal Advice (Virtual)",
-    copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
-  },
+  // {
+  //   save: "Save £5",
+  //   code: "PREP5COACH",
+  //   title: "Appraisal Advice (Virtual)",
+  //   copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
+  // },
+  // {
+  //   save: "Save £5",
+  //   code: "PREP5COACH",
+  //   title: "Appraisal Advice (Virtual)",
+  //   copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
+  // },
+  // {
+  //   save: "Save £5",
+  //   code: "PREP5COACH",
+  //   title: "Appraisal Advice (Virtual)",
+  //   copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
+  // },
 ];
 
 const benefits = [
@@ -66,7 +66,7 @@ const journey = [
     idle: "/01.svg",
     active: "/01_with_color.svg",
     width: 158,
-    title: "Enroll with PLABCoach",
+    title: "Enrol with PLABCoach",
     copy: "Begin by registering with PLABCoach to access a structured support system tailored for your professional development and appraisal readiness",
   },
   {
@@ -233,12 +233,12 @@ export default function AppraisalPage() {
         <section className="relative overflow-hidden bg-[var(--appraisal-hero-bg)]">
           <div className="relative mx-auto grid w-[var(--site-width)] max-w-[var(--container-max)] items-center gap-[28px] py-[44px] sm:min-h-[650px] sm:gap-8 sm:py-[70px] lg:min-h-[745px] lg:grid-cols-[0.89fr_1.11fr] lg:gap-0 lg:py-0">
             <div className="relative z-20 mx-auto w-full max-w-[670px] text-center sm:text-left lg:mx-0 lg:-translate-y-[18px] lg:self-center">
-              <p className="text-[11px] font-bold uppercase tracking-[0.025em] text-[var(--appraisal-accent)] sm:text-[12px] lg:text-[13px]">We&apos;re here to help</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.025em] text-[var(--appraisal-accent)] sm:text-[12px] lg:text-[13px]">In partnership with Dr Appraisals</p>
               <h1 className="mx-auto mt-[11px] max-w-[360px] text-[36px] font-bold leading-[1.04] tracking-[-0.034em] text-[var(--appraisal-ink)] min-[420px]:max-w-[400px] min-[420px]:text-[40px] sm:mx-0 sm:mt-[13px] sm:max-w-none sm:text-[54px] sm:leading-[1.01] sm:tracking-[-0.038em] lg:text-[64px] xl:text-[66px]">
-                Get in Touch With Our Team
+               GMC Appraisal & Revalidation Support for UK Doctors
               </h1>
               <p className="mx-auto mt-[22px] max-w-[520px] text-[13px] leading-[1.6] text-[var(--appraisal-copy)] sm:mx-0 sm:mt-[35px] sm:max-w-[620px] sm:text-[15px] sm:leading-[1.68] lg:text-[16px]">
-                Have questions about courses, subscriptions, or admissions? Connect with our team for quick assistance and expert guidance.
+                PLABcoach has partnered with Dr Appraisals to give doctors working in the UK access to GMC-compliant appraisals, revalidation support, interview preparation and career services. PLABcoach students and members get exclusive discounted rates.
               </p>
               <button type="button" className="mt-[30px] h-[54px] w-full max-w-[260px] rounded-[9px] bg-[var(--appraisal-hero-button)] px-[20px] text-[13px] font-bold text-white shadow-[0_12px_28px_rgba(56,73,226,0.18)] transition duration-300 hover:-translate-y-1 hover:brightness-105 sm:mt-[50px] sm:h-[60px] sm:w-[226px]">
                 Get Exclusive Access

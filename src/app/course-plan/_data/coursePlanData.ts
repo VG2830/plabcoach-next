@@ -66,29 +66,29 @@ const sharedSchedule: ScheduleItem[] = [
   {
     label: "Data Interpretation",
     dates: [
-      { name: "Batch 1", date: "29–30 Aug 2026" },
-      { name: "Batch 2", date: "10–11 Oct 2026" },
+      { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
+      { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
     ],
   },
   {
     label: "LIVE Practical OSCE",
     dates: [
-      { name: "Batch 1", date: "11–13 Sep 2026" },
-      { name: "Batch 2", date: "16–18 Oct 2026" },
+      { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
+      { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
     ],
   },
   {
     label: "History & Communication",
-    dates: [{ name: "", date: "5–6 September 2026" }],
+    dates: [{ name: "", date: "Next batch dates coming soon. Contact us to reserve a place." }],
   },
 ];
 
 const pres3Plan: CoursePlanConfig = {
   slug: "pres-3",
-  heroEyebrow: "PLAN’s",
-  heroTitle: "UKMLA Journey with Confidence",
+  heroEyebrow: "PRES 3 PLAN",
+  heroTitle: "Prepare for PRES 3 with a Complete OSCE and Data Interpretation Plan",
   heroDescription:
-    "Structured, result-driven courses designed to help you clear exams and secure your medical career in the UK.",
+    " Structured, result-driven courses designed to help you clear exams and secure your medical career in Ireland.",
   programmeTitle: "PRES 3",
   programmeSubtitle: "Comprehensive Programme",
   testimonials: [
@@ -97,7 +97,7 @@ const pres3Plan: CoursePlanConfig = {
       role: "Doctor",
       country: "IRELAND",
       quote:
-        "Great course. The videos were great help. Dr Karam was very kind and helpful. He helped us and gave us tips whenever he was around. He knew us by name even before he had met us in person. Dr Anjum’s advice and notes were also very useful. The timing of the course was good. It allowed for enough practice time before the exam. The environment at the center was well-suited for practicing and studying. Very grateful for the opportunity to perform procedures and the large number of needles available at the center. Was also grateful for being able to practice on the breast mannequin which was one of my exam stations. However, a few of the mannequins require replacement like the one for rectal exam. The otoscopes and fundoscopes were not working.",
+        "Great course. The videos were great help. Dr Karam was very kind and helpful. He helped us and gave us tips whenever he was around. He knew us by name even before he had met us in person. Dr Anjum’s advice and notes were also very useful. The timing of the course was good. It allowed for enough practice time before the exam. The environment at the center was well-suited for practicing and studying. Very grateful for the opportunity to perform procedures and the large number of needles available at the center. Was also grateful for being able to practice on the breast mannequin which was one of my exam stations.",
     },
     {
       name: "Dr. Adeel Khan",
@@ -192,8 +192,8 @@ const pres3Plan: CoursePlanConfig = {
         "Mastery Videos Included",
       ],
       schedule: [
-        { name: "Batch 1", date: "11th–13th Sep 2026" },
-        { name: "Batch 2", date: "16th–18th Oct 2026" },
+        { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
+        { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
       ],
     },
     {
@@ -204,8 +204,8 @@ const pres3Plan: CoursePlanConfig = {
       title: "Data Interpretation Course",
       features: ["2-Day Live Online Training", "Exam-Focused Learning", "Practical Data Analysis", "Expert-Led Sessions"],
       schedule: [
-        { name: "Batch 1", date: "29th–30th Aug 2026" },
-        { name: "Batch 2", date: "10th–11th Oct 2026" },
+        { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
+        { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
       ],
     },
   ],

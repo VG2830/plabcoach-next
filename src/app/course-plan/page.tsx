@@ -4,8 +4,8 @@ import { coursePlanCatalog, defaultCoursePlan } from "./_data/coursePlanData";
 import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Course Plans | PLABCoach",
-  description: "Choose the PLABCoach plan that best fits your exam preparation needs.",
+  title: "Course Plans | PLABcoach",
+  description: "Choose the PLABcoach plan that best fits your exam preparation needs.",
 };
 
 type CoursePlanRouteProps = {

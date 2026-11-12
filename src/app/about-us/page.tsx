@@ -110,7 +110,7 @@ export default function AboutUsPage() {
                 <iframe
                   className="absolute inset-0 h-full w-full border-0"
                   src="https://www.youtube.com/embed/6nXIgV_8TVY?si=0u8-r7v4rnh-eADI"
-                  title="Every Doctor's Journey Needs the Right Guidance - PLABCoach"
+                  title="Every Doctor's Journey Needs the Right Guidance - PLABcoach"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen

@@ -186,7 +186,7 @@ const subscriptionCourses: SubscriptionCourse[] = [
 const testimonials = [
   {
     name: "Javeria",
-    image: "/third_section_dr_img.webp",
+    image: "/User_icon.svg",
     exam: "PLAB 2",
     location: "United Kingdom",
     quote: "Cleared the NCA exam in my first attempt and couldn’t have done it without PLABcoach and Dr Karam’s advice & support. I would highly recommend this course. Thank you!!",
@@ -212,6 +212,41 @@ const testimonials = [
     location: "Ireland",
     quote: "Dr Singh and Dr Kohi are amazing tutors. The mocks are very simmilar to the real NCA exam. The practising facilities are amazing. The curriculum taught was to the point and exactly what is needed for the exam. Couldn’t have asked for a better teacher.",
   },
+  {
+    name: "Sara",
+    image: "/african_image.webp",
+    exam: "PRES",
+    location: "China",
+    quote: "Very happy with the NCA course. Teachers are very kind and extremely helpful!",
+  },
+  {
+    name: "Safia Abdulla",
+    image: "/african_image.webp",
+    exam: "PRES",
+    location: "Sudan",
+    quote: "Great course. The videos were great help. Dr Karam was very kind and helpful. He helped us and gave us tips whenever he was around. He knew us by name even before had met us in person. Dr Anjum’s advice and notes were also very useful. The timing of the course was good. It allowed for enough practice time before the exam. The environment at the center was well-suited for practicing and studying. Very grateful for the opportunity to perform procedures and the large number of needles available at the center. Was also grateful for being able to practice on the breast mannequin which was one of my exam stations. However, a few of the mannequins require replacement like the one for rectal exam. The otoscopes and fundoscopes were not working. ",
+  },
+  {
+    name: "Peter Bergin",
+    image: "/african_image.webp",
+    exam: "PRES",
+    location: "UK",
+    quote: "The course was fantastic, I would have done much worse without it I’m sure. Dr Singh gave us everything we needed to know. The insight and knowledge into what comes up in the NCA vs what doesn’t was invaluable. The only thing I can think of to improve would be to have a more systematic recall of previous stations as it seemed like Dr Singh was doing a lot from memory which was fine but I wonder if a more systematic process for going through previous stations so that none are missed would be beneficial. I know it’s impossible to do all the stations of every year as there is a limit on time and capacity of course.",
+  },
+  {
+    name: "Rama Abubaker",
+    image: "/african_image.webp",
+    exam: "PRES",
+    location: "UK",
+    quote: "Amazing course, still can’t get over how good it was. Without a doubt the best Doctor that’s taught me by miles. Clear,concise and effective teaching style. I will definitely recommend plab coach to people taking NCA next year.",
+  },
+  {
+    name: "Dr. Saher Siddiqui",
+    image: "/african_image.webp",
+    exam: "PRES",
+    location: "UK",
+    quote: "Dr. Saher Siddiqui expressed gratitude for the individual attention and support provided, which helped in passing the PLAB 2 exam on the first attempt.",
+  },
 ];
 
 const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
@@ -220,7 +255,7 @@ const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
   { question: "Is PLAB the same as the UKMLA?", answer: "PLAB now meets the GMC’s Medical Licensing Assessment (MLA) requirements. PLAB 1 is set to the same standard as the UKMLA Applied Knowledge Test (AKT), and PLAB 2 to the same standard as the Clinical and Professional Skills Assessment (CPSA). International medical graduates still book exams called PLAB 1 and PLAB 2 through the GMC." },
   { question: "Does PLABcoach offer online and in-person courses?", answer: "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards." },
   { question: "Who teaches the PLABcoach courses?", answer: "Courses are taught by Dr Karam Singh (M.D., MRCGP), founder of PLABcoach and an NHS GP with over a decade of teaching experience, and Dr Anjum Kohli (M.D.). Both teach the core subjects the GMC requires and draw on their own clinical experience to help doctors prepare for licensing exams, including doctors returning after a career break." },
-  { question: "How do I access the courses and question banks?", answer: "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.", afterAnswer: (<> <div className="flex flex-wrap items-center gap-3 px-5 pb-4"><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer" className="text-[13px] font-semibold text-[var(--primary)] hover:underline">Sign Up</a><span aria-hidden="true" className="text-[#6f7280]">|</span><a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer"><Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} /></a><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer"><Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} /></a></div></>) },
+  { question: "How do I access the courses and question banks?", answer: "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.", afterAnswer: (<> <div className="flex flex-wrap items-center gap-3 px-5 pb-4"><a href="https://courses.plabcoach.com/" target="_blank" rel="noopener noreferrer" className="text-[13px] font-semibold text-[var(--primary)] hover:underline">Sign Up</a><span aria-hidden="true" className="text-[#6f7280]">|</span><a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer"><Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} /></a><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer"><Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} /></a></div></>) },
   { question: "Can I try PLABcoach for free?", answer: "Yes. You can take a free Self-Assessment on the PLAB 1 and PRES 2 SmartQBanks, and preview a selection of Self-Paced Mastery Videos before you buy.", afterAnswer: (<div className="flex flex-col items-start gap-2 px-5 pb-4 text-[13px] font-semibold text-[var(--primary)]"><a href="https://courses.plabcoach.com/course/SmartQBankDEMO-100135" target="_blank" rel="noopener noreferrer" className="hover:underline">PLAB 1 FREE Self-Assessment SmartQBank</a><a href="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881" target="_blank" rel="noopener noreferrer" className="hover:underline">PRES 2 FREE Self-Assessment SmartQBank</a></div>) },
 ];
 
@@ -397,11 +432,11 @@ useEffect(() => {
               </p>
               <h1 className="mt-[14px] max-w-[700px] text-[33px] font-bold leading-[1.07] tracking-[-0.032em] text-[var(--ink)] sm:text-[52px] lg:text-[58px] xl:text-[48px]">
                 {/* Prepare for PLAB &amp; UK Medical Exams with Confidence */}
-                PLAB, UKMLA & PRES Exam Preparation for International Doctors
+               PLAB, UKMLA, PRES & UK Medical Exam Preparation for IMGs
               </h1>
              <div className="mt-6 max-w-[720px] rounded-[22px] bg-white/68 px-5 py-4 shadow-[0_10px_30px_rgba(53,79,128,0.04)] backdrop-blur-sm sm:px-6 sm:py-5 xl:mt-7 xl:px-7 xl:py-6">
                 <p className="text-[12px] font-medium leading-[1.65] text-[#185b99] sm:text-[13px] xl:text-[14px]">
-                  PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr. Karam Singh(M.D., MRCGP), NHS GP and founder of PLABcoach. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, MRCGP AKT — combining live coaching with self-paced online learning.
+                 PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr Karam Singh (M.D., MRCGP), NHS GP. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, and the MRCGP AKT, combining live coaching with self-paced online learning.
                 </p>
               </div>
             </div>
@@ -616,11 +651,11 @@ useEffect(() => {
               </div>
             </div> */}
             <div>
-              <h2 className="text-[39px] font-bold uppercase tracking-[0.015em] text-[#17265c] sm:text-[44px] lg:text-[48px] xl:text-[50px]">
+              <h2 className="text-[39px] font-bold  tracking-[0.015em] text-[#17265c] sm:text-[44px] lg:text-[48px] xl:text-[50px]">
                 Why PLABcoach
               </h2>
               <p className="mt-5 max-w-[540px] text-[15px] leading-[2] text-[#353943] sm:text-[16px] xl:mt-6 xl:text-[18px]">
-                Led by Dr. Karam Singh(M.D., MRCGP), NHS GP and founder of PLABcoach, PLABcoach has provided structured exam preparation for international medical graduates for over a decade. Courses combine live coaching, self-paced video content, and exam-realistic question banks, with teaching tailored to each candidate&apos;s weak areas
+                Led by Dr Karam Singh (M.D., MRCGP), NHS GP, PLABcoach has provided structured exam preparation for international medical graduates for over a decade. Courses combine live coaching, self-paced video content, and exam-realistic question banks, with teaching tailored to each candidate&apos;s weak areas.
               </p>
               <p className="mt-10 text-[13px] font-semibold text-[#222] xl:text-[15px]">
                 Read Our Full Story
