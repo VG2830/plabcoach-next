@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "../_components/pageMetadata";
+import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Doctor Appraisal & Revalidation Services | PLABcoach",
@@ -13,5 +14,5 @@ export const metadata: Metadata = createPageMetadata({
 export default function DrAppraisalsLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return children;
+  return <><JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "GMC Appraisal", path: "/drappraisals" }])} />{children}</>;
 }

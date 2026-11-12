@@ -185,32 +185,32 @@ const subscriptionCourses: SubscriptionCourse[] = [
 
 const testimonials = [
   {
-    name: "Dr. Adeel Khan",
+    name: "Javeria",
     image: "/third_section_dr_img.webp",
     exam: "PLAB 2",
     location: "United Kingdom",
-    quote: "PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt! PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt! PLABcoach question bank and mocks were extremely helpful. I cleared PLAB 2 in my first attempt!",
+    quote: "Cleared the NCA exam in my first attempt and couldn’t have done it without PLABcoach and Dr Karam’s advice & support. I would highly recommend this course. Thank you!!",
   },
   {
-    name: "Dr. Priya Sharma",
+    name: "Dr. Carolina",
     image: "/fifth_sec_card_img.webp",
     exam: "PLAB 1",
-    location: "India",
-    quote: "The course gave me a clear plan instead of leaving me to figure everything out alone. I could revise at my own pace and use the mocks to understand exactly where I needed to improve.",
+    location: "IRELAND",
+    quote: "Dr. Carolina Ciacobone from Ireland highly recommended Dr. Singh’s course, acknowledging his assistance in passing both PLAB exams.",
   },
   {
-    name: "Dr. Mohammed Ali",
+    name: "Shevaani Ganendran",
     image: "/offer_section_image.webp",
     exam: "UKMLA",
-    location: "UAE",
-    quote: "I found the combination of concise teaching, practical questions and mentor guidance very useful. It kept my preparation focused and helped me build consistency week after week.",
+    location: "SINGAPORE",
+    quote: "I would like to express my heartfelt gratitude for the NCA course. It was an incredibly enriching experience that not only enhanced my medical knowledge and skills but also contributed to my personal growth.The message you sent us on the day of the exam, wishing us all the best, was inspiring. It resonated with me on a spiritual level, and I will carry it with me throughout my life.I am truly thankful for the opportunity to learn under your guidance. Your dedication and approach to teaching has left a lasting impact on me, and I will always cherish this experience.",
   },
   {
-    name: "Dr. Sara Wilson",
-    image: "/hero_banner_image.webp",
+    name: "Urooj Aizad",
+    image: "/african_image.webp",
     exam: "PRES",
     location: "Ireland",
-    quote: "The platform made a difficult syllabus feel manageable. The learning path was easy to follow and the practice resources helped me turn weak areas into strengths before the exam.",
+    quote: "Dr Singh and Dr Kohi are amazing tutors. The mocks are very simmilar to the real NCA exam. The practising facilities are amazing. The curriculum taught was to the point and exactly what is needed for the exam. Couldn’t have asked for a better teacher.",
   },
 ];
 

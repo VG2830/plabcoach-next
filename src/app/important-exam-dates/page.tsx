@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import Link from "next/link";
+import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata = createPageMetadata({
   title: "Important Medical Exam Dates 2026 | PLABcoach",
@@ -246,6 +247,7 @@ function ExamCard({ exam }: { exam: ExamEntry }) {
 export default function ImportantExamPage() {
   return (
     <>
+      <JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Important Exam Dates", path: "/important-exam-dates" }])} />
       <Header />
 
       <main className="bg-white">

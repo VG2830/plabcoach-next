@@ -1,5 +1,6 @@
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
+import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 const policySections = [
   {
@@ -40,6 +41,8 @@ const policySections = [
 
 export default function NoRefundPolicyPage() {
   return (
+    <>
+      <JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Refund Policy", path: "/no-refund-policy" }])} />
     <div className="min-h-screen bg-[#f5f8fc] text-[var(--ink)]">
       <Header />
       <main className="mx-auto min-h-[50vh] w-[var(--site-width)] max-w-[var(--container-max)] px-4 py-12 sm:py-16 lg:px-0">
@@ -98,5 +101,6 @@ export default function NoRefundPolicyPage() {
       </main>
       <Footer />
     </div>
+    </>
   );
 }

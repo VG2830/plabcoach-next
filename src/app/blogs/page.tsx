@@ -1,6 +1,7 @@
 import Blogs from "../_components/blogs/Blogs";
 import { createPageMetadata } from "../_components/pageMetadata";
 import { getWordPressPosts, toPlainText } from "../_lib/wordpress";
+import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata = createPageMetadata({
   title: "Medical Exam Preparation Blogs & Advice | PLABcoach",
@@ -31,5 +32,5 @@ export default async function BlogsPage() {
     href: `/${encodeURIComponent(post.slug)}/`,
   }));
 
-  return <Blogs posts={formattedPosts} />;
+  return <><JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Blog", path: "/blogs" }])} /><Blogs posts={formattedPosts} /></>;
 }

@@ -3,6 +3,7 @@ import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import CourseSelect from "./_components/CourseSelect";
 import { createPageMetadata } from "../_components/pageMetadata";
+import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata = createPageMetadata({
   title: "Contact PLABcoach | Course Support & Enquiries",
@@ -88,6 +89,8 @@ const inputClass =
 
 export default function ContactUsPage() {
   return (
+    <>
+      <JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact Us", path: "/contact-us" }])} />
     <div className="min-h-screen overflow-x-hidden bg-white text-[var(--ink)]">
       <Header />
 
@@ -222,5 +225,6 @@ export default function ContactUsPage() {
 
       <Footer />
     </div>
+    </>
   );
 }

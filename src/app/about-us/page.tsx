@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "../_components/Header";
 import Footer from "../_components/Footer";
 import Link from "next/link";
+import { JsonLd, personSchema, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata = createPageMetadata({
   title: "About PLABcoach | Expert Guidance for Doctors",
@@ -60,7 +61,10 @@ function CoachBadge({
 
 export default function AboutUsPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--ink)]">
+    <>
+      <JsonLd data={personSchema} />
+      <JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "About Us", path: "/about-us" }])} />
+      <div className="min-h-screen overflow-x-hidden bg-white text-[var(--ink)]">
       <Header />
 
       <main>
@@ -105,7 +109,7 @@ export default function AboutUsPage() {
               <div className="relative aspect-[1246/556] w-full overflow-hidden rounded-[22px] bg-[#102a32] shadow-[0_18px_34px_rgba(32,43,70,0.20)] sm:rounded-[28px]">
                 <iframe
                   className="absolute inset-0 h-full w-full border-0"
-                  src="https://www.youtube-nocookie.com/embed/6nXIgV_8TVY?si=0u8-r7v4rnh-eADI"
+                  src="https://www.youtube.com/embed/6nXIgV_8TVY?si=0u8-r7v4rnh-eADI"
                   title="Every Doctor's Journey Needs the Right Guidance - PLABCoach"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -230,5 +234,6 @@ export default function AboutUsPage() {
 
       <Footer />
     </div>
+    </>
   );
 }

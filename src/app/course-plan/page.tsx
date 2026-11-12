@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CoursePlanPage from "./_components/CoursePlanPage";
 import { coursePlanCatalog, defaultCoursePlan } from "./_data/coursePlanData";
+import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Course Plans | PLABCoach",
@@ -25,5 +26,5 @@ export default async function CoursePlanRoute({ searchParams }: CoursePlanRouteP
   // originating course context forward to the future checkout flow.
   const data = { ...configuredPlan, slug: requestedCourse };
 
-  return <CoursePlanPage data={data} />;
+  return <><JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Course Plans", path: "/course-plan" }])} /><CoursePlanPage data={data} /></>;
 }
