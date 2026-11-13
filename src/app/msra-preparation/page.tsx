@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+import CourseDetail from "../_components/course-detail/CourseDetail";
+import { courseDetails } from "../_components/course-detail/courseData";
+import { createCourseMetadata } from "../_components/course-detail/courseMetadata";
+import CourseStructuredData from "../_components/seo/CourseStructuredData";
+
+export const metadata: Metadata = createCourseMetadata(
+  courseDetails["msra"],
+  "/msra-preparation/",
+);
+
+export default function MedicalStudentRankingAssessmentPage() {
+  return (
+    <>
+      <CourseStructuredData
+        course={courseDetails["msra"]}
+        routePath="/msra-preparation/"
+      />
+      <CourseDetail course={courseDetails["msra"]} />
+    </>
+  );
+}

@@ -43,7 +43,7 @@ export function createCourseSchemas(course: CourseDetailData, routePath: string)
     provider: { "@type": "Organization", name: "PLABcoach", sameAs: `${PLABCOACH_SITE_URL}/` },
     hasCourseInstance: { "@type": "CourseInstance", courseMode: ["Online", "Onsite"], instructor: { "@id": `${PLABCOACH_SITE_URL}/about-us/#karam-singh` } },
   };
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: course.faqs.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) };
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: course.faqs.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: typeof faq.answer === "string" ? faq.answer : `${faq.answer.beforeLink}${faq.answer.linkText}${faq.answer.afterLink ?? ""}` } })) };
   const breadcrumb = createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Courses", path: "/courses" }, { name: course.eyebrow.replace(/\n/g, " "), path: routePath }]);
   return [courseSchema, faqSchema, breadcrumb];
 }

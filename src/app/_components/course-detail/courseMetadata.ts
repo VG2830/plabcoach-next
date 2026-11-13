@@ -5,9 +5,7 @@ import type { CourseDetailData } from "./courseData";
 const siteUrl = "https://plabcoach.cogniq.in";
 
 
-export function createCourseMetadata(course: CourseDetailData, routePath: string): Metadata {
-  const canonicalPath = `/courses/${routePath}/`;
-
+export function createCourseMetadata(course: CourseDetailData, canonicalPath: string): Metadata {
   return {
     title: course.metaTitle,
     description: course.metaDescription,

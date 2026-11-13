@@ -58,14 +58,17 @@ export default function Footer({
             <section>
               <h3 className="mb-3 font-semibold text-[var(--footer-heading)]">Courses</h3>
               <ul className="divide-y divide-[#dedede]">
-                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-plab-ukmla">UK PLAB / UKMLA Courses</a></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#ireland-courses">Ireland Courses</a></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses#uk-foundation">UK Foundation Programme Courses</a></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><a href="/courses/msra">Upcoming Courses</a></li>
+                <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><Link href="/uk-plab-ukmla-courses/">UK PLAB / UKMLA Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/ireland-courses/">Ireland Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/uk-foundation-programme-courses/">UK Foundation Programme Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/msra-preparation/">Upcoming Courses</Link></li>
               </ul>
               <h3 className="mb-3 mt-6 font-semibold text-[var(--footer-heading)]">Important Links</h3>
-              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy">NO Refund Policy</Link></p>
-              <button type="button" onClick={() => window.dispatchEvent(new Event("plabcoach:open-cookie-settings"))} className="mt-2 text-left transition-colors hover:text-[var(--primary)]">Cookie settings</button>
+              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/privacy-policy">Privacy Policy</Link></p>
+              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/terms-and-conditions">Terms & Conditions</Link></p>
+              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/cookie-policy">Cookie Policy</Link></p>
+              <p className="transition-colors hover:text-[var(--primary)]"><Link href="/no-refund-policy">Refund Policy</Link></p>
+              <button type="button" onClick={() => window.dispatchEvent(new Event("plabcoach:open-cookie-settings"))} className=" text-left transition-colors hover:text-[var(--primary)]">Cookie settings</button>
             </section>
 
             <section>

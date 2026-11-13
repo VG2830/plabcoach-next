@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
-import type { CourseDetailData, PathwayStep, RelatedExam } from "./courseData";
+import type { CourseDetailData, FAQItem, PathwayStep, RelatedExam } from "./courseData";
 
 
 function SubscribeButton({ href, className = "", children }: { href: string; className?: string; children?: React.ReactNode }) {
@@ -19,7 +19,7 @@ function SubscribeButton({ href, className = "", children }: { href: string; cla
   );
 }
 
-function FAQAccordionItem({ question, answer, isOpen, onToggle }: { question: string; answer: string; isOpen: boolean; onToggle: () => void }) {
+function FAQAccordionItem({ question, answer, isOpen, onToggle }: { question: string; answer: FAQItem["answer"]; isOpen: boolean; onToggle: () => void }) {
   return (
     <div className={`rounded-[14px] transition-all duration-200 ${isOpen ? "bg-[var(--course-detail-faq-item-active)] text-white shadow-[0_10px_26px_rgba(12,35,80,0.22)]" : "bg-[var(--course-detail-faq-item-bg)]"}`}>
       <button
@@ -47,7 +47,24 @@ function FAQAccordionItem({ question, answer, isOpen, onToggle }: { question: st
       >
         <div className="min-h-0 overflow-hidden">
           <div className={`px-6 pb-6 sm:px-7 sm:pb-7 ${isOpen ? "text-[#c9d1e4]" : "text-[var(--course-detail-copy)]"}`}>
-            <p className="text-[13px] leading-[1.7] sm:text-[14px]">{answer}</p>
+            <p className="text-[13px] leading-[1.7] sm:text-[14px]">
+              {typeof answer === "string" ? (
+                answer
+              ) : (
+                <>
+                  {answer.beforeLink}
+                  <a
+                    href={answer.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-blue-500 underline hover:text-blue-600"
+                  >
+                    {answer.linkText}
+                  </a>
+                  {answer.afterLink}
+                </>
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -566,7 +583,21 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                     <ul className="mt-[14px] space-y-[10px] pl-[20px] sm:mt-[16px] sm:pl-[22px]">
                       {course.comparison.noteBullets.map((b, i) => (
                         <li key={i} className="list-disc text-[12.5px] leading-[1.65] text-[#39415a] sm:text-[13.5px] [&::marker]:text-[var(--course-detail-comparison-note-text)]">
-                          {b}
+                          {typeof b === "string" ? (
+                            b
+                          ) : (
+                            <>
+                              {b.text}{" "}
+                              <a
+                                href={b.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-semibold text-[var(--course-detail-primary)] underline underline-offset-2"
+                              >
+                                {b.linkText}
+                              </a>
+                            </>
+                          )}
                         </li>
                       ))}
                     </ul>

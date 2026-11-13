@@ -11,7 +11,14 @@ export type CourseSection = {
 
 export type FAQItem = {
   question: string;
-  answer: string;
+  answer:
+    | string
+    | {
+        beforeLink: string;
+        linkText: string;
+        href: string;
+        afterLink?: string;
+      };
 };
 
 export type ComparisonRow = {
@@ -23,7 +30,7 @@ export type ComparisonRow = {
 export type ComparisonTable = {
   heading: string;
   noteHeading?: string;
-  noteBullets?: string[];
+  noteBullets?: (string | { text: string; linkText: string; href: string })[];
   colAHeader: string;
   colBHeader: string;
   colAColor?: string;
@@ -285,7 +292,11 @@ const comparisonPlab1: ComparisonTable = {
   heading: "PLAB 1 vs PRES 2 Comparison",
   // noteHeading: "",
   noteBullets: [
-    "The Irish Medical Council accepts a PLAB 1 pass as an alternative to PRES 2, so candidates who have passed PLAB 1 can apply directly for PRES 3. A PLAB 1 pass is valid for 2 years from the exam date.",
+    {
+    text:"The Irish Medical Council accepts a PLAB 1 pass as an alternative to PRES 2, so candidates who have passed PLAB 1 can apply directly for PRES 3. A PLAB 1 pass is valid for 2 years from the exam date.",
+    linkText: "Irish Medical Council",
+          href: "https://www.medicalcouncil.ie/registration-applications/pres/pre-registration-examination-system-pres-level-3/"}
+          ,
     "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
   ],
   colAHeader: "PLAB 1",
@@ -303,7 +314,7 @@ const comparisonPlab1: ComparisonTable = {
     },
   ],
   footerBtnUrl:
-    "/courses/pres-2",
+    "/pres-level-2-subscription-plans/",
     footerText:"Candidates targeting UK GMC registration primarily should sit PLAB 1; candidates targeting Ireland who already hold a PLAB 1 pass do not need to separately sit PRES 2.",
 
 };
@@ -317,7 +328,7 @@ const relatedExamsDefault: RelatedExam[] = [
       { label: "plab-2-ukmla-cpsa", variant: 1 },
     ],
     image: "/plab_2_courses_img.webp",
-    href: "/courses/plab-2-ukmla-cpsa",
+    href: "/plab2-ukmla-cpsa-subscription/",
   },
   {
     title: "PRES 2 (Ireland)",
@@ -327,7 +338,7 @@ const relatedExamsDefault: RelatedExam[] = [
       { label: "pres-2", variant: 2 },
     ],
     image: "/pres_2_courses_img.webp",
-    href: "/courses/pres-2",
+    href: "/pres-level-2-subscription-plans/",
   },
   {
     title: "UKFPO-NCA / UKFPO-PSA",
@@ -337,7 +348,7 @@ const relatedExamsDefault: RelatedExam[] = [
       { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
     ],
     image: "/ukfpo_courses__indv_img.webp",
-    href: "/courses/ukfpo-nca",
+    href: "/national-clinical-assessment-nca-subscription-plans/",
   },
 ];
 
@@ -575,7 +586,7 @@ const comparisonPlab2: ComparisonTable = {
 
   ],
   footerBtnUrl:
-    "/courses/pres-3",
+    "/pres-3-osce-data-interpretation-subscription-plans/",
     footerText:" Candidates targeting UK GMC registration should sit PLAB 2 regardless; candidates also considering Ireland should check the Irish Medical Council's current position on PLAB 2 recognition before assuming exemption from PRES 3, since this is not yet finalised.",
 };
 
@@ -853,8 +864,13 @@ const faqsPres3: FAQItem[] = [
   },
   {
     question: "What is the PRES 3 fee?",
-    answer:
-      "The Irish Medical Council sets the PRES 3 fee. See the current fee on the Medical Council's Fees page, under Pre-Registration Exam System.",
+    answer: {
+      beforeLink:
+        "The Irish Medical Council sets the PRES 3 fee. See the current fee on the Medical Council's ",
+      linkText: "Fees page",
+      href: "https://www.medicalcouncil.ie/registration-applications/fees/",
+      afterLink: ", under Pre-Registration Exam System.",
+    },
   },
 ];
 const comparisonPres3: ComparisonTable = {
@@ -880,7 +896,7 @@ const comparisonPres3: ComparisonTable = {
     { feature:" Venue", colA: "Dublin only, in person", colB: "Manchester only, in person" },
   ],
   footerBtnUrl:
-    "/courses/plab-2-ukmla-cpsa",
+    "/plab2-ukmla-cpsa-subscription/",
     footerText:"If you already hold a PLAB 2 pass, you don’t need to sit PRES 3. You can apply for Irish registration directly.",
 };
 
@@ -1305,7 +1321,7 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "what-is",
     heading: "What is the MRCGP AKT?",
     paragraphs: [
-      "The Applied Knowledge Test (AKT) is one component of the MRCGP examination set by the Royal College of General Practitioners (RCGP). It is a summative assessment of the knowledge base underpinning independent general practise in the UK within the context of the NHS, sat by doctors in GP specialty training.",
+      "The Applied Knowledge Test (AKT) is one component of the MRCGP examination set by the Royal College of General Practitioners (RCGP). It is a summative assessment of the knowledge base underpinning independent general practice in the UK within the context of the NHS, sat by doctors in GP specialty training.",
       "From October 2025, RCGP reduced the AKT from 200 items over 190 minutes to 160 items over 160 minutes, giving candidates slightly longer per item while shortening the overall exam — this is a recent change worth stating explicitly, since older third-party guides may still describe the previous 200-item format."
     ],
   },
@@ -1392,7 +1408,7 @@ const faqsMrcpAkt: FAQItem[] = [
   {
     question: "What does the AKT cover? ",
     answer:
-      "Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practise, and 10% health informatics and administrative issues.",
+      "Approximately 80% clinical medicine, 10% critical appraisal and evidence-based practice, and 10% health informatics and administrative issues.",
   },
   {
     question: "Do I need active MRCGP membership to book the AKT?",
@@ -1542,7 +1558,7 @@ export const courseDetails = {
           { label: "pres-3", variant: 2 },
         ],
         image: "/ireland_course.webp",
-        href: "/courses/pres-3",
+        href: "/pres-3-osce-data-interpretation-subscription-plans/",
       },
       {
         title: "UKFPO-NCA / UKFPO-PSA",
@@ -1552,7 +1568,7 @@ export const courseDetails = {
           { label: "ukfpo-nca, /ukfpo-psa", variant: 3 },
         ],
         image: "/uk_course.webp",
-        href: "/courses/ukfpo-nca",
+        href: "/national-clinical-assessment-nca-subscription-plans/",
       },
       {
         title: "PLAB 1 / UKMLA-AKT",
@@ -1562,7 +1578,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-1-ukmla-akt",
+        href: "/plab1-ukmla-akt-subscription-plans/",
       },
 
       
@@ -1600,7 +1616,11 @@ export const courseDetails = {
       heading: "PRES 2 vs PLAB 1 Comparison",
       noteHeading: "",
       noteBullets: [
-        "The Irish Medical Council accepts a PLAB 1 pass as an alternative to PRES 2, so PLAB 1 pass holders can apply directly for PRES 3. A PLAB 1 pass is valid for 2 years from the exam date.",
+        {
+          text: "The Irish Medical Council accepts a PLAB 1 pass as an alternative to PRES 2, so PLAB 1 pass holders can apply directly for PRES 3. A PLAB 1 pass is valid for 2 years from the exam date.",
+          linkText: "Irish Medical Council",
+          href: "https://www.medicalcouncil.ie/registration-applications/pres/pre-registration-examination-system-pres-level-3/",
+        },
         "PRES 2 and PLAB 1 remain separate exams, booked and run independently by their respective regulators (Irish Medical Council vs GMC), even where mutual recognition applies.",
       ],
       colAHeader: "PRES 2",
@@ -1618,7 +1638,7 @@ export const courseDetails = {
         },
       ],
       footerBtnUrl:
-        "/courses/plab-1-ukmla-akt",
+        "/plab1-ukmla-akt-subscription-plans/",
         footerText:"Candidates targeting Ireland who don't yet hold a PLAB 1 pass should sit PRES 2 directly; candidates who already hold a PLAB 1 pass should check current IMC exemption rules before booking PRES 2, as they may not need to sit it separately.",
     },
     relatedExams: [
@@ -1630,7 +1650,7 @@ export const courseDetails = {
           { label: "pres-3", variant: 2 },
         ],
         image: "/ireland_course.webp",
-        href: "/courses/pres-3",
+        href: "/pres-3-osce-data-interpretation-subscription-plans/",
       },
       {
         title: "PLAB 1 / UKMLA-AKT",
@@ -1640,7 +1660,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-1-ukmla-akt",
+        href: "/plab1-ukmla-akt-subscription-plans/",
       },
     ],
     pathway: pathwayIrelandPres,
@@ -1682,7 +1702,7 @@ export const courseDetails = {
           { label: "plab-2-ukmla-cpsa", variant: 1 },
         ],
         image: "/plab_2_courses_img.webp",
-        href: "/courses/plab-2-ukmla-cpsa",
+        href: "/plab2-ukmla-cpsa-subscription/",
       },
       {
         title: "PRES 2 ",
@@ -1692,7 +1712,7 @@ export const courseDetails = {
           { label: "pres-2", variant: 2 },
         ],
         image: "/ireland_course.webp",
-        href: "/courses/pres-2",
+        href: "/pres-level-2-subscription-plans/",
       }
     ],
     pathway: pathwayPres3,
@@ -1733,7 +1753,7 @@ export const courseDetails = {
           { label: "prescribing-safety-assessment", variant: 3 },
         ],
         image: "/uk_course.webp",
-        href: "/courses/ukfpo-psa",
+        href: "/prescribing-safety-assessment-psa-subscription-plans/",
       },
       {
         title: "PLAB 2 / UKMLA-CPSA",
@@ -1743,7 +1763,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/plab-2-ukmla-cpsa",
+        href: "/plab2-ukmla-cpsa-subscription/",
       },
       // {
       //   title: "PLAB 2 / UKMLA-CPSA",
@@ -1794,7 +1814,7 @@ export const courseDetails = {
           { label: "national-clinical-assessment", variant: 3 },
         ],
         image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/ukfpo-nca",
+        href: "/national-clinical-assessment-nca-subscription-plans/",
       },
       {
         title: "MSRA",
@@ -1804,7 +1824,7 @@ export const courseDetails = {
           { label: "plab-1-ukmla-akt", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/msra",
+        href: "/msra-preparation/",
       },
     ],
     pathway: pathwayPsa,
@@ -1845,7 +1865,7 @@ export const courseDetails = {
           { label: "mrcp-akt", variant: 2 },
         ],
         image: "/pres_2_courses_img.webp",
-        href: "/courses/mrcp-akt",
+        href: "/mrcgp-akt-preparation/",
       },
       {
         title: "UKFPO — NCA",
@@ -1855,7 +1875,7 @@ export const courseDetails = {
           { label: "national-clinical-assessment", variant: 3 },
         ],
         image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/ukfpo-nca",
+        href: "/national-clinical-assessment-nca-subscription-plans/",
       },
       {
         title: "UKFPO-PSA",
@@ -1865,7 +1885,7 @@ export const courseDetails = {
           { label: "ukfpo-psa", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/ukfpo-psa",
+        href: "/prescribing-safety-assessment-psa-subscription-plans/",
       },
       
     ],
@@ -1908,7 +1928,7 @@ export const courseDetails = {
           { label: "national-clinical-assessment", variant: 3 },
         ],
         image: "/ukfpo_courses__indv_img.webp",
-        href: "/courses/msra",
+        href: "/msra-preparation/",
       },
       {
         title: "UKFPO-PSA",
@@ -1918,7 +1938,7 @@ export const courseDetails = {
           { label: "", variant: 1 },
         ],
         image: "/plab1_course.webp",
-        href: "/courses/ukfpo-psa",
+        href: "/prescribing-safety-assessment-psa-subscription-plans/",
       },
       {
         title: "UKFPO-NCA",
@@ -1928,7 +1948,7 @@ export const courseDetails = {
           { label: "pres-2", variant: 2 },
         ],
         image: "/pres_2_courses_img.webp",
-        href: "/courses/ukfpo-nca",
+        href: "/national-clinical-assessment-nca-subscription-plans/",
       },
     ],
     pathway: pathwayUkFoundation,

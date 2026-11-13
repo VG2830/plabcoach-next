@@ -19,31 +19,31 @@ type CourseMenuGroup = {
 const courseMenu: CourseMenuGroup[] = [
   {
     label: "UK PLAB / UKMLA",
-    href: "/courses#uk-plab-ukmla",
+    href: "/uk-plab-ukmla-courses/",
     subCourses: [
-      { label: "PLAB 1 / UKMLA — AKT", href: "/courses/plab-1-ukmla-akt" },
-      { label: "PLAB 2 / UKMLA — CPSA", href: "/courses/plab-2-ukmla-cpsa" },
+      { label: "PLAB 1 / UKMLA — AKT", href: "/plab1-ukmla-akt-subscription-plans/" },
+      { label: "PLAB 2 / UKMLA — CPSA", href: "/plab2-ukmla-cpsa-subscription/" },
     ],
   },
   {
     label: "Ireland PRES",
-    href: "/courses#ireland-courses",
+    href: "/ireland-courses/",
     subCourses: [
-      { label: "PRES 2", href: "/courses/pres-2" },
-      { label: "PRES 3 — OSCE", href: "/courses/pres-3" },
+      { label: "PRES 2", href: "/pres-level-2-subscription-plans/" },
+      { label: "PRES 3 — OSCE", href: "/pres-3-osce-data-interpretation-subscription-plans/" },
     ],
   },
   {
     label: "UK Foundation Programme",
-    href: "/courses#uk-foundation",
+    href: "/uk-foundation-programme-courses/",
     subCourses: [
       {
         label: "National Clinical Assessment (NCA)",
-        href: "/courses/ukfpo-nca",
+        href: "/national-clinical-assessment-nca-subscription-plans/",
       },
       {
         label: "Prescribing Safety Assessment (PSA)",
-        href: "/courses/ukfpo-psa",
+        href: "/prescribing-safety-assessment-psa-subscription-plans/",
       },
     ],
   },
@@ -53,17 +53,17 @@ const courseMenu: CourseMenuGroup[] = [
     subCourses: [
       {
         label: "Multi-Specialty Recruitment Assessment (MSRA)",
-        href: "/courses/msra",
+        href: "/msra-preparation/",
         status: "Launching soon",
       },
       {
         label: "MRCGP Applied Knowledge Test (AKT)",
-        href: "/courses/mrcp-akt",
+        href: "/mrcgp-akt-preparation/",
         status: "Launching soon",
       },
       {
         label: "USMLE",
-        href: "/courses/usmle",
+        href: "/contact-us/",
         status: "Coming soon",
       },
       {
@@ -221,7 +221,7 @@ export default function Header() {
                               </p>
                               {group.subCourses.map((subCourse) => (
                                 <Link
-                                  key={subCourse.href}
+                                  key={subCourse.label}
                                   href={subCourse.href}
                                   className="flex min-h-[44px] items-center justify-between gap-2 rounded-[8px] px-3.5 py-2 text-[12.5px] font-medium leading-[1.35] text-[var(--nav-muted)] transition-colors duration-150 hover:bg-[#F5F8FD] hover:text-[var(--primary)]"
                                 >
@@ -441,7 +441,7 @@ export default function Header() {
                                 </Link>
                                 {group.subCourses.map((subCourse) => (
                                   <Link
-                                    key={subCourse.href}
+                                    key={subCourse.label}
                                     href={subCourse.href}
                                     onClick={closeMobileMenu}
                                     className="flex min-h-[40px] min-w-0 items-center justify-between gap-2 rounded-[7px] px-3 py-2 text-[12px] font-medium leading-[1.35] text-[var(--nav-muted)] transition-colors hover:bg-[#F5F8FD] hover:text-[var(--primary)]"

@@ -23,16 +23,16 @@ const offers = [
   },
   {
     save: "Save £10",
-    code: "PREP5COACH",
+    code: "PREP10COACH",
     title: "Standard Appraisal (Virtual)",
     copy: "Complete GMC-compliant appraisal including portfolio review, appraisal meeting, and documentation (REV12).",
   },
-  {
-    save: "Save £15",
-    code: "APP15COACH",
-    title: "Appraisal Advice (Virtual)",
-    copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
-  },
+  // {
+  //   save: "Save £15",
+  //   code: "APP15COACH",
+  //   title: "Appraisal Advice (Virtual)",
+  //   copy: "Expert guidance to help you prepare for your appraisal, including portfolio review and personalised support.",
+  // },
   // {
   //   save: "Save £5",
   //   code: "PREP5COACH",
@@ -66,8 +66,8 @@ const journey = [
     idle: "/01.svg",
     active: "/01_with_color.svg",
     width: 158,
-    title: "Enrol with PLABCoach",
-    copy: "Begin by registering with PLABCoach to access a structured support system tailored for your professional development and appraisal readiness",
+    title: "Enrol with PLABcoach",
+    copy: "Begin by registering with PLABcoach to access a structured support system tailored for your professional development and appraisal readiness",
   },
   {
     idle: "/02.svg",
@@ -243,7 +243,7 @@ export default function AppraisalPage() {
               <button type="button" className="mt-[30px] h-[54px] w-full max-w-[260px] rounded-[9px] bg-[var(--appraisal-hero-button)] px-[20px] text-[13px] font-bold text-white shadow-[0_12px_28px_rgba(56,73,226,0.18)] transition duration-300 hover:-translate-y-1 hover:brightness-105 sm:mt-[50px] sm:h-[60px] sm:w-[226px]">
                 Get Exclusive Access
               </button>
-              <p className="mt-[18px] text-[12px] font-bold text-[var(--appraisal-primary)] sm:mt-[24px]">We&apos;re Here to Help</p>
+             
             </div>
 
             <div className="relative z-10 mx-auto mt-0 h-[335px] w-full max-w-[430px] min-[420px]:h-[370px] min-[420px]:max-w-[500px] sm:mt-8 sm:h-[520px] sm:max-w-[760px] lg:mt-0 lg:h-[720px] lg:max-w-[860px] lg:translate-x-[60px] lg:self-center">
@@ -270,7 +270,7 @@ export default function AppraisalPage() {
                   Your Trusted Partnership for UK Medical Success
                 </h2>
                 <p className="mt-[36px] max-w-[625px] text-[13px] leading-[1.7] text-[var(--appraisal-ink)]/85 sm:text-[14px] lg:text-[16px]">
-                  PLABcoach has partnered with Dr Appraisals to simplify the journey of doctors entering or practicing in the UK.
+                  PLABcoach has partnered with Dr Appraisals to simplify the journey of doctors entering or practising in the UK.
                 </p>
                 <p className="mt-[26px] max-w-[630px] text-[13px] leading-[1.7] text-[var(--appraisal-ink)]/85 sm:text-[14px] lg:text-[16px]">
                   Through this collaboration, PLABcoach students and doctors gain access to reliable, cost-effective, and fully GMC-compliant services — all at exclusive discounted rates.

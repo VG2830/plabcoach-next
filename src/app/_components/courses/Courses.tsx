@@ -17,7 +17,7 @@ import Footer from "../Footer";
 import CourseCard from "./CourseCard";
 import Link from "next/link";
 
-type CourseItem = {
+export type CourseItem = {
   image: string;
   title: string;
   assessment: string;
@@ -30,7 +30,7 @@ type CourseItem = {
   features?: { icon: string; label: string }[];
 };
 
-type CourseSectionProps = {
+export type CourseSectionProps = {
   id: string;
   title: string;
   description: string;
@@ -38,7 +38,7 @@ type CourseSectionProps = {
   decoration: "left" | "right" | "left-large";
 };
 
-const ukCourses: CourseItem[] = [
+export const ukCourses: CourseItem[] = [
   {
     image: "/courses_plab1.webp",
     title: "PLAB 1 / UKMLA",
@@ -46,7 +46,7 @@ const ukCourses: CourseItem[] = [
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
-    href: "/courses/plab-1-ukmla-akt",
+    href: "/plab1-ukmla-akt-subscription-plans/",
     badge: "UK PLAB",
     badgeClassName: "border-[#dfe8ff] bg-[#eef4ff] text-[#1d4f9d]",
     buttonClassName: "bg-[var(--courses-cta)]",
@@ -64,7 +64,7 @@ const ukCourses: CourseItem[] = [
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/courses/plab-2-ukmla-cpsa",
+    href: "/plab2-ukmla-cpsa-subscription/",
     badge: "UK PLAB",
     badgeClassName: "border-[#dfe8ff] bg-[#eef4ff] text-[#1d4f9d]",
     buttonClassName: "bg-[var(--courses-cta)]",
@@ -77,7 +77,7 @@ const ukCourses: CourseItem[] = [
   },
 ];
 
-const irelandCourses: CourseItem[] = [
+export const irelandCourses: CourseItem[] = [
   {
     image: "/courses_pres2.webp",
     title: "PRES Level 2",
@@ -85,7 +85,7 @@ const irelandCourses: CourseItem[] = [
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
     buttonLabel: "Explore AKT Preparation",
-    href: "/courses/pres-2",
+    href: "/pres-level-2-subscription-plans/",
     badge: "Ireland PRES",
     badgeClassName: "border-[#dff4ec] bg-[#edfdf7] text-[#0d5f4d]",
     buttonClassName: "bg-[#0f7a68]",
@@ -103,7 +103,7 @@ const irelandCourses: CourseItem[] = [
     description:
       "Prepare for practical clinical scenarios with learning focused on communication, clinical reasoning and professional skills.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/courses/pres-3",
+    href: "/pres-3-osce-data-interpretation-subscription-plans/",
     badge: "Ireland PRES",
     badgeClassName: "border-[#dff4ec] bg-[#edfdf7] text-[#0d5f4d]",
     buttonClassName: "bg-[#0f7a68]",
@@ -119,7 +119,7 @@ const irelandCourses: CourseItem[] = [
   },
 ];
 
-const foundationCourses: CourseItem[] = [
+export const foundationCourses: CourseItem[] = [
   {
     image: "/courses_nca.webp",
     title: "National Clinical Assessment",
@@ -127,7 +127,7 @@ const foundationCourses: CourseItem[] = [
     description:
       "Prepare confidently for the UKFPO NCA Exam with our comprehensive courses covering clinical knowledge, practical skills, communication, and exam-focused preparation.",
     buttonLabel: "Explore AKT Preparation",
-    href: "/courses/ukfpo-nca",
+    href: "/national-clinical-assessment-nca-subscription-plans/",
     badge: "Foundation",
     badgeClassName: "border-[#e8e1ff] bg-[#f5f0ff] text-[#4f3ca9]",
     buttonClassName: "bg-[#6d50d2]",
@@ -146,7 +146,7 @@ const foundationCourses: CourseItem[] = [
     description:
       "Prepare for the Prescribing Safety Assessment (PSA) with focused, exam-oriented training covering prescribing skills, calculations, clinical decision-making, and safe prescribing practice.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/courses/ukfpo-psa",
+    href: "/prescribing-safety-assessment-psa-subscription-plans/",
     badge: "Foundation",
     badgeClassName: "border-[#e8e1ff] bg-[#f5f0ff] text-[#4f3ca9]",
     buttonClassName: "bg-[#6d50d2]",
@@ -199,7 +199,7 @@ const learningOptions = [
 ];
 
 
-function CourseSection({
+export function CourseSection({
   id,
   title,
   description,
@@ -243,6 +243,18 @@ function CourseSection({
         {/* </div> */}
       </div>
     </section>
+  );
+}
+
+export function CourseGroupPage(props: CourseSectionProps) {
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--courses-heading)] [--courses-button-border:#888888] [--courses-button-muted:#888888] [--courses-card-border:#E0E0E0] [--courses-card-heading:#002F60] [--courses-copy:#808080] [--courses-cta:#5B65DC] [--courses-divider:#F7FBFF] [--courses-feature-bg:#F6FBFF] [--courses-heading:#162355]">
+      <Header />
+      <main>
+        <CourseSection {...props} />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
@@ -329,27 +341,27 @@ export default function Courses() {
             </p>
 
             <div className="mx-auto mt-[28px] grid max-w-[594px] grid-cols-1 gap-[12px] sm:grid-cols-3 sm:gap-[14px]">
-              <a
-                href="#uk-plab-ukmla"
+              <Link
+                href="/uk-plab-ukmla-courses/"
                 className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)]  hover:bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-105 sm:text-[12px]"
               >
                 <Image src="/plab_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="h-[20px] w-[20px]" />
                 UK PLAB / UKMLA
-              </a>
-              <a
-                href="#ireland-courses"
+              </Link>
+              <Link
+                href="/ireland-courses/"
                 className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)] hover:bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-[0.98] sm:text-[12px]"
               >
                 <Image src="/ireland_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="h-[20px] w-[20px]" />
                 Ireland PRES
-              </a>
-              <a
-                href="#uk-foundation"
+              </Link>
+              <Link
+                href="/uk-foundation-programme-courses/"
                 className="flex h-[50px] items-center justify-center gap-[10px] rounded-[7px] bg-[var(--courses-tab-bg)] hover:bg-[var(--courses-primary)] px-[14px] text-[11px] font-bold text-white transition-[filter,transform] duration-200 hover:-translate-y-[1px] hover:brightness-[0.98] sm:text-[12px]"
               >
                 <Image src="/uk_icon.svg" alt="" aria-hidden="true" width={24} height={24} className="h-[20px] w-[20px]" />
                 UK Foundation
-              </a>
+              </Link>
             </div>
           </div>
         </section>
