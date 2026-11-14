@@ -19,6 +19,23 @@ export type RecentWordPressPost = {
   image: string;
 };
 
+export type WordPressSitemapPost = {
+  slug: string;
+  modified: string;
+};
+
+function isWordPressSitemapPost(value: unknown): value is WordPressSitemapPost {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "slug" in value &&
+    typeof value.slug === "string" &&
+    "modified" in value &&
+    typeof value.modified === "string" &&
+    Number.isFinite(Date.parse(value.modified))
+  );
+}
+
 const WORDPRESS_API_URL =
   process.env.WORDPRESS_API_URL?.replace(/\/+$/, "") ??
   "https://plabcoach.com/wp-json/wp/v2";
@@ -36,6 +53,37 @@ export async function getWordPressPosts() {
 
   if (!Array.isArray(posts)) {
     throw new Error("WordPress returned an invalid posts response");
+  }
+
+  return posts;
+}
+
+export async function getWordPressPostsForSitemap(): Promise<WordPressSitemapPost[]> {
+  const posts: WordPressSitemapPost[] = [];
+  let totalPages = 1;
+
+  for (let page = 1; page <= totalPages; page += 1) {
+    const response = await fetch(
+      `${WORDPRESS_API_URL}/posts?per_page=100&page=${page}&_fields=slug,modified`,
+      { next: { revalidate: 3600 } },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch sitemap blog posts: ${response.status}`);
+    }
+
+    const pagePosts: unknown = await response.json();
+    if (!Array.isArray(pagePosts) || !pagePosts.every(isWordPressSitemapPost)) {
+      throw new Error("WordPress returned an invalid sitemap posts response");
+    }
+
+    posts.push(...pagePosts);
+
+    const responseTotalPages = Number(response.headers.get("X-WP-TotalPages"));
+    if (!Number.isInteger(responseTotalPages) || responseTotalPages < 1) {
+      throw new Error("WordPress returned an invalid sitemap page count");
+    }
+    totalPages = responseTotalPages;
   }
 
   return posts;
