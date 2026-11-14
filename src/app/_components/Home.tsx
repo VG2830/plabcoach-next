@@ -512,7 +512,15 @@ useEffect(() => {
                 </div>
               ))}
             </div>
-            <span className="text-[12px] font-normal text-[var(--accent)] lg:text-[14px] xl:text-[16px]">Based on PLABcoach enrolment data, 2026</span>
+            <div className="relative flex justify-center border-t border-white/50 px-4 py-3">
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/75 bg-white/45 px-3.5 py-1.5 text-[11px] font-medium leading-tight text-[var(--body-muted)] shadow-[0_4px_12px_rgba(48,72,128,0.06)] backdrop-blur-sm lg:text-xs">
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
+                <span>
+                  Based on PLABcoach enrolment data,{" "}
+                  <span className="font-semibold text-[var(--ink)]">2026</span>
+                </span>
+              </p>
+            </div>
           </div>
         </section>
         
