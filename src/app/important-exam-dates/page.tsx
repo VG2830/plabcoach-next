@@ -6,9 +6,9 @@ import Link from "next/link";
 import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
 
 export const metadata = createPageMetadata({
-  title: "Important Medical Exam Dates 2026 | PLABcoach",
+  title: "Important Medical Exam Dates 2027 | PLABcoach",
   description:
-    "Check important 2026 dates for PLAB, UKMLA, PRES and other medical exams, and plan your preparation with confidence.",
+    "Check important 2027 dates for PLAB, UKMLA, PRES and other medical exams, and plan your preparation with confidence.",
   canonicalPath: "/important-exam-dates",
   image: "/3d_floating_calender.webp",
   imageAlt: "Calendar to help plan medical exam dates",
@@ -109,9 +109,11 @@ const examGroups: ExamGroup[] = [
         name: "National Clinical Assessment (NCA)",
         icon: "/nca_exam_pg_icon_.svg",
         category: "UK Foundation Programme",
-        primaryDate: "Thursday 28 January 2027",
-        dateLines: ["18 March 2027", "15 April 2027", "3 June 2027"],
-        note:"Each medical school chooses its dates from within the national schedule. If you're sitting the PSA at a medical school, your school will tell you which of these dates it is using. Foundation schools hold their first sitting in the autumn, with two re-sit dates in the first half of the following year.",
+        primaryDate: "",
+        dateLines: [
+          "November 2027",
+          
+        ],
          officialLink:"https://foundationprogramme.nhs.uk/ukfp-2027-eligibility-applications-timeline-and-deadlines/",
       },
       {
@@ -119,11 +121,10 @@ const examGroups: ExamGroup[] = [
         name: "PRESCRIBING SAFETY ASSESSMENT (PSA)",
         icon: "/psa_exam_icon.svg",
         category: "UK Foundation Programme",
-        primaryDate: "November 2027",
-        dateLines: [
-          "November 2027",
-          
-        ],
+        primaryDate: "",
+       
+         dateLines: ["Thursday 28 January 2027 (medical schools only)","Thursday  18 March 2027", "Thursday 15 April 2027", "Thursday 3 June 2027 (medical schools only)"],
+        note:"Each medical school chooses its dates from within the national schedule. If you're sitting the PSA at a medical school, your school will tell you which of these dates it is using. Foundation schools hold their first sitting in the autumn, with two re-sit dates in the first half of the following year.",
          officialLink:"https://prescribingsafetyassessment.ac.uk",
       },
     ],

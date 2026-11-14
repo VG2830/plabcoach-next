@@ -82,29 +82,29 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/smartqbank-demo/",
-        destination: "/course-plan?course=plab-1-ukmla-akt",
+        destination: "/smartqbank/",
         permanent: true,
       },
       {
         source: "/smartqbank2/",
-        destination: "/course-plan?course=plab-1-ukmla-akt",
+        destination: "/smartqbank/",
         permanent: true,
       },
       {
         source: "/smartqbank-pres2-new/",
-        destination: "/course-plan?course=pres-2",
+        destination: "/smartqbank-pres2/",
         permanent: true,
       },
-      {
-        source: "/smartqbank/",
-        destination: "/course-plan?course=plab-1-ukmla-akt",
-        permanent: true,
-      },
-      {
-        source: "/smartqbank-pres2/",
-        destination: "/course-plan?course=pres-2",
-        permanent: true,
-      },
+      // {
+      //   source: "/smartqbank/",
+      //   destination: "/course-plan?course=plab-1-ukmla-akt",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/smartqbank-pres2/",
+      //   destination: "/smartqbank-pres2/",
+      //   permanent: true,
+      // },
       {
         source: "/pres-3-osce-data-interpretation-subscription-plans-2-new/",
         destination: "/pres-3-osce-data-interpretation-subscription-plans/",
@@ -117,6 +117,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/prescribing-safety-assessment-psa-subscription-plans-new/",
+        destination: "/prescribing-safety-assessment-psa-subscription/",
+        permanent: true,
+      },
+      {
+        source: "/prescribing-safety-assessment-psa-subscription-plans/",
         destination: "/prescribing-safety-assessment-psa-subscription/",
         permanent: true,
       },
@@ -172,16 +177,11 @@ const nextConfig: NextConfig = {
       { source: "/category/:path*", destination: "/blogs/", permanent: true },
       { source: "/tag/:path*", destination: "/blogs/", permanent: true },
       { source: "/author/:path*", destination: "/blogs/", permanent: true },
-      {
-        source: "/testimonial/:path*",
-        destination: "/testimonials/",
-        permanent: true,
-      },
-      {
-        source: "/testimonials/",
-        destination: "/",
-        permanent: true,
-      },
+      // {
+      //   source: "/testimonial/:path*",
+      //   destination: "/testimonials/",
+      //   permanent: true,
+      // },
       // Old staging addresses
       {
         source: "/courses/plab-1-ukmla-akt/",

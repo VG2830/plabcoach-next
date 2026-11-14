@@ -61,7 +61,7 @@ function EnrolButton({ href }: { href: string }) {
   if (!href) {
     return (
       <button type="button" disabled className={`${className} cursor-not-allowed opacity-60`}>
-        Enrol now
+       Contact us 
       </button>
     );
   }

@@ -269,7 +269,7 @@ const faqsPlab1: FAQItem[] = [
   {
     question: "Where can I sit PLAB 1?",
     answer:
-      "In the UK, the exam runs in Belfast, Birmingham, Cardiff, Edinburgh, London, Manchester, Newcastle, Oxford and Sheffield. In the EU, you can sit it in Dublin or Madrid, and a number of international centres are run with the British Council. UK and EU candidates receive their venue address within seven days of the exam, while candidates at other overseas centres get venue details from the British Council.",
+      "In the UK, the exam runs in Belfast, Birmingham, Cardiff, Edinburgh, London, Manchester, Newcastle, Oxford and Sheffield. In the UK, the exam runs in Belfast, Birmingham, Cardiff, Edinburgh, London, Manchester, Newcastle, Oxford and Sheffield. In the EU, you can sit it in Dublin or Madrid. From 2027, PLAB 1 is held only in the UK and the EU. You will receive your venue address within seven days of the exam.",
   },
     {
     question: "Are there any changes to PLAB 1 in 2027?",
@@ -750,7 +750,7 @@ const faqsPres2: FAQItem[] = [
   {
     question: "What subjects does PRES 2 cover?",
     answer:
-      "Medicine/general practise, surgery, obstetrics & gynaecology, paediatrics, and psychiatry.",
+      "Medicine/general practice, surgery, obstetrics & gynaecology, paediatrics, and psychiatry.",
   },
   {
     question: "How long is the PRES 2 exam? ",
@@ -879,7 +879,7 @@ const faqsPres3: FAQItem[] = [
   {
     question: "What is PRES 3? ",
     answer:
-      " PRES 3 is the OSCE and data interpretation exam that forms the clinical component of Ireland's Pre-Registration Examination System, sat in person in Dublin.",
+      " PRES 3 is the OSCE and data interpretation exam that forms the clinical component of Ireland's Pre-Registration Examination System, sat in person in Dublin, Cork, Limerick or Galway.",
   },
   {
     question: "Do I need to pass PRES 2 before PRES 3?",
@@ -889,7 +889,7 @@ const faqsPres3: FAQItem[] = [
   {
     question: "Can I sit PRES 3 outside Ireland?",
     answer:
-      "No. Unlike PRES 2, PRES 3 is held only in person in Dublin.",
+      "No. PRES 3 is held only in person in Ireland, in Dublin, Cork, Limerick and Galway.",
   },
   {
     question: "Am I exempt from PRES 3 if I've passed PLAB 2?",
@@ -1751,7 +1751,7 @@ export const courseDetails = {
     ogImage: "/og/pres3.webp",
     heroImage: "/course_four.webp",
     heroDescription:
-      "PRES 3 is the clinical OSCE and data interpretation exam set by the Irish Medical Council (IMC), the second and final component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates. It is held in person in Dublin to It is held in person in Dublin, Cork, Limerick and Galway, combining an Objective Structured Clinical Examination (OSCE) of roughly 12 stations with a data interpretation assessment. Candidates must pass PRES 2 before they are eligible to sit PRES 3.",
+      "PRES 3 is the clinical OSCE and data interpretation exam set by the Irish Medical Council (IMC), the second and final component of Ireland's Pre-Registration Examination System (PRES) for international medical graduates.It is held in person in Dublin, Cork, Limerick and Galway, combining an Objective Structured Clinical Examination (OSCE) of roughly 12 stations with a data interpretation assessment. Candidates must pass PRES 2 before they are eligible to sit PRES 3.",
     toc: tocPres3,
     sections: sectionsPres3,
     faqTitle:"PRES 3 FAQs",

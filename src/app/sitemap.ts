@@ -31,6 +31,7 @@ const staticPaths = [
   "/prescribing-safety-assessment-psa-subscription/",
   "/privacy-policy/",
   "/terms-and-conditions/",
+  "/testimonials/",
   "/uk-foundation-programme-courses/",
   "/uk-plab-ukmla-courses/",
 ];

@@ -77,7 +77,7 @@ export default function Footer({
                 {posts.map((post, index) => (
                   <li key={post.id} className={index === 0 ? "pb-3" : "py-3"}>
                     <Link
-                      href={`/blogs/${encodeURIComponent(post.slug)}`}
+                      href={`/${encodeURIComponent(post.slug)}`}
                       className="hover:underline"
                     >
                       {post.title}

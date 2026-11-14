@@ -750,7 +750,7 @@ const msraPlan: CoursePlanConfig = {
     {
       id: "msra-core",
       externalHref: "",
-      price: "£219",
+      price: "Launching soon",
       oldPrice: "£289",
       title: "MSRA Core Plan",
       features: ["Revision modules", "Practice questions", "Exam strategy", "Review support"],
@@ -761,7 +761,7 @@ const msraPlan: CoursePlanConfig = {
     {
       id: "msra-qbank",
       externalHref: "",
-      price: "£109",
+      price: "Launching soon",
       oldPrice: "£149",
       title: "MSRA QBank",
       subtitle: "Practice what matters most",
@@ -772,7 +772,7 @@ const msraPlan: CoursePlanConfig = {
     {
       id: "msra-bootcamp",
       externalHref: "",
-      price: "£169",
+      price: "Launching soon",
       oldPrice: "£229",
       title: "MSRA Bootcamp",
       features: ["Revision focus", "Case interpretation", "Mock strategy", "Time management"],
@@ -783,7 +783,7 @@ const msraPlan: CoursePlanConfig = {
     {
       id: "msra-mock",
       externalHref: "",
-      price: "£45",
+      price: "Launching soon",
       oldPrice: "£69",
       title: "MSRA Mock Set",
       features: ["Practice under time pressure", "Review answers", "Performance insights", "Confidence building"],
@@ -813,7 +813,7 @@ const mrcpAktPlan: CoursePlanConfig = {
     {
       id: "mrcp-akt-plus",
       externalHref: "",
-      price: "£249",
+      price: "Launching soon",
       oldPrice: "£329",
       title: "AKT Plus Plan",
       features: ["Question bank", "Revision notes", "Exam strategy", "Weekly review"],
@@ -821,32 +821,32 @@ const mrcpAktPlan: CoursePlanConfig = {
     },
   ],
   selfPacedPlans: [
-    {
-      id: "mrcp-akt-qbank",
-      externalHref: "",
-      price: "£119",
-      oldPrice: "£169",
-      title: "AKT QBank",
-      subtitle: "Practice-based preparation",
-      features: ["Exam-style questions", "Timed rounds", "Topic analytics"],
-    },
+    // {
+    //   id: "mrcp-akt-qbank",
+    //   externalHref: "",
+    //   price: "Launching soon",
+    //   oldPrice: "£169",
+    //   title: "AKT QBank",
+    //   subtitle: "Practice-based preparation",
+    //   features: ["Exam-style questions", "Timed rounds", "Topic analytics"],
+    // },
   ],
   horizontalPlans: [
-    {
-      id: "mrcp-akt-revision",
-      externalHref: "",
-      price: "£159",
-      oldPrice: "£219",
-      title: "AKT Revision Route",
-      features: ["Targeted review", "Practice drills", "Topic prioritisation", "Confidence gains"],
-      schedule: [{ name: "Revision pass", date: "Self-paced" }],
-    },
+    // {
+    //   id: "mrcp-akt-revision",
+    //   externalHref: "",
+    //   price: "Launching soon",
+    //   oldPrice: "£219",
+    //   title: "AKT Revision Route",
+    //   features: ["Targeted review", "Practice drills", "Topic prioritisation", "Confidence gains"],
+    //   schedule: [{ name: "Revision pass", date: "Self-paced" }],
+    // },
   ],
   mockPlans: [
     {
       id: "mrcp-akt-mock",
       externalHref: "",
-      price: "£49",
+      price: "Launching soon",
       oldPrice: "£79",
       title: "AKT Mock Set",
       features: ["Timed exam-style practice", "Score review", "Weak areas", "Exam readiness"],
