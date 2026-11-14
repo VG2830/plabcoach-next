@@ -15,7 +15,12 @@ const nextConfig: NextConfig = {
     return [
       // Old live-site pages
       { source: "/homepage/", destination: "/", permanent: true },
+      { source: "/homeeo/", destination: "/", permanent: true },
       { source: "/frontpage/", destination: "/", permanent: true },
+      { source: "/newplanpage/", destination: "/courses/", permanent: true },
+      { source: "/coursesnewtwo/", destination: "/courses/", permanent: true },
+      { source: "/coursesnewupcoming-courses/", destination: "/courses/", permanent: true },
+      { source: "/candidate-interest-form-upcoming-courses/", destination: "/courses/", permanent: true },
       { source: "/newplanpage/", destination: "/courses/", permanent: true },
       { source: "/newplanpage2/", destination: "/courses/", permanent: true },
       { source: "/coursesnew/", destination: "/courses/", permanent: true },
@@ -36,12 +41,27 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/coursesnewuk-plab-ukmla-courses/",
+        destination: "/uk-plab-ukmla-courses/",
+        permanent: true,
+      },
+      {
         source: "/coursenewireland-courses/",
+        destination: "/ireland-courses/",
+        permanent: true,
+      },
+       {
+        source: "/coursesnewireland-courses/",
         destination: "/ireland-courses/",
         permanent: true,
       },
       {
         source: "/coursenew-ukfoundation-programme-courses/",
+        destination: "/uk-foundation-programme-courses/",
+        permanent: true,
+      },
+      {
+        source: "/coursesnewuk-foundation-programme/",
         destination: "/uk-foundation-programme-courses/",
         permanent: true,
       },
@@ -55,24 +75,39 @@ const nextConfig: NextConfig = {
         destination: "/plab2-ukmla-cpsa-subscription/",
         permanent: true,
       },
+       {
+        source: "/birmingham/",
+        destination: "/plab2-ukmla-cpsa-subscription/",
+        permanent: true,
+      },
       {
         source: "/smartqbank-demo/",
-        destination: "/smartqbank/",
+        destination: "/course-plan?course=plab-1-ukmla-akt",
         permanent: true,
       },
       {
         source: "/smartqbank2/",
-        destination: "/smartqbank/",
+        destination: "/course-plan?course=plab-1-ukmla-akt",
         permanent: true,
       },
       {
         source: "/smartqbank-pres2-new/",
-        destination: "/smartqbank-pres2/",
+        destination: "/course-plan?course=pres-2",
+        permanent: true,
+      },
+      {
+        source: "/smartqbank/",
+        destination: "/course-plan?course=plab-1-ukmla-akt",
+        permanent: true,
+      },
+      {
+        source: "/smartqbank-pres2/",
+        destination: "/course-plan?course=pres-2",
         permanent: true,
       },
       {
         source: "/pres-3-osce-data-interpretation-subscription-plans-2-new/",
-        destination: "/pres-3-osce-data-interpretation-subscription-plans-2/",
+        destination: "/pres-3-osce-data-interpretation-subscription-plans/",
         permanent: true,
       },
       {
@@ -82,11 +117,21 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/prescribing-safety-assessment-psa-subscription-plans-new/",
-        destination: "/prescribing-safety-assessment-psa-subscription-plans/",
+        destination: "/prescribing-safety-assessment-psa-subscription/",
+        permanent: true,
+      },
+       {
+        source: "/prescribing-safety-assessment-psa-subscription-plan-new/",
+        destination: "/prescribing-safety-assessment-psa-subscription/",
         permanent: true,
       },
       {
         source: "/important-exam-dates-2/",
+        destination: "/important-exam-dates/",
+        permanent: true,
+      },
+      {
+        source: "/upcoming-events/",
         destination: "/important-exam-dates/",
         permanent: true,
       },
@@ -132,6 +177,11 @@ const nextConfig: NextConfig = {
         destination: "/testimonials/",
         permanent: true,
       },
+      {
+        source: "/testimonials/",
+        destination: "/",
+        permanent: true,
+      },
       // Old staging addresses
       {
         source: "/courses/plab-1-ukmla-akt/",
@@ -160,7 +210,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/courses/ukfpo-psa/",
-        destination: "/prescribing-safety-assessment-psa-subscription-plans/",
+        destination: "/prescribing-safety-assessment-psa-subscription/",
         permanent: true,
       },
       {

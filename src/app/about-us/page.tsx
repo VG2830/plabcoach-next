@@ -169,7 +169,7 @@ export default function AboutUsPage() {
                 </h2>
                 <div className="mt-[14px] space-y-[13px] text-[12px] leading-[1.64] text-[var(--about-copy)] sm:text-[13px] lg:text-[14px]">
                   <p>
-                    I am Dr Karam Singh (M.D. MRCGP), founder of Plabcoach, with over a decade of experience in teaching live and online courses designed to help aspiring doctors succeed in their medical licensing exams. Born and raised in the UK, my journey took me overseas to study medicine, a path that mirrors the challenges many of you face today. I am licensed to practice medicine in both the United Kingdom and the United States and currently serve as a GP in Birmingham and Solihull.
+                    I am Dr Karam Singh (M.D. MRCGP), founder of PLABcoach, with over a decade of experience in teaching live and online courses designed to help aspiring doctors succeed in their medical licensing exams. Born and raised in the UK, my journey took me overseas to study medicine, a path that mirrors the challenges many of you face today. I am licensed to practice medicine in both the United Kingdom and the United States and currently serve as a GP in Birmingham and Solihull.
                   </p>
                   <p>
                     Having personally navigated the rigorous process of medical licensing, I bring not only professional expertise but also a deep understanding of the perseverance required to achieve success. Over the past 10 years, I have guided thousands of doctors, equipping them with the knowledge and strategies needed to excel in the PLAB exam, regardless of any career gaps they may have encountered.

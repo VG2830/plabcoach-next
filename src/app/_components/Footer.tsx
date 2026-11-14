@@ -61,7 +61,7 @@ export default function Footer({
                 <li className="py-2 first:pt-0 transition-colors hover:text-[var(--primary)]"><Link href="/uk-plab-ukmla-courses/">UK PLAB / UKMLA Courses</Link></li>
                 <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/ireland-courses/">Ireland Courses</Link></li>
                 <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/uk-foundation-programme-courses/">UK Foundation Programme Courses</Link></li>
-                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/msra-preparation/">Upcoming Courses</Link></li>
+                <li className="py-2 transition-colors hover:text-[var(--primary)]"><Link href="/courses/">Upcoming Courses</Link></li>
               </ul>
               <h3 className="mb-3 mt-6 font-semibold text-[var(--footer-heading)]">Important Links</h3>
               <p className="transition-colors hover:text-[var(--primary)]"><Link href="/privacy-policy">Privacy Policy</Link></p>

@@ -719,7 +719,7 @@ const psaPlan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
       price: "£99",
       oldPrice: "£199",
-      title: "Comprehensive Package Includes : SmartNotes & Self-Paced Mastery Videos.",
+      title: "Comprehensive Package for PSA",
       features: ["Prescribing cases", "Safety review", "Practice tests", "Exam technique"],
       schedule: [{ label: "Revision access", dates: [{ name: "Flexible", date: "Self-paced" }] }],
     },

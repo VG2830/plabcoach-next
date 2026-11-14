@@ -106,7 +106,7 @@ const exams = [
     title: "UKFPO-PSA",
     subtitle: "Prescribing Safety Assessment for Foundation Programme candidates",
     icon: "/psa_exam_icon.svg",
-    href: "/prescribing-safety-assessment-psa-subscription-plans/",
+    href: "/prescribing-safety-assessment-psa-subscription/",
   },
   {
     title: "MSRA",

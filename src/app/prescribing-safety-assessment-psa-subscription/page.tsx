@@ -6,7 +6,7 @@ import CourseStructuredData from "../_components/seo/CourseStructuredData";
 
 export const metadata: Metadata = createCourseMetadata(
   courseDetails["prescribing-safety-assessment"],
-  "/prescribing-safety-assessment-psa-subscription-plans/",
+  "/prescribing-safety-assessment-psa-subscription/",
 );
 
 export default function PrescribingSafetyAssessmentPage() {
@@ -14,7 +14,7 @@ export default function PrescribingSafetyAssessmentPage() {
     <>
       <CourseStructuredData
         course={courseDetails["prescribing-safety-assessment"]}
-        routePath="/prescribing-safety-assessment-psa-subscription-plans/"
+        routePath="/prescribing-safety-assessment-psa-subscription/"
       />
       <CourseDetail course={courseDetails["prescribing-safety-assessment"]} />
     </>

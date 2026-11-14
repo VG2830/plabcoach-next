@@ -80,7 +80,7 @@ export const ukCourses: CourseItem[] = [
 export const irelandCourses: CourseItem[] = [
   {
     image: "/courses_pres2.webp",
-    title: "PRES Level 2",
+    title: "PRES 2",
     assessment: "Applied Knowledge Test (AKT)",
     description:
       "Build confidence for the written assessment with focused exam preparation, high-yield questions and realistic practice.",
@@ -146,7 +146,7 @@ export const foundationCourses: CourseItem[] = [
     description:
       "Prepare for the Prescribing Safety Assessment (PSA) with focused, exam-oriented training covering prescribing skills, calculations, clinical decision-making, and safe prescribing practice.",
     buttonLabel: "Explore CPSA Preparation",
-    href: "/prescribing-safety-assessment-psa-subscription-plans/",
+    href: "/prescribing-safety-assessment-psa-subscription/",
     badge: "Foundation",
     badgeClassName: "border-[#e8e1ff] bg-[#f5f0ff] text-[#4f3ca9]",
     buttonClassName: "bg-[#6d50d2]",

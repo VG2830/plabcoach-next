@@ -53,7 +53,7 @@ const examGroups: ExamGroup[] = [
         name: "PLAB 1 / UKMLA AKT",
         icon: "/plab1_exam_pg_icon.svg",
         category: "UK PLAB / UKMLA",
-        examDate: "12th February 2026, 21st May 2026, August & November",
+        examDate: "11 February 2027,May, August and November 2027",
          officialLink:"https://www.gmc-uk.org/",
       },
       {
@@ -63,7 +63,7 @@ const examGroups: ExamGroup[] = [
         category: "UK PLAB / UKMLA",
         note:
           "Dates remain available throughout the year and candidates must log in and book the slots through their GMC account to know more about the availability of dates and slots for the given venue.",
-        officialLink:"https://www.gmc-uk.org/",
+        officialLink:"https://www.gmc-uk.org/registration-and-licensing/join-our-registers/plab/plab-2-guide/when-and-where-can-you-take-plab-2/",
       },
     ],
   },
@@ -78,13 +78,13 @@ const examGroups: ExamGroup[] = [
         icon: "/pres2_exam_pg_icon.svg",
         category: "Ireland",
         schedule: [
-          { venue: "Dublin, Ireland", examDate: "12th Feb 2026" },
+          { venue: "Dublin, Ireland", examDate: "To be declared" },
           {
             venue: "Dublin, Ireland & Dubai, UAE",
-            examDate: "21st May 2026 / 6th Aug 2026 / 5th Nov 2026",
+            examDate: "To be declared",
           },
         ],
-        officialLink:"https://www.gmc-uk.org/",
+        officialLink:"https://www.medicalcouncil.ie/registration-applications/pres/pres-level-2-exam.html",
       },
       {
         id: "pres-3-osce",
@@ -92,10 +92,10 @@ const examGroups: ExamGroup[] = [
         icon: "/pres3_exam_pg.svg",
         category: "Ireland",
         schedule: [
-          { venue: "Cork", examDate: "19th September 2026" },
-          { venue: "Dublin", examDate: "31st October 2026" },
+          { venue: "Cork", examDate: "To be declared" },
+          { venue: "Dublin", examDate: "To be declared" },
         ],
-         officialLink:"https://www.gmc-uk.org/",
+         officialLink:"https://www.medicalcouncil.ie/registration-applications/pres/pres-level-3-exam.html",
       },
     ],
   },
@@ -109,21 +109,22 @@ const examGroups: ExamGroup[] = [
         name: "National Clinical Assessment (NCA)",
         icon: "/nca_exam_pg_icon_.svg",
         category: "UK Foundation Programme",
-        primaryDate: "Nov 2026",
-        examDate: "9th, 10th, 11th, & 12th Nov 2026",
-         officialLink:"https://www.gmc-uk.org/",
+        primaryDate: "Thursday 28 January 2027",
+        dateLines: ["18 March 2027", "15 April 2027", "3 June 2027"],
+        note:"Each medical school chooses its dates from within the national schedule. If you're sitting the PSA at a medical school, your school will tell you which of these dates it is using. Foundation schools hold their first sitting in the autumn, with two re-sit dates in the first half of the following year.",
+         officialLink:"https://foundationprogramme.nhs.uk/ukfp-2027-eligibility-applications-timeline-and-deadlines/",
       },
       {
         id: "prescribing-safety-assessment",
         name: "PRESCRIBING SAFETY ASSESSMENT (PSA)",
         icon: "/psa_exam_icon.svg",
         category: "UK Foundation Programme",
-        primaryDate: "2026",
+        primaryDate: "November 2027",
         dateLines: [
-          "Thursday 26th March 2026, All Candidates",
-          "Thursday 23rd April 2026, All Candidates",
+          "November 2027",
+          
         ],
-         officialLink:"https://www.gmc-uk.org/",
+         officialLink:"https://prescribingsafetyassessment.ac.uk",
       },
     ],
   },
@@ -172,11 +173,7 @@ function ExamCard({ exam }: { exam: ExamEntry }) {
         </div>
       ) : null}
 
-      {exam.note ? (
-        <p className="mt-[18px] max-w-[640px] text-[13px] font-semibold leading-[1.34] text-[var(--exam-card-text)] sm:text-[14px] lg:text-[15px]">
-          {exam.note}
-        </p>
-      ) : null}
+      
 
       {exam.schedule ? (
         <div className="mt-[18px] overflow-hidden text-[12px] sm:text-[13px] lg:text-[14px]">
@@ -211,6 +208,11 @@ function ExamCard({ exam }: { exam: ExamEntry }) {
             ))}
           </div>
         </div>
+      ) : null}
+      {exam.note ? (
+        <p className="mt-[18px] max-w-[640px] text-[13px] font-semibold leading-[1.34] text-[var(--exam-card-text)] sm:text-[14px] lg:text-[15px]">
+          {exam.note}
+        </p>
       ) : null}
 
       {hasMetaDates ? (

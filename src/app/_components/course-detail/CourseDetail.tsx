@@ -352,6 +352,9 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                   <p className="text-[13px] font-medium leading-[1.75] text-[var(--course-detail-body-strong)] sm:text-[14.5px] lg:text-[15px]">
                     {course.heroDescription}
                   </p>
+                  <p className="mt-3 text-xs font-medium text-[var(--course-detail-body-strong)]">
+                    <span className="font-semibold">Last updated:</span> 14 November 2026
+                  </p>
                 </div>
               </div>
 
@@ -447,7 +450,22 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 key={i}
                 className="text-[13.5px] leading-[1.8] text-[var(--course-detail-body-strong)] sm:text-[14.5px] lg:text-[15.5px]"
               >
-                {p}
+                {typeof p === "string" ? (
+                  p
+                ) : (
+                  <>
+                    {p.beforeLink}
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-blue-500 underline hover:text-blue-600"
+                    >
+                      {p.linkText}
+                    </a>
+                    {p.afterLink}
+                  </>
+                )}
               </p>
             ))}
             {activeSection.id === "what-is" && (

@@ -1,6 +1,16 @@
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
+import { createPageMetadata } from "../_components/pageMetadata";
 import { JsonLd, createBreadcrumbSchema } from "../_components/seo/JsonLd";
+
+export const metadata = createPageMetadata({
+  title: "Refund Policy | PLABcoach",
+  description:
+    "Review PLABcoach's no-refund policy, including course access, non-transferable enrollments and exceptional circumstances.",
+  canonicalPath: "/no-refund-policy/",
+  image: "/hero_banner_image.webp",
+  imageAlt: "PLABcoach medical exam preparation",
+});
 
 const policySections = [
   {
@@ -35,7 +45,7 @@ const policySections = [
   {
     title: "Exceptional Circumstances (Discretionary)",
     content:
-      "In rare cases of documented emergencies, students may write to us for consideration. Final decisions will rest solely with the Plabcoach Management, and such considerations do not guarantee a refund or course credit.",
+      "In rare cases of documented emergencies, students may write to us for consideration. Final decisions will rest solely with the PLABcoach Management, and such considerations do not guarantee a refund or course credit.",
   },
 ];
 
@@ -58,7 +68,7 @@ export default function NoRefundPolicyPage() {
                 No Refund Policy
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-7 text-[var(--body-muted)] sm:text-lg">
-                At Plabcoach, we strive to offer comprehensive, high-quality learning support to all our
+                At PLABcoach, we strive to offer comprehensive, high-quality learning support to all our
                 students. Before enrolling, please review our No Refund Policy below:
               </p>
             </div>

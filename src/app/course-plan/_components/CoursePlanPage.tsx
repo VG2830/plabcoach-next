@@ -61,14 +61,14 @@ function EnrolButton({ href }: { href: string }) {
   if (!href) {
     return (
       <button type="button" disabled className={`${className} cursor-not-allowed opacity-60`}>
-        ENROLL NOW
+        Enrol now
       </button>
     );
   }
 
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-      ENROLL NOW
+      Enrol now
     </a>
   );
 }

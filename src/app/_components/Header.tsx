@@ -43,7 +43,7 @@ const courseMenu: CourseMenuGroup[] = [
       },
       {
         label: "Prescribing Safety Assessment (PSA)",
-        href: "/prescribing-safety-assessment-psa-subscription-plans/",
+        href: "/prescribing-safety-assessment-psa-subscription/",
       },
     ],
   },
@@ -495,7 +495,7 @@ export default function Header() {
               <span>Contact Us</span>
             </Link>
             <a
-              href="#sign-in"
+              href="https://courses.plabcoach.com/"
               onClick={closeMobileMenu}
               className="flex min-h-[46px] items-center px-2 transition hover:text-[var(--primary)] sm:hidden"
             >
