@@ -112,7 +112,9 @@ const tocPlab1: TocItem[] = [
   { id: "dates", label: "PLAB 1 Dates & Fees" },
   { id: "prepare", label: "How to Prepare for PLAB 1" },
   { id: "how-helps", label: "How PLABcoach Helps" },
+  { id: "smartqbank", label: "PLAB 1 SmartQBank" },
   { id: "who-should", label: "Who Should Take This Course" },
+  
 ];
 
 const sectionsPlab1: CourseSection[] = [
@@ -120,7 +122,7 @@ const sectionsPlab1: CourseSection[] = [
     id: "what-is",
     heading: "What is PLAB 1?",
     paragraphs: [
-      "PLAB 1 is the first part of the Professional and Linguistic Assessments Board (PLAB) test, set and administered by the General Medical Council (GMC), the UK's medical regulator. It is a written knowledge exam designed to test whether international medical graduates (IMGs) have the clinical knowledge required to practice safely in the UK, at the standard expected of a doctor starting Foundation Year 2 (F2).",
+      "PLAB 1 is the first part of the Professional and Linguistic Assessments Board (PLAB) test, set and administered by the General Medical Council (GMC), the UK's medical regulator. It is a written knowledge exam designed to test whether international medical graduates (IMGs) have the clinical knowledge required to practise safely in the UK, at the standard expected of a doctor starting Foundation Year 2 (F2).",
       "Since 2024, PLAB 1 questions are drawn from GMC's Medical Licensing Assessment (MLA) content map, the same knowledge framework used to assess UK medical graduates — meaning a PLAB 1 pass is now benchmarked to the same standard as UK finals, even though IMGs continue to sit an exam named \"PLAB 1\" rather than a separately branded UKMLA paper.",
       {
         beforeLink: "",
@@ -134,7 +136,7 @@ const sectionsPlab1: CourseSection[] = [
     id: "who-needs",
     heading: "Who Needs to Take PLAB 1?",
     paragraphs: [
-      "PLAB 1 is required for any international medical graduate who wants to register with the GMC and practice medicine in the UK, and who does not hold a qualification the GMC recognises as exempting them (such as certain EEA-recognised degrees or an accepted alternative like a relevant Royal College membership). Candidates can sit PLAB 1 immediately after graduating from medical school — a completed internship is not required to sit the exam itself, though it is required later for full GMC registration."
+      "PLAB 1 is required for any international medical graduate who wants to register with the GMC and practise medicine in the UK, and who does not hold a qualification the GMC recognises as exempting them (such as certain EEA-recognised degrees or an accepted alternative like a relevant Royal College membership). Candidates can sit PLAB 1 immediately after graduating from medical school — a completed internship is not required to sit the exam itself, though it is required later for full GMC registration."
     ],
   },
   {
@@ -205,7 +207,7 @@ const sectionsPlab1: CourseSection[] = [
     paragraphs: [
       "Effective PLAB 1 preparation centres on applying knowledge to 'most appropriate next step' clinical reasoning rather than exhaustive textbook recall — GMC's SBA questions are deliberately designed to test decision-making under UK guidelines (principally NICE), not simply factual knowledge.",
       "● Work through the full MLA content map systematically rather than topic-hopping.",
-      "● practice high volumes of realistic SBA questions under timed conditions",
+      "● Practise high volumes of realistic SBA questions under timed conditions",
       "● Anchor every answer to current NICE guidance and UK-standard first-line management, not home-country protocols",
       "● Sit at least one full-length, correctly-timed mock exam before the real sitting"
     ],
@@ -217,9 +219,17 @@ const sectionsPlab1: CourseSection[] = [
       "PLABcoach's PLAB 1 / UKMLA-AKT preparation is built around three components:",
       "● SmartQBank — 5,000+ high-yield SBA questions mapped to the current MLA content map",
       "● SmartNotes — rapid revision summaries organised by clinical presentation",
-      "● SmartMock — unlimited realistic 180-question, 180-minute practice exams",
+      "● SmartMock — unlimited realistic 180-question, 180-minute practise exams",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK licensing exams.",
       "While no course can guarantee an exam result, structured preparation can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
+    ],
+  },
+  {
+    id: "smartqbank",
+    heading: "PLAB 1 SmartQBank",
+    paragraphs: [
+      "SmartQBank is PLABcoach's question bank for PLAB 1 (UKMLA-AKT). It has more than 5,000 high-yield single best answer (SBA) questions, mapped to the GMC's current MLA content map, so your practice follows what the exam actually tests.",
+      "Use it alongside SmartNotes for quick revision by clinical presentation, and SmartMock for full 180-question, 180-minute practice exams under real timing."
     ],
   },
   {
@@ -228,10 +238,12 @@ const sectionsPlab1: CourseSection[] = [
     paragraphs: [
       "● International medical graduates preparing for their first PLAB 1 attempt.",
       "● Candidates who have attempted PLAB 1 before and want a more structured, feedback-driven approach",
-      "● Doctors who know their home-country clinical practice well but need to recalibrate to UK/NICE-guideline-based decision-making",
-      "● Doctors who want realistic, timed SBA practice rather than generic MCQ banks"
+      "● Doctors who know their home-country clinical practise well but need to recalibrate to UK/NICE-guideline-based decision-making",
+      "● Doctors who want realistic, timed SBA practise rather than generic MCQ banks"
     ],
   },
+   
+
 ];
 
 const faqsPlab1: FAQItem[] = [
@@ -454,9 +466,9 @@ const sectionsPlab2: CourseSection[] = [
     paragraphs: [
       "PLAB 2 tests behaviour under time pressure, not theoretical knowledge — most candidates who don't pass on the first attempt already know the clinical content but lose marks on structure, time management, or communication within the 8-minute window.",
       "● Drill the 8-minute station structure repeatedly — opening, data gathering, examination/procedure, closing and safety-netting",
-      "● practice on manikins matching the type used in the real exam, not generic models",
+      "● Practise on manikins matching the type used in the real exam, not generic models",
       "● Rehearse high-stakes communication stations (breaking bad news, consent, capacity) specifically — these are consistently where marks are lost",
-      "● Sit full-circuit mocks under real timing, not isolated station practice only"
+      "● Sit full-circuit mocks under real timing, not isolated station practise only"
     ],
   },
   {
@@ -473,7 +485,7 @@ const sectionsPlab2: CourseSection[] = [
       "4 Days of Online Training covering Data Interpretation, History Taking, and Communication Skills.",
       "2 Days of LIVE OSCE Training with expert faculty guidance and real-exam focused scenarios.",
       "1 Day of Supervised SIMMAN practice to enhance confidence in managing acute and emergency scenarios.",
-      "3 Days of OSCE practice Sessions with Manikins to develop practical skills and improve examination technique in a simulated clinical environment.",
+      "3 Days of OSCE Practice Sessions with Manikins to develop practical skills and improve examination technique in a simulated clinical environment.",
       "While no course can guarantee an exam result, structured, feedback-driven OSCE practice can improve exam readiness and help candidates avoid the mistakes that most often lead to repeat attempts."
     ],
   },
@@ -564,7 +576,7 @@ const faqsPlab2: FAQItem[] = [
   {
     question: "What happens after I pass PLAB 2?",
     answer:
-      "You can apply for GMC registration with a licence to practice, and your application should be approved within two years of passing PLAB 2. If more than two years have passed, the GMC will ask for extra evidence of your knowledge and skills. In some cases, a recent PLAB 2 pass can also count as evidence of your English language skills when you register.",
+      "You can apply for GMC registration with a licence to practise, and your application should be approved within two years of passing PLAB 2. If more than two years have passed, the GMC will ask for extra evidence of your knowledge and skills. In some cases, a recent PLAB 2 pass can also count as evidence of your English language skills when you register.",
   },
 ];
 const comparisonPlab2: ComparisonTable = {
@@ -625,7 +637,9 @@ const tocPres2: TocItem[] = [
   { id: "dates", label: "PRES 2 Dates & Fees" },
   { id: "prepare", label: "How to Prepare for PRES 2" },
   { id: "how-helps", label: "How PLABcoach Helps" },
-  { id: "who-should", label: "Who Should Take This Course" },
+   { id: "smartqbank", label: "PRES 2 SmartQBank" },
+  { id: "who-should", label: "Who Should Take This Course" }
+ 
 ];
 
 const sectionsPres2: CourseSection[] = [
@@ -633,7 +647,7 @@ const sectionsPres2: CourseSection[] = [
     id: "what-is",
     heading: "What is PRES 2?",
     paragraphs: [
-      "PRES 2 is the written knowledge component of Ireland's Pre-Registration Examination System (PRES), set by the Irish Medical Council (IMC). It is required for international medical graduates who qualified outside the EU/EEA and who do not hold a qualification or internship the IMC recognises as an exemption, before they can register to practice medicine in Ireland.",
+      "PRES 2 is the written knowledge component of Ireland's Pre-Registration Examination System (PRES), set by the Irish Medical Council (IMC). It is required for international medical graduates who qualified outside the EU/EEA and who do not hold a qualification or internship the IMC recognises as an exemption, before they can register to practise medicine in Ireland.",
       "PRES 2 must be passed before a candidate can attempt PRES 3, the OSCE and data interpretation component — the two levels are sat in a fixed, IMC-enforced sequence.",
        {
         beforeLink: "",
@@ -700,7 +714,7 @@ const sectionsPres2: CourseSection[] = [
     heading: "How to Prepare for PRES 2",
     paragraphs: [
       "● Work systematically through all five core content areas rather than favouring familiar specialties",
-      "● practice high volumes of clinical-scenario MCQs specifically written to the PRES syllabus, not generic MCQ banks",
+      "● Practise high volumes of clinical-scenario MCQs specifically written to the PRES syllabus, not generic MCQ banks",
       "● Time yourself against the full 3-hour format at least once before the real sitting",
       "● Review core obstetrics, paediatrics and psychiatry content in particular, as these are less heavily weighted in some competing exam syllabi and can be under-prepared as a result"
     ],
@@ -717,12 +731,20 @@ const sectionsPres2: CourseSection[] = [
     ],
   },
   {
+    id: "smartqbank",
+    heading: "PRES 2 SmartQBank",
+    paragraphs: [
+      "SmartQBank for PRES 2 is PLABcoach's question bank for the Irish Medical Council's PRES 2 exam. It covers all five PRES 2 areas: medicine and general practice, surgery, obstetrics and gynaecology, paediatrics, and psychiatry.",
+      "It includes online mock tests, so you can practise under exam conditions and see where you need more work before the real sitting."
+    ],
+  },
+  {
     id: "who-should",
     heading: "Who Should Take This Course",
     paragraphs: [
       "● International medical graduates preparing for their first PRES 2 attempt.",
       "● Candidates who have attempted PRES 2 before and want more structured, feedback-driven revision.",
-      "● Doctors who know their home-country clinical practice well but need Ireland-specific, IMC-aligned preparation.",
+      "● Doctors who know their home-country clinical practise well but need Ireland-specific, IMC-aligned preparation.",
       "● Candidates weighing whether to sit PRES 2 or rely on a PLAB 1 exemption, and preparing either way.",
       "● Candidates preparing remotely ahead of a PRES 2 sitting."
    
@@ -840,7 +862,7 @@ const sectionsPres3: CourseSection[] = [
     id: "prepare",
     heading: "How to Prepare for PRES 3",
     paragraphs: [
-      "● practice the full station circuit under real 8-minute timing, not isolated skills in isolation.",
+      "● Practise the full station circuit under real 8-minute timing, not isolated skills in isolation.",
       "● Prioritise data interpretation practice specifically — ECGs, blood gases, bloods, and radiology — as this is a distinct assessed domain, not just background knowledge",
       "● Rehearse communication-heavy stations (breaking bad news, explaining diagnoses) with a study partner or coach, since these are consistently harder to self-assess",
       "● Use manikins/simulators matching real exam equipment for practical procedure stations",
@@ -857,7 +879,7 @@ const sectionsPres3: CourseSection[] = [
       "● Live Coaching, available both online and offline, with manikin-based practical skills training",
       "● Mock exams — OSCE mocks held live in Dublin, data interpretation mocks available online",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
-      "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
+      "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practise can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
 
     ],
   },
@@ -893,7 +915,7 @@ const faqsPres3: FAQItem[] = [
   {
     question: "Am I exempt from PRES 3 if I've passed PLAB 2?",
     answer:
-      "Yes. The Irish Medical Council accepts a PLAB 2 pass in place of the PRES, including PRES 3. Apply for General registration through the PRES route and upload the GMC email confirming your pass. If you passed more than three years ago and haven’t practiced since, the Council will review your recency of practice.",
+      "Yes. The Irish Medical Council accepts a PLAB 2 pass in place of the PRES, including PRES 3. Apply for General registration through the PRES route and upload the GMC email confirming your pass. If you passed more than three years ago and haven’t practised since, the Council will review your recency of practice.",
   },
   {
     question: "How many stations does PRES 3 have?",
@@ -915,7 +937,7 @@ const comparisonPres3: ComparisonTable = {
   heading: "PRES 3 vs PLAB 2 Comparison",
   noteHeading: "",
   // noteBullets: [
-  //   "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practice — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
+  //   "The Irish Medical Council already treats PLAB 1 as equivalent to PRES 2 in practise — candidates who pass PLAB 1 can be exempted from sitting PRES 2.",
   //   "PLAB 1 and PRES 2 are set independently by different regulators (GMC vs Irish Medical Council) and are not sat on a shared date or joint booking system, even though their content/standard is treated as equivalent.",
   // ],
   colAHeader: "PRES 3",
@@ -1018,7 +1040,7 @@ const sectionsNca: CourseSection[] = [
     heading: "How to Prepare for the UKFPO-NCA",
     paragraphs: [
       "Manchester University NHS Foundation Trust explicitly states it does not recommend or endorse any specific training course for this assessment — preparation content should be framed as general skills-building support, not as an officially endorsed pathway.",
-      "● practice the 12-station CCA format specifically — short, focused stations with only 1 minute of preparation time reward speed and structure",
+      "● Practise the 12-station CCA format specifically — short, focused stations with only 1 minute of preparation time reward speed and structure",
       "● Focus on core F1-level ward skills: safe prescribing, escalation, basic procedures, and clear communication under time pressure",
       "● Rehearse under realistic timing — 10 minutes total per station, including reading and prep",
       "● Review UK-specific ward processes and terminology if coming from a non-UK clinical background, since the standard assessed is explicitly that of a UK F1 starter"
@@ -1033,7 +1055,7 @@ const sectionsNca: CourseSection[] = [
       "● Self-Paced Mastery Videos for flexible preparation",
       "● Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli, online and offline",
       "● SmartMocks Online & Offline",
-      "● Manikin practice - practice till your Exam",
+      "● Manikin practice - practise till your Exam",
       "● One Day Crash Course",
       "While no course can guarantee an exam result, structured station practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
     ],
@@ -1165,7 +1187,7 @@ const sectionsPsa: CourseSection[] = [
     heading: " How to Prepare for the UKFPO-PSA",
     paragraphs: [
       "● Work through each of the core question types individually — prescribing, review, calculation, adverse reaction identification, and communication — rather than generic pharmacology revision alone.",
-      "● practice dose calculations under time pressure, as this is a common area candidates lose marks in.",
+      "● Practise dose calculations under time pressure, as this is a common area candidates lose marks in.",
       "● Get comfortable navigating the BNF/BNFc quickly, since it's available during the real exam and speed of lookup matters as much as knowledge",
       "● Use BPS's own free PSA Prep eLearning sessions as a baseline, then supplement with realistic timed practice"
 
@@ -1304,8 +1326,8 @@ const sectionsMsra: CourseSection[] = [
     id: "prepare",
     heading: " How to Prepare for the MSRA",
     paragraphs: [
-      "● practice Professional Dilemmas ranking questions specifically — remember only one action is ever 'most appropriate', not a sequence (A or B or C, not A then B).",
-      "● Build familiarity with NHS structures, GMC ethical guidance (Good Medical practice), and typical primary/secondary care working environments, since PD questions assume this context.",
+      "● Practise Professional Dilemmas ranking questions specifically — remember only one action is ever 'most appropriate', not a sequence (A or B or C, not A then B).",
+      "● Build familiarity with NHS structures, GMC ethical guidance (Good Medical Practice), and typical primary/secondary care working environments, since PD questions assume this context.",
       "● For Clinical Problem Solving, drill across the full range of clinical topics rather than concentrating only on familiar specialties",
       "● Time both papers separately under realistic conditions — 95 minutes for PD, 75 minutes for CPS, with only a short break between"
 
@@ -1324,7 +1346,7 @@ const sectionsMsra: CourseSection[] = [
     heading: "Who Should Take This Course",
     paragraphs: [
       "● Doctors applying to GP training (ST1) or another MSRA-using specialty programme.",
-      "● Candidates who find Professional Dilemmas ranking questions unintuitive and want structured practice on judgement-based scenarios",
+      "● Candidates who find Professional Dilemmas ranking questions unintuitive and want structured practise on judgement-based scenarios",
       "● Doctors who want focused Clinical Problem Solving revision across the full range of specialty topics",
       "● Candidates who have sat the MSRA before and want to improve their combined score for a more competitive specialty"
     ],
@@ -1441,7 +1463,7 @@ const sectionsMrcpAkt: CourseSection[] = [
     paragraphs: [
       "● Weight your revision to match the exam's own content split — roughly 80% clinical medicine means the bulk of preparation time should go there, not evenly across all three areas.",
       "● Don't neglect the smaller-weighted areas (critical appraisal/evidence-based practice, health informatics/admin) — they're still worth roughly 20% combined and are often under-revised",
-      "● practice under the current 160-minute, 160-item timing specifically — resources describing the older 190-minute/200-item format will train the wrong pace",
+      "● Practise under the current 160-minute, 160-item timing specifically — resources describing the older 190-minute/200-item format will train the wrong pace",
       "● Use realistic single-best-answer and extended-matching style questions rather than generic MCQ banks not calibrated to AKT's specific format"
 
     ],
@@ -1569,7 +1591,7 @@ export const courseDetails = {
     slug: "plab-1-ukmla-akt",
     eyebrow: "PLAB 1 / UKMLA-AKT",
     title: "PLAB 1 (UKMLA AKT): \nFormat, Dates & Preparation",
-    metaTitle: "PLAB 1 / UKMLA-AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
+    metaTitle: "PLAB 1 (UKMLA AKT) 2027: Format, Dates & Prep",
     metaDescription: "PLAB 1 (UKMLA-AKT) is GMC's 180-question written exam for IMGs seeking UK registration. Learn the format, syllabus, dates and how PLABcoach's SmartQBank & courses help you pass.",
     ogImage: "/og/plab1.webp",
     heroImage: "/course_one.webp",
@@ -1601,7 +1623,7 @@ export const courseDetails = {
     slug: "plab-2-ukmla",
     eyebrow: "PLAB 2 / UKMLA-CPSA",
     title: "PLAB 2 (UKMLA CPSA): \nOSCE Guide",
-    metaTitle: "PLAB 2 / UKMLA-CPSA Exam 2026 – OSCE Stations, Format & Preparation | PLABcoach",
+    metaTitle: "PLAB 2 (UKMLA CPSA) 2027: OSCE Guide",
     metaDescription: "PLAB 2 (UKMLA-CPSA) is GMC's 16-station OSCE for IMGs, held in Manchester. Learn the station format, marking domains, dates and how PLABcoach's manikin-based training helps you pass.",
     ogImage: "/og/plab2.webp",
     heroImage: "/course_two.webp",
@@ -1665,7 +1687,7 @@ export const courseDetails = {
     slug: "pres-2",
     eyebrow: "PRES LEVEL 2",
     title: "PRES 2 Exam Ireland: \nFormat & Preparation",
-    metaTitle: "PRES 2 Exam Ireland 2026 – Format, Syllabus & Preparation | PLABcoach",
+    metaTitle: "PRES 2 Exam Ireland 2027: Format & Prep",
     metaDescription: "PRES 2 is the Irish Medical Council's written exam for international medical graduates. Learn the format, syllabus, fees and how PLABcoach's SmartQBank helps you pass.",
     ogImage: "/og/pres2.webp",
     heroImage: "/course_three.webp",
@@ -1745,7 +1767,7 @@ export const courseDetails = {
     slug: "pres-3-osce",
     eyebrow: "PRES 3",  
     title: "PRES 3 Ireland: \nOSCE & Data Interpretation",
-    metaTitle: "PRES 3 Exam Ireland 2026 – OSCE & Data Interpretation Guide | PLABcoach",
+    metaTitle: "PRES 3 Ireland 2027: OSCE & Data Interpretation",
     metaDescription: "PRES 3 is the Irish Medical Council's OSCE and data interpretation exam for international medical graduates, held in Ireland. Learn the format, stations and how PLABcoach helps you pass.",
     ogImage: "/og/pres3.webp",
     heroImage: "/course_four.webp",
@@ -1785,7 +1807,7 @@ export const courseDetails = {
     ],
     pathway: pathwayPres3,
     videoId: "LXPbAtgIitI",
-    videoTitle: "Preparing Doctors for Safe, Ethical & Effective Medical practice in Ireland",
+    videoTitle: "Preparing Doctors for Safe, Ethical & Effective Medical Practice in Ireland",
     ctaTitle: "READY TO ACE PRES 3?",
     ctaCopy: "Choose your learning path and start your preparation with PLABCOACH today.",
     subscribeButtonLabel: "Start PRES 3 Preparation",
@@ -1797,7 +1819,7 @@ export const courseDetails = {
     slug: "national-clinical-assessment",
     eyebrow: "NCA",
     title: "UKFPO-NCA: Complete \nGuide to Format & Preparation",
-    metaTitle: "UKFPO-NCA Exam 2026 – Format & Preparation | PLABcoach",
+    metaTitle: "UKFPO-NCA 2027: Format & Preparation Guide",
     metaDescription: "The UKFPO-NCA is the UKFPO's required 12-station exam for eligible IMGs applying to the UK Foundation Programme. Learn the format, eligibility and how PLABcoach helps you pass.",
     ogImage: "/og/nca.webp",
     heroImage: "/course_five.webp",
@@ -1858,7 +1880,7 @@ export const courseDetails = {
     slug: "prescribing-safety-assessment",
     eyebrow: "PSA",
     title: "UKFPO PSA: \nPrescribing Safety Guide",
-    metaTitle: "UKFPO-PSA Exam 2026 – Prescribing Safety Assessment Guide | PLABcoach",
+    metaTitle: "UKFPO PSA 2027: Prescribing Safety Guide",
     metaDescription: "The UKFPO-PSA is the 60-question prescribing exam all F1 doctors must pass to progress to F2. Learn the format, question types and how PLABcoach helps you prepare.",
     ogImage: "/og/psa.webp",
     heroImage: "/course_six.webp",
@@ -1909,7 +1931,7 @@ export const courseDetails = {
     slug: "msra",
     eyebrow: "MSRA",
     title: "MSRA Exam: \nFormat & Preparation",
-    metaTitle: "MSRA Exam 2026 – Format, Question Bank & Preparation | PLABcoach",
+    metaTitle: "MSRA Exam 2027: Format & Preparation",
     metaDescription: "The MSRA is a two-paper computer-based exam used for GP and other specialty training entry in the UK. Learn the format, scoring and how PLABcoach's question bank helps you prepare.",
     ogImage: "/og/msra.webp",
     heroImage: "/course_seven.webp",
@@ -1972,7 +1994,7 @@ export const courseDetails = {
     slug: "mrcp-akt",
     eyebrow: "MRCGP AKT",
     title: "MRCGP AKT: \nFormat & Preparation ",
-    metaTitle: "MRCGP AKT Exam 2026 – Format, Syllabus & Preparation | PLABcoach",
+    metaTitle: "MRCGP AKT 2027: Format & Preparation",
     metaDescription: "The MRCGP AKT is RCGP's 160-item computer-based exam for GP trainees. Learn the current format, syllabus weighting, fees and how PLABcoach helps you pass.",
     ogImage: "/og/mrccp-akt.webp",
     heroImage: "/course_eight_1.webp",

@@ -861,7 +861,7 @@ useEffect(() => {
             <div className="relative min-h-[410px] w-full sm:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px] 2xl:min-h-[640px]">
               <div className="pointer-events-none absolute bottom-[10%] left-[10%] h-[56px] w-[78%] rounded-full bg-[#243f79]/10 blur-3xl 2xl:left-[5%] 2xl:w-[88%]" />
 
-              <div className="absolute inset-0 2xl:-left-[180px] 2xl:-right-[55px]">
+              <div className="absolute inset-0">
                 <Image
                   src="/video_learning_laptop_2.webp"
                   alt="PLABcoach video lesson on a laptop"

@@ -532,6 +532,22 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
                 Prepare with  SmartQBank
               </SubscribeButton>
             )}
+            { activeSection.id === "smartqbank" && course.slug=== "plab-1-ukmla-akt" &&(
+               <SubscribeButton
+                href="/course-plan?course=plab-1-ukmla-akt"
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                See SmartQBank Pricing
+              </SubscribeButton>
+            )}
+             { activeSection.id === "smartqbank" && course.slug=== "pres-2" &&(
+               <SubscribeButton
+                href="/course-plan?course=pres-2"
+                className="mt-[8px] h-[48px] w-full px-[24px] sm:w-auto"
+              >
+                Subscribe to SmartQBank for PRES 2
+              </SubscribeButton>
+            )}
 
           </div>
         </article>

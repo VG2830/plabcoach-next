@@ -189,11 +189,11 @@ const nextConfig: NextConfig = {
       { source: "/category/:path*", destination: "/blogs/", permanent: true },
       { source: "/tag/:path*", destination: "/blogs/", permanent: true },
       { source: "/author/:path*", destination: "/blogs/", permanent: true },
-      // {
-      //   source: "/testimonial/:path*",
-      //   destination: "/testimonials/",
-      //   permanent: true,
-      // },
+      {
+        source: "/testimonial/:path*",
+        destination: "/testimonials/",
+        statusCode: 301,
+      },
       // Old staging addresses
       {
         source: "/courses/plab-1-ukmla-akt/",
