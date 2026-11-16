@@ -248,7 +248,7 @@ export function CourseSection({
 
 export function CourseGroupPage(props: CourseSectionProps) {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--courses-heading)] [--courses-button-border:#888888] [--courses-button-muted:#888888] [--courses-card-border:#E0E0E0] [--courses-card-heading:#002F60] [--courses-copy:#808080] [--courses-cta:#5B65DC] [--courses-divider:#F7FBFF] [--courses-feature-bg:#F6FBFF] [--courses-heading:#162355]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--courses-heading)] [--courses-button-border:#888888] [--courses-button-muted:#888888] [--courses-card-border:#E0E0E0] [--courses-card-heading:#002F60] [--courses-copy:#808080] [--courses-cta:#5B65DC] [--courses-divider:#F7FBFF] [--courses-feature-bg:#F6FBFF] [--courses-heading:#162355]">
       <Header />
       <main>
         <CourseSection {...props} />
@@ -260,7 +260,7 @@ export function CourseGroupPage(props: CourseSectionProps) {
 
 export default function Courses() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--courses-heading)] [--courses-button-border:#888888] [--courses-button-muted:#888888] [--courses-card-border:#E0E0E0] [--courses-card-heading:#002F60] [--courses-copy:#808080] [--courses-cta:#5B65DC] [--courses-divider:#F7FBFF] [--courses-feature-bg:#F6FBFF] [--courses-final-bg:#084C90] [--courses-final-copy:#B7D2EE] [--courses-heading:#162355] [--courses-hero-bg:#EEEFFD] [--courses-label:#5B65DC] [--courses-learning-bg:#EDEDED] [--courses-learning-card-bg:#1D2130] [--courses-panel-bg:#E8F0FF] [--courses-primary:#09539F] [--courses-tab-bg:#A5D2FF]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--courses-heading)] [--courses-button-border:#888888] [--courses-button-muted:#888888] [--courses-card-border:#E0E0E0] [--courses-card-heading:#002F60] [--courses-copy:#808080] [--courses-cta:#5B65DC] [--courses-divider:#F7FBFF] [--courses-feature-bg:#F6FBFF] [--courses-final-bg:#084C90] [--courses-final-copy:#B7D2EE] [--courses-heading:#162355] [--courses-hero-bg:#EEEFFD] [--courses-label:#5B65DC] [--courses-learning-bg:#EDEDED] [--courses-learning-card-bg:#1D2130] [--courses-panel-bg:#E8F0FF] [--courses-primary:#09539F] [--courses-tab-bg:#A5D2FF]">
       <Header />
 
       <main>

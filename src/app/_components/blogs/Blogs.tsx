@@ -51,7 +51,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
   const featuredBlogs = otherPosts.slice(3);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--blogs-heading)]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--blogs-heading)]">
       <Header />
 
       <main>

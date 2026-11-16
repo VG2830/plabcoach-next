@@ -432,7 +432,7 @@ function MockSection({ data }: { data: CoursePlanConfig }) {
 
 export default function CoursePlanPage({ data }: { data: CoursePlanConfig }) {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--plan-ink)]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--plan-ink)]">
       <Header />
       <main>
         <PlanHero data={data} />

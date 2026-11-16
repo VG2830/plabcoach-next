@@ -91,7 +91,7 @@ export default function ContactUsPage() {
   return (
     <>
       <JsonLd data={createBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact Us", path: "/contact-us" }])} />
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--ink)]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--ink)]">
       <Header />
 
       <main className="bg-[var(--contact-page-bg)]">

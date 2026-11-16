@@ -723,6 +723,14 @@ useEffect(() => {
                 ))}
               </div>
             </div>
+            <div className="mt-10 flex justify-center">
+              <Link
+                href="/testimonials/"
+                className="inline-flex h-[52px] items-center justify-center rounded-[9px] bg-[#075cae] px-8 text-[13px] font-semibold text-white transition-colors hover:bg-[#064f95]"
+              >
+                View all testimonials
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -780,7 +788,7 @@ useEffect(() => {
                   key={post.id}
                   className="group rounded-[28px] bg-[#d4e3ff] p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#cadafa] hover:shadow-[0_18px_42px_rgba(46,83,143,0.13)] xl:p-6"
                 >
-                  <Link href={`/blogs/${encodeURIComponent(post.slug)}`} className="block">
+                  <Link href={`/${encodeURIComponent(post.slug)}`} className="block">
                     <div className="relative h-[190px] overflow-hidden rounded-[20px] sm:h-[210px] md:h-[190px] lg:h-[210px] xl:h-[224px]">
                       <Image
                         src={post.image}

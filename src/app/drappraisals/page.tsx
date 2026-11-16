@@ -226,7 +226,7 @@ export default function AppraisalPage() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--appraisal-ink)]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--appraisal-ink)]">
       <Header />
 
       <main>

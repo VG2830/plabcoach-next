@@ -13,6 +13,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/course-plan/",
+        has: [{ type: "query", key: "course", value: "mrcp-akt" }],
+        destination: "/mrcgp-akt-preparation/",
+        statusCode: 302,
+      },
+      {
+        source: "/course-plan/",
+        has: [{ type: "query", key: "course", value: "msra" }],
+        destination: "/msra-preparation/",
+        statusCode: 302,
+      },
       // Old live-site pages
       { source: "/homepage/", destination: "/", permanent: true },
       { source: "/homeeo/", destination: "/", permanent: true },
@@ -95,16 +107,16 @@ const nextConfig: NextConfig = {
         destination: "/smartqbank-pres2/",
         permanent: true,
       },
-      // {
-      //   source: "/smartqbank/",
-      //   destination: "/course-plan?course=plab-1-ukmla-akt",
-      //   permanent: true,
-      // },
-      // {
-      //   source: "/smartqbank-pres2/",
-      //   destination: "/smartqbank-pres2/",
-      //   permanent: true,
-      // },
+      {
+        source: "/smartqbank/",
+        destination: "/plab1-ukmla-akt-subscription-plans/",
+        permanent: true,
+      },
+      {
+        source: "/smartqbank-pres2/",
+        destination: "/pres-level-2-subscription-plans/",
+        permanent: true,
+      },
       {
         source: "/pres-3-osce-data-interpretation-subscription-plans-2-new/",
         destination: "/pres-3-osce-data-interpretation-subscription-plans/",

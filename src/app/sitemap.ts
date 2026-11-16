@@ -5,6 +5,8 @@ const siteUrl = "https://plabcoach.com";
 const redirectingBlogSlugs = new Set([
   "osce-pitfalls-30-mistakes-to-avoid-2",
   "osce-pitfalls-30-mistakes-to-avoid-3",
+  "smartqbank",
+  "smartqbank-pres2",
 ]);
 
 const staticPaths = [

@@ -317,7 +317,7 @@ export default function CourseDetail({ course }: { course: CourseDetailData }) {
 
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-[var(--course-detail-heading)]">
+    <div className="min-h-screen overflow-x-clip bg-white text-[var(--course-detail-heading)]">
       <Header />
 
       <main>
