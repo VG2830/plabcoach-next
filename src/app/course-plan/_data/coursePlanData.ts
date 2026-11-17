@@ -10,7 +10,14 @@ export type PlanCardData = {
   oldPrice: string;
   title: string;
   features: string[];
-  schedule: ScheduleItem[];
+  groupDiscount?: {
+    candidateRange: string;
+    price: string;
+    originalPrice: string;
+    inclusions: string;
+    email: string;
+  };
+  schedule: ScheduleItem[] | [];
 };
 
 export type SelfPacedPlan = {
@@ -48,6 +55,7 @@ export type CoursePlanConfig = {
   heroEyebrow: string;
   heroTitle: string;
   heroDescription: string;
+  offerLine?: string;
   programmeTitle: string;
   programmeSubtitle: string;
   testimonials: {
@@ -59,6 +67,7 @@ export type CoursePlanConfig = {
   primaryPlans: PlanCardData[];
   selfPacedPlans: SelfPacedPlan[];
   horizontalPlans: HorizontalPlan[];
+  horizontalPlansTwo: HorizontalPlan[];
   mockPlans: MockPlan[];
 };
 
@@ -82,6 +91,7 @@ const sharedSchedule: ScheduleItem[] = [
     dates: [{ name: "", date: "Next batch dates coming soon. Contact us to reserve a place." }],
   },
 ];
+const smartQBankOffer = "Get 1 Month Extra Free on any PRES2 SmartQBank subscription & Flat 20% Off";
 
 const pres3Plan: CoursePlanConfig = {
   slug: "pres-3",
@@ -89,6 +99,7 @@ const pres3Plan: CoursePlanConfig = {
   heroTitle: "Prepare for PRES 3 with a Complete OSCE and Data Interpretation Plan",
   heroDescription:
     " Structured, result-driven courses designed to help you clear exams and secure your medical career in Ireland.",
+  offerLine: "Get 1 Month Extra Free on any PRES3 SmartQBank subscription & Flat 20% Off",
   programmeTitle: "PRES 3",
   programmeSubtitle: "Comprehensive Programme",
   testimonials: [
@@ -131,78 +142,88 @@ const pres3Plan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "live-course",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
-      price: "£660",
-      oldPrice: "£800",
+      externalHref: "https://courses.plabcoach.com/course/PRES3ComprehensiveProgrammeLIVEOFFLINE-2027-115797/checkout",
+      price: "£690",
+      oldPrice: "£850",
       title: "PRES 3 Comprehensive Programme LIVE Course ",
-      features: ["Smart Notes & Videos", "3 Days LIVE OSCE (Dublin)", "4 Days Online Training"],
-      schedule: sharedSchedule,
+      features: [ "3 Days LIVE OSCE (Dublin)", "4 Days Online Training","SmartNotes","Self-Paced Mastery Videos"],
+      groupDiscount: {
+        candidateRange: "3-5 candidates only in one group",
+        price: "£580",
+        originalPrice: "£740",
+        inclusions: "Includes access to all online materials",
+        email: "support@plabcoach.com",
+      },
+      schedule: [],
     },
     {
       id: "live-online",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
-      price: "£440",
-      oldPrice: "£575",
+      externalHref: "https://courses.plabcoach.com/course/PRES3ComprehensiveProgrammeLIVEONLINEonly-2027-115800/checkout",
+      price: "£475",
+      oldPrice: "£610",
       title: "PRES 3 Comprehensive Programme LIVE Online Mode",
-      features: ["Data Interpretation", "Smart Notes", "Online Support", "History & Communication", "Mastery Videos"],
-      schedule: sharedSchedule,
+      features: ["6 Days of Online Training including OSCE", "SmartNotes","Self-Paced Mastery Videos"],
+      schedule: [],
     },
   ],
   selfPacedPlans: [
     {
-      id: "mastery-videos",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
-      price: "£195",
-      oldPrice: "£250",
-      title: "MASTERY VIDEOS",
-      subtitle: "Video Course Access",
-      features: ["Self-Paced Learning", "OSCE Videos", "Data Interpretation", "Anytime Access"],
-    },
-    {
       id: "full-bundle",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
+      externalHref: "https://courses.plabcoach.com/course/PRES3-OSCEandDataInterpretation-83518/checkout",
       price: "£275",
       oldPrice: "£330",
       title: "FULL BUNDLE",
       subtitle: "SmartNotes + Videos",
-      features: ["Self-Paced Learning", "OSCE Videos", "Data Interpretation", "Anytime Access"],
+      features: ["Self Paced Mastery Videos", "SmartNotes", "Data Interpretation SmartQBank - Self Assessment"],
     },
     {
+      id: "mastery-videos",
+      externalHref: "https://courses.plabcoach.com/course/PRES3-OSCEandDataInterpretationSelf-PacedMasteryVi-84024/checkout",
+      price: "£195",
+      oldPrice: "£250",
+      title: "MASTERY VIDEOS",
+      subtitle: "Video Course Access",
+      features: ["Self Paced Mastery Videos", "Data Interpretation SmartQBank - Self Assessment",],
+    },
+    
+    {
       id: "smartnotes",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
+      externalHref: "https://courses.plabcoach.com/course/PRES3-OSCEDataInterpretation-84141/checkout",
       price: "£140",
       oldPrice: "£175",
       title: "SMARTNOTES",
       subtitle: "Study Notes Only",
-      features: ["Self-Paced Learning", "OSCE Videos", "Data Interpretation", "Anytime Access"],
+      features: ["SmartNotes", "Data Interpretation SmartQBank - Self Assessment"],
     },
   ],
-  horizontalPlans: [
+  horizontalPlansTwo:[
     {
       id: "pres3-osce-programme",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
-      price: "£500",
-      oldPrice: "£550",
+      externalHref: "https://courses.plabcoach.com/course/PRES3OSCE-OnlyTrainingProgramme-2027-116417/checkout",
+      price: "£550",
+      oldPrice: "£625",
       title: "PRES3 OSCE-Only Training Programme",
       features: [
         "History & Communication Skills",
         "3-Day Live OSCE Training",
         "Dublin Practical Sessions",
-        "SmartNotes Included",
-        "Mastery Videos Included",
+        "SmartNotes",
+        "Self PacedMastery Videos",
       ],
       schedule: [
         { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
         { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
       ],
     },
+  ],
+  horizontalPlans: [
     {
       id: "data-interpretation-course",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
+      externalHref: "https://courses.plabcoach.com/course/PRES3DataInterpretationCourse2-DayOnlineLive-84035/checkout",
       price: "£275",
       oldPrice: "£330",
       title: "Data Interpretation Course",
-      features: ["2-Day Live Online Training", "Exam-Focused Learning", "Practical Data Analysis", "Expert-Led Sessions"],
+      features: ["2-Day Live Online Training", "Exam-Focused Learning", "Self PacedMastery Videos", "SmartNotes"],
       schedule: [
         { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
         { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
@@ -212,29 +233,29 @@ const pres3Plan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "data-interpretation-mock",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
+      externalHref: "https://courses.plabcoach.com/course/MockExamforPRES3DataInterpretation-84036/checkout",
       price: "£49",
       oldPrice: "£75",
-      title: "Data Interpretation Mock Exam",
-      features: ["Real Exam Experience", "Timed Assessment", "Performance Review", "Exam-Focused Questions"],
+      title: "SmartMock for Data Interpretation",
+      features: ["OSCE Mock Exam", "Data Interpretation Mock", "Detailed Feedback", "Exam-Focused Questions"],
       note: "Perfect for Practice & Confidence",
     },
-    {
-      id: "osce-mock",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
-      price: "£125",
-      oldPrice: "£175",
-      title: "OSCE Mock Exam",
-      features: ["Simulated OSCE Stations", "Real Exam Environment", "Expert Assessment", "Performance Feedback"],
-      note: "Test Your OSCE Readiness",
-    },
+    // {
+    //   id: "osce-mock",
+    //   externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
+    //   price: "£125",
+    //   oldPrice: "£175",
+    //   title: "OSCE Mock Exam",
+    //   features: ["Simulated OSCE Stations", "Real Exam Environment", "Expert Assessment", "Performance Feedback"],
+    //   note: "Test Your OSCE Readiness",
+    // },
     {
       id: "complete-mock-package",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11244",
+      externalHref: "https://courses.plabcoach.com/course/MockExamforPRES3DataInterpretation-87898/checkout",
       price: "£149",
       oldPrice: "£250",
-      title: "Complete Mock Package",
-      features: ["OSCE Mock Exam", "Data Interpretation Mock", "Detailed Feedback", "Full Exam Preparation"],
+      title: "Complete SmartMock Package",
+      features: ["OSCE Mock Exam", "Data Interpretation Mock", "Detailed Feedback", "Exam-Focused Questions"],
       note: "Best Value for Complete Practice",
     },
   ],
@@ -246,6 +267,7 @@ const plab1Plan: CoursePlanConfig = {
   heroTitle: "Build AKT Confidence with a Structured Plan",
   heroDescription:
     "Choose the preparation route that matches your study style, budget, and exam timeline for PLAB 1 / UKMLA-AKT.",
+  offerLine: "Get 1 Month Extra Free on any PLAB1 SmartQBank subscription & Flat 20% Off",
   programmeTitle: "PLAB 1 / UKMLA-AKT",
   programmeSubtitle: "Knowledge-focused preparation",
   testimonials: [
@@ -288,7 +310,7 @@ const plab1Plan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "plab1-smartqbank",
-      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015",
+      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015/checkout",
       price: "£14.99",
       oldPrice: "£44.99",
       title: "SmartQBank",
@@ -297,7 +319,7 @@ const plab1Plan: CoursePlanConfig = {
     },
     {
       id: "plab1-smartqbank2",
-      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015",
+      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015/checkout",
       price: "£29.99",
       oldPrice: "£99.99",
       title: "SmartQBank",
@@ -306,7 +328,7 @@ const plab1Plan: CoursePlanConfig = {
     },
     {
       id: "plab1-smartnotes",
-      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015",
+      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015/checkout",
       price: "£49.99",
       oldPrice: "£174.99",
       title: "SmartQBank",
@@ -315,7 +337,7 @@ const plab1Plan: CoursePlanConfig = {
     },
     {
       id: "plab1-smartqbank3",
-      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015",
+      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTQuestionBankMockT-84015/checkout",
       price: "£79.99",
       oldPrice: "£299.99",
       title: "SmartQBank",
@@ -334,23 +356,24 @@ const plab1Plan: CoursePlanConfig = {
     //   schedule: [{ name: "Start anytime", date: "Self-paced" }],
     // },
   ],
+  horizontalPlansTwo:[],
   mockPlans: [
     {
       id: "plab1-mock",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11341",
+      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKT1MockTest-84019/checkout",
       price: "£30",
       oldPrice: "£49",
-      title: "AKT Mock Test",
-      features: ["180 Question for 1 Month", "1 Mock Test", "Timed conditions", "Performance feedback", "Weak topic review"],
+      title: "PLAB1 1 SmartMock Test",
+      features: ["1 Mock Test 180 Question for 1 Month","Timed conditions"],
       note: "Best way to assess readiness",
     },
     {
       id: "plab1-complete-mock",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11341",
+      externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTThreeMockTests-84109/checkout",
       price: "£75",
       oldPrice: "£149",
-      title: "Mock + Review Pack",
-      features: ["180 Question for 6 Months", "6 Mock Tests", "Analysis review", "Priority topic list", "Revision guidance"],
+      title: "PLAB1 3 SmartMocks Test",
+      features: ["3 Mock Tests 180 Question for 6 Months","Timed conditions"],
       note: "Ideal before your real exam window",
     },
   ],
@@ -362,6 +385,7 @@ const plab2Plan: CoursePlanConfig = {
   heroTitle: "Prepare for Clinical Skills with a Practical Path",
   heroDescription:
     "Choose a plan built around objective clinical practice, communication mastery, and exam-specific OSCE readiness.",
+  offerLine: "Get 1 Month Extra Free on any PLAB2 SmartQBank subscription & Flat 20% Off",
   programmeTitle: "PLAB 2 / UKMLA-CPSA",
   programmeSubtitle: "Clinical and professional skills programme",
   testimonials: [
@@ -388,39 +412,44 @@ const plab2Plan: CoursePlanConfig = {
     // },
   ],
   primaryPlans: [
-    // {
-    //   id: "plab2-core",
-    //   price: "£399",
-    //   oldPrice: "£499",
-    //   title: "PLAB 2 Core Course",
-    //   features: ["Clinical skills training", "OSCE station rehearsal", "Communication drills", "Faculty feedback"],
-    //   schedule: [
-    //     { label: "Station Practice", dates: [{ name: "Weekend batches", date: "Flexible schedule" }] },
-    //     { label: "Communication Lab", dates: [{ name: "Live sessions", date: "Weekly practice" }] },
-    //   ],
-    // },
-    // {
-    //   id: "plab2-elite",
-    //   price: "£520",
-    //   oldPrice: "£650",
-    //   title: "PLAB 2 Elite Bundle",
-    //   features: ["Everything in Core", "Extra mock circuits", "Personal review", "Priority mentor support"],
-    //   schedule: [
-    //     { label: "Mock Circuit", dates: [{ name: "Multiple batches", date: "Select your date" }] },
-    //   ],
-    // },
+    {
+      id: "plab2-core",
+      externalHref: "",
+      price: "£650",
+      oldPrice: "£800",
+      title: "PLAB 2 Comprehensive Programme OFFLINE (10 days)",
+      features: [ "4 Days of Online Training covering Data Interpretation, History Taking, and Communication Skills.", "2 Days of LIVE OSCE Training with expert faculty guidance and real-exam focused scenarios.","1 Day of Supervised SIMMAN Practice to enhance confidence in managing acute and emergency scenarios.","3 Days of OSCE Practice Sessions with Manikins to develop practical skills and improve examination technique in a simulated clinical environment.","Includes SmartNotes : OSCE Scenarios explained"],
+      groupDiscount: {
+        candidateRange: "3-5 candidates only in one group",
+        price: "£550 ",
+        originalPrice: "£740",
+        inclusions: "Includes access to all online materials",
+        email: "support@plabcoach.com",
+      },
+      schedule: [],
+    },
+    {
+      id: "plab2-elite",
+      externalHref: "",
+      price: "£435",
+      oldPrice: "£575",
+      title: "PLAB 2 Comprehensive Course ONLINE Only (7 days)",
+      features: [ "4 Days of Online Training covering Data Interpretation, History Taking, and Communication Skills.", "2 Days of LIVE Online OSCE Training featuring exam-focused scenarios, clinical skills teaching, and expert faculty guidance.","1 Day of Online Supervised SIMMAN Experience designed to improve confidence in recognising and managing acute and emergency clinical situations in a structured OSCE setting.","Includes SmartNotes : OSCE Scenarios explained"],
+      schedule: [],
+    }
   ],
   selfPacedPlans: [
-    {
-      id: "plab2-videos",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11243",
-      price: "£99",
-      oldPrice: "£120",
-      title: "SmartNotes for 6 months",
-      subtitle: "Comprehensive Study Package",
-      features: ["OSCE walkthroughs", "History taking", "Clinical reasoning", "Anytime access"],
-    },
+    // {
+    //   id: "plab2-videos",
+    //   externalHref: "https://courses.plabcoach.com/courses?categories_ids=11243",
+    //   price: "£99",
+    //   oldPrice: "£120",
+    //   title: "SmartNotes for 6 months",
+    //   subtitle: "Comprehensive Study Package",
+    //   features: ["OSCE walkthroughs", "History taking", "Clinical reasoning", "Anytime access"],
+    // },
   ],
+  horizontalPlansTwo:[],
   horizontalPlans: [
   //  {
   //     id: "plab2-communication-course",
@@ -440,14 +469,15 @@ const plab2Plan: CoursePlanConfig = {
   //   },
   ],
   mockPlans: [
-    // {
-    //   id: "plab2-mock",
-    //   price: "£95",
-    //   oldPrice: "£130",
-    //   title: "PLAB 2 Mock Circuit",
-    //   features: ["Realistic stations", "Exam timing", "Performance review", "Feedback notes"],
-    //   note: "Practice under exam pressure",
-    // },
+    {
+      id: "plab2-mock",
+      price: "£150",
+      oldPrice: "£200",
+      title: "SmartMock for PLAB2 OSCE Face to Face",
+      features: ["Realistic stations", "Exam timing", "Performance review", "Feedback notes"],
+      note: "Practice under exam pressure",
+      externalHref: "",
+    },
     // {
     //   id: "plab2-mock-bundle",
     //   price: "£145",
@@ -465,6 +495,7 @@ const pres2Plan: CoursePlanConfig = {
   heroTitle: "Build Exam Readiness with a Focused PRES 2 Path",
   heroDescription:
     "Structured learning built for Ireland's PRES 2 exam, with practice, revision, and feedback designed around real exam priorities.",
+  offerLine: smartQBankOffer,
   programmeTitle: "PRES 2",
   programmeSubtitle: "Written assessment preparation",
   testimonials: [
@@ -497,41 +528,42 @@ const pres2Plan: CoursePlanConfig = {
   selfPacedPlans: [
     {
       id: "pres2-qbank",
-      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501",
+      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501/checkout",
       price: "£19.99",
       oldPrice: "£49.99",
       title: "SmartQBank",
       subtitle: "Prepared for exam practice",
-      features: ["Unlimited SmartMocks for 1 Month","SmartNotes","Targeted topics", "Timed questions", "Detailed review"],
+      features: ["Unlimited SmartMocks for 1 Month","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
     {
       id: "pres2-notes",
-      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501",
+      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501/checkout",
       price: "£39.99",
       oldPrice: "£109.99",
       title: "SmartQBank",
       subtitle: "Concise revision notes",
-      features: ["Unlimited SmartMocks for 3 Months","SmartNotes","Board-aligned topics", "Rapid revision", "Quick recap"],
+      features: ["Unlimited SmartMocks for 3 Months","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
     {
       id: "plab1-smartnotes2",
-      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501",
+      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501/checkout",
       price: "£66.66",
       oldPrice: "£189.99",
       title: "SmartQBank",
       subtitle: "High-yield revision notes",
-      features: ["Unlimited SmartMocks for 6 Months", "Presentation-based review", "Key learning points"],
+      features: ["Unlimited SmartMocks for 6 Months","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
     {
       id: "plab1-smartqbank3",
-      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501",
+      externalHref: "https://courses.plabcoach.com/course/PRESLEVEL2SmartQBankSmartNotesSmartMock-101501/checkout",
       price: "£99.99",
       oldPrice: "£349.99",
       title: "SmartQBank",
       subtitle: "Question bank access",
-      features: ["Unlimited SmartMocks for 12 Months", "Topic-wise practice", "Timed review mode"],
+      features: ["Unlimited SmartMocks for 12 Months","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
   ],
+  horizontalPlansTwo:[],
   horizontalPlans: [
     // {
     //   id: "pres2-rapid-revision",
@@ -546,20 +578,20 @@ const pres2Plan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "pres2-mock",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11341",
+      externalHref: "https://courses.plabcoach.com/course/PRESLevel2MockTest-84022/checkout",
       price: "£49",
       oldPrice: "£75",
-      title: "1 Mock Test",
-      features: ["180 Question for 1 Month","Timed practice", "Review answers", "Weak topic report", "Exam confidence"],
+      title: "PRES2 One SmartMock 49",
+      features: ["1 Mock Test 180 Question for 1 Month","Timed practice"],
       note: "Great for practice before exam day",
     },
      {
       id: "pres2-mock2",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11341",
+      externalHref: "https://courses.plabcoach.com/course/PRESLevel2MockTestThree-84114/checkout",
       price: "£120",
       oldPrice: "£199",
-      title: "3 Mock Tests",
-      features: ["180 Question for 6 Months","Timed practice", "Review answers", "Weak topic report", "Exam confidence"],
+      title: "PRES2 Three SmartMocks 120",
+      features: ["3 Mock Tests 180 Question for 6 Months","Timed practice"],
       note: "Great for practice before exam day",
     },
   ],
@@ -592,70 +624,79 @@ const ncaPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "nca-complete",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
-      price: "£525",
-      oldPrice: "£625",
-      title: "NCA Complete Plan",
-      features: ["Clinical revision", "Mock scenarios", "Case strategy", "Progress tracking"],
-      schedule: [{ label: "Complete pathway", dates: [{ name: "Flexible", date: "Self-paced" }] }],
+      externalHref: "https://courses.plabcoach.com/course/NationalClinicalAssessmentComprehensiveProgramme-116416",
+      price: "£550",
+      oldPrice: "£650",
+      title: "NCA Comprehensive Programme",
+      features: ["3 Days of Online Training","2 Days LIVE Practical & Clinical Examination Training", "Mock scenarios", "Case strategy"],
+      // schedule: [{ label: "Complete pathway", dates: [{ name: "Flexible", date: "Self-paced" }] }],
+      schedule: [],
+      groupDiscount: {
+        candidateRange: "3-5 candidates only in one group",
+        price: "£500",
+        originalPrice: "£700",
+        inclusions: "Includes access to all online materials",
+        email: "support@plabcoach.com",
+      },
     },
   ],
   selfPacedPlans: [
     {
       id: "nca-videos",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+      externalHref: "https://courses.plabcoach.com/course/NationalClinicalAssessmentNCAFullBundle-84040/checkout",
       price: "£275",
       oldPrice: "£330",
       title: "Full Bundle",
       subtitle: "Topic-based revision",
-      features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
+      features: ["Self Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
     },
     {
       id: "nca-videos2",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+      externalHref: "https://courses.plabcoach.com/course/NationalClinicalAssessmentNCASelf-PacedMasteryVide-84041/checkout",
       price: "£195",
       oldPrice: "£250",
-      title: "Only Self-Paced Mastery Videos:",
+      title: "Only Self-Paced Mastery Videos",
       subtitle: "Topic-based revision",
-      features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
+      features: ["Self Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
     },
     {
       id: "nca-videos3",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+      externalHref: "https://courses.plabcoach.com/course/UKFoundationProgrammeNationalClinicalAssessment-83519/checkout",
       price: "£140",
       oldPrice: "£175",
       title: "Only SmartNotes",
       subtitle: "Topic-based revision",
-      features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
+      features: ["Self Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
     },
-    {
-      id: "nca-videos4",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
-      price: "£200",
-      oldPrice: "£250",
-      title: "One Day Offline Crash Course (City: Solihull)",
-      subtitle: "Topic-based revision",
-      features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
-    },
-    {
-      id: "nca-videos5",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
-      price: "£175",
-      oldPrice: "£225",
-      title: "One Day Online Crash Course",
-      subtitle: "Topic-based revision",
-      features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
-    },
-    {
-      id: "nca-videos6",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
-      price: "£300",
-      oldPrice: "£400",
-      title: "Practice on Manikins : Every Day till Exam",
-      subtitle: "Topic-based revision",
-      features: ["Practice sessions", "Clinical skills development", "Exam preparation"],
-    },
+    // {
+    //   id: "nca-videos4",
+    //   externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+    //   price: "£200",
+    //   oldPrice: "£250",
+    //   title: "One Day Offline Crash Course (City: Solihull)",
+    //   subtitle: "Topic-based revision",
+    //   features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
+    // },
+    // {
+    //   id: "nca-videos5",
+    //   externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+    //   price: "£175",
+    //   oldPrice: "£225",
+    //   title: "One Day Online Crash Course",
+    //   subtitle: "Topic-based revision",
+    //   features: ["Case-based learning", "Clinical reasoning", "Structured notes"],
+    // },
+    // {
+    //   id: "nca-videos6",
+    //   externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+    //   price: "£300",
+    //   oldPrice: "£400",
+    //   title: "Practice on Manikins : Every Day till Exam",
+    //   subtitle: "Topic-based revision",
+    //   features: ["Practice sessions", "Clinical skills development", "Exam preparation"],
+    // },
   ],
+  horizontalPlansTwo:[],
   horizontalPlans: [
     // {
     //   id: "nca-rapid-plan",
@@ -670,7 +711,7 @@ const ncaPlan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "nca-mock",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+      externalHref: "https://courses.plabcoach.com/course/MockExaminationforNCALiveFacetoFace-84043",
       price: "£150",
       oldPrice: "£200",
       title: "Mock Examination for NCA LIVE Face to Face",
@@ -679,7 +720,7 @@ const ncaPlan: CoursePlanConfig = {
     },
      {
       id: "nca-mock2",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+      externalHref: "https://courses.plabcoach.com/course/MockExaminationforNCAOnline-84044/checkout",
       price: "£125",
       oldPrice: "£175",
       title: "Mock Examination for NCA Online ",
@@ -716,16 +757,18 @@ const psaPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "psa-complete",
-      externalHref: "https://courses.plabcoach.com/courses?categories_ids=11246",
+      externalHref: "https://courses.plabcoach.com/course/PrescribingSafetyAssessment-80237/checkout",
       price: "£99",
       oldPrice: "£199",
-      title: "Comprehensive Package for PSA",
-      features: ["Prescribing cases", "Safety review", "Practice tests", "Exam technique"],
-      schedule: [{ label: "Revision access", dates: [{ name: "Flexible", date: "Self-paced" }] }],
+      title: "UKFPO Prescribing Safety Assessment- SmartNotes & Self-Paced Mastery Videos",
+      features: ["Self-Paced Mastery Videos", "Safety review", "Practice tests", "SmartNotes"],
+      // schedule: [{ label: "Revision access", dates: [{ name: "Flexible", date: "Self-paced" }] }],
+      schedule: [],
     },
   ],
   selfPacedPlans: [],
   horizontalPlans: [],
+  horizontalPlansTwo:[],
   mockPlans: [],
 };
 
@@ -768,6 +811,7 @@ const msraPlan: CoursePlanConfig = {
       features: ["High-yield questions", "Timed sets", "Topic analytics"],
     },
   ],
+  horizontalPlansTwo:[],
   horizontalPlans: [
     {
       id: "msra-bootcamp",
@@ -831,6 +875,7 @@ const mrcpAktPlan: CoursePlanConfig = {
     //   features: ["Exam-style questions", "Timed rounds", "Topic analytics"],
     // },
   ],
+  horizontalPlansTwo:[],
   horizontalPlans: [
     // {
     //   id: "mrcp-akt-revision",

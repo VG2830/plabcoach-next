@@ -85,6 +85,11 @@ function PlanHero({ data }: { data: CoursePlanConfig }) {
           <p className="mt-7 max-w-[585px] text-[14px] leading-[1.65] text-[var(--plan-muted)] sm:text-[15px] lg:mt-8 lg:text-[16px]">
             {data.heroDescription}
           </p>
+          {data.offerLine ? (
+            <p className="mt-4 max-w-[585px] text-[14px] font-bold leading-[1.5] text-[var(--plan-button)] sm:text-[15px]">
+              {data.offerLine}
+            </p>
+          ) : null}
         </div>
 
         <DecorativeHeroRings className="right-[-270px] top-[-330px] hidden w-[980px] lg:block xl:right-[-178px] xl:top-[-382px] xl:w-[1110px]" />
@@ -204,6 +209,7 @@ function PrimaryPlanCard({ plan }: { plan: PlanCardData }) {
         </div>
       </div>
 
+      {plan.schedule && plan.schedule.length > 0 ? (     
       <div className="relative z-10 mt-4 border-t border-[var(--plan-divider)] pt-3">
         <h4 className="text-[15px] font-bold text-[var(--plan-text)]">COURSE SCHEDULE</h4>
         <div className="mt-2 space-y-[9px]">
@@ -233,6 +239,25 @@ function PrimaryPlanCard({ plan }: { plan: PlanCardData }) {
           ))}
         </div>
       </div>
+      ) : null} 
+        
+      {plan.groupDiscount ? (
+        <div className="relative z-10 mt-4 rounded-[10px] border border-[var(--plan-card-border)] bg-[var(--plan-card-accent)] p-3 text-[11px] leading-[1.45] text-[var(--plan-text)]">
+          <p className="font-bold text-[var(--plan-ink)]">Group Discount</p>
+          <p className="mt-1">{plan.groupDiscount.candidateRange}</p>
+          <p>
+            <span className="font-bold">{plan.groupDiscount.price}</span>{" "}
+            <span className="line-through">{plan.groupDiscount.originalPrice}</span> per candidate
+          </p>
+          <p>{plan.groupDiscount.inclusions}</p>
+          <p>
+            Email us:{" "}
+            <a className="font-semibold underline" href={`mailto:${plan.groupDiscount.email}`}>
+              {plan.groupDiscount.email}
+            </a>
+          </p>
+        </div>
+      ) : null}
 
       <div className="relative z-10 mt-auto pt-3">
         <EnrolButton href={plan.externalHref} />
@@ -381,6 +406,24 @@ function DataInterpretationSection({ data }: { data: CoursePlanConfig }) {
     </section>
   );
 }
+function DataInterpretationSectionTwo({ data }: { data: CoursePlanConfig }) {
+  return (
+    <section className="relative overflow-hidden bg-white py-[62px] lg:py-[70px]">
+      <DecorativeRings className="right-[-360px] top-[24px] w-[760px] rotate-[19deg] sm:right-[-345px] sm:top-[8px] sm:w-[785px] lg:right-[-330px] lg:top-[-4px] lg:w-[805px]" />
+      {/* <DecorativeRings className="-bottom-[292px] -left-[180px] w-[650px] rotate-[72deg] sm:-bottom-[286px] sm:-left-[172px] sm:w-[675px] lg:-bottom-[280px] lg:-left-[165px] lg:w-[690px]" /> */}
+      <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
+        <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
+        <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">PRES 3 OSCE-Only Training Programme</h2>
+        <div className="mx-auto mt-5 max-w-[1040px] space-y-4">
+          {data.horizontalPlansTwo.map((plan) => (
+            <HorizontalPlanCard key={plan.id} plan={plan} />
+          ))}
+        </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function MockPlanCard({ plan }: { plan: MockPlan }) {
   return (
@@ -418,7 +461,7 @@ function MockSection({ data }: { data: CoursePlanConfig }) {
       {/* <DecorativeRings className="-right-[255px] -top-[365px] w-[720px] rotate-[19deg] sm:-right-[245px] sm:-top-[375px] sm:w-[745px] lg:-right-[235px] lg:-top-[385px] lg:w-[770px]" /> */}
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
         <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
-        <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">Mock - Online Tests</h2>
+        <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">SmartMock - Online Tests</h2>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           {data.mockPlans.map((plan) => (
             <MockPlanCard key={plan.id} plan={plan} />
@@ -438,6 +481,7 @@ export default function CoursePlanPage({ data }: { data: CoursePlanConfig }) {
         <PlanHero data={data} />
         {data.primaryPlans.length > 0 ? <ProgrammeSection data={data} /> : null}
         {data.selfPacedPlans.length > 0 ? <SelfPacedSection data={data} /> : null}
+        {data.horizontalPlansTwo.length > 0 ? <DataInterpretationSectionTwo data={data} /> : null}
         {data.horizontalPlans.length > 0 ? <DataInterpretationSection data={data} /> : null}
         {data.mockPlans.length > 0 ? <MockSection data={data} /> : null}
       </main>

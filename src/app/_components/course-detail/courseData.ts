@@ -879,7 +879,7 @@ const sectionsPres3: CourseSection[] = [
       "● Live Coaching, available both online and offline, with manikin-based practical skills training",
       "● Mock exams — OSCE mocks held live in Dublin, data interpretation mocks available online",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
-      "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practise can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
+      "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
 
     ],
   },
