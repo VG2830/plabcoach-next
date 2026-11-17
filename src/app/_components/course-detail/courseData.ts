@@ -219,7 +219,7 @@ const sectionsPlab1: CourseSection[] = [
       "PLABcoach's PLAB 1 / UKMLA-AKT preparation is built around three components:",
       "● SmartQBank — 5,000+ high-yield SBA questions mapped to the current MLA content map",
       "● SmartNotes — rapid revision summaries organised by clinical presentation",
-      "● SmartMock — unlimited realistic 180-question, 180-minute practise exams",
+      "● SmartMock — unlimited realistic 180-question, 180-minute practice exams",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK licensing exams.",
       "While no course can guarantee an exam result, structured preparation can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
     ],
@@ -238,8 +238,8 @@ const sectionsPlab1: CourseSection[] = [
     paragraphs: [
       "● International medical graduates preparing for their first PLAB 1 attempt.",
       "● Candidates who have attempted PLAB 1 before and want a more structured, feedback-driven approach",
-      "● Doctors who know their home-country clinical practise well but need to recalibrate to UK/NICE-guideline-based decision-making",
-      "● Doctors who want realistic, timed SBA practise rather than generic MCQ banks"
+      "● Doctors who know their home-country clinical practice well but need to recalibrate to UK/NICE-guideline-based decision-making",
+      "● Doctors who want realistic, timed SBA practice rather than generic MCQ banks"
     ],
   },
    
@@ -468,7 +468,7 @@ const sectionsPlab2: CourseSection[] = [
       "● Drill the 8-minute station structure repeatedly — opening, data gathering, examination/procedure, closing and safety-netting",
       "● Practise on manikins matching the type used in the real exam, not generic models",
       "● Rehearse high-stakes communication stations (breaking bad news, consent, capacity) specifically — these are consistently where marks are lost",
-      "● Sit full-circuit mocks under real timing, not isolated station practise only"
+      "● Sit full-circuit mocks under real timing, not isolated station practice only"
     ],
   },
   {
@@ -744,7 +744,7 @@ const sectionsPres2: CourseSection[] = [
     paragraphs: [
       "● International medical graduates preparing for their first PRES 2 attempt.",
       "● Candidates who have attempted PRES 2 before and want more structured, feedback-driven revision.",
-      "● Doctors who know their home-country clinical practise well but need Ireland-specific, IMC-aligned preparation.",
+      "● Doctors who know their home-country clinical practice well but need Ireland-specific, IMC-aligned preparation.",
       "● Candidates weighing whether to sit PRES 2 or rely on a PLAB 1 exemption, and preparing either way.",
       "● Candidates preparing remotely ahead of a PRES 2 sitting."
    
@@ -1055,7 +1055,7 @@ const sectionsNca: CourseSection[] = [
       "● Self-Paced Mastery Videos for flexible preparation",
       "● Live Coaching with Dr. Karam Singh and Dr. Anjum Kohli, online and offline",
       "● SmartMocks Online & Offline",
-      "● Manikin practice - practise till your Exam",
+      "● Manikin practice - practise till your exam",
       "● One Day Crash Course",
       "While no course can guarantee an exam result, structured station practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
     ],
@@ -1346,7 +1346,7 @@ const sectionsMsra: CourseSection[] = [
     heading: "Who Should Take This Course",
     paragraphs: [
       "● Doctors applying to GP training (ST1) or another MSRA-using specialty programme.",
-      "● Candidates who find Professional Dilemmas ranking questions unintuitive and want structured practise on judgement-based scenarios",
+      "● Candidates who find Professional Dilemmas ranking questions unintuitive and want structured practice on judgement-based scenarios",
       "● Doctors who want focused Clinical Problem Solving revision across the full range of specialty topics",
       "● Candidates who have sat the MSRA before and want to improve their combined score for a more competitive specialty"
     ],
