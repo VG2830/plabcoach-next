@@ -99,7 +99,7 @@ const pres3Plan: CoursePlanConfig = {
   heroTitle: "Prepare for PRES 3 with a Complete OSCE and Data Interpretation Plan",
   heroDescription:
     " Structured, result-driven courses designed to help you clear exams and secure your medical career in Ireland.",
-  offerLine: "Get 1 Month Extra Free on any PRES3 SmartQBank subscription & Flat 20% Off",
+  offerLine: "",
   programmeTitle: "PRES 3",
   programmeSubtitle: "Comprehensive Programme",
   testimonials: [
@@ -385,7 +385,7 @@ const plab2Plan: CoursePlanConfig = {
   heroTitle: "Prepare for Clinical Skills with a Practical Path",
   heroDescription:
     "Choose a plan built around objective clinical practice, communication mastery, and exam-specific OSCE readiness.",
-  offerLine: "Get 1 Month Extra Free on any PLAB2 SmartQBank subscription & Flat 20% Off",
+  offerLine: "",
   programmeTitle: "PLAB 2 / UKMLA-CPSA",
   programmeSubtitle: "Clinical and professional skills programme",
   testimonials: [
