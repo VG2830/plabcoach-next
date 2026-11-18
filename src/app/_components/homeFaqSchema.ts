@@ -7,7 +7,7 @@ const homeFaqSchema = {
       "name": "What is PLABcoach?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, question banks, mock exams and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams."
+        "text": "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, SmartQBank, SmartMocks and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams."
       }
     },
     {
@@ -31,7 +31,7 @@ const homeFaqSchema = {
       "name": "Does PLABcoach offer online and in-person courses?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards."
+        "text": "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards."
       }
     },
     {
@@ -44,7 +44,7 @@ const homeFaqSchema = {
     },
     {
       "@type": "Question",
-      "name": "How do I access the courses and question banks?",
+      "name": "How do I access the courses and SmartQBank?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android."
