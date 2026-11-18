@@ -163,7 +163,7 @@ const learningOptions = [
   {
     title: "SmartQBank",
     description:
-      "Extensive question bank with self-assessment tools to strengthen knowledge and exam readiness.",
+      "Extensive SmartQBank with self-assessment tools to strengthen knowledge and exam readiness.",
     icon: "/smart_banks_icon.svg",
   },
   {
@@ -175,7 +175,7 @@ const learningOptions = [
   {
     title: "SmartMocks",
     description:
-      "Realistic mock examinations to assess performance, build confidence, and improve exam technique.",
+      "Realistic SmartMocks to assess performance, build confidence, and improve exam technique.",
     icon: "/smart_mocks_cour_icon.svg",
   },
   {
@@ -285,7 +285,7 @@ export default function Courses() {
                   <br className="hidden sm:block" /> Career. One Exam at a Time.
                 </h1>
                 <p className="mt-[22px] max-w-[530px] text-[12px] leading-[1.62] text-[var(--courses-copy)] sm:text-[16px]">
-                  Explore structured courses, question banks, SmartNotes, mock exams and expert-led learning designed for medical professionals preparing for key UK and Ireland medical assessments.
+                  Explore structured courses, SmartQBank, SmartNotes, SmartMocks and expert-led learning designed for medical professionals preparing for key UK and Ireland medical assessments.
                 </p>
 
                 <div className="mt-[48px] flex flex-col gap-[14px] sm:flex-row sm:gap-[18px]">

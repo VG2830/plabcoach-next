@@ -173,17 +173,17 @@ const pres3Plan: CoursePlanConfig = {
       price: "£275",
       oldPrice: "£330",
       title: "FULL BUNDLE",
-      subtitle: "SmartNotes + Videos",
-      features: ["Self Paced Mastery Videos", "SmartNotes", "Data Interpretation SmartQBank - Self Assessment"],
+      subtitle: "SmartNotes + Self-Paced Mastery Videos",
+      features: ["Self-Paced Mastery Videos", "SmartNotes", "Data Interpretation SmartQBank - Self Assessment"],
     },
     {
       id: "mastery-videos",
       externalHref: "https://courses.plabcoach.com/course/PRES3-OSCEandDataInterpretationSelf-PacedMasteryVi-84024/checkout",
       price: "£195",
       oldPrice: "£250",
-      title: "MASTERY VIDEOS",
+      title: "SELF-PACED MASTERY VIDEOS",
       subtitle: "Video Course Access",
-      features: ["Self Paced Mastery Videos", "Data Interpretation SmartQBank - Self Assessment",],
+      features: ["Self-Paced Mastery Videos", "Data Interpretation SmartQBank - Self Assessment",],
     },
     
     {
@@ -208,7 +208,7 @@ const pres3Plan: CoursePlanConfig = {
         "3-Day Live OSCE Training",
         "Dublin Practical Sessions",
         "SmartNotes",
-        "Self PacedMastery Videos",
+        "Self-Paced Mastery Videos",
       ],
       schedule: [
         { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
@@ -223,7 +223,7 @@ const pres3Plan: CoursePlanConfig = {
       price: "£275",
       oldPrice: "£330",
       title: "Data Interpretation Course",
-      features: ["2-Day Live Online Training", "Exam-Focused Learning", "Self PacedMastery Videos", "SmartNotes"],
+      features: ["2-Day Live Online Training", "Exam-Focused Learning", "Self-Paced Mastery Videos", "SmartNotes"],
       schedule: [
         { name: "Batch 1", date: "Next batch dates coming soon. Contact us to reserve a place." },
         { name: "Batch 2", date: "Next batch dates coming soon. Contact us to reserve a place." },
@@ -237,7 +237,7 @@ const pres3Plan: CoursePlanConfig = {
       price: "£49",
       oldPrice: "£75",
       title: "SmartMock for Data Interpretation",
-      features: ["OSCE Mock Exam", "Data Interpretation Mock", "Detailed Feedback", "Exam-Focused Questions"],
+      features: ["OSCE Mock Exam", "Data Interpretation SmartMock", "Detailed Feedback", "Exam-Focused Questions"],
       note: "Perfect for Practice & Confidence",
     },
     // {
@@ -255,7 +255,7 @@ const pres3Plan: CoursePlanConfig = {
       price: "£149",
       oldPrice: "£250",
       title: "Complete SmartMock Package",
-      features: ["OSCE Mock Exam", "Data Interpretation Mock", "Detailed Feedback", "Exam-Focused Questions"],
+      features: ["OSCE Mock Exam", "Data Interpretation SmartMock", "Detailed Feedback", "Exam-Focused Questions"],
       note: "Best Value for Complete Practice",
     },
   ],
@@ -314,7 +314,7 @@ const plab1Plan: CoursePlanConfig = {
       price: "£14.99",
       oldPrice: "£44.99",
       title: "SmartQBank",
-      subtitle: "Question bank access",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 1 Month", "Topic-wise practice", "Timed review mode"],
     },
     {
@@ -323,7 +323,7 @@ const plab1Plan: CoursePlanConfig = {
       price: "£29.99",
       oldPrice: "£99.99",
       title: "SmartQBank",
-      subtitle: "Question bank access",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 3 Months", "Topic-wise practice", "Timed review mode"],
     },
     {
@@ -332,8 +332,8 @@ const plab1Plan: CoursePlanConfig = {
       price: "£49.99",
       oldPrice: "£174.99",
       title: "SmartQBank",
-      subtitle: "High-yield revision notes",
-      features: ["Unlimited SmartMocks for 6 Months", "Presentation-based review", "Key learning points"],
+      subtitle: "SmartQBank Access",
+      features: ["Unlimited SmartMocks for 6 Months", "Presentation-based review", "Timed review mode"],
     },
     {
       id: "plab1-smartqbank3",
@@ -341,7 +341,7 @@ const plab1Plan: CoursePlanConfig = {
       price: "£79.99",
       oldPrice: "£299.99",
       title: "SmartQBank",
-      subtitle: "Question bank access",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 12 Months", "Topic-wise practice", "Timed review mode"],
     },
   ],
@@ -363,7 +363,7 @@ const plab1Plan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKT1MockTest-84019/checkout",
       price: "£30",
       oldPrice: "£49",
-      title: "PLAB1 1 SmartMock Test",
+      title: "PLAB1 1 SmartMock",
       features: ["1 Mock Test 180 Question for 1 Month","Timed conditions"],
       note: "Best way to assess readiness",
     },
@@ -372,7 +372,7 @@ const plab1Plan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/PLAB1UKMLAAppliedKnowledgeTestAKTThreeMockTests-84109/checkout",
       price: "£75",
       oldPrice: "£149",
-      title: "PLAB1 3 SmartMocks Test",
+      title: "PLAB1 3 SmartMocks",
       features: ["3 Mock Tests 180 Question for 6 Months","Timed conditions"],
       note: "Ideal before your real exam window",
     },
@@ -389,32 +389,32 @@ const plab2Plan: CoursePlanConfig = {
   programmeTitle: "PLAB 2 / UKMLA-CPSA",
   programmeSubtitle: "Clinical and professional skills programme",
   testimonials: [
-    // {
-    //   name: "Dr. Hina Shah",
-    //   role: "Doctor",
-    //   country: "UK",
-    //   quote:
-    //     "The clinical scenarios and communication prep made a real difference. I felt calmer in the exam because I had rehearsed the structure and flow of the stations.",
-    // },
-    // {
-    //   name: "Dr. Omar Hassan",
-    //   role: "IMG",
-    //   country: "EGYPT",
-    //   quote:
-    //     "The practical coaching and mock stations are very realistic. It helped me understand what the examiner actually looks for in each scenario.",
-    // },
-    // {
-    //   name: "Dr. Zainab Ali",
-    //   role: "Doctor",
-    //   country: "SAUDI ARABIA",
-    //   quote:
-    //     "I was able to practise communication and clinical reasoning in a focused way. The feedback helped me correct small mistakes that had been causing me to lose time.",
-    // },
+    {
+      name: "Dr. Hina Shah",
+      role: "Doctor",
+      country: "UK",
+      quote:
+        "The clinical scenarios and communication prep made a real difference. I felt calmer in the exam because I had rehearsed the structure and flow of the stations.",
+    },
+    {
+      name: "Dr. Omar Hassan",
+      role: "IMG",
+      country: "EGYPT",
+      quote:
+        "The practical coaching and mock stations are very realistic. It helped me understand what the examiner actually looks for in each scenario.",
+    },
+    {
+      name: "Dr. Zainab Ali",
+      role: "Doctor",
+      country: "SAUDI ARABIA",
+      quote:
+        "I was able to practise communication and clinical reasoning in a focused way. The feedback helped me correct small mistakes that had been causing me to lose time.",
+    },
   ],
   primaryPlans: [
     {
       id: "plab2-core",
-      externalHref: "",
+      externalHref: "https://courses.plabcoach.com/course/PLAB2ComprehensiveProgrammeOFFLINE-2027-111014/checkout",
       price: "£650",
       oldPrice: "£800",
       title: "PLAB 2 Comprehensive Programme OFFLINE (10 days)",
@@ -430,7 +430,7 @@ const plab2Plan: CoursePlanConfig = {
     },
     {
       id: "plab2-elite",
-      externalHref: "",
+      externalHref: "https://courses.plabcoach.com/course/PLAB2ComprehensiveCourseONLINEOnly-2027-111018/checkout",
       price: "£435",
       oldPrice: "£575",
       title: "PLAB 2 Comprehensive Course ONLINE Only (7 days)",
@@ -439,15 +439,15 @@ const plab2Plan: CoursePlanConfig = {
     }
   ],
   selfPacedPlans: [
-    // {
-    //   id: "plab2-videos",
-    //   externalHref: "https://courses.plabcoach.com/courses?categories_ids=11243",
-    //   price: "£99",
-    //   oldPrice: "£120",
-    //   title: "SmartNotes for 6 months",
-    //   subtitle: "Comprehensive Study Package",
-    //   features: ["OSCE walkthroughs", "History taking", "Clinical reasoning", "Anytime access"],
-    // },
+    {
+      id: "plab2-videos",
+      externalHref: "https://courses.plabcoach.com/course/PLAB2-UKMLA-CPSA-83517/checkout",
+      price: "£99",
+      oldPrice: "£120",
+      title: "SmartNotes for 6 months",
+      subtitle: "Comprehensive Study Package",
+      features: ["OSCE walkthroughs", "History taking", "Clinical reasoning", "Anytime access"],
+    },
   ],
   horizontalPlansTwo:[],
   horizontalPlans: [
@@ -476,7 +476,7 @@ const plab2Plan: CoursePlanConfig = {
       title: "SmartMock for PLAB2 OSCE Face to Face",
       features: ["Realistic stations", "Exam timing", "Performance review", "Feedback notes"],
       note: "Practice under exam pressure",
-      externalHref: "",
+      externalHref: "https://courses.plabcoach.com/course/SmartMockforPLAB2OSCEFacetoFace-111021/checkout",
     },
     // {
     //   id: "plab2-mock-bundle",
@@ -532,7 +532,7 @@ const pres2Plan: CoursePlanConfig = {
       price: "£19.99",
       oldPrice: "£49.99",
       title: "SmartQBank",
-      subtitle: "Prepared for exam practice",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 1 Month","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
     {
@@ -541,7 +541,7 @@ const pres2Plan: CoursePlanConfig = {
       price: "£39.99",
       oldPrice: "£109.99",
       title: "SmartQBank",
-      subtitle: "Concise revision notes",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 3 Months","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
     {
@@ -550,7 +550,7 @@ const pres2Plan: CoursePlanConfig = {
       price: "£66.66",
       oldPrice: "£189.99",
       title: "SmartQBank",
-      subtitle: "High-yield revision notes",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 6 Months","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
     {
@@ -559,7 +559,7 @@ const pres2Plan: CoursePlanConfig = {
       price: "£99.99",
       oldPrice: "£349.99",
       title: "SmartQBank",
-      subtitle: "Question bank access",
+      subtitle: "SmartQBank Access",
       features: ["Unlimited SmartMocks for 12 Months","SmartNotes","Self-Paced Mastery Videos", "Timed questions"],
     },
   ],
@@ -581,7 +581,7 @@ const pres2Plan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/PRESLevel2MockTest-84022/checkout",
       price: "£49",
       oldPrice: "£75",
-      title: "PRES2 One SmartMock 49",
+      title: "PRES2 One SmartMock",
       features: ["1 Mock Test 180 Question for 1 Month","Timed practice"],
       note: "Great for practice before exam day",
     },
@@ -590,7 +590,7 @@ const pres2Plan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/PRESLevel2MockTestThree-84114/checkout",
       price: "£120",
       oldPrice: "£199",
-      title: "PRES2 Three SmartMocks 120",
+      title: "PRES2 Three SmartMocks",
       features: ["3 Mock Tests 180 Question for 6 Months","Timed practice"],
       note: "Great for practice before exam day",
     },
@@ -628,7 +628,7 @@ const ncaPlan: CoursePlanConfig = {
       price: "£550",
       oldPrice: "£650",
       title: "NCA Comprehensive Programme",
-      features: ["3 Days of Online Training","2 Days LIVE Practical & Clinical Examination Training", "Mock scenarios", "Case strategy"],
+      features: ["3 Days of Online Training","2 Days LIVE Practical & Clinical Examination Training", "SmartMock scenarios", "Case strategy"],
       // schedule: [{ label: "Complete pathway", dates: [{ name: "Flexible", date: "Self-paced" }] }],
       schedule: [],
       groupDiscount: {
@@ -648,7 +648,7 @@ const ncaPlan: CoursePlanConfig = {
       oldPrice: "£330",
       title: "Full Bundle",
       subtitle: "Topic-based revision",
-      features: ["Self Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
+      features: ["Self-Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
     },
     {
       id: "nca-videos2",
@@ -657,7 +657,7 @@ const ncaPlan: CoursePlanConfig = {
       oldPrice: "£250",
       title: "Only Self-Paced Mastery Videos",
       subtitle: "Topic-based revision",
-      features: ["Self Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
+      features: ["Self-Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
     },
     {
       id: "nca-videos3",
@@ -666,7 +666,7 @@ const ncaPlan: CoursePlanConfig = {
       oldPrice: "£175",
       title: "Only SmartNotes",
       subtitle: "Topic-based revision",
-      features: ["Self Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
+      features: ["Self-Paced Mastery Videos", "Clinical reasoning", "SmartNotes"],
     },
     // {
     //   id: "nca-videos4",
@@ -714,7 +714,7 @@ const ncaPlan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/MockExaminationforNCALiveFacetoFace-84043",
       price: "£150",
       oldPrice: "£200",
-      title: "Mock Examination for NCA LIVE Face to Face",
+      title: "SmartMock for NCA LIVE Face to Face",
       features: ["Timed cases", "Clinical reasoning review", "Feedback", "Confidence building"],
       note: "Focused practice before the real assessment",
     },
@@ -723,7 +723,7 @@ const ncaPlan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/MockExaminationforNCAOnline-84044/checkout",
       price: "£125",
       oldPrice: "£175",
-      title: "Mock Examination for NCA Online ",
+      title: "SmartMock for NCA Online",
       features: ["Timed cases", "Clinical reasoning review", "Feedback", "Confidence building"],
       note: "Focused practice before the real assessment",
     },
@@ -760,7 +760,7 @@ const psaPlan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/PrescribingSafetyAssessment-80237/checkout",
       price: "£99",
       oldPrice: "£199",
-      title: "UKFPO Prescribing Safety Assessment- SmartNotes & Self-Paced Mastery Videos",
+      title: "UKFPO Prescribing Safety Assessment - SmartNotes & Self-Paced Mastery Videos",
       features: ["Self-Paced Mastery Videos", "Safety review", "Practice tests", "SmartNotes"],
       // schedule: [{ label: "Revision access", dates: [{ name: "Flexible", date: "Self-paced" }] }],
       schedule: [],

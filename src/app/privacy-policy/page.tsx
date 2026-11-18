@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
               <tr><td className="border-b border-[#e7edf5] px-4 py-3">Send course updates and exam reminders</td><td className="border-b border-[#e7edf5] px-4 py-3">Legitimate interests (you can opt out at any time)</td></tr>
               <tr><td className="border-b border-[#e7edf5] px-4 py-3">Send offers and news about new courses</td><td className="border-b border-[#e7edf5] px-4 py-3">Consent</td></tr>
               <tr><td className="border-b border-[#e7edf5] px-4 py-3">If introduced, measure website use and advertising through analytics and marketing cookies</td><td className="border-b border-[#e7edf5] px-4 py-3">Consent before use</td></tr>
-              <tr><td className="px-4 py-3">Improve our courses and question banks using anonymised learning data</td><td className="px-4 py-3">Legitimate interests</td></tr>
+              <tr><td className="px-4 py-3">Improve our courses and SmartQBank using anonymised learning data</td><td className="px-4 py-3">Legitimate interests</td></tr>
             </tbody>
           </table>
         </div>

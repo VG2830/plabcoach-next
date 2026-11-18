@@ -209,7 +209,7 @@ const sectionsPlab1: CourseSection[] = [
       "● Work through the full MLA content map systematically rather than topic-hopping.",
       "● Practise high volumes of realistic SBA questions under timed conditions",
       "● Anchor every answer to current NICE guidance and UK-standard first-line management, not home-country protocols",
-      "● Sit at least one full-length, correctly-timed mock exam before the real sitting"
+      "● Sit at least one full-length, correctly-timed SmartMock before the real sitting"
     ],
   },
   {
@@ -468,7 +468,7 @@ const sectionsPlab2: CourseSection[] = [
       "● Drill the 8-minute station structure repeatedly — opening, data gathering, examination/procedure, closing and safety-netting",
       "● Practise on manikins matching the type used in the real exam, not generic models",
       "● Rehearse high-stakes communication stations (breaking bad news, consent, capacity) specifically — these are consistently where marks are lost",
-      "● Sit full-circuit mocks under real timing, not isolated station practice only"
+      "● Sit full-circuit SmartMocks under real timing, not isolated station practice only"
     ],
   },
   {
@@ -477,7 +477,7 @@ const sectionsPlab2: CourseSection[] = [
     paragraphs: [
       "PLABcoach's PLAB 2 / UKMLA-CPSA preparation centres on hands-on, manikin-based practice rather than video-only learning:",
       "● Small-group live coaching with manikins matching real exam equipment.",
-      "● Full-circuit simulated mock exams under real 8-minute timing",
+      "● Full-circuit SmartMocks under real 8-minute timing",
       "● Communication and breaking-bad-news station coaching, delivered by NHS-experienced instructors",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK licensing exams.",
       "PLAB 2 Comprehensive Course 10 Days",
@@ -497,7 +497,7 @@ const sectionsPlab2: CourseSection[] = [
       "● Candidates who know the clinical content well but need structured performance and station-timing practice.",
       "● Candidates who have attempted PLAB 2 before and want a more feedback-driven, targeted preparation strategy",
       "● Doctors who need to build confidence in communication-heavy stations (breaking bad news, consent, capacity)",
-      "● Candidates preparing to travel to Manchester and wanting realistic, timed, manikin-based mock practice beforehand"
+      "● Candidates preparing to travel to Manchester and wanting realistic, timed, manikin-based SmartMock practice beforehand"
     ],
   },
 ];
@@ -724,7 +724,7 @@ const sectionsPres2: CourseSection[] = [
     heading: "How PLABcoach Helps",
     paragraphs: [
       "PLABcoach's PRES 2 preparation includes:",
-      "● SmartQBank for PRES 2 — question bank with online mock tests",
+      "● SmartQBank for PRES 2 with online SmartMocks",
       "● Structured coverage across all five PRES 2 content areas",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
       "While no course can guarantee an exam result, structured preparation across all five PRES 2 content areas can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts."
@@ -735,7 +735,7 @@ const sectionsPres2: CourseSection[] = [
     heading: "PRES 2 SmartQBank",
     paragraphs: [
       "SmartQBank for PRES 2 is PLABcoach's question bank for the Irish Medical Council's PRES 2 exam. It covers all five PRES 2 areas: medicine and general practice, surgery, obstetrics and gynaecology, paediatrics, and psychiatry.",
-      "It includes online mock tests, so you can practise under exam conditions and see where you need more work before the real sitting."
+      "It includes online SmartMocks, so you can practise under exam conditions and see where you need more work before the real sitting."
     ],
   },
   {
@@ -877,7 +877,7 @@ const sectionsPres3: CourseSection[] = [
       "● SmartNotes covering all assessed domains — communication, data interpretation, and practical skills",
       "● Self-Paced Mastery Videos for flexible, on-your-own-schedule preparation",
       "● Live Coaching, available both online and offline, with manikin-based practical skills training",
-      "● Mock exams — OSCE mocks held live in Dublin, data interpretation mocks available online",
+      "● SmartMocks — OSCE SmartMocks held live in Dublin, data interpretation SmartMocks available online",
       "Courses are led by Dr Karam Singh (M.D., MRCGP), NHS GP and founder of PLABcoach with over a decade of experience preparing IMGs for UK and Ireland licensing exams.",
       "While no course can guarantee an exam result, structured, feedback-driven OSCE and data interpretation practice can improve exam readiness and help candidates avoid the mistakes that often lead to repeat attempts.",
 
@@ -891,7 +891,7 @@ const sectionsPres3: CourseSection[] = [
       "● Candidates who know the clinical content well but need structured station-timing and performance practice",
       "● Candidates who have attempted PRES 3 before and want more targeted, feedback-driven preparation",
       "● Doctors who need focused data interpretation practice (ECGs, blood gases, bloods, radiology) alongside clinical stations",
-      "● Candidates planning travel to Ireland and wanting realistic mock practice beforehand."
+      "● Candidates planning travel to Ireland and wanting realistic SmartMock practice beforehand."
     ],
   },
 ];
@@ -1472,7 +1472,7 @@ const sectionsMrcpAkt: CourseSection[] = [
     id: "how-helps",
     heading: "How PLABcoach Helps",
     paragraphs: [
-      "PLABcoach’s current MRCGP-AKT course offering and materials should be confirmed with the team before this section is finalised. The live site currently lists MRCGP-AKT under “Upcoming Courses”, so specific details such as the question-bank size, question format, course structure, and delivery method should reflect the materials actually being developed rather than being inferred from the structure of other exam-preparation courses.",
+      "PLABcoach’s current MRCGP-AKT course offering and materials should be confirmed with the team before this section is finalised. The live site currently lists MRCGP-AKT under “Upcoming Courses”, so specific details such as the SmartQBank size, question format, course structure, and delivery method should reflect the materials actually being developed rather than being inferred from the structure of other exam-preparation courses.",
       "While no course can guarantee an examination result, structured revision aligned with the AKT’s published content weighting can support exam readiness and help candidates identify and address potential gaps across the different assessment areas."
     ],
   },

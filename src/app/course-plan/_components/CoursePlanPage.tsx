@@ -192,7 +192,7 @@ function PrimaryPlanCard({ plan }: { plan: PlanCardData }) {
           <span className="text-[48px] font-bold leading-none tracking-[-0.035em] text-[var(--plan-ink)] transition-transform duration-300 group-hover:-translate-y-[1px] sm:text-[52px] xl:text-[64px]">
             {plan.price}
           </span>
-          <span className="mb-[7px] text-[12px] font-semibold text-[var(--plan-old-price)] line-through xl:text-[24px]">{plan.oldPrice}</span>
+          <span className="mb-[7px] text-[18px] font-semibold text-[var(--plan-old-price)] line-through xl:text-[24px]">{plan.oldPrice}</span>
         </div>
         <h3 className="mt-2 text-[23px] font-bold leading-tight text-[var(--plan-blue)] sm:text-[25px]">{plan.title}</h3>
       </div>
@@ -243,11 +243,11 @@ function PrimaryPlanCard({ plan }: { plan: PlanCardData }) {
         
       {plan.groupDiscount ? (
         <div className="relative z-10 mt-4 rounded-[10px] border border-[var(--plan-card-border)] bg-[var(--plan-card-accent)] p-3 text-[11px] leading-[1.45] text-[var(--plan-text)]">
-          <p className="font-bold text-[var(--plan-ink)]">Group Discount</p>
-          <p className="mt-1">{plan.groupDiscount.candidateRange}</p>
+          <p className="font-bold text-[var(--plan-ink)] text-[14px]">Group Discount</p>
+          <p className="mt-1 text-[14px]">{plan.groupDiscount.candidateRange}</p>
           <p>
-            <span className="font-bold">{plan.groupDiscount.price}</span>{" "}
-            <span className="line-through">{plan.groupDiscount.originalPrice}</span> per candidate
+            <span className="font-bold text-[18px]">{plan.groupDiscount.price}</span>{" "}
+            <span className="line-through text-[14px]">{plan.groupDiscount.originalPrice}</span> per candidate
           </p>
           <p>{plan.groupDiscount.inclusions}</p>
           <p>
@@ -303,7 +303,7 @@ function SelfPacedCard({ plan }: { plan: SelfPacedPlan }) {
         <div className="relative z-10">
           <div className="flex items-end gap-4">
             <span className="text-[42px] font-bold leading-none tracking-[-0.03em] text-[var(--plan-ink)] transition-[font-size] duration-300 group-hover:text-[54px]">{plan.price}</span>
-            <span className="mb-[6px] text-[12px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
+            <span className="mb-[6px] text-[18px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
           </div>
           <h3 className="mt-3 text-[20px] font-bold leading-tight text-[var(--plan-ink)] transition-colors duration-300 group-hover:text-[var(--plan-blue)] sm:text-[21px]">{plan.title}</h3>
         </div>
@@ -332,7 +332,7 @@ function SelfPacedSection({ data }: { data: CoursePlanConfig }) {
       <DecorativeRings className="-left-[290px] -top-[148px] w-[760px] rotate-[15deg]" />
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
         <div className="mx-auto max-w-[1480px]">
-          <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px]">SmartNotes &amp; Self-Paced Mastery Videos</h2>
+          {/* <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px]">SmartNotes &amp; Self-Paced Mastery Videos</h2> */}
           <div className="mt-7 grid gap-4 md:grid-cols-3">
             {data.selfPacedPlans.map((plan) => (
               <SelfPacedCard key={plan.id} plan={plan} />
@@ -352,7 +352,7 @@ function HorizontalPlanCard({ plan }: { plan: HorizontalPlan }) {
       <div className="flex flex-col">
         <div className="flex items-end gap-4">
           <span className="text-[53px] font-bold leading-none tracking-[-0.03em] text-[var(--plan-ink)] transition-transform duration-300 group-hover:-translate-y-[1px]">{plan.price}</span>
-          <span className="mb-[7px] text-[12px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
+          <span className="mb-[7px] text-[18px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
         </div>
         <h3 className="mt-2 text-[25px] font-bold leading-tight text-[var(--plan-blue)]">{plan.title}</h3>
         <div className="mt-auto pt-5 lg:max-w-[390px]">
@@ -432,7 +432,7 @@ function MockPlanCard({ plan }: { plan: MockPlan }) {
     >
       <div className="flex items-end gap-3">
         <span className="text-[42px] font-bold leading-none tracking-[-0.03em] text-[var(--plan-ink)] transition-transform duration-300 group-hover:-translate-y-[1px]">{plan.price}</span>
-        <span className="mb-[6px] text-[12px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
+        <span className="mb-[6px] text-[18px] font-semibold text-[var(--plan-old-price)] line-through">{plan.oldPrice}</span>
       </div>
       <h3 className="mt-3 min-h-[54px] text-[21px] font-bold leading-[1.08] text-[var(--plan-ink)] transition-colors duration-300 group-hover:text-[var(--plan-blue)]">{plan.title}</h3>
       <div className="mt-4">
@@ -461,7 +461,7 @@ function MockSection({ data }: { data: CoursePlanConfig }) {
       {/* <DecorativeRings className="-right-[255px] -top-[365px] w-[720px] rotate-[19deg] sm:-right-[245px] sm:-top-[375px] sm:w-[745px] lg:-right-[235px] lg:-top-[385px] lg:w-[770px]" /> */}
       <div className="relative z-10 mx-auto w-[var(--site-width)] max-w-[var(--container-max)]">
         <div className="mx-auto w-full lg:w-[79%] 2xl:w-full">
-        <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">SmartMock - Online Tests</h2>
+        <h2 className="text-[25px] font-bold tracking-[-0.015em] text-[var(--plan-ink)] sm:text-[26px] xl:text-[36px]">SmartMocks</h2>
         <div className="mt-4 grid gap-5 md:grid-cols-3">
           {data.mockPlans.map((plan) => (
             <MockPlanCard key={plan.id} plan={plan} />
