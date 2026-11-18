@@ -335,13 +335,13 @@ export default function Header() {
           </Link>
           <span className="hidden h-[18px] w-px bg-[#dce5f0] lg:block" aria-hidden="true" />
           <a
-            href="https://courses.plabcoach.com/"
+            href="https://courses.plabcoach.com/login"
             className="hidden text-[14px] font-medium text-[var(--nav-muted)] transition hover:text-[var(--primary)] sm:inline"
           >
             Sign in
           </a>
           <a
-            href="https://courses.plabcoach.com/"
+            href="https://courses.plabcoach.com/register"
             className="inline-flex h-[40px] items-center justify-center rounded-[7px] bg-[var(--primary)] px-4 text-[14px] font-semibold text-white shadow-[0_8px_18px_rgba(11,93,168,0.18)] transition-[filter] hover:brightness-105"
           >
             Sign up
@@ -495,7 +495,7 @@ export default function Header() {
               <span>Contact Us</span>
             </Link>
             <a
-              href="https://courses.plabcoach.com/"
+              href="https://courses.plabcoach.com/login"
               onClick={closeMobileMenu}
               className="flex min-h-[46px] items-center px-2 transition hover:text-[var(--primary)] sm:hidden"
             >
