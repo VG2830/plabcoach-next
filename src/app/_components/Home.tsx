@@ -31,7 +31,7 @@ const offerTop = [
 const offerBottom = [
   {
     title: "SmartMocks",
-    description: "Full-length mock exams simulating real exam conditions, with personalised feedback",
+    description: "Full-length SmartMocks simulating real exam conditions, with personalised feedback",
     icon: "/second_sec_exam_icon_2.svg",
   },
   {
@@ -44,7 +44,7 @@ const offerBottom = [
 const offerTall = [
   {
     title: "SmartQBank",
-    description: "Question banks for PLAB I/UKMLA-AKT and PRES 2, with performance analytics to track progress.",
+    description: "SmartQBank for PLAB 1/UKMLA-AKT and PRES 2, with performance analytics to track progress.",
     icon: "/second_sec_question_icon_2.svg",
   },
   {
@@ -185,12 +185,12 @@ const subscriptionCourses: SubscriptionCourse[] = [
 ];
 
 const faqs: { question: string; answer: string; afterAnswer?: ReactNode }[] = [
-  { question: "What is PLABcoach?", answer: "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, question banks, mock exams and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams." },
+  { question: "What is PLABcoach?", answer: "PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs) and doctors training in the UK. It was founded by Dr Karam Singh (M.D., MRCGP), an NHS GP, and offers structured courses, SmartQBank, SmartMocks and clinical skills coaching for PLAB, UKMLA, PRES and UK Foundation Programme exams." },
   { question: "Which exams does PLABcoach prepare you for?", answer: "PLABcoach prepares candidates for PLAB 1 (UKMLA AKT) and PLAB 2 (UKMLA CPSA), PRES 2 and PRES 3 for the Irish Medical Council, and the National Clinical Assessment (NCA) and Prescribing Safety Assessment (PSA) for the UK Foundation Programme. Courses for the MRCGP AKT and MSRA are launching soon, and USMLE and AMC courses are coming soon." },
   { question: "Is PLAB the same as the UKMLA?", answer: "PLAB now meets the GMC’s Medical Licensing Assessment (MLA) requirements. PLAB 1 is set to the same standard as the UKMLA Applied Knowledge Test (AKT), and PLAB 2 to the same standard as the Clinical and Professional Skills Assessment (CPSA). International medical graduates still book exams called PLAB 1 and PLAB 2 through the GMC." },
-  { question: "Does PLABcoach offer online and in-person courses?", answer: "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank question banks and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards." },
+  { question: "Does PLABcoach offer online and in-person courses?", answer: "Yes. PLABcoach combines online study with live online and in-person training. Online resources include SmartNotes, Self-Paced Mastery Videos, SmartQBank and online SmartMocks. In-person training includes manikin practice, SimMan sessions and offline SmartMocks. Live sessions run online and in person, and every session is recorded so you can revise from it afterwards." },
   { question: "Who teaches the PLABcoach courses?", answer: "Courses are taught by Dr Karam Singh (M.D., MRCGP), founder of PLABcoach and an NHS GP with over a decade of teaching experience, and Dr Anjum Kohli (M.D.). Both teach the core subjects the GMC requires and draw on their own clinical experience to help doctors prepare for licensing exams, including doctors returning after a career break." },
-  { question: "How do I access the courses and question banks?", answer: "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.", afterAnswer: (<> <div className="flex flex-wrap items-center gap-3 px-5 pb-4"><a href="https://courses.plabcoach.com/" target="_blank" rel="noopener noreferrer" className="text-[13px] font-semibold text-[var(--primary)] hover:underline">Sign Up</a><span aria-hidden="true" className="text-[#6f7280]">|</span><a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer"><Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} /></a><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer"><Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} /></a></div></>) },
+  { question: "How do I access the courses and SmartQBank?", answer: "Sign up on the PLABcoach website or app and enrol in your course. You get instant access to everything it includes, such as SmartNotes, Self-Paced Mastery Videos and SmartQBank. The PLABcoach app is available on iOS and Android.", afterAnswer: (<> <div className="flex flex-wrap items-center gap-3 px-5 pb-4"><a href="https://courses.plabcoach.com/" target="_blank" rel="noopener noreferrer" className="text-[13px] font-semibold text-[var(--primary)] hover:underline">Sign Up</a><span aria-hidden="true" className="text-[#6f7280]">|</span><a href="https://apps.apple.com/us/app/plabcoach/id6740922681" target="_blank" rel="noopener noreferrer"><Image src="/appstore-badge-light.svg" alt="Download on the App Store" width={108} height={36} /></a><a href="https://play.google.com/store/apps/details?id=com.edmingle.plabcoach" target="_blank" rel="noopener noreferrer"><Image src="/google-play-badge-light.svg" alt="Get it on Google Play" width={121} height={36} /></a></div></>) },
   { question: "Can I try PLABcoach for free?", answer: "Yes. You can take a free Self-Assessment on the PLAB 1 and PRES 2 SmartQBanks, and preview a selection of Self-Paced Mastery Videos before you buy.", afterAnswer: (<div className="flex flex-col items-start gap-2 px-5 pb-4 text-[13px] font-semibold text-[var(--primary)]"><a href="https://courses.plabcoach.com/course/SmartQBankDEMO-100135" target="_blank" rel="noopener noreferrer" className="hover:underline">PLAB 1 FREE Self-Assessment SmartQBank</a><a href="https://courses.plabcoach.com/course/PRES2SmartQBankDemo-101881" target="_blank" rel="noopener noreferrer" className="hover:underline">PRES 2 FREE Self-Assessment SmartQBank</a></div>) },
 ];
 
@@ -371,7 +371,7 @@ useEffect(() => {
               </h1>
              <div className="mt-6 max-w-[720px] rounded-[22px] bg-white/68 px-5 py-4 shadow-[0_10px_30px_rgba(53,79,128,0.04)] backdrop-blur-sm sm:px-6 sm:py-5 xl:mt-7 xl:px-7 xl:py-6">
                 <p className="text-[12px] font-medium leading-[1.65] text-[#185b99] sm:text-[13px] xl:text-[14px]">
-                 PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr Karam Singh (M.D., MRCGP), NHS GP. It provides structured courses, question banks, and mock exams for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, and the MRCGP AKT, combining live coaching with self-paced online learning.
+                 PLABcoach is a UK-based exam preparation platform for international medical graduates (IMGs), founded by Dr Karam Singh (M.D., MRCGP), NHS GP. It provides structured courses, SmartQBank, and SmartMocks for PLAB/UKMLA, Ireland&apos;s PRES, the UK Foundation Programme&apos;s NCA and PSA, and the MRCGP AKT, combining live coaching with self-paced online learning.
                 </p>
               </div>
             </div>
@@ -598,7 +598,7 @@ useEffect(() => {
                 Why PLABcoach
               </h2>
               <p className="mt-5 max-w-[540px] text-[15px] leading-[2] text-[#353943] sm:text-[16px] xl:mt-6 xl:text-[18px]">
-                Led by Dr Karam Singh (M.D., MRCGP), NHS GP, PLABcoach has provided structured exam preparation for international medical graduates for over a decade. Courses combine live coaching, self-paced video content, and exam-realistic question banks, with teaching tailored to each candidate&apos;s weak areas.
+                Led by Dr Karam Singh (M.D., MRCGP), NHS GP, PLABcoach has provided structured exam preparation for international medical graduates for over a decade. Courses combine live coaching, Self-Paced Mastery Videos, and exam-realistic SmartQBank, with teaching tailored to each candidate&apos;s weak areas.
               </p>
               <p className="mt-10 text-[13px] font-semibold text-[#222] xl:text-[15px]">
                 Read Our Full Story
@@ -827,7 +827,7 @@ useEffect(() => {
             <aside className="flex flex-col">
               <p className="text-[12px] font-semibold uppercase text-[#7d56ff]">Our Courses</p>
               <h2 className="mt-2 text-[34px] font-bold leading-[1.08] text-black lg:text-[42px]">Subscription-Based Coaching</h2>
-              <p className="mt-4 text-[14px] leading-6 text-[#676767]">At PLABcoach, we understand the importance of flexibility in your learning journey. Our self-paced learning modules let you study at your own convenience with expert-curated content, question banks, and video lessons - tailored to fit your schedule and goals.</p>
+              <p className="mt-4 text-[14px] leading-6 text-[#676767]">At PLABcoach, we understand the importance of flexibility in your learning journey. Our self-paced learning modules let you study at your own convenience with expert-curated content, SmartQBank, and Self-Paced Mastery Videos - tailored to fit your schedule and goals.</p>
               <div className="mt-8 bg-[#f4f9ff] p-6">
                 <span className="grid h-10 w-10 place-items-center rounded-full  shadow-sm"><Image src="/scriptionIcon.svg" alt="Icon" width={20} height={20} /></span>
                 <p className="mt-4 text-[13px] font-semibold leading-5 text-black">Learn at your pace. Prepare with confidence. Succeed in your exams.</p>
@@ -873,7 +873,7 @@ useEffect(() => {
             </div>
 
             <div className="relative z-10 max-w-[690px] lg:py-4 2xl:justify-self-end">
-              <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Video Learning</p>
+              <p className="text-[13px] font-semibold uppercase text-[var(--accent)]">Self-Paced Mastery Videos</p>
               <h2 className="mt-2 max-w-[620px] text-[40px] font-bold leading-[1.12] tracking-[-0.025em] sm:text-[42px] lg:text-[48px] xl:text-[50px]">Learn From Experts. Prepare With Confidence</h2>
               <p className="mt-4 max-w-[670px] text-[15px] leading-7 text-[var(--body-muted)] sm:text-[16px]">Watch expert-led lessons, exam strategies, clinical concepts and practical guidance designed to make your preparation more focused and effective.</p>
               <div className="mt-8 space-y-4 sm:mt-9 sm:space-y-5">
