@@ -236,8 +236,8 @@ const pres3Plan: CoursePlanConfig = {
       externalHref: "https://courses.plabcoach.com/course/MockExamforPRES3DataInterpretation-84036/checkout",
       price: "£49",
       oldPrice: "£75",
-      title: "SmartMock for Data Interpretation",
-      features: ["OSCE SmartMock", "Data Interpretation SmartMock", "Detailed Feedback", "Exam-Focused Questions"],
+      title: "One SmartMock for Data Interpretation",
+      features: ["Data Interpretation SmartMock","Exam-Focused Questions","Self Assessment",],
       note: "Perfect for Practice & Confidence",
     },
     // {
@@ -252,10 +252,10 @@ const pres3Plan: CoursePlanConfig = {
     {
       id: "complete-mock-package",
       externalHref: "https://courses.plabcoach.com/course/MockExamforPRES3DataInterpretation-87898/checkout",
-      price: "£149",
-      oldPrice: "£250",
-      title: "Complete SmartMock Package",
-      features: ["OSCE SmartMock", "Data Interpretation SmartMock", "Detailed Feedback", "Exam-Focused Questions"],
+      price: "£90",
+      oldPrice: "£170",
+      title: "Two SmartMocks for Data Interpretation",
+      features: ["Data Interpretation SmartMock","Exam-Focused Questions","Self Assessment"],
       note: "Best Value for Complete Practice",
     },
   ],
@@ -624,7 +624,7 @@ const ncaPlan: CoursePlanConfig = {
   primaryPlans: [
     {
       id: "nca-complete",
-      externalHref: "https://courses.plabcoach.com/course/NationalClinicalAssessmentComprehensiveProgramme-116416",
+      externalHref: "https://courses.plabcoach.com/course/NationalClinicalAssessmentComprehensiveProgramme-116416/checkout",
       price: "£550",
       oldPrice: "£650",
       title: "NCA Comprehensive Programme",
@@ -711,7 +711,7 @@ const ncaPlan: CoursePlanConfig = {
   mockPlans: [
     {
       id: "nca-mock",
-      externalHref: "https://courses.plabcoach.com/course/MockExaminationforNCALiveFacetoFace-84043",
+      externalHref: "https://courses.plabcoach.com/course/MockExaminationforNCALiveFacetoFace-84043/checkout",
       price: "£150",
       oldPrice: "£200",
       title: "SmartMock for NCA LIVE Face to Face",
