@@ -80,7 +80,6 @@ const navigation = [
   { label: "Important Exam Dates", href: "/important-exam-dates" },
   { label: "Blogs", href: "/blogs/" },
   { label: "About Us", href: "/about-us/" },
-  // { label: "GMC Appraisal", href: "/drappraisals" },
 ];
 
 export default function Header() {
