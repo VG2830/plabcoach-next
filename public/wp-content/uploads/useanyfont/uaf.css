@@ -1,0 +1,13 @@
+				@font-face {
+					font-family: 'urbanist-bold';
+					src: url('/wp-content/uploads/useanyfont/7145Urbanist-Bold.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/7145Urbanist-Bold.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.urbanist-bold{font-family: 'urbanist-bold' !important;}
+
+						h1, h2, h3, h4, h5, h6{
+					font-family: 'urbanist-bold' !important;
+				}
+		
